@@ -12,10 +12,10 @@ export const HomeHero = () => {
       <div className="absolute bottom-[-10%] left-[-5%] w-[40%] h-[50%] bg-brand-teal/5 rounded-full blur-[120px] pointer-events-none" />
       
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-24 items-center">
           
           {/* Text Content */}
-          <div className="lg:col-span-7 xl:col-span-6">
+          <div className="lg:col-span-7 xl:col-span-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -26,7 +26,7 @@ export const HomeHero = () => {
                 Premium Solar Engineering
               </div>
               
-              <h1 className="text-5xl md:text-7xl xl:text-8xl font-extrabold text-brand-dark leading-[1.05] mb-8 tracking-tight">
+              <h1 className="text-5xl md:text-7xl xl:text-7xl 2xl:text-8xl font-extrabold text-brand-dark leading-[1.05] mb-8 tracking-tight">
                 The <motion.span 
                   animate={{ color: ['#1b2a33', '#f9cd0d', '#1b2a33'] }}
                   transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
@@ -76,7 +76,7 @@ export const HomeHero = () => {
           </div>
 
           {/* Visual Side */}
-          <div className="lg:col-span-5 xl:col-span-6 relative">
+          <div className="lg:col-span-5 xl:col-span-4 relative">
             <motion.div 
               initial={{ opacity: 0, scale: 0.95, x: 20 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
