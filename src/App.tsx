@@ -54,41 +54,47 @@ export default function App() {
       <ScrollToTop />
       <LoadingScreen onComplete={() => setIsLoaded(true)} />
       <CursorGlow />
-      <motion.div 
-        initial={{ opacity: 0, filter: 'brightness(2) saturate(0)' }}
-        animate={isLoaded ? { 
-          opacity: 1, 
-          filter: 'brightness(1) saturate(1)',
-        } : { opacity: 0 }}
-        transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
-        className="flex flex-col min-h-screen selection:bg-brand-gold selection:text-brand-dark"
-      >
-        <Navbar />
-        <div className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            
-            {/* Dynamic Service Routes */}
-            <Route path="/services/:slug" element={<DynamicServicePage />} />
-            
-            {/* Legacy/Static Service Pages if needed, otherwise redirected by dynamic handler */}
-            <Route path="/services/incentives" element={<SolarIncentives />} />
-            <Route path="/services/how-it-works" element={<HowSolarWorks />} />
-            
-            {/* Dynamic Location Routes */}
-            <Route path="/locations/:slug" element={<DynamicLocationPage />} />
-            
-            <Route path="/financing" element={<Financing />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+      <div className="flex flex-col min-h-screen selection:bg-brand-gold selection:text-brand-dark">
+        {/* Fixed UI Elements Wrapper - Kept outside motion.div to prevent filter from breaking position: fixed */}
+        <div 
+          className={`relative z-[50] transition-opacity duration-[2000ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${isLoaded ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        >
+          <Navbar />
+          <StickyMobileCTA />
         </div>
-        <Footer />
-        
-        {/* Dynamic Sticky Mobile CTA */}
-        <StickyMobileCTA />
-      </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, filter: 'brightness(2) saturate(0)' }}
+          animate={isLoaded ? { 
+            opacity: 1, 
+            filter: 'brightness(1) saturate(1)',
+          } : { opacity: 0 }}
+          transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
+          className="flex-grow flex flex-col relative z-0"
+        >
+          <div className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              
+              {/* Dynamic Service Routes */}
+              <Route path="/services/:slug" element={<DynamicServicePage />} />
+              
+              {/* Legacy/Static Service Pages if needed, otherwise redirected by dynamic handler */}
+              <Route path="/services/incentives" element={<SolarIncentives />} />
+              <Route path="/services/how-it-works" element={<HowSolarWorks />} />
+              
+              {/* Dynamic Location Routes */}
+              <Route path="/locations/:slug" element={<DynamicLocationPage />} />
+              
+              <Route path="/financing" element={<Financing />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </div>
+          <Footer />
+        </motion.div>
+      </div>
     </Router>
   );
 }
