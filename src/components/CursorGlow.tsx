@@ -78,6 +78,10 @@ export const CursorGlow = () => {
     };
   }, [isVisible, mouseX, mouseY]);
 
+  if (isMobile) {
+    return null;
+  }
+
   return (
     <div className="fixed inset-0 pointer-events-none z-[9999] overflow-hidden">
       {/* Outer subtle glow - Disabled on mobile for performance */}
