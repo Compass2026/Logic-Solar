@@ -159,7 +159,7 @@ export const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
                animate={{ opacity: [0.4, 0.8, 0.4] }}
                transition={{ duration: 2, repeat: Infinity }}
              >
-               Optimal Energy Harvest In Progress
+               harnessing the power of the sun
              </motion.span>
           </div>
         </motion.div>
