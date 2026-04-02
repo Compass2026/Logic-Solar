@@ -37,10 +37,10 @@ export const ServicesOverview = () => {
             return (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.15, duration: 0.8 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, margin: "-50px" }}
                 className="group relative bg-white p-12 rounded-[48px] hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.12)] transition-all duration-700 border border-gray-100 flex flex-col"
               >
                 {/* Hover Glow */}
@@ -52,10 +52,10 @@ export const ServicesOverview = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-brand-dark mb-5 tracking-tight">{service.title}</h3>
                   <p className="text-brand-dark/60 mb-10 flex-grow leading-relaxed font-medium">
-                    {service.description}
+                    {service.shortDescription}
                   </p>
                   <Link 
-                    to={service.href}
+                    to={`/services/${service.slug}`}
                     className="inline-flex items-center gap-3 text-brand-dark font-bold text-lg group/link"
                   >
                     Explore service

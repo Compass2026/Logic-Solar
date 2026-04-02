@@ -135,10 +135,10 @@ export const Home = () => {
             ].map((item, i) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1, duration: 0.8 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, margin: "-50px" }}
                 className="relative group p-10 rounded-[40px] bg-white border border-gray-100 hover:border-brand-gold/30 hover:shadow-2xl transition-all duration-500"
               >
                 <div className="w-16 h-16 rounded-2xl bg-brand-dark text-brand-gold flex items-center justify-center text-xl font-black mb-8 group-hover:scale-110 transition-transform duration-500 shadow-xl shadow-brand-dark/20">
@@ -172,9 +172,10 @@ export const Home = () => {
 
           <div className="grid md:grid-cols-2 gap-10 lg:gap-16">
             <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, margin: "-50px" }}
               className="bg-white/5 p-12 rounded-[48px] border border-white/10 backdrop-blur-sm"
             >
               <div className="flex items-center gap-5 mb-12">
@@ -199,9 +200,10 @@ export const Home = () => {
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, margin: "-50px" }}
               className="bg-brand-gold p-12 rounded-[48px] shadow-[0_40px_80px_-20px_rgba(249,205,13,0.25)]"
             >
               <div className="flex items-center gap-5 mb-12">
