@@ -113,6 +113,7 @@ export const siteData = {
       state: "MO",
       title: "Premium Solar Installation in Missouri",
       description: "Logic Solar provides elite solar energy solutions to homeowners across the Show-Me State. From St. Louis to Kansas City, we bring premium energy to Missouri.",
+      backgroundImage: "https://images.unsplash.com/photo-1619497170407-39443a7f4cd6?auto=format&fit=crop&q=80&w=2000",
       highlights: [
         "Show-Me State Incentives",
         "St. Louis & KC Local Teams",

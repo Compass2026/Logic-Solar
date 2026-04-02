@@ -16,6 +16,7 @@ interface CityTemplateProps {
     title: string;
     description: string;
     highlights: string[];
+    backgroundImage?: string;
   };
 }
 
@@ -30,7 +31,7 @@ export const CityTemplate = ({ location }: CityTemplateProps) => {
       <PageHero 
         title={location.title}
         subtitle={location.description}
-        backgroundImage="https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&q=80&w=2000"
+        backgroundImage={location.backgroundImage || "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&q=80&w=2000"}
         eyebrow={`Solar Energy in ${location.city}`}
       />
 
