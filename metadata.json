@@ -1,0 +1,7 @@
+{
+  "name": "Logic Solar",
+  "description": "Premium, conversion-focused solar energy solutions for modern homeowners. Elegant, trustworthy, and ultra-clean solar installation and battery backup services.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
