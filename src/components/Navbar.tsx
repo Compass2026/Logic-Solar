@@ -134,7 +134,7 @@ export const Navbar = () => {
       {/* Mobile Menu */}
       <div className={cn(
         "fixed inset-0 top-0 bg-white z-[60] lg:hidden transition-all duration-500 ease-in-out",
-        isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+        isOpen ? "translate-y-0 opacity-100 pointer-events-auto" : "-translate-y-full opacity-0 pointer-events-none"
       )}>
         <div className="flex flex-col h-full p-8 pt-24">
           <div className="flex-grow space-y-8">

@@ -55,13 +55,8 @@ export default function App() {
       <LoadingScreen onComplete={() => setIsLoaded(true)} />
       <CursorGlow />
       <div className="flex flex-col min-h-screen selection:bg-brand-gold selection:text-brand-dark">
-        {/* Fixed UI Elements Wrapper - Kept outside motion.div to prevent filter from breaking position: fixed */}
-        <div 
-          className={`relative z-[50] transition-opacity duration-[2000ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${isLoaded ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-        >
-          <Navbar />
-          <StickyMobileCTA />
-        </div>
+        <Navbar />
+        <StickyMobileCTA />
 
         <motion.div 
           initial={{ opacity: 0, filter: 'brightness(2) saturate(0)' }}
