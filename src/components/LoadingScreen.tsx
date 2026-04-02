@@ -57,11 +57,29 @@ export const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
               style={{ 
                 y: (1 - progress / 100) * 300 - 180,
                 opacity: Math.max(0, (progress - 20) / 80),
-                filter: `brightness(${0.8 + (progress / 100) * 0.4}) drop-shadow(0 0 ${progress/5}px rgba(249, 205, 13, ${progress/200}))`
+                filter: `drop-shadow(0 0 ${progress/5}px rgba(249, 205, 13, ${progress/200}))`
               }}
-              className="absolute z-30"
+              className="absolute z-30 flex flex-col items-center"
             >
-              <img src="/logo.png" alt="Logic Solar" className="h-12 md:h-16 w-auto object-contain" />
+              <div className="relative h-12 md:h-16 w-64 flex items-center justify-center">
+                {/* Top part: LOGIC (Original Gold) */}
+                <img 
+                  src="/logo.png" 
+                  alt="Logic Solar" 
+                  className="absolute inset-0 w-full h-full object-contain" 
+                  style={{ clipPath: 'inset(0 0 42% 0)' }}
+                />
+                {/* Bottom part: SOLAR (White via inversion) */}
+                <img 
+                  src="/logo.png" 
+                  alt="" 
+                  className="absolute inset-0 w-full h-full object-contain" 
+                  style={{ 
+                    clipPath: 'inset(58% 0 0 0)',
+                    filter: 'brightness(0) invert(1)' 
+                  }}
+                />
+              </div>
             </motion.div>
 
             {/* The Sun - Rising synced with progress */}
