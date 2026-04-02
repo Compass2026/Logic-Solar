@@ -136,7 +136,7 @@ export const Navbar = () => {
         "fixed inset-0 top-0 bg-white z-[60] lg:hidden transition-all duration-500 ease-in-out",
         isOpen ? "translate-y-0 opacity-100 pointer-events-auto" : "-translate-y-full opacity-0 pointer-events-none"
       )}>
-        <div className="flex flex-col h-full p-8 pt-24">
+        <div className="flex flex-col h-full p-8 pt-24 overflow-y-auto pb-24">
           <div className="flex-grow space-y-8">
             {siteData.nav.map((item) => (
               <div key={item.name} className="space-y-4">
