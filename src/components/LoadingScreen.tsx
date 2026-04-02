@@ -52,6 +52,18 @@ export const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
           />
 
           <div className="relative w-full max-w-xl aspect-square flex flex-col items-center justify-center">
+            {/* Logic Solar Logo - Rising and Illuminating */}
+            <motion.div
+              style={{ 
+                y: (1 - progress / 100) * 300 - 180,
+                opacity: Math.max(0, (progress - 20) / 80),
+                filter: `brightness(${0.8 + (progress / 100) * 0.4}) drop-shadow(0 0 ${progress/5}px rgba(249, 205, 13, ${progress/200}))`
+              }}
+              className="absolute z-30"
+            >
+              <img src="/logo.png" alt="Logic Solar" className="h-12 md:h-16 w-auto object-contain" />
+            </motion.div>
+
             {/* The Sun - Rising synced with progress */}
             <motion.div
               style={{ 
