@@ -27,7 +27,7 @@ export const Footer = () => {
             </p>
             <div className="flex gap-4">
               {[
-                { icon: Facebook, href: "#" },
+                { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61580455196022" },
                 { icon: Twitter, href: "#" },
                 { icon: Instagram, href: "#" },
                 { icon: Linkedin, href: "#" }
