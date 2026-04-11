@@ -1,11 +1,21 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Send, MessageSquare, Clock, Globe, Shield } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageSquare, Clock, Globe, Shield } from 'lucide-react';
 import { PageHero } from '../components/PageHero';
 import { SectionHeading } from '../components/SectionHeading';
 import { SEO } from '../components/SEO';
 
 export const Contact = () => {
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://link.logic-solar.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <main className="bg-white">
       <SEO 
@@ -76,99 +86,41 @@ export const Contact = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-[48px] shadow-2xl border border-gray-100 p-12 lg:p-16 relative"
+              className="bg-white rounded-[48px] shadow-2xl border border-gray-100 p-8 lg:p-12 relative"
             >
-              <div className="absolute -top-6 left-12 px-6 py-3 bg-brand-gold text-brand-dark text-xs font-black uppercase tracking-widest rounded-full shadow-xl shadow-brand-gold/20">
+              <div className="absolute -top-6 left-12 px-6 py-3 bg-brand-gold text-brand-dark text-xs font-black uppercase tracking-widest rounded-full shadow-xl shadow-brand-gold/20 z-10">
                 Inquiry Form
               </div>
               
-              <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-extrabold uppercase tracking-widest text-brand-dark/40 ml-1">Full Name</label>
-                    <input 
-                      type="text" 
-                      placeholder="John Doe"
-                      className="w-full px-8 py-5 bg-gray-50 border border-gray-100 rounded-2xl focus:outline-none focus:border-brand-gold transition-all"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-extrabold uppercase tracking-widest text-brand-dark/40 ml-1">Email Address</label>
-                    <input 
-                      type="email" 
-                      placeholder="john@example.com"
-                      className="w-full px-8 py-5 bg-gray-50 border border-gray-100 rounded-2xl focus:outline-none focus:border-brand-gold transition-all"
-                    />
-                  </div>
-                </div>
+              <div className="w-full min-h-[600px] overflow-hidden">
+                <iframe
+                  src="https://link.logic-solar.com/widget/form/jXEWmVgfutwbzVW9JGIu"
+                  style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+                  id="inline-jXEWmVgfutwbzVW9JGIu" 
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="Google ads 1 Form"
+                  data-height="911"
+                  data-layout-iframe-id="inline-jXEWmVgfutwbzVW9JGIu"
+                  data-form-id="jXEWmVgfutwbzVW9JGIu"
+                  title="Google ads 1 Form"
+                />
+              </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-extrabold uppercase tracking-widest text-brand-dark/40 ml-1">Phone Number</label>
-                    <input 
-                      type="tel" 
-                      placeholder="(555) 000-0000"
-                      className="w-full px-8 py-5 bg-gray-50 border border-gray-100 rounded-2xl focus:outline-none focus:border-brand-gold transition-all"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-extrabold uppercase tracking-widest text-brand-dark/40 ml-1">Average Utility Bill</label>
-                    <select className="w-full px-8 py-5 bg-gray-50 border border-gray-100 rounded-2xl focus:outline-none focus:border-brand-gold transition-all appearance-none cursor-pointer">
-                      <option>$100 - $200</option>
-                      <option>$200 - $300</option>
-                      <option>$300 - $400</option>
-                      <option>$400+</option>
-                    </select>
-                  </div>
+              <div className="flex items-center justify-center gap-6 pt-8 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-dark/30">
+                <div className="flex items-center gap-1.5 pointer-events-none">
+                  <Clock className="w-3.5 h-3.5" /> 24hr Response
                 </div>
+                <div className="flex items-center gap-1.5 pointer-events-none">
+                  <Globe className="w-3.5 h-3.5" /> Direct Experts
+                </div>
+              </div>
 
-                <div className="space-y-2">
-                  <label className="text-[10px] font-extrabold uppercase tracking-widest text-brand-dark/40 ml-1">Home Address</label>
-                  <input 
-                    type="text" 
-                    placeholder="123 Solar St, City, State"
-                    className="w-full px-8 py-5 bg-gray-50 border border-gray-100 rounded-2xl focus:outline-none focus:border-brand-gold transition-all"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-[10px] font-extrabold uppercase tracking-widest text-brand-dark/40 ml-1">Interested In</label>
-                  <select className="w-full px-8 py-5 bg-gray-50 border border-gray-100 rounded-2xl focus:outline-none focus:border-brand-gold transition-all appearance-none cursor-pointer">
-                    <option>Residential Solar</option>
-                    <option>Battery Backup</option>
-                    <option>Commercial Solar</option>
-                    <option>Solar Incentives</option>
-                    <option>Financing</option>
-                    <option>Not Sure Yet</option>
-                  </select>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-[10px] font-extrabold uppercase tracking-widest text-brand-dark/40 ml-1">Message (Optional)</label>
-                  <textarea 
-                    rows={4}
-                    placeholder="Tell us more about your project..."
-                    className="w-full px-8 py-5 bg-gray-50 border border-gray-100 rounded-2xl focus:outline-none focus:border-brand-gold transition-all resize-none"
-                  ></textarea>
-                </div>
-
-                <button 
-                  type="submit"
-                  className="w-full bg-brand-dark text-white py-6 rounded-2xl font-black text-lg hover:bg-brand-steel transition-all flex items-center justify-center gap-4 shadow-xl shadow-brand-dark/20 uppercase tracking-widest"
-                >
-                  Request Consultation
-                  <Send className="w-5 h-5 text-brand-gold" />
-                </button>
-                
-                <div className="flex items-center justify-center gap-6 pt-4 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-dark/30">
-                  <div className="flex items-center gap-1.5 pointer-events-none">
-                    <Clock className="w-3.5 h-3.5" /> 24hr Response
-                  </div>
-                  <div className="flex items-center gap-1.5 pointer-events-none">
-                    <Globe className="w-3.5 h-3.5" /> Direct Experts
-                  </div>
-                </div>
-              </form>
             </motion.div>
           </div>
         </div>

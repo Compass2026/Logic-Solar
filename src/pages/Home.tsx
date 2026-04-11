@@ -28,7 +28,7 @@ export const Home = () => {
                 className="relative rounded-[48px] overflow-hidden shadow-[0_40px_80px_-20px_rgba(0,0,0,0.12)]"
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=1200" 
+                  src="/images/groundmount-solar.jpg" 
                   alt="Modern Solar Installation" 
                   className="w-full h-full object-cover aspect-[4/5]"
                   referrerPolicy="no-referrer"
@@ -135,10 +135,10 @@ export const Home = () => {
             ].map((item, i) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true, margin: "-50px" }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                viewport={{ once: true, amount: 0.1 }}
                 className="relative group p-10 rounded-[40px] bg-white border border-gray-100 hover:border-brand-gold/30 hover:shadow-2xl transition-all duration-500"
               >
                 <div className="w-16 h-16 rounded-2xl bg-brand-dark text-brand-gold flex items-center justify-center text-xl font-black mb-8 group-hover:scale-110 transition-transform duration-500 shadow-xl shadow-brand-dark/20">
@@ -172,10 +172,10 @@ export const Home = () => {
 
           <div className="grid md:grid-cols-2 gap-10 lg:gap-16">
             <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true, margin: "-50px" }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true, amount: 0.2 }}
               className="bg-white/5 p-12 rounded-[48px] border border-white/10 backdrop-blur-sm"
             >
               <div className="flex items-center gap-5 mb-12">
@@ -200,10 +200,10 @@ export const Home = () => {
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true, margin: "-50px" }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true, amount: 0.2 }}
               className="bg-brand-gold p-12 rounded-[48px] shadow-[0_40px_80px_-20px_rgba(249,205,13,0.25)]"
             >
               <div className="flex items-center gap-5 mb-12">

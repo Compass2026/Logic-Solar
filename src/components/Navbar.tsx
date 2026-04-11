@@ -35,24 +35,10 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center group relative h-10 md:h-12 w-auto">
-          {/* Base Logo (Gold 'Logic', Dark 'Solar') */}
           <img 
-            src="/logo.png" 
+            src={(scrolled || isHome) ? "/logo-dark.png" : "/logo.png"} 
             alt="Logic Solar" 
-            className="h-full w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
-          />
-          {/* Inverted Logo overlay for 'Solar' - Visible only over dark backgrounds */}
-          <img 
-            src="/logo.png" 
-            alt="" 
-            className={cn(
-              "absolute inset-0 h-full w-auto object-contain transition-all duration-300 pointer-events-none group-hover:scale-105",
-              !(scrolled || isHome) ? "opacity-100" : "opacity-0"
-            )}
-            style={{ 
-              clipPath: 'inset(58% 0 0 0)',
-              filter: 'brightness(0) invert(1)' 
-            }}
+            className="h-full w-auto object-contain transition-all duration-300 group-hover:scale-105" 
           />
         </Link>
 

@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Send } from 'lucide-react';
 
 export const QuoteForm = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://link.logic-solar.com/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <section id="quote-form" className="section-padding bg-brand-dark relative overflow-hidden">
       {/* Decorative elements */}
@@ -44,76 +53,28 @@ export const QuoteForm = () => {
             </div>
           </div>
 
-          <div className="lg:w-3/5 p-12 lg:p-16">
-            <form className="grid grid-cols-1 md:grid-cols-2 gap-6" onSubmit={(e) => e.preventDefault()}>
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-brand-dark/40">Full Name</label>
-                <input 
-                  type="text" 
-                  placeholder="John Doe"
-                  className="w-full px-6 py-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:border-brand-gold transition-colors"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-brand-dark/40">Email Address</label>
-                <input 
-                  type="email" 
-                  placeholder="john@example.com"
-                  className="w-full px-6 py-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:border-brand-gold transition-colors"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-brand-dark/40">Phone Number</label>
-                <input 
-                  type="tel" 
-                  placeholder="(555) 000-0000"
-                  className="w-full px-6 py-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:border-brand-gold transition-colors"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-brand-dark/40">Average Utility Bill</label>
-                <select className="w-full px-6 py-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:border-brand-gold transition-colors appearance-none">
-                  <option>$100 - $200</option>
-                  <option>$200 - $300</option>
-                  <option>$300 - $400</option>
-                  <option>$400+</option>
-                </select>
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-brand-dark/40">Interested In</label>
-                <select className="w-full px-6 py-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:border-brand-gold transition-colors appearance-none">
-                  <option>Residential Solar</option>
-                  <option>Battery Backup</option>
-                  <option>Commercial Solar</option>
-                  <option>Solar Incentives</option>
-                  <option>Financing</option>
-                  <option>Not Sure Yet</option>
-                </select>
-              </div>
-              <div className="md:col-span-2 space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-brand-dark/40">Home Address</label>
-                <input 
-                  type="text" 
-                  placeholder="123 Solar St, City, State"
-                  className="w-full px-6 py-4 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:border-brand-gold transition-colors"
-                />
-              </div>
-              <div className="md:col-span-2 pt-4">
-                <button 
-                  type="submit"
-                  className="w-full bg-brand-dark text-white py-5 rounded-xl font-bold text-lg hover:bg-brand-steel transition-all flex items-center justify-center gap-3 shadow-xl"
-                >
-                  Send My Quote Request
-                  <Send className="w-5 h-5 text-brand-gold" />
-                </button>
-                <p className="text-center text-xs text-brand-dark/40 mt-4">
-                  By clicking, you agree to our privacy policy and to be contacted by Logic Solar.
-                </p>
-              </div>
-            </form>
+          <div className="lg:w-3/5 p-4 lg:p-8 min-h-[600px]">
+            <iframe
+              src="https://link.logic-solar.com/widget/form/jXEWmVgfutwbzVW9JGIu"
+              style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+              id="inline-jXEWmVgfutwbzVW9JGIu" 
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Google ads 1 Form"
+              data-height="911"
+              data-layout-iframe-id="inline-jXEWmVgfutwbzVW9JGIu"
+              data-form-id="jXEWmVgfutwbzVW9JGIu"
+              title="Google ads 1 Form"
+            />
           </div>
         </div>
       </div>
     </section>
   );
 };
+

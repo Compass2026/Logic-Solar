@@ -15,7 +15,7 @@ export const HomeHero = () => {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-24 items-center">
           
           {/* Text Content */}
-          <div className="lg:col-span-7 xl:col-span-8">
+          <div className="lg:col-span-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -26,7 +26,7 @@ export const HomeHero = () => {
                 Premium Solar Engineering
               </div>
               
-              <h1 className="text-5xl md:text-7xl xl:text-7xl 2xl:text-8xl font-extrabold text-brand-dark leading-[1.05] mb-8 tracking-tight">
+              <h1 className="text-5xl md:text-6xl xl:text-7xl font-extrabold text-brand-dark leading-[1.05] mb-8 tracking-tight">
                 The <motion.span 
                   animate={{ color: ['#1b2a33', '#f9cd0d', '#1b2a33'] }}
                   transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
@@ -76,7 +76,7 @@ export const HomeHero = () => {
           </div>
 
           {/* Visual Side */}
-          <div className="lg:col-span-5 xl:col-span-4 relative">
+          <div className="lg:col-span-6 relative">
             <motion.div 
               initial={{ opacity: 0, scale: 0.95, x: 20 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -84,11 +84,11 @@ export const HomeHero = () => {
               className="relative"
             >
               {/* Main Image Container */}
-              <div className="relative rounded-[40px] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.15)] aspect-[4/5] lg:aspect-[3/4] xl:aspect-square group">
+              <div className="relative rounded-[40px] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.15)] aspect-square md:aspect-[4/3] lg:aspect-[3/2] group">
                 <img 
-                  src="/images/hero-solar.jpg" 
+                  src="/images/hero-roof.jpg" 
                   alt="Premium Solar Home" 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-1000"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent opacity-60" />

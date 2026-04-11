@@ -38,17 +38,17 @@ export const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.1, filter: 'brightness(2)' }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed inset-0 z-[1000] flex flex-col items-center justify-center bg-brand-dark overflow-hidden"
+          className="fixed inset-0 z-[1000] flex flex-col items-center justify-center bg-[#05161C] overflow-hidden"
         >
-          {/* Dawn Background Glow */}
+          {/* Dawn Background Glow / Teal Gradient */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ 
-              opacity: [0, 0.2, 0.4, 0.1],
-              scale: [1, 1.2, 1.1, 1]
+              opacity: [0, 0.4, 0.6, 0.3],
+              scale: [1, 1.3, 1.2, 1]
             }}
             transition={{ duration: 4, times: [0, 0.3, 0.6, 1] }}
-            className="absolute inset-0 bg-gradient-to-t from-brand-gold/20 via-transparent to-transparent"
+            className="absolute inset-0 bg-gradient-to-tr from-[#0A3A4A]/40 via-transparent to-transparent"
           />
 
           <div className="relative w-full max-w-xl aspect-square flex flex-col items-center justify-center">
@@ -62,22 +62,10 @@ export const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
               className="absolute z-30 flex flex-col items-center"
             >
               <div className="relative h-12 md:h-16 w-64 flex items-center justify-center">
-                {/* Top part: LOGIC (Original Gold) */}
                 <img 
                   src="/logo.png" 
                   alt="Logic Solar" 
-                  className="absolute inset-0 w-full h-full object-contain" 
-                  style={{ clipPath: 'inset(0 0 42% 0)' }}
-                />
-                {/* Bottom part: SOLAR (White via inversion) */}
-                <img 
-                  src="/logo.png" 
-                  alt="" 
-                  className="absolute inset-0 w-full h-full object-contain" 
-                  style={{ 
-                    clipPath: 'inset(58% 0 0 0)',
-                    filter: 'brightness(0) invert(1)' 
-                  }}
+                  className="w-full h-full object-contain" 
                 />
               </div>
             </motion.div>

@@ -5,12 +5,14 @@ interface SEOProps {
   title: string;
   description?: string;
   schema?: object;
+  noindex?: boolean;
 }
 
 export const SEO = ({ 
   title, 
   description = "Logic Solar | Premium Solar Energy Solutions for Home & Business. Custom engineered, high-performance solar installations with luxury service aesthetics.",
-  schema
+  schema,
+  noindex = false
 }: SEOProps) => {
   const location = useLocation();
 
@@ -25,6 +27,19 @@ export const SEO = ({
       document.head.appendChild(metaDescription);
     }
     metaDescription.setAttribute('content', description);
+
+    // Handle noindex
+    let robotsMeta = document.querySelector('meta[name="robots"]');
+    if (noindex) {
+      if (!robotsMeta) {
+        robotsMeta = document.createElement('meta');
+        robotsMeta.setAttribute('name', 'robots');
+        document.head.appendChild(robotsMeta);
+      }
+      robotsMeta.setAttribute('content', 'noindex, nofollow');
+    } else if (robotsMeta) {
+      robotsMeta.setAttribute('content', 'index, follow');
+    }
 
     // Handle Schema
     const existingSchema = document.getElementById('json-ld-schema');

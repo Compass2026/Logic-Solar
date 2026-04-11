@@ -121,8 +121,8 @@ export const Footer = () => {
             © {new Date().getFullYear()} Logic Solar. All rights reserved.
           </p>
           <div className="flex gap-8 text-xs text-white/40">
-            <a href="#" className="hover:text-brand-gold">Privacy Policy</a>
-            <a href="#" className="hover:text-brand-gold">Terms of Service</a>
+            <Link to="/privacy" className="hover:text-brand-gold">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-brand-gold">Terms of Service</Link>
             <a href="#" className="hover:text-brand-gold">Cookie Policy</a>
           </div>
         </div>

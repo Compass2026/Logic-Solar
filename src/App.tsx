@@ -16,6 +16,22 @@ import { CursorGlow } from './components/CursorGlow';
 import { StickyMobileCTA } from './components/StickyMobileCTA';
 import { siteData } from './data/siteData';
 import { motion } from 'motion/react';
+import { AddersPage } from './pages/AddersPage';
+import { ServiceRequestPage } from './pages/ServiceRequestPage';
+import { CreditApplicationPage } from './pages/CreditApplicationPage';
+import { CreditRepairPage } from './pages/CreditRepairPage';
+import { DealSubmissionPage } from './pages/DealSubmissionPage';
+import { HIAPage } from './pages/HIAPage';
+import { LoginsPage } from './pages/LoginsPage';
+import { OnboardingPage } from './pages/OnboardingPage';
+import { SiteSurveyPage } from './pages/SiteSurveyPage';
+import { ThankYouPage } from './pages/ThankYouPage';
+
+
+
+import { Privacy } from './pages/Privacy';
+import { Terms } from './pages/Terms';
+
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -85,6 +101,22 @@ export default function App() {
               <Route path="/financing" element={<Financing />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+
+              {/* Internal Utility Pages (Hidden) */}
+              <Route path="/adders" element={<AddersPage />} />
+              <Route path="/service" element={<ServiceRequestPage />} />
+              <Route path="/credit" element={<CreditApplicationPage />} />
+              <Route path="/creditrepair" element={<CreditRepairPage />} />
+              <Route path="/dealsubmission" element={<DealSubmissionPage />} />
+              <Route path="/hia" element={<HIAPage />} />
+              <Route path="/logins" element={<LoginsPage />} />
+              <Route path="/onboarding" element={<OnboardingPage />} />
+              <Route path="/sitesurvey" element={<SiteSurveyPage />} />
+              <Route path="/thankyou" element={<ThankYouPage />} />
+
+
             </Routes>
           </div>
           <Footer />
