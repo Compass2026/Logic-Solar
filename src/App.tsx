@@ -112,11 +112,14 @@ export default function App() {
               <Route path="/deal-submission" element={<DealSubmissionPage />} />
               <Route path="/logins" element={<LoginsPage />} />
               <Route path="/onboard" element={<OnboardingPage />} />
+              <Route path="/dealsubmission" element={<DealSubmissionPage />} />
               <Route path="/sitesurveys" element={<SiteSurveyPage />} />
               <Route path="/thankyou" element={<ThankYouPage />} />
               <Route path="/commercial" element={<CommercialPage />} />
 
 
+              {/* Fallback for unknown routes */}
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </div>
           <Footer />
