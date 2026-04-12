@@ -82,9 +82,6 @@ export const AddersPage = () => {
             className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-5 md:p-6 border-b border-gray-100 last:border-0 hover:bg-brand-teal/[0.02] transition-colors group"
           >
             <div className="flex-1">
-              <span className="text-sm font-bold text-brand-dark/40 uppercase tracking-widest mb-1 block">
-                Item {index + 1}
-              </span>
               <h3 className="text-lg font-bold text-brand-dark group-hover:text-brand-teal transition-colors">
                 {adder.item}
               </h3>

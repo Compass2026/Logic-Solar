@@ -4,7 +4,7 @@ export const siteData = {
   description: "Premium solar solutions designed for performance, elegance, and long-term savings.",
   contact: {
     phone: "(816) 300-5781",
-    email: "operations@logic-solar.com",
+    email: "sales@logic-solar.com",
     address: "7300 W 110th St Plaza 1, 7th Floor, Overland Park, KS 66210",
   },
   nav: [
