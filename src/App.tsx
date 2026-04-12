@@ -109,11 +109,10 @@ export default function App() {
               <Route path="/service" element={<ServiceRequestPage />} />
               <Route path="/credit" element={<CreditApplicationPage />} />
               <Route path="/credit-repair" element={<CreditRepairPage />} />
-              <Route path="/deal-submission" element={<DealSubmissionPage />} />
+              <Route path="/deal" element={<DealSubmissionPage />} />
               <Route path="/logins" element={<LoginsPage />} />
               <Route path="/onboard" element={<OnboardingPage />} />
-              <Route path="/dealsubmission" element={<DealSubmissionPage />} />
-              <Route path="/sitesurveys" element={<SiteSurveyPage />} />
+              <Route path="/sitesurvey" element={<SiteSurveyPage />} />
               <Route path="/thankyou" element={<ThankYouPage />} />
               <Route path="/commercial" element={<CommercialPage />} />
 
