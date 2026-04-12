@@ -61,7 +61,7 @@ export const siteData = {
         "Backup power readiness"
       ],
       icon: "Sun",
-      backgroundImage: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=2000"
+      backgroundImage: "/images/installation-hero.jpg"
     },
     {
       id: "battery",

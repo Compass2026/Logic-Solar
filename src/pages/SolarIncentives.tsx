@@ -112,7 +112,7 @@ export const SolarIncentives = () => {
             <div className="relative">
               <div className="rounded-[48px] overflow-hidden shadow-2xl skew-y-3">
                 <img 
-                  src="https://images.unsplash.com/photo-1454165833772-d996d4ad5004?auto=format&fit=crop&q=80&w=1200" 
+                  src="/images/solar-incentives-math.jpg" 
                   alt="Financial Planning" 
                   className="w-full h-full object-cover aspect-video"
                 />

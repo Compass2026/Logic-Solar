@@ -58,7 +58,7 @@ export const SolarInstallation = () => {
         title={<>Precision <br /><span className="text-brand-gold">Installation.</span></>}
         subtitle="Experience the logic of superior engineering and master craftsmanship for your home."
         eyebrow="Residential Solar"
-        backgroundImage="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=2000"
+        backgroundImage="/images/installation-hero.jpg"
       />
 
       {/* Overview Section */}
