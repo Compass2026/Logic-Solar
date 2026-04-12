@@ -43,15 +43,13 @@ export const AddersPage = () => {
     >
       <div className="space-y-12">
         {/* Enphase IQ8MC Datasheet Button */}
-        <div className="flex justify-center">
+        <div className="flex justify-center relative z-[60]">
           <div className="w-full max-w-md">
-            <motion.a
-              href="https://www.logic-solar.com/wp-content/uploads/2026/01/Enphase-IQ8MC-.pdf"
+            <a
+              href="https://drive.google.com/drive/folders/1MojkRTOp4RYET6emBY12B3rurmHS3kvP"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ y: -5, scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="flex items-center justify-between p-6 rounded-3xl bg-white border-2 border-brand-teal/10 hover:border-brand-teal/30 shadow-lg hover:shadow-brand-teal/10 transition-all group"
+              className="flex items-center justify-between p-6 rounded-3xl bg-white border-2 border-brand-teal/10 hover:border-brand-teal/30 shadow-lg hover:shadow-brand-teal/10 transition-all group cursor-pointer relative z-[70]"
             >
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-brand-teal/10 flex items-center justify-center group-hover:bg-brand-teal group-hover:text-white transition-colors duration-500">
@@ -63,7 +61,7 @@ export const AddersPage = () => {
                 </div>
               </div>
               <ExternalLink className="w-5 h-5 text-brand-dark/20 group-hover:text-brand-teal transition-colors" />
-            </motion.a>
+            </a>
           </div>
         </div>
 
