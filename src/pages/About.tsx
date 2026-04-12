@@ -43,7 +43,7 @@ export const About = () => {
                 </p>
                 <div className="grid grid-cols-2 gap-8">
                   <div>
-                    <h4 className="text-4xl font-black text-brand-dark mb-2">12k+</h4>
+                    <h4 className="text-4xl font-black text-brand-dark mb-2">1k+</h4>
                     <p className="text-sm font-bold uppercase tracking-widest text-brand-dark/40">Homeowners</p>
                   </div>
                   <div>
@@ -63,19 +63,19 @@ export const About = () => {
             >
               <div className="aspect-[4/5] rounded-[48px] overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1542332213-31f87348057f?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Modern Home with Solar" 
-                  className="w-full h-full object-cover"
+                  src="/images/we-went-solar.jpg" 
+                  alt="Happy Logic Solar Customer" 
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
-              <div className="absolute -bottom-10 -left-10 glass p-10 rounded-[40px] shadow-2xl hidden md:block">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-brand-gold/20 flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-brand-dark" />
+              <div className="absolute -bottom-6 -left-6 glass p-7 rounded-[32px] shadow-2xl hidden md:block">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-brand-gold/20 flex items-center justify-center">
+                    <Shield className="w-5 h-5 text-brand-dark" />
                   </div>
-                  <h4 className="text-xl font-bold text-brand-dark">Precision Quality</h4>
+                  <h4 className="text-lg font-bold text-brand-dark">Precision Quality</h4>
                 </div>
-                <p className="text-sm text-brand-dark/60 max-w-[200px]">Every installation meets our rigorous 50-point quality standard.</p>
+                <p className="text-sm text-brand-dark/60 max-w-[180px]">Every installation meets our rigorous quality standards.</p>
               </div>
             </motion.div>
           </div>

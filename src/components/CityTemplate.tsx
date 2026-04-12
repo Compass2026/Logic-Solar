@@ -71,20 +71,29 @@ export const CityTemplate = ({ location }: CityTemplateProps) => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-brand-dark p-8 rounded-[40px] shadow-2xl relative overflow-hidden"
+              className="relative rounded-[40px] overflow-hidden aspect-[4/5] shadow-2xl"
             >
-              <div className="absolute top-0 right-0 p-8 opacity-10">
-                <MapPin className="w-64 h-64 text-white" />
-              </div>
-              <div className="relative z-10">
-                <h3 className="text-3xl font-black text-white mb-6 uppercase tracking-tighter italic">Local Energy Audit</h3>
-                <p className="text-white/60 mb-8 font-medium">Request a free site assessment for your {location.city} residence today.</p>
-                <QuoteForm />
+              <img 
+                src={location.backgroundImage || "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&q=80&w=2000"} 
+                alt={`${location.city} Solar`}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 to-transparent" />
+              <div className="absolute bottom-8 left-8 right-8">
+                <div className="glass p-6 rounded-2xl border-white/20">
+                  <div className="flex items-center gap-3 mb-2">
+                    <MapPin className="w-5 h-5 text-brand-gold" />
+                    <span className="text-white font-bold">{location.city}, {location.state}</span>
+                  </div>
+                  <h4 className="text-white/80 text-sm font-medium">Local Energy Assessment Ready</h4>
+                </div>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
+
+      <QuoteForm />
 
       <section className="py-24 bg-brand-light">
         <div className="container-custom text-center">

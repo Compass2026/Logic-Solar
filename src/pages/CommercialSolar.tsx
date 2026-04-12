@@ -76,14 +76,14 @@ export const CommercialSolar = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-10 -left-10 glass p-10 rounded-[40px] shadow-2xl hidden md:block">
-                <div className="text-4xl font-black text-brand-dark mb-2">30%</div>
-                <p className="text-sm font-bold uppercase tracking-widest text-brand-dark/40">Average Savings</p>
-                <div className="mt-6 flex gap-2">
+              <div className="absolute -bottom-6 -left-6 glass p-5 rounded-[20px] shadow-2xl hidden md:block">
+                <div className="text-xl font-black text-brand-dark mb-1">30%</div>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-brand-dark/40">Average Savings</p>
+                <div className="mt-3 flex gap-1.5">
                   {[1, 2, 3, 4, 5].map((s) => (
-                    <div key={s} className="w-1.5 h-6 bg-brand-gold rounded-full" />
+                    <div key={s} className="w-1 h-3 bg-brand-gold rounded-full" />
                   ))}
-                  <div className="w-1.5 h-6 bg-gray-100 rounded-full" />
+                  <div className="w-1 h-3 bg-gray-100 rounded-full" />
                 </div>
               </div>
             </motion.div>

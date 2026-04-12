@@ -25,8 +25,8 @@ export const DealSubmissionPage = () => {
     >
       <div className="space-y-12">
         {/* Navigation Buttons */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Link to="/adders" className="group cursor-pointer">
+        <div className="flex flex-col items-center gap-6">
+          <Link to="/adders" className="group cursor-pointer w-full max-w-xl">
             <motion.div
               whileHover={{ y: -5 }}
               whileTap={{ scale: 0.98 }}
@@ -45,24 +45,29 @@ export const DealSubmissionPage = () => {
             </motion.div>
           </Link>
 
-          <Link to="/hia" className="group cursor-pointer">
+          <a 
+            href="https://powerforms.docusign.net/7f0a0ef7-91de-4fdf-90cb-17b3064549c4?env=na4&acct=a5ca747b-f869-45ab-bdbe-194fd4d9dfeb&accountId=a5ca747b-f869-45ab-bdbe-194fd4d9dfeb"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group cursor-pointer w-full max-w-xl"
+          >
             <motion.div
               whileHover={{ y: -5 }}
               whileTap={{ scale: 0.98 }}
-              className="p-8 rounded-[32px] bg-white border-2 border-brand-dark/5 hover:border-brand-gold/50 shadow-lg hover:shadow-brand-gold/10 transition-all flex flex-col h-full"
+              className="p-8 rounded-[32px] bg-white border-2 border-brand-dark/5 shadow-lg flex flex-col h-full hover:border-brand-gold/50 hover:shadow-brand-gold/10 transition-all"
             >
               <div className="w-12 h-12 rounded-2xl bg-brand-gold/10 flex items-center justify-center mb-6">
                 <FileText className="w-6 h-6 text-brand-gold" />
               </div>
               <h3 className="text-2xl font-bold text-brand-dark mb-3 tracking-tight">Home Improvement Agreement</h3>
               <p className="text-brand-dark/50 mb-8 flex-grow leading-relaxed">
-                Generate and review customer agreements for project finalization (Page coming soon).
+                Generate project-specific legal agreements for customer signature via DocuSign.
               </p>
               <div className="flex items-center gap-2 font-bold text-brand-gold group-hover:gap-3 transition-all mt-auto">
                 Open Agreement <ArrowRight className="w-5 h-5" />
               </div>
             </motion.div>
-          </Link>
+          </a>
         </div>
 
         {/* GHL Form Area */}

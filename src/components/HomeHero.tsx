@@ -123,11 +123,11 @@ export const HomeHero = () => {
                     </div>
                   ))}
                   <div className="w-10 h-10 rounded-full border-2 border-white bg-brand-gold flex items-center justify-center text-[10px] font-black text-brand-dark shadow-sm">
-                    +12k
+                    +1k
                   </div>
                 </div>
                 <div className="text-[11px] font-bold text-brand-dark leading-snug">
-                  Trusted by 12,000+ <br />Modern Homeowners
+                  Trusted by 1,000+ <br />Modern Homeowners
                 </div>
               </motion.div>
 

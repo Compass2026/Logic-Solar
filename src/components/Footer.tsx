@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Sun, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Sun, ArrowRight } from 'lucide-react';
 import { siteData } from '../data/siteData';
 import { InternalLinks } from './InternalLinks';
 
@@ -28,13 +28,14 @@ export const Footer = () => {
             <div className="flex gap-4">
               {[
                 { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61580455196022" },
-                { icon: Twitter, href: "#" },
-                { icon: Instagram, href: "#" },
-                { icon: Linkedin, href: "#" }
+                { icon: Instagram, href: "https://www.instagram.com/logic_solar" },
+                { icon: Linkedin, href: "https://www.linkedin.com/company/logic-solar/" }
               ].map((social, i) => (
                 <a 
                   key={i}
-                  href={social.href} 
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:text-brand-dark hover:scale-110 active:scale-95 transition-all duration-300"
                 >
                   <social.icon className="w-5 h-5" />

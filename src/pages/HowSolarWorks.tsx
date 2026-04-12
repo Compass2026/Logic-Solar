@@ -18,7 +18,7 @@ export const HowSolarWorks = () => {
         title={<>Photon to <br /><span className="text-brand-gold">Power.</span></>}
         subtitle="The elegant science behind clean, renewable energy for your home."
         eyebrow="The Science"
-        backgroundImage="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=2000"
+        backgroundImage="/images/how-solar-works-hero.jpg"
       />
 
       {/* Basic Explanation */}
@@ -92,21 +92,21 @@ export const HowSolarWorks = () => {
             <div className="relative">
               <div className="aspect-square rounded-[48px] overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1542332213-31f87348057f?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Solar Component Detail" 
-                  className="w-full h-full object-cover"
+                  src="/images/logic-solar-install.jpg" 
+                  alt="Logic Solar Installer with Team Gear" 
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
               <motion.div 
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                className="absolute -bottom-10 -left-10 glass p-10 rounded-[40px] shadow-2xl hidden md:block max-w-[280px]"
+                className="absolute -bottom-6 -left-6 glass p-5 rounded-[20px] shadow-2xl hidden md:block max-w-[160px]"
               >
-                <div className="w-12 h-12 rounded-2xl bg-brand-gold/20 flex items-center justify-center mb-4">
-                  <Layout className="w-6 h-6 text-brand-dark" />
+                <div className="w-8 h-8 rounded-xl bg-brand-gold/20 flex items-center justify-center mb-3">
+                  <Layout className="w-4 h-4 text-brand-dark" />
                 </div>
-                <h4 className="text-lg font-bold text-brand-dark mb-2">Custom Geometry</h4>
-                <p className="text-xs text-brand-dark/40">Engineered to match your roof's specific pitch and orientation.</p>
+                <h4 className="text-sm font-bold text-brand-dark mb-1">Custom Geometry</h4>
+                <p className="text-[10px] text-brand-dark/40 leading-tight">Engineered to match your roof's specific pitch and orientation.</p>
               </motion.div>
             </div>
           </div>

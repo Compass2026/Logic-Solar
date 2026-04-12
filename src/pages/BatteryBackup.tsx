@@ -38,7 +38,8 @@ export const BatteryBackup = () => {
         title={<>Energy <br /><span className="text-brand-gold">Independence.</span></>}
         subtitle="Never be left in the dark again. Store your solar power and keep your home running when the grid fails."
         eyebrow="Battery Backup"
-        backgroundImage="https://images.unsplash.com/photo-1620614831320-997d53cc0452?auto=format&fit=crop&q=80&w=2000"
+        backgroundImage="/images/battery-hero.jpg"
+        imagePosition="object-right"
       />
 
       {/* Why Battery Matters */}
@@ -86,16 +87,16 @@ export const BatteryBackup = () => {
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                className="absolute -bottom-10 -right-10 glass p-10 rounded-[40px] shadow-2xl hidden md:block"
+                className="absolute -bottom-6 -right-6 glass p-5 rounded-[20px] shadow-2xl hidden md:block"
               >
-                <div className="flex items-center gap-4 mb-6">
-                  <Battery className="w-10 h-10 text-brand-gold animate-pulse" />
-                  <div className="h-2 w-24 bg-gray-100 rounded-full overflow-hidden">
+                <div className="flex items-center gap-3 mb-3">
+                  <Battery className="w-6 h-6 text-brand-gold animate-pulse" />
+                  <div className="h-1.5 w-12 bg-gray-100 rounded-full overflow-hidden">
                     <div className="h-full w-[85%] bg-brand-gold rounded-full" />
                   </div>
                 </div>
-                <h4 className="text-xl font-bold text-brand-dark">Backup Ready</h4>
-                <p className="text-sm text-brand-dark/40">Continuously monitoring the grid.</p>
+                <h4 className="text-sm font-bold text-brand-dark">Backup Ready</h4>
+                <p className="text-[10px] text-brand-dark/40 leading-tight">Continuously monitoring the grid.</p>
               </motion.div>
             </div>
           </div>

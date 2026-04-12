@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { PageHero } from './PageHero';
+import { cn } from '../lib/utils';
 import { SEO } from './SEO';
 import { SectionHeading } from './SectionHeading';
 import { QuoteForm } from './QuoteForm';
@@ -15,6 +16,7 @@ interface ServiceTemplateProps {
     features: string[];
     benefits: string[];
     backgroundImage: string;
+    imagePosition?: string;
   };
 }
 
@@ -30,6 +32,7 @@ export const ServiceTemplate = ({ service }: ServiceTemplateProps) => {
         title={service.title}
         subtitle={service.fullDescription}
         backgroundImage={service.backgroundImage}
+        imagePosition={service.imagePosition}
         eyebrow="Premium Service"
       />
 
@@ -69,7 +72,7 @@ export const ServiceTemplate = ({ service }: ServiceTemplateProps) => {
               <img 
                 src={service.backgroundImage} 
                 alt={service.title}
-                className="w-full h-full object-cover"
+                className={cn("w-full h-full object-cover", service.imagePosition)}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 to-transparent" />
             </motion.div>
@@ -111,21 +114,7 @@ export const ServiceTemplate = ({ service }: ServiceTemplateProps) => {
         </div>
       </section>
 
-      <section className="py-24 bg-white" id="quote">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <SectionHeading 
-              eyebrow="Get Started"
-              title="Secure Your Energy Future"
-              description="Fill out the form below for a custom engineering assessment and quote."
-              centered={true}
-            />
-            <div className="mt-12 p-8 md:p-12 rounded-3xl bg-brand-dark shadow-2xl relative overflow-hidden">
-               <QuoteForm />
-            </div>
-          </div>
-        </div>
-      </section>
+      <QuoteForm />
     </>
   );
 };

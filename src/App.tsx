@@ -21,11 +21,11 @@ import { ServiceRequestPage } from './pages/ServiceRequestPage';
 import { CreditApplicationPage } from './pages/CreditApplicationPage';
 import { CreditRepairPage } from './pages/CreditRepairPage';
 import { DealSubmissionPage } from './pages/DealSubmissionPage';
-import { HIAPage } from './pages/HIAPage';
 import { LoginsPage } from './pages/LoginsPage';
 import { OnboardingPage } from './pages/OnboardingPage';
 import { SiteSurveyPage } from './pages/SiteSurveyPage';
 import { ThankYouPage } from './pages/ThankYouPage';
+import { CommercialPage } from './pages/CommercialPage';
 
 
 
@@ -108,13 +108,13 @@ export default function App() {
               <Route path="/adders" element={<AddersPage />} />
               <Route path="/service" element={<ServiceRequestPage />} />
               <Route path="/credit" element={<CreditApplicationPage />} />
-              <Route path="/creditrepair" element={<CreditRepairPage />} />
-              <Route path="/dealsubmission" element={<DealSubmissionPage />} />
-              <Route path="/hia" element={<HIAPage />} />
+              <Route path="/credit-repair" element={<CreditRepairPage />} />
+              <Route path="/deal-submission" element={<DealSubmissionPage />} />
               <Route path="/logins" element={<LoginsPage />} />
-              <Route path="/onboarding" element={<OnboardingPage />} />
-              <Route path="/sitesurvey" element={<SiteSurveyPage />} />
+              <Route path="/onboard" element={<OnboardingPage />} />
+              <Route path="/sitesurveys" element={<SiteSurveyPage />} />
               <Route path="/thankyou" element={<ThankYouPage />} />
+              <Route path="/commercial" element={<CommercialPage />} />
 
 
             </Routes>

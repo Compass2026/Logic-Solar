@@ -3,9 +3,9 @@ export const siteData = {
   tagline: "The Logical Choice for Energy Independence",
   description: "Premium solar solutions designed for performance, elegance, and long-term savings.",
   contact: {
-    phone: "(800) 555-LOGIC",
-    email: "hello@logicsolar.com",
-    address: "123 Solar Way, Energy City, CA 90210",
+    phone: "(816) 300-5781",
+    email: "operations@logic-solar.com",
+    address: "7300 W 110th St Plaza 1, 7th Floor, Overland Park, KS 66210",
   },
   nav: [
     { name: "Home", href: "/" },
@@ -37,7 +37,7 @@ export const siteData = {
   ],
   stats: [
     { label: "Energy Savings", value: "40%+", icon: "Zap" },
-    { label: "Homes Powered", value: "12k+", icon: "Home" },
+    { label: "Homes Powered", value: "1k+", icon: "Home" },
     { label: "Customer Rating", value: "4.9/5", icon: "Star" },
     { label: "Years Warranty", value: "25", icon: "ShieldCheck" },
   ],
@@ -82,7 +82,8 @@ export const siteData = {
         "Peace of mind for your family"
       ],
       icon: "Battery",
-      backgroundImage: "https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?auto=format&fit=crop&q=80&w=2000"
+      backgroundImage: "/images/battery-hero.jpg",
+      imagePosition: "object-right"
     },
     {
       id: "commercial",
@@ -113,7 +114,7 @@ export const siteData = {
       state: "MO",
       title: "Premium Solar Installation in Missouri",
       description: "Logic Solar provides elite solar energy solutions to homeowners across the Show-Me State. From St. Louis to Kansas City, we bring premium energy to Missouri.",
-      backgroundImage: "/images/st-louis-arch.jpeg",
+      backgroundImage: "/images/missouri-hero.jpg",
       highlights: [
         "Show-Me State Incentives",
         "St. Louis & KC Local Teams",
@@ -127,6 +128,7 @@ export const siteData = {
       state: "IL",
       title: "Illinois's Choice for Luxury Solar",
       description: "Harness the power of the sun in the Prairie State with high-performance solar systems designed for the midwestern climate.",
+      backgroundImage: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&q=80&w=2000",
       highlights: [
         "Illinois Shines Program Benefits",
         "Chicago Metro Service Area",
@@ -140,6 +142,7 @@ export const siteData = {
       state: "KS",
       title: "High-Performance Solar in Kansas",
       description: "Experience total energy independence in the Sunflower State with Logic Solar's custom-engineered residential systems.",
+      backgroundImage: "/images/kansas-hero.jpg",
       highlights: [
         "High Solar Irradiance Performance",
         "Storm-Resistant Mounting",
@@ -153,6 +156,7 @@ export const siteData = {
       state: "OK",
       title: "Oklahoma's Premium Solar Provider",
       description: "Bringing world-class solar technology and tornado-grade engineering to Oklahoma families and businesses.",
+      backgroundImage: "/images/oklahoma-hero.jpg",
       highlights: [
         "Sooners State Solar Credits",
         "Tornado-Grade Engineering",
@@ -166,6 +170,7 @@ export const siteData = {
       state: "TX",
       title: "Texas-Sized Energy Independence",
       description: "From Dallas to Austin, Logic Solar delivers the most reliable and efficient solar solutions for the Lonestar State.",
+      backgroundImage: "/images/texas-hero.jpg",
       highlights: [
         "Texas-Sized Energy Savings",
         "Off-Grid Readiness",

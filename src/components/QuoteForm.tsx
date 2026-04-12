@@ -28,7 +28,7 @@ export const QuoteForm = () => {
                 Get Your Free <br />Solar Quote
               </h2>
               <p className="text-brand-dark/70 font-medium leading-relaxed mb-8">
-                Join 12,000+ homeowners who have switched to Logic Solar. Our experts will analyze your home and provide a custom savings report.
+                Join 1,000+ homeowners who have switched to Logic Solar. Our experts will analyze your home and provide a custom savings report.
               </p>
             </div>
             <div className="space-y-6">

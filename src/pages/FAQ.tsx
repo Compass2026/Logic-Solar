@@ -71,8 +71,8 @@ export const FAQ = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { icon: Mail, label: "Email Us", val: "support@logicsolar.com" },
-                { icon: Phone, label: "Call Us", val: "(800) LOGIC-SOLAR" },
+                { icon: Mail, label: "Email Us", val: siteData.contact.email },
+                { icon: Phone, label: "Call Us", val: "(816) 300-5781" },
                 { icon: MessageSquare, label: "Live Chat", val: "Available 9am-5pm" }
               ].map((item, i) => (
                 <div key={i} className="p-8 rounded-[32px] bg-white border border-gray-100 flex flex-col items-center text-center group hover:border-brand-gold transition-all">

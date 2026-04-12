@@ -4,6 +4,7 @@ import { Mail, Phone, MapPin, MessageSquare, Clock, Globe, Shield } from 'lucide
 import { PageHero } from '../components/PageHero';
 import { SectionHeading } from '../components/SectionHeading';
 import { SEO } from '../components/SEO';
+import { siteData } from '../data/siteData';
 
 export const Contact = () => {
   React.useEffect(() => {
@@ -46,9 +47,9 @@ export const Contact = () => {
 
               <div className="space-y-10 mt-16">
                 {[
-                  { icon: Phone, label: "Call Us", val: "(800) LOGIC-SOLAR", sub: "Mon-Fri, 9am - 6pm" },
-                  { icon: Mail, label: "Email Us", val: "hello@logicsolar.com", sub: "Response within 24 hours" },
-                  { icon: MapPin, label: "Visit Our Studio", val: "123 Energy Way, Suite 500", sub: "Austin, TX 78701" }
+                  { icon: Phone, label: "Call Us", val: "(816) 300-5781", sub: "Mon-Fri, 9am - 6pm" },
+                  { icon: Mail, label: "Email Us", val: siteData.contact.email, sub: "Response within 24 hours" },
+                  { icon: MapPin, label: "Visit Our Studio", val: "7300 W 110th St Plaza 1", sub: "7th Floor, Overland Park, KS 66210" }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-8 group">
                     <div className="shrink-0 w-16 h-16 rounded-2xl bg-gray-50 flex items-center justify-center group-hover:bg-brand-gold transition-all duration-500">

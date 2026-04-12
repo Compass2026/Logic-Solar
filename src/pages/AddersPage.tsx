@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { InternalFormPageTemplate } from '../components/InternalFormPageTemplate';
+import { FileText, ExternalLink } from 'lucide-react';
 
 const ADDERS_DATA = [
   { item: "Main Panel Upgrade", price: "$3,500" },
@@ -40,7 +41,38 @@ export const AddersPage = () => {
       subtitle="Review Logic Solar adders and pricing details below."
       eyebrow="Internal Utility"
     >
-      <div className="space-y-1">
+      <div className="space-y-12">
+        {/* Enphase IQ8MC Datasheet Button */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-md">
+            <motion.a
+              href="https://www.logic-solar.com/wp-content/uploads/2026/01/Enphase-IQ8MC-.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ y: -5, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="flex items-center justify-between p-6 rounded-3xl bg-white border-2 border-brand-teal/10 hover:border-brand-teal/30 shadow-lg hover:shadow-brand-teal/10 transition-all group"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-brand-teal/10 flex items-center justify-center group-hover:bg-brand-teal group-hover:text-white transition-colors duration-500">
+                  <FileText className="w-6 h-6" />
+                </div>
+                <div className="text-left">
+                  <span className="block text-[10px] font-black uppercase tracking-[0.2em] text-brand-dark/30 mb-1">Datasheet</span>
+                  <h4 className="text-xl font-bold text-brand-dark">Enphase IQ8MC</h4>
+                </div>
+              </div>
+              <ExternalLink className="w-5 h-5 text-brand-dark/20 group-hover:text-brand-teal transition-colors" />
+            </motion.a>
+          </div>
+        </div>
+
+        {/* 
+            GHL FORM PLACEHOLDER 
+            (Add GoHighLevel form iframe below this comment if needed)
+        */}
+
+        <div className="space-y-1">
         {ADDERS_DATA.map((adder, index) => (
           <motion.div
             key={adder.item}
@@ -67,6 +99,7 @@ export const AddersPage = () => {
           </motion.div>
         ))}
       </div>
-    </InternalFormPageTemplate>
+    </div>
+  </InternalFormPageTemplate>
   );
 };

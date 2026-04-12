@@ -101,12 +101,12 @@ export const SolarInstallation = () => {
                   className="w-full h-full object-cover aspect-video"
                 />
               </div>
-              <div className="absolute -top-10 -right-10 glass p-10 rounded-[40px] shadow-2xl hidden md:block">
-                <div className="w-14 h-14 rounded-2xl bg-brand-gold flex items-center justify-center mb-6">
-                  <Sun className="w-7 h-7 text-brand-dark" />
+              <div className="absolute -top-6 -right-6 glass p-5 rounded-[20px] shadow-2xl hidden md:block">
+                <div className="w-10 h-10 rounded-xl bg-brand-gold flex items-center justify-center mb-3">
+                  <Sun className="w-5 h-5 text-brand-dark" />
                 </div>
-                <h4 className="text-xl font-bold text-brand-dark mb-2">Max Efficiency</h4>
-                <p className="text-sm text-brand-dark/40 max-w-[150px]">Optimized for low-light performance.</p>
+                <h4 className="text-sm font-bold text-brand-dark mb-1">Max Efficiency</h4>
+                <p className="text-[10px] text-brand-dark/40 max-w-[100px] leading-tight">Optimized for low-light performance.</p>
               </div>
             </motion.div>
           </div>

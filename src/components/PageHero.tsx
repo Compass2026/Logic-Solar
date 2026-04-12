@@ -9,6 +9,7 @@ interface PageHeroProps {
   subtitle?: string;
   eyebrow?: string;
   backgroundImage?: string;
+  imagePosition?: string;
   className?: string;
 }
 
@@ -17,6 +18,7 @@ export const PageHero = ({
   subtitle,
   eyebrow,
   backgroundImage = "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=2000",
+  imagePosition = "object-center",
   className
 }: PageHeroProps) => {
   return (
@@ -26,7 +28,7 @@ export const PageHero = ({
         <img 
           src={backgroundImage} 
           alt="Background" 
-          className="w-full h-full object-cover opacity-30"
+          className={cn("w-full h-full object-cover opacity-30", imagePosition)}
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-brand-dark/40 to-brand-dark" />
