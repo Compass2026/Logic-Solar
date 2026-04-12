@@ -63,8 +63,8 @@ export const About = () => {
             >
               <div className="aspect-[4/5] rounded-[48px] overflow-hidden shadow-2xl">
                 <img 
-                  src="/images/we-went-solar.jpg" 
-                  alt="Happy Logic Solar Customer" 
+                  src="/images/house-aerial-solar.jpg" 
+                  alt="Modern home with high-efficiency solar panel installation" 
                   className="w-full h-full object-cover object-center"
                 />
               </div>
