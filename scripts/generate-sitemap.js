@@ -37,9 +37,9 @@ const generateSitemap = () => {
     // stateKey is 'tx', 'ok', etc.
     // Ensure the cities are typed as string array
     const cities = stateData.cities || [];
-    cities.forEach(city => {
-      // Format city slug: "San Antonio" -> "san-antonio"
-      const citySlug = city.toLowerCase().replace(/\s+/g, '-');
+    cities.forEach(cityObj => {
+      // Use the pre-computed slug from the city object
+      const citySlug = cityObj.slug;
       sitemap += `  <url><loc>${BASE_URL}/locations/${stateKey}/${citySlug}</loc><priority>0.7</priority></url>\n`;
     });
   }
