@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { CityTemplate } from '../components/CityTemplate';
+import { siteData } from '../data/siteData';
 import locationsData from '../data/locations-solar.json';
 
 export const CityPage = () => {
@@ -11,10 +12,14 @@ export const CityPage = () => {
     str.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
   const formattedCity = city ? formatName(city) : '';
-  const formattedState = state ? state.toUpperCase() : '';
 
-  // Check if state exists in our JSON
-  const stateKey = state?.toLowerCase() as keyof typeof locationsData.states;
+  // The URL uses the full state slug (e.g. "texas"), but the JSON is keyed by
+  // 2-letter abbreviation (e.g. "tx"). Resolve via siteData.locations.
+  const locationEntry = siteData.locations.find(l => l.slug === state);
+  if (!locationEntry) return <Navigate to="/" replace />;
+
+  const formattedState = locationEntry.state; // e.g. "TX"
+  const stateKey = locationEntry.state.toLowerCase() as keyof typeof locationsData.states;
   const stateData = locationsData.states[stateKey];
 
   if (!stateData) {

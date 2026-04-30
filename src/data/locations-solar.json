@@ -6,6 +6,7 @@
       "sunlightDays": 234,
       "utilityFocus": "Oncor and CenterPoint Energy net metering programs",
       "stateIncentive": "the Federal Solar Investment Tax Credit (ITC) plus local property tax exemptions on solar equipment",
+      "avgBill": "$156",
       "cities": [
         {
           "city": "Houston",
@@ -1315,6 +1316,7 @@
       "sunlightDays": 215,
       "utilityFocus": "PSO and OG&E net metering incentives",
       "stateIncentive": "the Federal Solar Investment Tax Credit (ITC) and Oklahoma's sales tax exemption on solar equipment",
+      "avgBill": "$132",
       "cities": [
         {
           "city": "Oklahoma City",
@@ -2624,6 +2626,7 @@
       "sunlightDays": 195,
       "utilityFocus": "Evergy's net metering and Solar Rebate Program",
       "stateIncentive": "the Federal Solar Investment Tax Credit (ITC) and Kansas's property tax exemption for renewable energy systems",
+      "avgBill": "$122",
       "cities": [
         {
           "city": "Wichita",
@@ -3933,6 +3936,7 @@
       "sunlightDays": 189,
       "utilityFocus": "ComEd's Illinois Shines net metering credits",
       "stateIncentive": "the Illinois Shines Adjustable Block Program (ABP), which provides guaranteed solar bill credits",
+      "avgBill": "$105",
       "cities": [
         {
           "city": "Chicago",
@@ -5242,6 +5246,7 @@
       "sunlightDays": 205,
       "utilityFocus": "Ameren Missouri's renewable energy net metering program",
       "stateIncentive": "the Federal Solar Investment Tax Credit (ITC) and Missouri's solar property tax exemption",
+      "avgBill": "$138",
       "cities": [
         {
           "city": "Kansas City",

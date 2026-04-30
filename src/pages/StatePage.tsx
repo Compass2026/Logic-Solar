@@ -94,25 +94,32 @@ export const StatePage = () => {
 
       <QuoteForm />
 
+      {/* Cities We Serve — SEO Internal Linking Section */}
       <section className="py-24 bg-brand-light">
-        <div className="container-custom text-center">
+        <div className="container-custom">
           <SectionHeading 
-            eyebrow="Locations"
-            title={`Areas We Serve in ${location.city}`}
-            description={`Expanding premium solar across ${location.city}. Find your local Logic Solar team below.`}
+            eyebrow="Service Areas"
+            title={`Cities We Serve in ${stateData?.name || location.city}`}
+            description={`Logic Solar proudly serves homeowners across ${stateData?.name || location.city}. Click your city below to explore local solar incentives, savings estimates, and available installation teams.`}
             centered={true}
           />
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-             {cities.map((cityObj) => (
-               <Link 
-                 key={cityObj.slug} 
-                 to={`/locations/${stateKey}/${cityObj.slug}`}
-                 className="px-6 py-4 rounded-xl bg-white border border-black/5 font-bold text-sm text-brand-dark hover:border-brand-gold hover:text-brand-gold transition-all duration-300 shadow-sm hover:shadow-md"
-               >
-                  {cityObj.city}
-               </Link>
-             ))}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mt-12">
+            {cities.map((cityObj) => (
+              <Link 
+                key={cityObj.slug} 
+                to={`/locations/${location.slug}/${cityObj.slug}`}
+                className="group flex items-center gap-2 px-4 py-3 rounded-xl bg-white border border-black/5 text-sm font-semibold text-brand-dark hover:border-brand-gold hover:text-brand-gold hover:-translate-y-0.5 transition-all duration-200 shadow-sm hover:shadow-md"
+              >
+                <MapPin className="w-3.5 h-3.5 shrink-0 text-brand-gold/60 group-hover:text-brand-gold transition-colors duration-200" />
+                {cityObj.city}
+              </Link>
+            ))}
           </div>
+          {cities.length > 0 && (
+            <p className="text-center text-sm text-brand-dark/40 mt-8">
+              Showing {cities.length} service cities in {stateData?.name || location.city}
+            </p>
+          )}
         </div>
       </section>
     </>

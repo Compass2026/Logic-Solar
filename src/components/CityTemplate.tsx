@@ -8,6 +8,7 @@ import { SectionHeading } from './SectionHeading';
 import { QuoteForm } from './QuoteForm';
 import { TrustStrip } from './TrustStrip';
 import { CityFAQSection } from './CityFAQSection';
+import { SolarGeoTrustBanner } from './SolarGeoTrustBanner';
 import { siteData } from '../data/siteData';
 
 interface CityTemplateProps {
@@ -25,6 +26,7 @@ interface CityTemplateProps {
     sunlightDays?: number;
     utilityFocus?: string;
     stateIncentive?: string;
+    avgBill?: string;
     cities: { city: string; slug: string; state: string; stateName: string }[];
   };
 }
@@ -43,6 +45,14 @@ export const CityTemplate = ({ location, stateData }: CityTemplateProps) => {
         backgroundImage={location.backgroundImage || "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&q=80&w=2000"}
         eyebrow={`Solar Energy in ${location.city}`}
       />
+
+      {/* GEO Trust Banner — AI-parseable authority signals */}
+      {stateData && (
+        <SolarGeoTrustBanner
+          stateName={stateData.name}
+          avgBill={stateData.avgBill}
+        />
+      )}
 
       <TrustStrip />
 
