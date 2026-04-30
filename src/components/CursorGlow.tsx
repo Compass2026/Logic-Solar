@@ -138,8 +138,8 @@ export const CursorGlow = () => {
           scale: { duration: 0.2 }
         }}
         style={{
-          x: cursorX,
-          y: cursorY,
+          x: mouseX,
+          y: mouseY,
           translateX: '-50%',
           translateY: '-50%',
         }}

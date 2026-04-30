@@ -11,6 +11,8 @@ import { FAQ } from './pages/FAQ';
 import { Contact } from './pages/Contact';
 import { ServiceTemplate } from './components/ServiceTemplate';
 import { CityTemplate } from './components/CityTemplate';
+import { StatePage } from './pages/StatePage';
+import { CityPage } from './pages/CityPage';
 import { LoadingScreen } from './components/LoadingScreen';
 import { CursorGlow } from './components/CursorGlow';
 import { StickyMobileCTA } from './components/StickyMobileCTA';
@@ -52,15 +54,7 @@ const DynamicServicePage = () => {
   return <ServiceTemplate service={service} />;
 };
 
-// Dynamic Location Page Wrapper
-const DynamicLocationPage = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const location = siteData.locations.find(l => l.slug === slug);
-  
-  if (!location) return <Navigate to="/" replace />;
-  
-  return <CityTemplate location={location} />;
-};
+
 
 export default function App() {
   const [isLoaded, setIsLoaded] = React.useState(false);
@@ -96,7 +90,8 @@ export default function App() {
               <Route path="/services/how-it-works" element={<HowSolarWorks />} />
               
               {/* Dynamic Location Routes */}
-              <Route path="/locations/:slug" element={<DynamicLocationPage />} />
+              <Route path="/locations/:stateId" element={<StatePage />} />
+              <Route path="/locations/:state/:city" element={<CityPage />} />
               
               <Route path="/financing" element={<Financing />} />
               <Route path="/faq" element={<FAQ />} />

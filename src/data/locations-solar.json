@@ -1,0 +1,6534 @@
+{
+  "states": {
+    "tx": {
+      "name": "Texas",
+      "heroImage": "/images/texas-hero.jpg",
+      "cities": [
+        {
+          "city": "Houston",
+          "slug": "houston",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "San Antonio",
+          "slug": "san-antonio",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Dallas",
+          "slug": "dallas",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Austin",
+          "slug": "austin",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Fort Worth",
+          "slug": "fort-worth",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "El Paso",
+          "slug": "el-paso",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Arlington",
+          "slug": "arlington",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Corpus Christi",
+          "slug": "corpus-christi",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Plano",
+          "slug": "plano",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Laredo",
+          "slug": "laredo",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lubbock",
+          "slug": "lubbock",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Garland",
+          "slug": "garland",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Irving",
+          "slug": "irving",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Amarillo",
+          "slug": "amarillo",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Grand Prairie",
+          "slug": "grand-prairie",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Brownsville",
+          "slug": "brownsville",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Pasadena",
+          "slug": "pasadena",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "McKinney",
+          "slug": "mckinney",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Mesquite",
+          "slug": "mesquite",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "McAllen",
+          "slug": "mcallen",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Killeen",
+          "slug": "killeen",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Frisco",
+          "slug": "frisco",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Waco",
+          "slug": "waco",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Carrollton",
+          "slug": "carrollton",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Denton",
+          "slug": "denton",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Midland",
+          "slug": "midland",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Abilene",
+          "slug": "abilene",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Beaumont",
+          "slug": "beaumont",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Round Rock",
+          "slug": "round-rock",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Odessa",
+          "slug": "odessa",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Wichita Falls",
+          "slug": "wichita-falls",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Richardson",
+          "slug": "richardson",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lewisville",
+          "slug": "lewisville",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Tyler",
+          "slug": "tyler",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "College Station",
+          "slug": "college-station",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Pearland",
+          "slug": "pearland",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "San Angelo",
+          "slug": "san-angelo",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Allen",
+          "slug": "allen",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "League City",
+          "slug": "league-city",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Sugar Land",
+          "slug": "sugar-land",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Longview",
+          "slug": "longview",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Edinburg",
+          "slug": "edinburg",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Mission",
+          "slug": "mission",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Bryan",
+          "slug": "bryan",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Baytown",
+          "slug": "baytown",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Pharr",
+          "slug": "pharr",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Temple",
+          "slug": "temple",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Missouri City",
+          "slug": "missouri-city",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Flower Mound",
+          "slug": "flower-mound",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Harlingen",
+          "slug": "harlingen",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "North Richland Hills",
+          "slug": "north-richland-hills",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Victoria",
+          "slug": "victoria",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Conroe",
+          "slug": "conroe",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "New Braunfels",
+          "slug": "new-braunfels",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Mansfield",
+          "slug": "mansfield",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Cedar Park",
+          "slug": "cedar-park",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Rowlett",
+          "slug": "rowlett",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Port Arthur",
+          "slug": "port-arthur",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Euless",
+          "slug": "euless",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Georgetown",
+          "slug": "georgetown",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Pflugerville",
+          "slug": "pflugerville",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "DeSoto",
+          "slug": "desoto",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "San Marcos",
+          "slug": "san-marcos",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Grapevine",
+          "slug": "grapevine",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Bedford",
+          "slug": "bedford",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Galveston",
+          "slug": "galveston",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Cedar Hill",
+          "slug": "cedar-hill",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Texas City",
+          "slug": "texas-city",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Wylie",
+          "slug": "wylie",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Haltom City",
+          "slug": "haltom-city",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Keller",
+          "slug": "keller",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Coppell",
+          "slug": "coppell",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Rockwall",
+          "slug": "rockwall",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Huntsville",
+          "slug": "huntsville",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Duncanville",
+          "slug": "duncanville",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Sherman",
+          "slug": "sherman",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "The Colony",
+          "slug": "the-colony",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Burleson",
+          "slug": "burleson",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Hurst",
+          "slug": "hurst",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lancaster",
+          "slug": "lancaster",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Texarkana",
+          "slug": "texarkana",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Friendswood",
+          "slug": "friendswood",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Weslaco",
+          "slug": "weslaco",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lufkin",
+          "slug": "lufkin",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Schertz",
+          "slug": "schertz",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "San Juan",
+          "slug": "san-juan",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Del Rio",
+          "slug": "del-rio",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "La Porte",
+          "slug": "la-porte",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Nacogdoches",
+          "slug": "nacogdoches",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Deer Park",
+          "slug": "deer-park",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Rosenberg",
+          "slug": "rosenberg",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Copperas Cove",
+          "slug": "copperas-cove",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Little Elm",
+          "slug": "little-elm",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Socorro",
+          "slug": "socorro",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Kyle",
+          "slug": "kyle",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Leander",
+          "slug": "leander",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Farmers Branch",
+          "slug": "farmers-branch",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Waxahachie",
+          "slug": "waxahachie",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Cleburne",
+          "slug": "cleburne",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Southlake",
+          "slug": "southlake",
+          "state": "tx",
+          "stateName": "Texas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        }
+      ]
+    },
+    "ok": {
+      "name": "Oklahoma",
+      "heroImage": "/images/oklahoma-hero.jpg",
+      "cities": [
+        {
+          "city": "Oklahoma City",
+          "slug": "oklahoma-city",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Tulsa",
+          "slug": "tulsa",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Norman",
+          "slug": "norman",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Broken Arrow",
+          "slug": "broken-arrow",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Edmond",
+          "slug": "edmond",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lawton",
+          "slug": "lawton",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Moore",
+          "slug": "moore",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Midwest City",
+          "slug": "midwest-city",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Enid",
+          "slug": "enid",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Stillwater",
+          "slug": "stillwater",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Owasso",
+          "slug": "owasso",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Bartlesville",
+          "slug": "bartlesville",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Muskogee",
+          "slug": "muskogee",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Shawnee",
+          "slug": "shawnee",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Bixby",
+          "slug": "bixby",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Jenks",
+          "slug": "jenks",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Ardmore",
+          "slug": "ardmore",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Ponca City",
+          "slug": "ponca-city",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Yukon",
+          "slug": "yukon",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Duncan",
+          "slug": "duncan",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Sapulpa",
+          "slug": "sapulpa",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Del City",
+          "slug": "del-city",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Bethany",
+          "slug": "bethany",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Mustang",
+          "slug": "mustang",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Sand Springs",
+          "slug": "sand-springs",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Claremore",
+          "slug": "claremore",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Altus",
+          "slug": "altus",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Durant",
+          "slug": "durant",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "McAlester",
+          "slug": "mcalester",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "El Reno",
+          "slug": "el-reno",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Ada",
+          "slug": "ada",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Tahlequah",
+          "slug": "tahlequah",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Chickasha",
+          "slug": "chickasha",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Glenpool",
+          "slug": "glenpool",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Miami",
+          "slug": "miami",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Guymon",
+          "slug": "guymon",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Choctaw",
+          "slug": "choctaw",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Weatherford",
+          "slug": "weatherford",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Okmulgee",
+          "slug": "okmulgee",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Elk City",
+          "slug": "elk-city",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Woodward",
+          "slug": "woodward",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Guthrie",
+          "slug": "guthrie",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Newcastle",
+          "slug": "newcastle",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Piedmont",
+          "slug": "piedmont",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Clinton",
+          "slug": "clinton",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Coweta",
+          "slug": "coweta",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Cushing",
+          "slug": "cushing",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Sallisaw",
+          "slug": "sallisaw",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Poteau",
+          "slug": "poteau",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Warr Acres",
+          "slug": "warr-acres",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Skiatook",
+          "slug": "skiatook",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Blanchard",
+          "slug": "blanchard",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Perry",
+          "slug": "perry",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Grove",
+          "slug": "grove",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Noble",
+          "slug": "noble",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Idabel",
+          "slug": "idabel",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Pryor Creek",
+          "slug": "pryor-creek",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Collinsville",
+          "slug": "collinsville",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Purcell",
+          "slug": "purcell",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Tecumseh",
+          "slug": "tecumseh",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Pauls Valley",
+          "slug": "pauls-valley",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Henryetta",
+          "slug": "henryetta",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Hugo",
+          "slug": "hugo",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lone Grove",
+          "slug": "lone-grove",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Seminole",
+          "slug": "seminole",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Alva",
+          "slug": "alva",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Anadarko",
+          "slug": "anadarko",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Holdenville",
+          "slug": "holdenville",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Kingfisher",
+          "slug": "kingfisher",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Chandler",
+          "slug": "chandler",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Catoosa",
+          "slug": "catoosa",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Hobart",
+          "slug": "hobart",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Checotah",
+          "slug": "checotah",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Slaughterville",
+          "slug": "slaughterville",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Bristow",
+          "slug": "bristow",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Vinita",
+          "slug": "vinita",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "McLoud",
+          "slug": "mcloud",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Spencer",
+          "slug": "spencer",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Wewoka",
+          "slug": "wewoka",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Stigler",
+          "slug": "stigler",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Hominy",
+          "slug": "hominy",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Watonga",
+          "slug": "watonga",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Tonkawa",
+          "slug": "tonkawa",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Marlow",
+          "slug": "marlow",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Harrah",
+          "slug": "harrah",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Madill",
+          "slug": "madill",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Broken Bow",
+          "slug": "broken-bow",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Healdton",
+          "slug": "healdton",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Frederick",
+          "slug": "frederick",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Hinton",
+          "slug": "hinton",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Nowata",
+          "slug": "nowata",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Okemah",
+          "slug": "okemah",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Eufaula",
+          "slug": "eufaula",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Perkins",
+          "slug": "perkins",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lindsay",
+          "slug": "lindsay",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Marietta",
+          "slug": "marietta",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Mangum",
+          "slug": "mangum",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Heavener",
+          "slug": "heavener",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Fairview",
+          "slug": "fairview",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Atoka",
+          "slug": "atoka",
+          "state": "ok",
+          "stateName": "Oklahoma",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        }
+      ]
+    },
+    "ks": {
+      "name": "Kansas",
+      "heroImage": "/images/kansas-hero.jpg",
+      "cities": [
+        {
+          "city": "Wichita",
+          "slug": "wichita",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Overland Park",
+          "slug": "overland-park",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Kansas City",
+          "slug": "kansas-city",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Olathe",
+          "slug": "olathe",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Topeka",
+          "slug": "topeka",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lawrence",
+          "slug": "lawrence",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Shawnee",
+          "slug": "shawnee",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lenexa",
+          "slug": "lenexa",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Manhattan",
+          "slug": "manhattan",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Salina",
+          "slug": "salina",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Hutchinson",
+          "slug": "hutchinson",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Leavenworth",
+          "slug": "leavenworth",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Leawood",
+          "slug": "leawood",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Garden City",
+          "slug": "garden-city",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Dodge City",
+          "slug": "dodge-city",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Derby",
+          "slug": "derby",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Gardner",
+          "slug": "gardner",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Emporia",
+          "slug": "emporia",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Prairie Village",
+          "slug": "prairie-village",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Junction City",
+          "slug": "junction-city",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Hays",
+          "slug": "hays",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Pittsburg",
+          "slug": "pittsburg",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Liberal",
+          "slug": "liberal",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Newton",
+          "slug": "newton",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Andover",
+          "slug": "andover",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Great Bend",
+          "slug": "great-bend",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "McPherson",
+          "slug": "mcpherson",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Ottawa",
+          "slug": "ottawa",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "El Dorado",
+          "slug": "el-dorado",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Arkansas City",
+          "slug": "arkansas-city",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Winfield",
+          "slug": "winfield",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Merriam",
+          "slug": "merriam",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Haysville",
+          "slug": "haysville",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lansing",
+          "slug": "lansing",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Atchison",
+          "slug": "atchison",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Spring Hill",
+          "slug": "spring-hill",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Bel Aire",
+          "slug": "bel-aire",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Mission",
+          "slug": "mission",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Parsons",
+          "slug": "parsons",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Augusta",
+          "slug": "augusta",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Coffeyville",
+          "slug": "coffeyville",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Chanute",
+          "slug": "chanute",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Independence",
+          "slug": "independence",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Park City",
+          "slug": "park-city",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Bonner Springs",
+          "slug": "bonner-springs",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Wellington",
+          "slug": "wellington",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Fort Scott",
+          "slug": "fort-scott",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Valley Center",
+          "slug": "valley-center",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Roeland Park",
+          "slug": "roeland-park",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Basehor",
+          "slug": "basehor",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Pratt",
+          "slug": "pratt",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Abilene",
+          "slug": "abilene",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Eudora",
+          "slug": "eudora",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Mulvane",
+          "slug": "mulvane",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "De Soto",
+          "slug": "de-soto",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Paola",
+          "slug": "paola",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Ulysses",
+          "slug": "ulysses",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Maize",
+          "slug": "maize",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Tonganoxie",
+          "slug": "tonganoxie",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Colby",
+          "slug": "colby",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Iola",
+          "slug": "iola",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Concordia",
+          "slug": "concordia",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Goddard",
+          "slug": "goddard",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Louisburg",
+          "slug": "louisburg",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Wamego",
+          "slug": "wamego",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Baldwin City",
+          "slug": "baldwin-city",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Edwardsville",
+          "slug": "edwardsville",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Goodland",
+          "slug": "goodland",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Russell",
+          "slug": "russell",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Rose Hill",
+          "slug": "rose-hill",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lindsborg",
+          "slug": "lindsborg",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Hesston",
+          "slug": "hesston",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Hugoton",
+          "slug": "hugoton",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Osawatomie",
+          "slug": "osawatomie",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Scott City",
+          "slug": "scott-city",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Beloit",
+          "slug": "beloit",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Clearwater",
+          "slug": "clearwater",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Hiawatha",
+          "slug": "hiawatha",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Garnett",
+          "slug": "garnett",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Marysville",
+          "slug": "marysville",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Frontenac",
+          "slug": "frontenac",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Riley",
+          "slug": "riley",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lakin",
+          "slug": "lakin",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Syracuse",
+          "slug": "syracuse",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Osage City",
+          "slug": "osage-city",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Neodesha",
+          "slug": "neodesha",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Hoisington",
+          "slug": "hoisington",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Ellsworth",
+          "slug": "ellsworth",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Cherryvale",
+          "slug": "cherryvale",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Oakley",
+          "slug": "oakley",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Plainville",
+          "slug": "plainville",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Wellsville",
+          "slug": "wellsville",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Halstead",
+          "slug": "halstead",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Norton",
+          "slug": "norton",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Girard",
+          "slug": "girard",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Moundridge",
+          "slug": "moundridge",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Cheney",
+          "slug": "cheney",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Phillipsburg",
+          "slug": "phillipsburg",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Inman",
+          "slug": "inman",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Seneca",
+          "slug": "seneca",
+          "state": "ks",
+          "stateName": "Kansas",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        }
+      ]
+    },
+    "il": {
+      "name": "Illinois",
+      "heroImage": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&q=80&w=2000",
+      "cities": [
+        {
+          "city": "Chicago",
+          "slug": "chicago",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Aurora",
+          "slug": "aurora",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Joliet",
+          "slug": "joliet",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Naperville",
+          "slug": "naperville",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Rockford",
+          "slug": "rockford",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Elgin",
+          "slug": "elgin",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Springfield",
+          "slug": "springfield",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Peoria",
+          "slug": "peoria",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Champaign",
+          "slug": "champaign",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Waukegan",
+          "slug": "waukegan",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Cicero",
+          "slug": "cicero",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Bloomington",
+          "slug": "bloomington",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Arlington Heights",
+          "slug": "arlington-heights",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Evanston",
+          "slug": "evanston",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Schaumburg",
+          "slug": "schaumburg",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Bolingbrook",
+          "slug": "bolingbrook",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Decatur",
+          "slug": "decatur",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Palatine",
+          "slug": "palatine",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Skokie",
+          "slug": "skokie",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Orland Park",
+          "slug": "orland-park",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Des Plaines",
+          "slug": "des-plaines",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Oak Lawn",
+          "slug": "oak-lawn",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Berwyn",
+          "slug": "berwyn",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Mount Prospect",
+          "slug": "mount-prospect",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Wheaton",
+          "slug": "wheaton",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Normal",
+          "slug": "normal",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Hoffman Estates",
+          "slug": "hoffman-estates",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Oak Park",
+          "slug": "oak-park",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Downers Grove",
+          "slug": "downers-grove",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Glenview",
+          "slug": "glenview",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Belleville",
+          "slug": "belleville",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Elmhurst",
+          "slug": "elmhurst",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "DeKalb",
+          "slug": "dekalb",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Moline",
+          "slug": "moline",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lombard",
+          "slug": "lombard",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Buffalo Grove",
+          "slug": "buffalo-grove",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Urbana",
+          "slug": "urbana",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Bartlett",
+          "slug": "bartlett",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Crystal Lake",
+          "slug": "crystal-lake",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Quincy",
+          "slug": "quincy",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Streamwood",
+          "slug": "streamwood",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Carol Stream",
+          "slug": "carol-stream",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Romeoville",
+          "slug": "romeoville",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Plainfield",
+          "slug": "plainfield",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Rock Island",
+          "slug": "rock-island",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Hanover Park",
+          "slug": "hanover-park",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Carpentersville",
+          "slug": "carpentersville",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Wheeling",
+          "slug": "wheeling",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Park Ridge",
+          "slug": "park-ridge",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Calumet City",
+          "slug": "calumet-city",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Addison",
+          "slug": "addison",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Glendale Heights",
+          "slug": "glendale-heights",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Pekin",
+          "slug": "pekin",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Northbrook",
+          "slug": "northbrook",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Elk Grove Village",
+          "slug": "elk-grove-village",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Danville",
+          "slug": "danville",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "St. Charles",
+          "slug": "st-charles",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Woodridge",
+          "slug": "woodridge",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "North Chicago",
+          "slug": "north-chicago",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Galesburg",
+          "slug": "galesburg",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Gurnee",
+          "slug": "gurnee",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Mundelein",
+          "slug": "mundelein",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Oswego",
+          "slug": "oswego",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Chicago Heights",
+          "slug": "chicago-heights",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Algonquin",
+          "slug": "algonquin",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Freeport",
+          "slug": "freeport",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Niles",
+          "slug": "niles",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Marion",
+          "slug": "marion",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "O'Fallon",
+          "slug": "o-fallon",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Oak Forest",
+          "slug": "oak-forest",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Highland Park",
+          "slug": "highland-park",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lake in the Hills",
+          "slug": "lake-in-the-hills",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Burbank",
+          "slug": "burbank",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lansing",
+          "slug": "lansing",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "McHenry",
+          "slug": "mchenry",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Alton",
+          "slug": "alton",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "South Elgin",
+          "slug": "south-elgin",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Vernon Hills",
+          "slug": "vernon-hills",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Batavia",
+          "slug": "batavia",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Belvidere",
+          "slug": "belvidere",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Zion",
+          "slug": "zion",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Carbondale",
+          "slug": "carbondale",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Melrose Park",
+          "slug": "melrose-park",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Grayslake",
+          "slug": "grayslake",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lockport",
+          "slug": "lockport",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Woodstock",
+          "slug": "woodstock",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "West Chicago",
+          "slug": "west-chicago",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Collinsville",
+          "slug": "collinsville",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Edwardsville",
+          "slug": "edwardsville",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Sycamore",
+          "slug": "sycamore",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Rolling Meadows",
+          "slug": "rolling-meadows",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "East St. Louis",
+          "slug": "east-st-louis",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Morton Grove",
+          "slug": "morton-grove",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "New Lenox",
+          "slug": "new-lenox",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Macomb",
+          "slug": "macomb",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Elmwood Park",
+          "slug": "elmwood-park",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Homer Glen",
+          "slug": "homer-glen",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Godfrey",
+          "slug": "godfrey",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Canton",
+          "slug": "canton",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Bourbonnais",
+          "slug": "bourbonnais",
+          "state": "il",
+          "stateName": "Illinois",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        }
+      ]
+    },
+    "mo": {
+      "name": "Missouri",
+      "heroImage": "/images/missouri-hero.jpg",
+      "cities": [
+        {
+          "city": "Kansas City",
+          "slug": "kansas-city",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "St. Louis",
+          "slug": "st-louis",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Springfield",
+          "slug": "springfield",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Columbia",
+          "slug": "columbia",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Independence",
+          "slug": "independence",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lee's Summit",
+          "slug": "lees-summit",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "O'Fallon",
+          "slug": "o-fallon",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "St. Charles",
+          "slug": "st-charles",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "St. Joseph",
+          "slug": "st-joseph",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "St. Peters",
+          "slug": "st-peters",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Blue Springs",
+          "slug": "blue-springs",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Joplin",
+          "slug": "joplin",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Florissant",
+          "slug": "florissant",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Wentzville",
+          "slug": "wentzville",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Chesterfield",
+          "slug": "chesterfield",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Jefferson City",
+          "slug": "jefferson-city",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Cape Girardeau",
+          "slug": "cape-girardeau",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Oakville",
+          "slug": "oakville",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Wildwood",
+          "slug": "wildwood",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "University City",
+          "slug": "university-city",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Liberty",
+          "slug": "liberty",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Ballwin",
+          "slug": "ballwin",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Kirkwood",
+          "slug": "kirkwood",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Mehlville",
+          "slug": "mehlville",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Raytown",
+          "slug": "raytown",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Gladstone",
+          "slug": "gladstone",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Nixa",
+          "slug": "nixa",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Raymore",
+          "slug": "raymore",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Maryland Heights",
+          "slug": "maryland-heights",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Belton",
+          "slug": "belton",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Grandview",
+          "slug": "grandview",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Hazelwood",
+          "slug": "hazelwood",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Ozark",
+          "slug": "ozark",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Webster Groves",
+          "slug": "webster-groves",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Republic",
+          "slug": "republic",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Sedalia",
+          "slug": "sedalia",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Old Jamestown",
+          "slug": "old-jamestown",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Arnold",
+          "slug": "arnold",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Rolla",
+          "slug": "rolla",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Warrensburg",
+          "slug": "warrensburg",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Affton",
+          "slug": "affton",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Creve Coeur",
+          "slug": "creve-coeur",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Concord",
+          "slug": "concord",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Farmington",
+          "slug": "farmington",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Ferguson",
+          "slug": "ferguson",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Manchester",
+          "slug": "manchester",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lake St. Louis",
+          "slug": "lake-st-louis",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Spanish Lake",
+          "slug": "spanish-lake",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Kirksville",
+          "slug": "kirksville",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Clayton",
+          "slug": "clayton",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Hannibal",
+          "slug": "hannibal",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Sikeston",
+          "slug": "sikeston",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Grain Valley",
+          "slug": "grain-valley",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Poplar Bluff",
+          "slug": "poplar-bluff",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lemay",
+          "slug": "lemay",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Overland",
+          "slug": "overland",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Jackson",
+          "slug": "jackson",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Carthage",
+          "slug": "carthage",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Fort Leonard Wood",
+          "slug": "fort-leonard-wood",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Lebanon",
+          "slug": "lebanon",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Washington",
+          "slug": "washington",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Troy",
+          "slug": "troy",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Marshall",
+          "slug": "marshall",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Moberly",
+          "slug": "moberly",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Dardenne Prairie",
+          "slug": "dardenne-prairie",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Neosho",
+          "slug": "neosho",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Webb City",
+          "slug": "webb-city",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Festus",
+          "slug": "festus",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Eureka",
+          "slug": "eureka",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Jennings",
+          "slug": "jennings",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Branson",
+          "slug": "branson",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "St. Ann",
+          "slug": "st-ann",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Union",
+          "slug": "union",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Fulton",
+          "slug": "fulton",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "West Plains",
+          "slug": "west-plains",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Crestwood",
+          "slug": "crestwood",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Town and Country",
+          "slug": "town-and-country",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Mexico",
+          "slug": "mexico",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Bridgeton",
+          "slug": "bridgeton",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Bolivar",
+          "slug": "bolivar",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Kearney",
+          "slug": "kearney",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Smithville",
+          "slug": "smithville",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Bellefontaine Neighbors",
+          "slug": "bellefontaine-neighbors",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Excelsior Springs",
+          "slug": "excelsior-springs",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Maryville",
+          "slug": "maryville",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Kennett",
+          "slug": "kennett",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Ellisville",
+          "slug": "ellisville",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Harrisonville",
+          "slug": "harrisonville",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Monett",
+          "slug": "monett",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Des Peres",
+          "slug": "des-peres",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Richmond Heights",
+          "slug": "richmond-heights",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Sunset Hills",
+          "slug": "sunset-hills",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Warrenton",
+          "slug": "warrenton",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Clinton",
+          "slug": "clinton",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Ladue",
+          "slug": "ladue",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Chillicothe",
+          "slug": "chillicothe",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Pleasant Hill",
+          "slug": "pleasant-hill",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Park Hills",
+          "slug": "park-hills",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Perryville",
+          "slug": "perryville",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        },
+        {
+          "city": "Carl Junction",
+          "slug": "carl-junction",
+          "state": "mo",
+          "stateName": "Missouri",
+          "keywords": {
+            "primary": "solar installation",
+            "secondary": [
+              "solar panels",
+              "battery backup"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

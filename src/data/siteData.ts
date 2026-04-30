@@ -21,14 +21,14 @@ export const siteData = {
         { name: "How Solar Works", href: "/services/how-it-works" },
       ]
     },
-    { name: "Locations", 
+    { name: "Service Areas", 
       href: "#",
       children: [
-        { name: "Missouri", href: "/locations/missouri" },
-        { name: "Illinois", href: "/locations/illinois" },
-        { name: "Kansas", href: "/locations/kansas" },
-        { name: "Oklahoma", href: "/locations/oklahoma" },
         { name: "Texas", href: "/locations/texas" },
+        { name: "Oklahoma", href: "/locations/oklahoma" },
+        { name: "Kansas", href: "/locations/kansas" },
+        { name: "Illinois", href: "/locations/illinois" },
+        { name: "Missouri", href: "/locations/missouri" },
       ]
     },
     { name: "Financing", href: "/financing" },

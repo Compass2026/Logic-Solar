@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Static Pages -->
+  <url><loc>https://logic-solar.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://logic-solar.com/about</loc><priority>0.8</priority></url>
+  <url><loc>https://logic-solar.com/services/installation</loc><priority>0.8</priority></url>
+  <url><loc>https://logic-solar.com/services/battery</loc><priority>0.8</priority></url>
+  <url><loc>https://logic-solar.com/services/commercial</loc><priority>0.8</priority></url>
+  <url><loc>https://logic-solar.com/financing</loc><priority>0.8</priority></url>
+  <url><loc>https://logic-solar.com/faq</loc><priority>0.8</priority></url>
+  <url><loc>https://logic-solar.com/contact</loc><priority>0.8</priority></url>
+  
+  <!-- State Hubs -->
+  <url><loc>https://logic-solar.com/locations/texas</loc><priority>0.9</priority></url>
+  <url><loc>https://logic-solar.com/locations/oklahoma</loc><priority>0.9</priority></url>
+  <url><loc>https://logic-solar.com/locations/kansas</loc><priority>0.9</priority></url>
+  <url><loc>https://logic-solar.com/locations/illinois</loc><priority>0.9</priority></url>
+  <url><loc>https://logic-solar.com/locations/missouri</loc><priority>0.9</priority></url>
+</urlset>
