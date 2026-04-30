@@ -3,6 +3,9 @@
     "tx": {
       "name": "Texas",
       "heroImage": "/images/texas-hero.jpg",
+      "sunlightDays": 234,
+      "utilityFocus": "Oncor and CenterPoint Energy net metering programs",
+      "stateIncentive": "the Federal Solar Investment Tax Credit (ITC) plus local property tax exemptions on solar equipment",
       "cities": [
         {
           "city": "Houston",
@@ -1309,6 +1312,9 @@
     "ok": {
       "name": "Oklahoma",
       "heroImage": "/images/oklahoma-hero.jpg",
+      "sunlightDays": 215,
+      "utilityFocus": "PSO and OG&E net metering incentives",
+      "stateIncentive": "the Federal Solar Investment Tax Credit (ITC) and Oklahoma's sales tax exemption on solar equipment",
       "cities": [
         {
           "city": "Oklahoma City",
@@ -2615,6 +2621,9 @@
     "ks": {
       "name": "Kansas",
       "heroImage": "/images/kansas-hero.jpg",
+      "sunlightDays": 195,
+      "utilityFocus": "Evergy's net metering and Solar Rebate Program",
+      "stateIncentive": "the Federal Solar Investment Tax Credit (ITC) and Kansas's property tax exemption for renewable energy systems",
       "cities": [
         {
           "city": "Wichita",
@@ -3921,6 +3930,9 @@
     "il": {
       "name": "Illinois",
       "heroImage": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&q=80&w=2000",
+      "sunlightDays": 189,
+      "utilityFocus": "ComEd's Illinois Shines net metering credits",
+      "stateIncentive": "the Illinois Shines Adjustable Block Program (ABP), which provides guaranteed solar bill credits",
       "cities": [
         {
           "city": "Chicago",
@@ -5227,6 +5239,9 @@
     "mo": {
       "name": "Missouri",
       "heroImage": "/images/missouri-hero.jpg",
+      "sunlightDays": 205,
+      "utilityFocus": "Ameren Missouri's renewable energy net metering program",
+      "stateIncentive": "the Federal Solar Investment Tax Credit (ITC) and Missouri's solar property tax exemption",
       "cities": [
         {
           "city": "Kansas City",
