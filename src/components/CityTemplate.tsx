@@ -7,6 +7,7 @@ import { SEO } from './SEO';
 import { SectionHeading } from './SectionHeading';
 import { QuoteForm } from './QuoteForm';
 import { TrustStrip } from './TrustStrip';
+import { CityFAQSection } from './CityFAQSection';
 import { siteData } from '../data/siteData';
 
 interface CityTemplateProps {
@@ -18,9 +19,17 @@ interface CityTemplateProps {
     highlights: string[];
     backgroundImage?: string;
   };
+  stateData?: {
+    name: string;
+    heroImage?: string;
+    sunlightDays?: number;
+    utilityFocus?: string;
+    stateIncentive?: string;
+    cities: { city: string; slug: string; state: string; stateName: string }[];
+  };
 }
 
-export const CityTemplate = ({ location }: CityTemplateProps) => {
+export const CityTemplate = ({ location, stateData }: CityTemplateProps) => {
   return (
     <>
       <SEO 
@@ -94,6 +103,11 @@ export const CityTemplate = ({ location }: CityTemplateProps) => {
       </section>
 
       <QuoteForm />
+
+      {/* ── AEO City FAQ with JSON-LD Schema ── */}
+      {stateData && (
+        <CityFAQSection city={location.city} stateData={stateData} />
+      )}
 
       <section className="py-24 bg-brand-light">
         <div className="container-custom text-center">

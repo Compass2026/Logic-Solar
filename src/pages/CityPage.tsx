@@ -37,5 +37,5 @@ export const CityPage = () => {
     backgroundImage: stateData?.heroImage || "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&q=80&w=2000"
   };
 
-  return <CityTemplate location={location} />;
+  return <CityTemplate location={location} stateData={stateData} />;
 };
