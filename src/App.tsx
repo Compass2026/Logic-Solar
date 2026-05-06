@@ -33,6 +33,7 @@ import { CommercialPage } from './pages/CommercialPage';
 
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
+import { RoofingHome } from './pages/roofing/RoofingHome';
 
 
 // Scroll to top on route change
@@ -81,6 +82,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/roofing" element={<RoofingHome />} />
               
               {/* Dynamic Service Routes */}
               <Route path="/services/:slug" element={<DynamicServicePage />} />

@@ -10,6 +10,8 @@ export const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
   const isHome = location.pathname === '/';
+  const isRoofing = location.pathname === '/roofing';
+  const isDarkNav = isHome || isRoofing;
 
 
   useEffect(() => {
@@ -34,12 +36,21 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center group relative h-10 md:h-12 w-auto">
-          <img 
-            src={(scrolled || isHome) ? "/logo-dark.png" : "/logo.png"} 
-            alt="Logic Solar" 
-            className="h-full w-auto object-contain transition-all duration-300 group-hover:scale-105" 
-          />
+        <Link to={isRoofing ? "/roofing" : "/"} className="flex items-center group relative h-10 md:h-12 w-auto">
+          {isRoofing ? (
+            <span className={cn(
+              "text-2xl font-black tracking-tighter transition-all duration-300 group-hover:scale-105",
+              (scrolled || isDarkNav) ? "text-brand-dark" : "text-white"
+            )}>
+              LOGIC <span className="text-brand-gold">ROOFING</span>
+            </span>
+          ) : (
+            <img 
+              src={(scrolled || isDarkNav) ? "/logo-dark.png" : "/logo.png"} 
+              alt="Logic Solar" 
+              className="h-full w-auto object-contain transition-all duration-300 group-hover:scale-105" 
+            />
+          )}
         </Link>
 
         {/* Desktop Nav */}
@@ -55,7 +66,7 @@ export const Navbar = () => {
                 <button 
                   className={cn(
                     "flex items-center gap-1.5 text-[13px] font-bold uppercase tracking-widest transition-colors py-2",
-                    (scrolled || isHome) ? "text-brand-dark/60 hover:text-brand-dark" : "text-white/60 hover:text-white"
+                    (scrolled || isDarkNav) ? "text-brand-dark/60 hover:text-brand-dark" : "text-white/60 hover:text-white"
                   )}
                 >
                   {item.name}
@@ -66,7 +77,7 @@ export const Navbar = () => {
                   to={item.href}
                   className={cn(
                     "text-[13px] font-bold uppercase tracking-widest transition-colors py-2",
-                    (scrolled || isHome) ? "text-brand-dark/60 hover:text-brand-dark" : "text-white/60 hover:text-white"
+                    (scrolled || isDarkNav) ? "text-brand-dark/60 hover:text-brand-dark" : "text-white/60 hover:text-white"
                   )}
                 >
                   {item.name}
@@ -109,7 +120,7 @@ export const Navbar = () => {
         <button 
           className={cn(
             "lg:hidden w-11 h-11 rounded-xl flex items-center justify-center transition-colors",
-            (scrolled || isHome) ? "bg-brand-dark/5 text-brand-dark" : "bg-white/10 text-white backdrop-blur-md"
+            (scrolled || isDarkNav) ? "bg-brand-dark/5 text-brand-dark" : "bg-white/10 text-white backdrop-blur-md"
           )}
           onClick={() => setIsOpen(!isOpen)}
         >

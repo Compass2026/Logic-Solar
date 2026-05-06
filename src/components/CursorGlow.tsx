@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useSpring, useMotionValue } from 'motion/react';
-import { Sun } from 'lucide-react';
 
 export const CursorGlow = () => {
   const mouseX = useMotionValue(0);
@@ -130,10 +129,8 @@ export const CursorGlow = () => {
         animate={{ 
           opacity: isVisible ? 1 : 0,
           scale: isClicking ? 1.5 : 1,
-          rotate: isVisible ? 360 : 0,
         }}
         transition={{
-          rotate: { duration: 10, repeat: Infinity, ease: "linear" },
           opacity: { duration: 0.3 },
           scale: { duration: 0.2 }
         }}
@@ -144,13 +141,18 @@ export const CursorGlow = () => {
           translateY: '-50%',
         }}
       >
-        <div className="relative">
-          {/* Sun Core Glow */}
-          <div className="absolute inset-0 bg-brand-gold rounded-full blur-[8px] opacity-60 animate-pulse" />
-          <Sun 
-            className="w-6 h-6 text-brand-gold relative z-10 drop-shadow-[0_0_8px_rgba(249,205,13,0.8)]" 
-            strokeWidth={2.5}
-          />
+        <div className="relative" style={{ width: 44, height: 44 }}>
+          {/* Logo Glow */}
+          <div className="absolute inset-0 rounded-full blur-[10px] opacity-50 animate-pulse" style={{ background: 'rgba(249,205,13,0.6)' }} />
+          <div style={{ width: 44, height: 44, borderRadius: '50%', overflow: 'hidden', position: 'relative', zIndex: 10, filter: 'drop-shadow(0 0 8px rgba(249,205,13,0.9))' }}>
+            <img
+              src="/og-image.png"
+              alt="Logic Solar Sun"
+              className="select-none"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              draggable={false}
+            />
+          </div>
         </div>
       </motion.div>
     </div>
