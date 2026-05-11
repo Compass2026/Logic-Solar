@@ -110,13 +110,13 @@ export const Navbar = () => {
         <div className="hidden lg:flex items-center gap-2">
           <a
             href={`tel:${siteData.contact.phone.replace(/[^+\d]/g, '')}`}
-            className="bg-brand-green hover:bg-brand-green/90 text-white px-4 py-2 rounded-full text-[11px] font-black uppercase tracking-wider shadow-md shadow-brand-green/20 transition-all hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
+            style={{ backgroundColor: '#1a6b3a', color: 'white', padding: '8px 16px', borderRadius: '999px', fontSize: '11px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap', textDecoration: 'none', display: 'inline-block', transition: 'all 0.2s' }}
           >
             Give Us a Call
           </a>
           <Link 
             to="/contact" 
-            className="bg-brand-gold hover:bg-brand-gold-bright text-brand-dark px-4 py-2 rounded-full text-[11px] font-black uppercase tracking-wider shadow-md shadow-brand-gold/20 transition-all hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
+            style={{ backgroundColor: '#f9cd0d', color: '#1b2a33', padding: '8px 16px', borderRadius: '999px', fontSize: '11px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap', textDecoration: 'none', display: 'inline-block', transition: 'all 0.2s' }}
           >
             Get My Free Quote
           </Link>
