@@ -107,16 +107,16 @@ export const Navbar = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-2">
           <a
             href={`tel:${siteData.contact.phone.replace(/[^+\d]/g, '')}`}
-            className="bg-brand-green hover:bg-brand-green/90 text-white px-6 py-4 rounded-full text-[13px] font-black uppercase tracking-widest shadow-xl shadow-brand-green/20 transition-all hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-2"
+            className="bg-brand-green hover:bg-brand-green/90 text-white px-4 py-2 rounded-full text-[11px] font-black uppercase tracking-wider shadow-md shadow-brand-green/20 transition-all hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
           >
-            📞 Give Us a Call
+            Give Us a Call
           </a>
           <Link 
             to="/contact" 
-            className="bg-brand-gold hover:bg-brand-gold-bright text-brand-dark px-8 py-4 rounded-full text-[13px] font-black uppercase tracking-widest shadow-xl shadow-brand-gold/20 transition-all hover:-translate-y-0.5 active:translate-y-0"
+            className="bg-brand-gold hover:bg-brand-gold-bright text-brand-dark px-4 py-2 rounded-full text-[11px] font-black uppercase tracking-wider shadow-md shadow-brand-gold/20 transition-all hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
           >
             Get My Free Quote
           </Link>
