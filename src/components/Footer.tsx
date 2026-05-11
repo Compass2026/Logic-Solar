@@ -107,11 +107,11 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
                 <Phone className="w-5 h-5 text-brand-gold shrink-0" />
-                <span>{siteData.contact.phone}</span>
+                <a href={`tel:${siteData.contact.phone.replace(/[^+\d]/g, '')}`} className="hover:text-brand-gold transition-colors">{siteData.contact.phone}</a>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
                 <Mail className="w-5 h-5 text-brand-gold shrink-0" />
-                <span>{siteData.contact.email}</span>
+                <a href={`mailto:${siteData.contact.email}`} className="hover:text-brand-gold transition-colors">{siteData.contact.email}</a>
               </li>
             </ul>
           </div>

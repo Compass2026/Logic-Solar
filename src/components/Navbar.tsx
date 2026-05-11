@@ -106,8 +106,14 @@ export const Navbar = () => {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <div className="hidden lg:block">
+        {/* CTA Buttons */}
+        <div className="hidden lg:flex items-center gap-3">
+          <a
+            href={`tel:${siteData.contact.phone.replace(/[^+\d]/g, '')}`}
+            className="bg-brand-green hover:bg-brand-green/90 text-white px-6 py-4 rounded-full text-[13px] font-black uppercase tracking-widest shadow-xl shadow-brand-green/20 transition-all hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-2"
+          >
+            📞 Give Us a Call
+          </a>
           <Link 
             to="/contact" 
             className="bg-brand-gold hover:bg-brand-gold-bright text-brand-dark px-8 py-4 rounded-full text-[13px] font-black uppercase tracking-widest shadow-xl shadow-brand-gold/20 transition-all hover:-translate-y-0.5 active:translate-y-0"
@@ -165,7 +171,13 @@ export const Navbar = () => {
               </div>
             ))}
           </div>
-          <div className="pt-10 border-t border-gray-100">
+          <div className="pt-10 border-t border-gray-100 space-y-4">
+            <a
+              href={`tel:${siteData.contact.phone.replace(/[^+\d]/g, '')}`}
+              className="block w-full bg-brand-green text-white text-center py-5 rounded-2xl font-black uppercase tracking-widest shadow-xl"
+            >
+              📞 Give Us a Call
+            </a>
             <Link 
               to="/contact" 
               className="block w-full bg-brand-gold text-brand-dark text-center py-5 rounded-2xl font-black uppercase tracking-widest shadow-2xl"
