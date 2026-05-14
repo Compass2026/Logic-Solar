@@ -107,33 +107,26 @@ export const AddersPage = () => {
           <div className="ls-grid-row"><div className="ls-left">Ground Mount Installation</div><div className="ls-right">$0.35/watt + Trenching</div></div>
           <div className="ls-grid-row"><div className="ls-left">Trenching</div><div className="ls-right">$20/ft</div></div>
 
-          {/* Updated */}
           <div className="ls-grid-row"><div className="ls-left">Detach &amp; Reset of Panels</div><div className="ls-right">$400/panel</div></div>
 
           <div className="ls-grid-row"><div className="ls-left">EV Charger</div><div className="ls-right">$1,500 + Cost of Charger</div></div>
 
-          {/* Updated label */}
           <div className="ls-grid-row"><div className="ls-left">Tile / Flat Roof / Ballast System</div><div className="ls-right">$0.25/watt</div></div>
 
           <div className="ls-grid-row"><div className="ls-left">Solar Panel Critter Guard</div><div className="ls-right">$20/ft</div></div>
 
-          <div className="ls-grid-row"><div className="ls-left">Franklin aPower 2 Battery</div><div className="ls-right">$15,500</div></div>
+          <div className="ls-grid-row"><div className="ls-left">Franklin aPower 2 Battery</div><div className="ls-right">$14,500 (+$1,500 if battery only)</div></div>
 
-          {/* Updated */}
           <div className="ls-grid-row"><div className="ls-left">Generac 24KW Generator (excludes gas line and gas hookup)</div><div className="ls-right">$14,500</div></div>
 
-          {/* Updated */}
           <div className="ls-grid-row"><div className="ls-left">Enphase Encharge IQ 10 Battery</div><div className="ls-right">$13,500 (+$1,500 if battery only)</div></div>
 
-          {/* Updated (replacing the prior "Enphase IQ Battery 5P" line) */}
           <div className="ls-grid-row"><div className="ls-left">Enphase Encharge IQ 5 Battery</div><div className="ls-right">$9,000 (+$1,500 if battery only)</div></div>
 
-          {/* Updated */}
           <div className="ls-grid-row"><div className="ls-left">Tesla Powerwall 3</div><div className="ls-right">$13,500 (+$1,500 if battery only)</div></div>
 
           <div className="ls-grid-row"><div className="ls-left">Project Site Surveys / Trip Charges / Truck Rolls</div><div className="ls-right">$500</div></div>
 
-          {/* Updated notes */}
           <div className="ls-grid-row"><div className="ls-left">Small System Adder (4KW - 6KW) (must be within 100 miles of metro areas)</div><div className="ls-right">$1,500</div></div>
           <div className="ls-grid-row"><div className="ls-left">Small System Adder (4KW or less) (must be within 100 miles of metro areas)</div><div className="ls-right">$2,500</div></div>
 
