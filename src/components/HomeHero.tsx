@@ -187,7 +187,7 @@ const s: Record<string, React.CSSProperties> = {
   imgWrap: {
     position: 'absolute',
     top: 0, right: 0,
-    width: '78%',
+    width: '82%',
     height: '100%',
   },
   img: {
@@ -199,7 +199,7 @@ const s: Record<string, React.CSSProperties> = {
   imgMask: {
     position: 'absolute',
     inset: 0,
-    background: 'linear-gradient(to bottom, rgba(247,248,250,0.82) 0%, rgba(247,248,250,0.3) 10%, transparent 18%), linear-gradient(to right, #f7f8fa 0%, #f7f8fa 2%, rgba(247,248,250,0.85) 14%, rgba(247,248,250,0.2) 28%, transparent 44%)',
+    background: 'linear-gradient(to bottom, rgba(247,248,250,0.75) 0%, rgba(247,248,250,0.2) 8%, transparent 16%), linear-gradient(to right, #f7f8fa 0%, rgba(247,248,250,0.9) 8%, rgba(247,248,250,0.2) 22%, transparent 38%)',
   },
   content: {
     position: 'relative',
@@ -208,10 +208,8 @@ const s: Record<string, React.CSSProperties> = {
     display: 'grid',
     gridTemplateColumns: '5fr 4fr',
     alignItems: 'center',
-    maxWidth: 1200,
-    margin: '0 auto',
     width: '100%',
-    padding: '130px 32px 90px 48px',
+    padding: '130px 40px 90px 56px',
     gap: 0,
   },
   left: {
