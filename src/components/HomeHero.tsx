@@ -13,26 +13,27 @@ export const HomeHero = () => {
   return (
   <>
     {/* ═══ HERO ═══════════════════════════════════════════ */}
-    <section style={s.hero}>
+    <section style={s.hero} className="hero-section">
 
       {/* House image — right side, bleeds full height */}
-      <div style={s.imgWrap}>
+      <div style={s.imgWrap} className="hero-img-wrap">
         <img src="/images/hero-chatgpt-may15.png" alt="Logic Solar home" style={s.img} />
-        <div style={s.imgMask} />
+        <div style={s.imgMask} className="hero-img-mask" />
       </div>
 
       {/* ── Content ── */}
-      <div style={s.content}>
+      <div style={s.content} className="hero-content">
 
         {/* LEFT column */}
         <motion.div
           style={s.left}
+          className="hero-left"
           initial={{ opacity: 0, x: -24 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           {/* Badge */}
-          <div style={s.badge}>
+          <div style={s.badge} className="hero-badge">
             <span style={s.badgeDot}>+</span>
             <span style={s.badgeLabel}>PREMIUM</span>
             <span style={s.badgePower}>⏻</span>
@@ -68,12 +69,12 @@ export const HomeHero = () => {
         </motion.div>
 
         {/* RIGHT column */}
-        <div style={s.right}>
+        <div style={s.right} className="hero-right">
 
           {/* Trust card — contained within right column, no overflow */}
           <motion.div
             className="trust-bubble"
-            style={{ ...s.card, position: 'absolute', top: '40%', right: 16, transform: 'translateY(-50%)', zIndex: 20 }}
+            style={{ ...s.card, position: 'absolute', top: '40%', right: 40, transform: 'translateY(-50%)', zIndex: 20 }}
             initial={{ opacity: 0, y: -14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.3 }}
@@ -90,6 +91,7 @@ export const HomeHero = () => {
 
           {/* Savings card */}
           <motion.div
+            className="savings-card"
             style={{ ...s.card, bottom: 80, left: '5%' }}
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
@@ -147,6 +149,81 @@ export const HomeHero = () => {
       @keyframes floatDown { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)}  }
       .logo-pill:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.10) !important; }
       @media (max-width: 900px) { .trust-bubble { display: none !important; } }
+
+      /* ── Mobile Hero Overrides ─────────────────────────── */
+      @media (max-width: 768px) {
+        /* Section: stack vertically, auto height */
+        .hero-section {
+          min-height: unset !important;
+          flex-direction: column !important;
+          overflow: visible !important;
+        }
+
+        /* Image: sits at top, fixed height, not absolute */
+        .hero-img-wrap {
+          position: relative !important;
+          width: 100% !important;
+          height: 56vw !important;
+          min-height: 220px !important;
+          max-height: 320px !important;
+          flex-shrink: 0;
+        }
+
+        /* Stronger bottom fade so image dissolves into white */
+        .hero-img-mask {
+          background:
+            linear-gradient(to bottom,
+              rgba(247,248,250,0.5) 0%,
+              transparent 25%,
+              transparent 55%,
+              rgba(247,248,250,0.85) 75%,
+              #f7f8fa 100%
+            ),
+            linear-gradient(to right,
+              rgba(247,248,250,0.3) 0%,
+              transparent 30%
+            ) !important;
+        }
+
+        /* Content: no longer a grid — single column, solid bg */
+        .hero-content {
+          position: relative !important;
+          display: flex !important;
+          flex-direction: column !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          padding: 28px 24px 48px !important;
+          background: #f7f8fa !important;
+          z-index: 10 !important;
+          margin: 0 !important;
+        }
+
+        /* Left column: full width */
+        .hero-left {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        /* Badge: slightly smaller */
+        .hero-badge {
+          margin-bottom: 18px !important;
+        }
+
+        /* Hide right column entirely on mobile */
+        .hero-right {
+          display: none !important;
+        }
+
+        /* Hide trust bubble (already hidden at 900px but be explicit) */
+        .trust-bubble {
+          display: none !important;
+        }
+
+        /* Hide the floating savings card on mobile */
+        .savings-card {
+          display: none !important;
+        }
+      }
     `}</style>
   </>
   );
@@ -184,6 +261,7 @@ const s: Record<string, React.CSSProperties> = {
     background: '#f7f8fa',
     display: 'flex',
     flexDirection: 'column',
+    overflow: 'hidden',
   },
   imgWrap: {
     position: 'absolute',
@@ -210,7 +288,9 @@ const s: Record<string, React.CSSProperties> = {
     gridTemplateColumns: '5fr 4fr',
     alignItems: 'center',
     width: '100%',
-    padding: '130px 40px 90px 56px',
+    maxWidth: 1440,
+    margin: '0 auto',
+    padding: '130px 48px 90px 56px',
     gap: 0,
   },
   left: {
@@ -289,7 +369,7 @@ const s: Record<string, React.CSSProperties> = {
     color: 'rgba(27,42,51,0.55)',
   },
   trustIco: { width: 15, height: 15, color: '#34d399' },
-  right: { position: 'relative', minHeight: 480 },
+  right: { position: 'relative', minHeight: 480, overflow: 'visible' },
   card: {
     position: 'absolute',
     background: 'rgba(255,255,255,0.92)',
