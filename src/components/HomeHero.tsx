@@ -23,7 +23,7 @@ export const HomeHero = () => (
 
       {/* Trust card — anchored to section top-right corner */}
       <motion.div
-        style={{ ...s.card, position: 'absolute', top: 108, right: 20, zIndex: 20 }}
+        style={{ ...s.card, position: 'absolute', top: 348, right: 20, zIndex: 20 }}
         initial={{ opacity: 0, y: -14 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.85, delay: 0.3 }}
