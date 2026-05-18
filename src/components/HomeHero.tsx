@@ -9,7 +9,8 @@ const AVATARS = [
   'https://i.pravatar.cc/100?img=44',
 ];
 
-export const HomeHero = () => (
+export const HomeHero = () => {
+  return (
   <>
     {/* ═══ HERO ═══════════════════════════════════════════ */}
     <section style={s.hero}>
@@ -17,7 +18,6 @@ export const HomeHero = () => (
       {/* House image — right side, bleeds full height */}
       <div style={s.imgWrap}>
         <img src="/images/hero-chatgpt-may15.png" alt="Logic Solar home" style={s.img} />
-        {/* White gradient mask bleeding from left */}
         <div style={s.imgMask} />
       </div>
 
@@ -149,7 +149,8 @@ export const HomeHero = () => (
       @media (max-width: 900px) { .trust-bubble { display: none !important; } }
     `}</style>
   </>
-);
+  );
+};
 
 /* ── Helpers ── */
 const ImgLogo = ({ src, name, style }: { src: string; name: string; style?: React.CSSProperties }) => (
