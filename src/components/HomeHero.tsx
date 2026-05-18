@@ -72,7 +72,7 @@ export const HomeHero = () => (
 
           {/* Trust card */}
           <motion.div
-            style={{ ...s.card, top: 48, right: -162 }}
+            style={{ ...s.card, top: -48, right: -18 }}
             initial={{ opacity: 0, y: -14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.3 }}
