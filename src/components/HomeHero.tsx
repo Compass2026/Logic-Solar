@@ -23,7 +23,8 @@ export const HomeHero = () => (
 
       {/* Trust card — anchored to section top-right corner */}
       <motion.div
-        style={{ ...s.card, position: 'absolute', top: 444, right: 20, zIndex: 20 }}
+        className="trust-bubble"
+        style={{ ...s.card, position: 'absolute', top: '44%', right: 20, zIndex: 20 }}
         initial={{ opacity: 0, y: -14 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.85, delay: 0.3 }}
@@ -145,6 +146,7 @@ export const HomeHero = () => (
       @keyframes floatUp   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
       @keyframes floatDown { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)}  }
       .logo-pill:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.10) !important; }
+      @media (max-width: 900px) { .trust-bubble { display: none !important; } }
     `}</style>
   </>
 );
