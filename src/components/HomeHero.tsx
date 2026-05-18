@@ -21,6 +21,23 @@ export const HomeHero = () => (
         <div style={s.imgMask} />
       </div>
 
+      {/* Trust card — anchored to section top-right corner */}
+      <motion.div
+        style={{ ...s.card, position: 'absolute', top: 108, right: 20, zIndex: 20 }}
+        initial={{ opacity: 0, y: -14 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.85, delay: 0.3 }}
+      >
+        <div style={s.avatarRow}>
+          {AVATARS.map((u, i) => (
+            <img key={i} src={u} referrerPolicy="no-referrer" style={{ ...s.avatar, marginLeft: i ? -8 : 0 }} alt="" />
+          ))}
+          <div style={s.avatarPlus}>+1k</div>
+        </div>
+        <p style={s.cardTitle}>Trusted by 1,000+</p>
+        <p style={s.cardSub}>Modern Homeowners</p>
+      </motion.div>
+
       {/* ── Content ── */}
       <div style={s.content}>
 
@@ -67,25 +84,8 @@ export const HomeHero = () => (
           </div>
         </motion.div>
 
-        {/* RIGHT column — floating cards only, img is absolute */}
+        {/* RIGHT column — savings card only */}
         <div style={s.right}>
-
-          {/* Trust card */}
-          <motion.div
-            style={{ ...s.card, top: -48, right: -18 }}
-            initial={{ opacity: 0, y: -14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.85, delay: 0.3 }}
-          >
-            <div style={s.avatarRow}>
-              {AVATARS.map((u, i) => (
-                <img key={i} src={u} referrerPolicy="no-referrer" style={{ ...s.avatar, marginLeft: i ? -8 : 0 }} alt="" />
-              ))}
-              <div style={s.avatarPlus}>+1k</div>
-            </div>
-            <p style={s.cardTitle}>Trusted by 1,000+</p>
-            <p style={s.cardSub}>Modern Homeowners</p>
-          </motion.div>
 
           {/* Savings card */}
           <motion.div
@@ -181,7 +181,6 @@ const s: Record<string, React.CSSProperties> = {
     background: '#f7f8fa',
     display: 'flex',
     flexDirection: 'column',
-    overflow: 'hidden',
   },
   imgWrap: {
     position: 'absolute',
