@@ -21,24 +21,6 @@ export const HomeHero = () => (
         <div style={s.imgMask} />
       </div>
 
-      {/* Trust card — anchored to section top-right corner */}
-      <motion.div
-        className="trust-bubble"
-        style={{ ...s.card, position: 'absolute', top: '44%', right: 20, zIndex: 20 }}
-        initial={{ opacity: 0, y: -14 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.85, delay: 0.3 }}
-      >
-        <div style={s.avatarRow}>
-          {AVATARS.map((u, i) => (
-            <img key={i} src={u} referrerPolicy="no-referrer" style={{ ...s.avatar, marginLeft: i ? -8 : 0 }} alt="" />
-          ))}
-          <div style={s.avatarPlus}>+1k</div>
-        </div>
-        <p style={s.cardTitle}>Trusted by 1,000+</p>
-        <p style={s.cardSub}>Modern Homeowners</p>
-      </motion.div>
-
       {/* ── Content ── */}
       <div style={s.content}>
 
@@ -85,8 +67,26 @@ export const HomeHero = () => (
           </div>
         </motion.div>
 
-        {/* RIGHT column — savings card only */}
+        {/* RIGHT column */}
         <div style={s.right}>
+
+          {/* Trust card — contained within right column, no overflow */}
+          <motion.div
+            className="trust-bubble"
+            style={{ ...s.card, position: 'absolute', top: '40%', right: 16, transform: 'translateY(-50%)', zIndex: 20 }}
+            initial={{ opacity: 0, y: -14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, delay: 0.3 }}
+          >
+            <div style={s.avatarRow}>
+              {AVATARS.map((u, i) => (
+                <img key={i} src={u} referrerPolicy="no-referrer" style={{ ...s.avatar, marginLeft: i ? -8 : 0 }} alt="" />
+              ))}
+              <div style={s.avatarPlus}>+1k</div>
+            </div>
+            <p style={s.cardTitle}>Trusted by 1,000+</p>
+            <p style={s.cardSub}>Modern Homeowners</p>
+          </motion.div>
 
           {/* Savings card */}
           <motion.div
