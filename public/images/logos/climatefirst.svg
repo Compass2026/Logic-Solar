@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 90" width="420" height="90">
+  <!-- Blue circular arc / globe element -->
+  <defs>
+    <radialGradient id="circleGrad" cx="60%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#7ed6f7"/>
+      <stop offset="60%" stop-color="#29abe2"/>
+      <stop offset="100%" stop-color="#0072bc"/>
+    </radialGradient>
+    <clipPath id="ringClip">
+      <path d="M 0,45 A 38,38 0 1 1 76,45 A 38,38 0 1 1 0,45 Z M 10,45 A 28,28 0 1 0 66,45 A 28,28 0 1 0 10,45 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer glow ring (light blue) -->
+  <circle cx="40" cy="45" r="38" fill="none" stroke="#b8e8f8" stroke-width="10" opacity="0.6"/>
+  <!-- Main arc ring -->
+  <circle cx="40" cy="45" r="32" fill="none" stroke="url(#circleGrad)" stroke-width="10"/>
+  <!-- Inner fade -->
+  <circle cx="40" cy="45" r="22" fill="none" stroke="#d6f0fb" stroke-width="6" opacity="0.5"/>
+
+  <!-- CLIMATE FIRST - bold blue -->
+  <text
+    x="92"
+    y="40"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-size="26"
+    font-weight="900"
+    fill="#29abe2"
+    letter-spacing="1"
+  >CLIMATE FIRST</text>
+
+  <!-- BANK® - grey -->
+  <text
+    x="92"
+    y="66"
+    font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif"
+    font-size="26"
+    font-weight="900"
+    fill="#888888"
+    letter-spacing="1"
+  >BANK</text>
+  <text
+    x="262"
+    y="58"
+    font-family="Arial, sans-serif"
+    font-size="14"
+    font-weight="600"
+    fill="#888888"
+  >®</text>
+</svg>

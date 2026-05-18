@@ -106,17 +106,11 @@ export const Navbar = () => {
           ))}
         </div>
 
-        {/* CTA Buttons */}
-        <div className="hidden lg:flex items-center gap-2">
-          <a
-            href={`tel:${siteData.contact.phone.replace(/[^+\d]/g, '')}`}
-            style={{ backgroundColor: '#1a6b3a', color: 'white', padding: '8px 16px', borderRadius: '999px', fontSize: '11px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap', textDecoration: 'none', display: 'inline-block', transition: 'all 0.2s' }}
-          >
-            Give Us a Call
-          </a>
-          <Link 
-            to="/contact" 
-            style={{ backgroundColor: '#f9cd0d', color: '#1b2a33', padding: '8px 16px', borderRadius: '999px', fontSize: '11px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap', textDecoration: 'none', display: 'inline-block', transition: 'all 0.2s' }}
+        {/* CTA Button */}
+        <div className="hidden lg:flex items-center">
+          <Link
+            to="/contact"
+            style={{ backgroundColor: '#f9cd0d', color: '#1b2a33', padding: '10px 22px', borderRadius: '999px', fontSize: '11px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap', textDecoration: 'none', display: 'inline-block', transition: 'all 0.2s', boxShadow: '0 2px 10px rgba(249,205,13,0.3)' }}
           >
             Get My Free Quote
           </Link>

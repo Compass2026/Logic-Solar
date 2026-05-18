@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 72" width="280" height="72">
+  <!-- Starburst: 24 thin radiating lines from center -->
+  <g transform="translate(36, 36)">
+    <!-- Each line rotated by 15deg increments, varying lengths for natural look -->
+    <line x1="0" y1="-10" x2="0" y2="-28" stroke="#1a1a1a" stroke-width="1.4" stroke-linecap="round" transform="rotate(0)"/>
+    <line x1="0" y1="-10" x2="0" y2="-26" stroke="#1a1a1a" stroke-width="1.4" stroke-linecap="round" transform="rotate(15)"/>
+    <line x1="0" y1="-10" x2="0" y2="-24" stroke="#1a1a1a" stroke-width="1.4" stroke-linecap="round" transform="rotate(30)"/>
+    <line x1="0" y1="-10" x2="0" y2="-22" stroke="#1a1a1a" stroke-width="1.4" stroke-linecap="round" transform="rotate(45)"/>
+    <line x1="0" y1="-10" x2="0" y2="-20" stroke="#1a1a1a" stroke-width="1.4" stroke-linecap="round" transform="rotate(60)"/>
+    <line x1="0" y1="-10" x2="0" y2="-18" stroke="#1a1a1a" stroke-width="1.4" stroke-linecap="round" transform="rotate(75)"/>
+    <line x1="0" y1="-10" x2="0" y2="-16" stroke="#1a1a1a" stroke-width="1.3" stroke-linecap="round" transform="rotate(90)"/>
+    <line x1="0" y1="-10" x2="0" y2="-15" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round" transform="rotate(105)"/>
+    <line x1="0" y1="-10" x2="0" y2="-14" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round" transform="rotate(120)"/>
+    <line x1="0" y1="-10" x2="0" y2="-14" stroke="#1a1a1a" stroke-width="1.1" stroke-linecap="round" transform="rotate(135)"/>
+    <line x1="0" y1="-10" x2="0" y2="-14" stroke="#1a1a1a" stroke-width="1.1" stroke-linecap="round" transform="rotate(150)"/>
+    <line x1="0" y1="-10" x2="0" y2="-14" stroke="#1a1a1a" stroke-width="1.1" stroke-linecap="round" transform="rotate(165)"/>
+    <line x1="0" y1="-10" x2="0" y2="-14" stroke="#1a1a1a" stroke-width="1.1" stroke-linecap="round" transform="rotate(180)"/>
+    <line x1="0" y1="-10" x2="0" y2="-14" stroke="#1a1a1a" stroke-width="1.1" stroke-linecap="round" transform="rotate(195)"/>
+    <line x1="0" y1="-10" x2="0" y2="-14" stroke="#1a1a1a" stroke-width="1.1" stroke-linecap="round" transform="rotate(210)"/>
+    <line x1="0" y1="-10" x2="0" y2="-14" stroke="#1a1a1a" stroke-width="1.1" stroke-linecap="round" transform="rotate(225)"/>
+    <line x1="0" y1="-10" x2="0" y2="-15" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round" transform="rotate(240)"/>
+    <line x1="0" y1="-10" x2="0" y2="-16" stroke="#1a1a1a" stroke-width="1.2" stroke-linecap="round" transform="rotate(255)"/>
+    <line x1="0" y1="-10" x2="0" y2="-18" stroke="#1a1a1a" stroke-width="1.3" stroke-linecap="round" transform="rotate(270)"/>
+    <line x1="0" y1="-10" x2="0" y2="-20" stroke="#1a1a1a" stroke-width="1.4" stroke-linecap="round" transform="rotate(285)"/>
+    <line x1="0" y1="-10" x2="0" y2="-22" stroke="#1a1a1a" stroke-width="1.4" stroke-linecap="round" transform="rotate(300)"/>
+    <line x1="0" y1="-10" x2="0" y2="-24" stroke="#1a1a1a" stroke-width="1.4" stroke-linecap="round" transform="rotate(315)"/>
+    <line x1="0" y1="-10" x2="0" y2="-26" stroke="#1a1a1a" stroke-width="1.4" stroke-linecap="round" transform="rotate(330)"/>
+    <line x1="0" y1="-10" x2="0" y2="-28" stroke="#1a1a1a" stroke-width="1.4" stroke-linecap="round" transform="rotate(345)"/>
+  </g>
+
+  <!-- aurora wordmark — lowercase, medium grey, clean sans -->
+  <text
+    x="84"
+    y="43"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="30"
+    font-weight="400"
+    fill="#2a2a2a"
+    letter-spacing="1"
+  >aurora</text>
+</svg>
