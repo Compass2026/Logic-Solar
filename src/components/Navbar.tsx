@@ -30,9 +30,16 @@ export const Navbar = () => {
   return (
     <nav 
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 py-6",
-        scrolled ? "bg-white/90 backdrop-blur-xl border-b border-gray-100 py-4" : "bg-transparent"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6",
+        scrolled ? "bg-white/95 backdrop-blur-xl border-b border-gray-100 py-4" : "py-6"
       )}
+      style={!scrolled ? {
+        backgroundColor: 'rgba(27, 42, 51, 0.92)',
+        backdropFilter: 'blur(18px) saturate(1.4)',
+        WebkitBackdropFilter: 'blur(18px) saturate(1.4)',
+        borderBottom: '1px solid rgba(255,255,255,0.12)',
+        boxShadow: '0 4px 32px rgba(33,97,102,0.18), inset 0 1px 0 rgba(255,255,255,0.15)',
+      } : {}}
     >
       <div className="w-full flex items-center justify-between">
         {/* Logo */}
@@ -46,7 +53,7 @@ export const Navbar = () => {
             </span>
           ) : (
             <img 
-              src={(scrolled || isDarkNav) ? "/logo-dark.png" : "/logo.png"} 
+              src={scrolled ? "/logo-dark.png" : "/logo.png"} 
               alt="Logic Solar" 
               className="h-full w-auto object-contain transition-all duration-300 group-hover:scale-105" 
             />
@@ -66,7 +73,7 @@ export const Navbar = () => {
                 <button 
                   className={cn(
                     "flex items-center gap-1.5 text-[13px] font-bold uppercase tracking-widest transition-colors py-2",
-                    (scrolled || isDarkNav) ? "text-brand-dark/60 hover:text-brand-dark" : "text-white/60 hover:text-white"
+                    scrolled ? "text-brand-dark/60 hover:text-brand-dark" : "text-white/80 hover:text-white"
                   )}
                 >
                   {item.name}
@@ -77,7 +84,7 @@ export const Navbar = () => {
                   to={item.href}
                   className={cn(
                     "text-[13px] font-bold uppercase tracking-widest transition-colors py-2",
-                    (scrolled || isDarkNav) ? "text-brand-dark/60 hover:text-brand-dark" : "text-white/60 hover:text-white"
+                    scrolled ? "text-brand-dark/60 hover:text-brand-dark" : "text-white/80 hover:text-white"
                   )}
                 >
                   {item.name}
@@ -120,7 +127,7 @@ export const Navbar = () => {
         <button 
           className={cn(
             "lg:hidden w-11 h-11 rounded-xl flex items-center justify-center transition-colors",
-            (scrolled || isDarkNav) ? "bg-brand-dark/5 text-brand-dark" : "bg-white/10 text-white backdrop-blur-md"
+            scrolled ? "bg-brand-dark/5 text-brand-dark" : "bg-white/20 text-white"
           )}
           onClick={() => setIsOpen(!isOpen)}
         >

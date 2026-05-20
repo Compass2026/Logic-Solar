@@ -14,7 +14,7 @@ import { CityTemplate } from './components/CityTemplate';
 import { StatePage } from './pages/StatePage';
 import { CityPage } from './pages/CityPage';
 import { LoadingScreen } from './components/LoadingScreen';
-import { CursorGlow } from './components/CursorGlow';
+
 import { StickyMobileCTA } from './components/StickyMobileCTA';
 import { siteData } from './data/siteData';
 import { motion } from 'motion/react';
@@ -28,6 +28,7 @@ import { OnboardingPage } from './pages/OnboardingPage';
 import { SiteSurveyPage } from './pages/SiteSurveyPage';
 import { ThankYouPage } from './pages/ThankYouPage';
 import { CommercialPage } from './pages/CommercialPage';
+import { SolarLanding } from './pages/SolarLanding';
 
 
 
@@ -57,14 +58,14 @@ const DynamicServicePage = () => {
 
 
 
-export default function App() {
+// Layout wrapper for the main site (with Navbar, Footer, etc.)
+const MainSiteLayout = () => {
   const [isLoaded, setIsLoaded] = React.useState(false);
 
   return (
-    <Router>
-      <ScrollToTop />
+    <>
       <LoadingScreen onComplete={() => setIsLoaded(true)} />
-      <CursorGlow />
+
       <div className="flex flex-col min-h-screen selection:bg-brand-gold selection:text-brand-dark">
         <Navbar />
         <StickyMobileCTA />
@@ -113,7 +114,6 @@ export default function App() {
               <Route path="/thankyou" element={<ThankYouPage />} />
               <Route path="/commercial" element={<CommercialPage />} />
 
-
               {/* Fallback for unknown routes */}
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
@@ -121,6 +121,21 @@ export default function App() {
           <Footer />
         </motion.div>
       </div>
+    </>
+  );
+};
+
+export default function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <Routes>
+        {/* Standalone landing page — no site shell */}
+        <Route path="/solar-landing" element={<SolarLanding />} />
+
+        {/* All other routes use the main site layout */}
+        <Route path="/*" element={<MainSiteLayout />} />
+      </Routes>
     </Router>
   );
 }

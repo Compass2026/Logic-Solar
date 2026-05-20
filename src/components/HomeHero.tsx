@@ -266,7 +266,7 @@ const s: Record<string, React.CSSProperties> = {
   imgWrap: {
     position: 'absolute',
     top: 0, right: 0,
-    width: '82%',
+    width: '86%',
     height: '100%',
   },
   img: {
@@ -288,9 +288,7 @@ const s: Record<string, React.CSSProperties> = {
     gridTemplateColumns: '5fr 4fr',
     alignItems: 'center',
     width: '100%',
-    maxWidth: 1440,
-    margin: '0 auto',
-    padding: '130px 48px 90px 56px',
+    padding: '130px 48px 90px 28px',
     gap: 0,
   },
   left: {
