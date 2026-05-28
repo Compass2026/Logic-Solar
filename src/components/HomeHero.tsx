@@ -17,7 +17,7 @@ export const HomeHero = () => {
 
       {/* House image — right side, bleeds full height */}
       <div style={s.imgWrap} className="hero-img-wrap">
-        <img src="/images/hero-chatgpt-may15.png" alt="Logic Solar home" style={s.img} />
+        <img src="/images/hero-chatgpt-may15.png" alt="Logic Solar home" style={s.img} className="hero-img" />
         <div style={s.imgMask} className="hero-img-mask" />
       </div>
 
@@ -128,7 +128,7 @@ export const HomeHero = () => {
         display: flex;
         align-items: center;
         width: max-content;
-        animation: ticker-scroll 38s linear infinite;
+        animation: ticker-scroll 60s linear infinite;
         will-change: transform;
       }
       .ticker-wrap:hover .ticker-track {
@@ -199,18 +199,22 @@ export const HomeHero = () => {
         .hero-img-wrap {
           position: relative !important;
           width: 100% !important;
-          height: 56vw !important;
-          min-height: 220px !important;
-          max-height: 320px !important;
+          height: 74vw !important;
+          min-height: 280px !important;
+          max-height: 460px !important;
           flex-shrink: 0;
+        }
+        /* Shift crop to top so full roof peak & panels are visible */
+        .hero-img {
+          object-position: center top !important;
         }
         .hero-img-mask {
           background:
             linear-gradient(to bottom,
-              rgba(247,248,250,0.5) 0%,
-              transparent 25%,
-              transparent 55%,
-              rgba(247,248,250,0.85) 75%,
+              rgba(247,248,250,0.3) 0%,
+              transparent 15%,
+              transparent 78%,
+              rgba(247,248,250,0.85) 92%,
               #f7f8fa 100%
             ),
             linear-gradient(to right,
@@ -234,7 +238,7 @@ export const HomeHero = () => {
         .hero-right  { display: none !important; }
         .trust-bubble { display: none !important; }
         .savings-card { display: none !important; }
-        .ticker-track { animation-duration: 28s; }
+        .ticker-track { animation-duration: 45s; }
       }
     `}</style>
   </>
@@ -306,23 +310,24 @@ const s: Record<string, React.CSSProperties> = {
     display: 'flex',
     flexDirection: 'column',
     overflow: 'hidden',
+    paddingBottom: 0,
   },
   imgWrap: {
     position: 'absolute',
     top: 0, right: 0,
-    width: '86%',
+    width: '100%',
     height: '100%',
   },
   img: {
     width: '100%',
     height: '100%',
-    objectFit: 'cover',
-    objectPosition: 'center center',
+    objectFit: 'contain',
+    objectPosition: 'right 10%',
   },
   imgMask: {
     position: 'absolute',
     inset: 0,
-    background: 'linear-gradient(to bottom, rgba(247,248,250,0.75) 0%, rgba(247,248,250,0.2) 8%, transparent 16%), linear-gradient(to right, #f7f8fa 0%, rgba(247,248,250,0.9) 8%, rgba(247,248,250,0.2) 22%, transparent 38%)',
+    background: 'linear-gradient(to bottom, rgba(247,248,250,0.75) 0%, rgba(247,248,250,0.2) 8%, transparent 16%), linear-gradient(to right, #f7f8fa 0%, rgba(247,248,250,0.95) 12%, rgba(247,248,250,0.3) 28%, transparent 46%)',
   },
   content: {
     position: 'relative',
@@ -446,7 +451,7 @@ const s: Record<string, React.CSSProperties> = {
   /* PARTNERS TICKER */
   pp: {
     background: '#f7f8fa',
-    padding: '0 0 68px',
+    padding: '60px 0 68px',
     overflow: 'hidden',
   },
   ppTitle: {
