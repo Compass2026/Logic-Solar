@@ -108,58 +108,94 @@ export const HomeHero = () => {
       </div>
     </section>
 
-    {/* ═══ PREFERRED PARTNERS ═════════════════════════════ */}
+    {/* ═══ PREFERRED PARTNERS — Infinite Ticker ═══════════ */}
     <section style={s.pp}>
-      <div style={s.ppInner}>
-        <motion.p
-          style={s.ppTitle}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          PREFERRED PARTNERS
-        </motion.p>
-
-        {/* Row 1 */}
-        <div style={s.logoRow}>
-          <ImgLogo src="/images/logos/tesla-word.svg" name="Tesla Powerwall" style={{ height: 100, width: 'auto' }} />
-          <ImgLogo src="/images/logos/franklinwh.png" name="Franklin WH" />
-          <ImgLogo src="/images/logos/enphase.svg" name="Enphase" />
-          <ImgLogo src="/images/logos/opensolar.svg" name="OpenSolar" style={{ height: 44 }} />
-          <ImgLogo src="/images/logos/sungage.png" name="Sungage Financial" />
-          <ImgLogo src="/images/logos/enfin.jpg" name="Enfin Solar" style={{ height: 40 }} />
-          <ImgLogo src="/images/logos/aurorasolar.svg" name="Aurora Solar" style={{ height: 44 }} />
-          <ImgLogo src="/images/logos/bbb.svg" name="BBB" style={{ height: 56 }} />
-          <ImgLogo src="/images/logos/silfab.svg" name="Silfab Solar" />
-        </div>
-
-        {/* Row 2 */}
-        <div style={{ ...s.logoRow, justifyContent: 'center' }}>
-          <ImgLogo src="/images/logos/ironridge.svg" name="IronRidge" style={{ height: 40 }} />
-          <ImgLogo src="/images/logos/sunmodo.jpg" name="Sunmodo" />
-          <ImgLogo src="/images/logos/qcells.svg" name="Qcells" style={{ height: 38 }} />
-          <TextLogo name="Concert Technologies" color="#0066cc" />
-          <ImgLogo src="/images/logos/climatefirst.svg" name="Climate First Bank" style={{ height: 48 }} />
-        </div>
-      </div>
+      <p style={s.ppTitle}>PREFERRED PARTNERS</p>
+      <PartnerTicker />
     </section>
 
     <style>{`
       @keyframes floatUp   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
       @keyframes floatDown { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)}  }
-      .logo-pill:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.10) !important; }
       @media (max-width: 900px) { .trust-bubble { display: none !important; } }
+
+      /* ── Ticker animation ─────────────────────────────── */
+      @keyframes ticker-scroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .ticker-track {
+        display: flex;
+        align-items: center;
+        width: max-content;
+        animation: ticker-scroll 38s linear infinite;
+        will-change: transform;
+      }
+      .ticker-wrap:hover .ticker-track {
+        animation-play-state: paused;
+      }
+      .ticker-logo {
+        filter: grayscale(100%);
+        opacity: 0.55;
+        transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        cursor: default;
+        flex-shrink: 0;
+      }
+      .ticker-logo:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+      .ticker-text-logo {
+        filter: grayscale(100%);
+        opacity: 0.45;
+        transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        cursor: default;
+        flex-shrink: 0;
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        color: #0055aa;
+        white-space: nowrap;
+      }
+      .ticker-text-logo:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+
+      /* ── Edge fade masks ──────────────────────────────── */
+      .ticker-outer {
+        position: relative;
+      }
+      .ticker-outer::before,
+      .ticker-outer::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 120px;
+        z-index: 2;
+        pointer-events: none;
+      }
+      .ticker-outer::before {
+        left: 0;
+        background: linear-gradient(to right, #f7f8fa 0%, transparent 100%);
+      }
+      .ticker-outer::after {
+        right: 0;
+        background: linear-gradient(to left, #f7f8fa 0%, transparent 100%);
+      }
+      @media (max-width: 480px) {
+        .ticker-outer::before,
+        .ticker-outer::after { width: 48px; }
+      }
 
       /* ── Mobile Hero Overrides ─────────────────────────── */
       @media (max-width: 768px) {
-        /* Section: stack vertically, auto height */
         .hero-section {
           min-height: unset !important;
           flex-direction: column !important;
           overflow: visible !important;
         }
-
-        /* Image: sits at top, fixed height, not absolute */
         .hero-img-wrap {
           position: relative !important;
           width: 100% !important;
@@ -168,8 +204,6 @@ export const HomeHero = () => {
           max-height: 320px !important;
           flex-shrink: 0;
         }
-
-        /* Stronger bottom fade so image dissolves into white */
         .hero-img-mask {
           background:
             linear-gradient(to bottom,
@@ -184,8 +218,6 @@ export const HomeHero = () => {
               transparent 30%
             ) !important;
         }
-
-        /* Content: no longer a grid — single column, solid bg */
         .hero-content {
           position: relative !important;
           display: flex !important;
@@ -197,60 +229,72 @@ export const HomeHero = () => {
           z-index: 10 !important;
           margin: 0 !important;
         }
-
-        /* Left column: full width */
-        .hero-left {
-          width: 100% !important;
-          max-width: 100% !important;
-        }
-
-        /* Badge: slightly smaller */
-        .hero-badge {
-          margin-bottom: 18px !important;
-        }
-
-        /* Hide right column entirely on mobile */
-        .hero-right {
-          display: none !important;
-        }
-
-        /* Hide trust bubble (already hidden at 900px but be explicit) */
-        .trust-bubble {
-          display: none !important;
-        }
-
-        /* Hide the floating savings card on mobile */
-        .savings-card {
-          display: none !important;
-        }
+        .hero-left   { width: 100% !important; max-width: 100% !important; }
+        .hero-badge  { margin-bottom: 18px !important; }
+        .hero-right  { display: none !important; }
+        .trust-bubble { display: none !important; }
+        .savings-card { display: none !important; }
+        .ticker-track { animation-duration: 28s; }
       }
     `}</style>
   </>
   );
 };
 
-/* ── Helpers ── */
-const ImgLogo = ({ src, name, style }: { src: string; name: string; style?: React.CSSProperties }) => (
-  <div style={s.logoPill} className="logo-pill">
-    <img
-      src={src}
-      alt={name}
-      style={{ ...s.logoImg, ...(style?.height ? { height: style.height, width: 'auto', maxWidth: 180 } : style) }}
-      onError={(e) => {
-        const target = e.currentTarget;
-        target.style.display = 'none';
-        const fallback = target.nextElementSibling as HTMLElement | null;
-        if (fallback) fallback.style.display = 'block';
-      }}
-    />
-    <span style={s.logoFallback}>{name}</span>
-  </div>
-);
-const TextLogo = ({ name, color, italic }: { name: string; color: string; italic?: boolean }) => (
-  <div style={s.logoPill} className="logo-pill">
-    <span style={{ fontSize: 16, fontWeight: 700, color, fontStyle: italic ? 'italic' : 'normal', letterSpacing: '0.02em' }}>{name}</span>
-  </div>
-);
+/* ── Partner Ticker Data ── */
+const PARTNERS: Array<{ type: 'img'; src: string; name: string; height: number } | { type: 'text'; name: string }> = [
+  { type: 'img',  src: '/images/logos/tesla-word.png',   name: 'Tesla Powerwall',      height: 50 },
+  { type: 'img',  src: '/images/logos/franklinwh.png',   name: 'FranklinWH',           height: 36 },
+  { type: 'img',  src: '/images/logos/enphase.svg',      name: 'Enphase',              height: 52 },
+  { type: 'img',  src: '/images/logos/opensolar.svg',    name: 'OpenSolar',            height: 48 },
+  { type: 'img',  src: '/images/logos/sungage.png',      name: 'Sungage Financial',    height: 52 },
+  { type: 'img',  src: '/images/logos/enfin.jpg',        name: 'EnFin',                height: 48 },
+  { type: 'img',  src: '/images/logos/aurorasolar.svg',  name: 'Aurora',               height: 48 },
+  { type: 'img',  src: '/images/logos/bbb.svg',          name: 'BBB Accredited',       height: 64 },
+  { type: 'img',  src: '/images/logos/silfab.svg',       name: 'Silfab Solar',         height: 50 },
+  { type: 'img',  src: '/images/logos/ironridge.svg',    name: 'IronRidge',            height: 46 },
+  { type: 'img',  src: '/images/logos/sunmodo.jpg',      name: 'SunModo',              height: 52 },
+  { type: 'img',  src: '/images/logos/qcells.svg',       name: 'Qcells',               height: 46 },
+  { type: 'img',  src: '/images/logos/concert-finance.png', name: 'Concert Finance', height: 48 },
+  { type: 'img',  src: '/images/logos/climatefirst.svg', name: 'Climate First',        height: 54 },
+];
+
+/* ── Partner Ticker Component ── */
+const PartnerTicker = () => {
+  // Duplicate list to create seamless infinite loop
+  const all = [...PARTNERS, ...PARTNERS];
+  return (
+    <div className="ticker-outer">
+      <div className="ticker-wrap" style={s.tickerWrap}>
+        <div className="ticker-track">
+          {all.map((p, i) =>
+            p.type === 'img' ? (
+              <div key={i} style={s.tickerItem}>
+                <img
+                  src={p.src}
+                  alt={p.name}
+                  className="ticker-logo"
+                  style={{ height: p.height, width: 'auto', maxWidth: 160, display: 'block' }}
+                  onError={(e) => {
+                    const target = e.currentTarget as HTMLImageElement;
+                    target.style.display = 'none';
+                    const fb = target.nextElementSibling as HTMLElement | null;
+                    if (fb) fb.style.display = 'inline';
+                  }}
+                />
+                <span style={{ display: 'none', fontSize: 14, fontWeight: 700, color: '#666' }}>{p.name}</span>
+              </div>
+            ) : (
+              <div key={i} style={s.tickerItem}>
+                <span className="ticker-text-logo">{p.name}</span>
+              </div>
+            )
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 /* ── Inline styles ── */
 const s: Record<string, React.CSSProperties> = {
@@ -399,57 +443,30 @@ const s: Record<string, React.CSSProperties> = {
   pct: { fontSize: '2.2rem', fontWeight: 900, color: '#1b2a33', letterSpacing: '-0.03em', lineHeight: 1 },
   savLabel: { fontSize: 9, fontWeight: 800, letterSpacing: '0.16em', textTransform: 'uppercase' as const, color: 'rgba(27,42,51,0.45)', lineHeight: 1.7, margin: 0 },
 
-  /* PARTNERS */
+  /* PARTNERS TICKER */
   pp: {
-    background: '#fff',
-    borderTop: '1px solid #efefef',
-    padding: '72px 48px 80px',
+    background: '#f7f8fa',
+    padding: '0 0 68px',
+    overflow: 'hidden',
   },
-  ppInner: { maxWidth: 1320, margin: '0 auto' },
   ppTitle: {
     textAlign: 'center' as const,
     fontSize: 11,
     fontWeight: 900,
     letterSpacing: '0.36em',
     color: '#aab4bb',
-    marginBottom: 48,
+    marginBottom: 36,
     textTransform: 'uppercase' as const,
   },
-  logoRow: {
-    display: 'flex',
-    flexWrap: 'wrap' as const,
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: 16,
-    marginBottom: 16,
+  tickerWrap: {
+    overflow: 'hidden',
+    width: '100%',
   },
-  logoPill: {
+  tickerItem: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: '18px 32px',
-    borderRadius: 16,
-    border: '1.5px solid #e8e8e8',
-    background: '#fff',
-    minWidth: 140,
-    minHeight: 110,
-    boxShadow: '0 2px 10px rgba(0,0,0,0.04)',
-    transition: 'box-shadow 0.22s ease, transform 0.22s ease',
-    cursor: 'default' as const,
-  },
-  logoImg: {
-    height: 52,
-    width: 'auto',
-    maxWidth: 180,
-    objectFit: 'contain' as const,
-    filter: 'grayscale(10%)',
-    display: 'block',
-  },
-  logoFallback: {
-    display: 'none',
-    fontSize: 15,
-    fontWeight: 700,
-    color: '#444',
-    letterSpacing: '0.03em',
+    padding: '0 56px',
+    flexShrink: 0,
   },
 };
