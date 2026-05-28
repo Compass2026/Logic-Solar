@@ -17,7 +17,7 @@ export const HomeHero = () => {
 
       {/* House image — right side, bleeds full height */}
       <div style={s.imgWrap} className="hero-img-wrap">
-        <img src="/images/hero-chatgpt-may15.png" alt="Logic Solar home" style={s.img} className="hero-img" />
+        <div className="hero-img" style={s.heroBg} />
         <div style={s.imgMask} className="hero-img-mask" />
       </div>
 
@@ -119,6 +119,16 @@ export const HomeHero = () => {
       @keyframes floatDown { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)}  }
       @media (max-width: 900px) { .trust-bubble { display: none !important; } }
 
+      /* ── Desktop hero image — full bleed, centered vertically ── */
+      .hero-img {
+        position: absolute;
+        inset: 0;
+        background-image: url('/images/hero-chatgpt-may15.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right 38%;
+      }
+
       /* ── Ticker animation ─────────────────────────────── */
       @keyframes ticker-scroll {
         0%   { transform: translateX(0); }
@@ -204,9 +214,10 @@ export const HomeHero = () => {
           max-height: 460px !important;
           flex-shrink: 0;
         }
-        /* Shift crop to top so full roof peak & panels are visible */
+        /* Mobile: switch to full-cover crop, pinned to top to show panels */
         .hero-img {
-          object-position: center top !important;
+          background-size: cover !important;
+          background-position: center top !important;
         }
         .hero-img-mask {
           background:
@@ -316,13 +327,11 @@ const s: Record<string, React.CSSProperties> = {
     position: 'absolute',
     top: 0, right: 0,
     width: '100%',
-    height: '100%',
+    height: '100vh',
   },
-  img: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'contain',
-    objectPosition: 'right 10%',
+  heroBg: {
+    position: 'absolute' as const,
+    inset: 0,
   },
   imgMask: {
     position: 'absolute',
