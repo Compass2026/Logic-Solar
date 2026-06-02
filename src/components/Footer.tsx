@@ -19,7 +19,7 @@ export const Footer = () => {
               <img 
                 src="/logo.png" 
                 alt="Logic Solar" 
-                className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+                className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
               />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
