@@ -55,8 +55,7 @@ export const Navbar = () => {
             <img 
               src="/logo.png" 
               alt="Logic Solar" 
-              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-              style={scrolled ? { background: '#1b2a33', borderRadius: 10, padding: '4px 10px' } : {}}
+              className="h-12 w-auto object-contain transition-all duration-300 group-hover:scale-105" 
             />
           )}
         </Link>
