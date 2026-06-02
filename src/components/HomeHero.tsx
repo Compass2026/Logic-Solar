@@ -17,8 +17,14 @@ export const HomeHero = () => {
 
       {/* Full-bleed aerial background */}
       <div style={s.imgWrap} className="hero-img-wrap">
-        <div className="hero-img" style={s.heroBg} />
-        {/* Left-to-right gradient: solid white-ish left → transparent right */}
+        {/* Hero image — full quality, no zoom, no distortion */}
+        <img
+          src="/images/modern_suburban_home_with_solar_panels.png"
+          alt="Modern suburban home with rooftop solar panels"
+          style={s.heroImg}
+          className="hero-img"
+        />
+        {/* Dark overlay — separate from image, never on the img element */}
         <div style={s.imgMask} className="hero-img-mask" />
         {/* Top fade for navbar readability */}
         <div style={s.imgTopFade} />
@@ -125,15 +131,15 @@ export const HomeHero = () => {
       @keyframes floatDown { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)}  }
       @media (max-width: 900px) { .trust-bubble { display: none !important; } }
 
-      /* ── Desktop hero image — wide aerial, house lower-center ── */
+      /* ── Desktop hero image — object-cover, no zoom, no distortion ── */
       .hero-img {
         position: absolute;
         inset: 0;
-        background-image: url('/hero-final.jpg');
-        background-repeat: no-repeat;
-        background-size: 85%;
-        /* 68% V pulls the viewport down — brings backyard patio into the shot */
-        background-position: center 68%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        display: block;
       }
 
       /* ── Ticker animation ─────────────────────────────── */
@@ -248,22 +254,11 @@ export const HomeHero = () => {
           flex-shrink: 0;
         }
         .hero-img {
-          background-size: cover !important;
-          background-position: center 30% !important;
+          object-fit: cover !important;
+          object-position: center center !important;
         }
         .hero-img-mask {
-          background:
-            linear-gradient(to bottom,
-              rgba(247,248,250,0.3) 0%,
-              transparent 15%,
-              transparent 78%,
-              rgba(247,248,250,0.85) 92%,
-              #f7f8fa 100%
-            ),
-            linear-gradient(to right,
-              rgba(247,248,250,0.3) 0%,
-              transparent 30%
-            ) !important;
+          background: linear-gradient(to bottom, transparent 40%, rgba(255,255,255,0.85) 80%, #fff 100%) !important;
         }
         .hero-content {
           position: relative !important;
@@ -348,7 +343,7 @@ const s: Record<string, React.CSSProperties> = {
   /* HERO */
   hero: {
     position: 'relative',
-    minHeight: '88vh',
+    minHeight: 760,
     background: '#000',
     display: 'flex',
     flexDirection: 'column',
@@ -361,26 +356,27 @@ const s: Record<string, React.CSSProperties> = {
     width: '100%',
     height: '100%',
   },
-  heroBg: {
+  /* Hero image — object-cover, object-center, full quality, no zoom */
+  heroImg: {
     position: 'absolute' as const,
     inset: 0,
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover' as const,
+    objectPosition: 'center center',
+    display: 'block',
   },
-  /* Dark overlay — full-bleed scrim, slightly stronger in the upper-left for text */
+  /* White-left gradient overlay — photo shows fully on right, white fade on left for text readability */
   imgMask: {
     position: 'absolute',
     inset: 0,
-    background: [
-      /* Lighter scrim — photo reads through naturally */
-      'linear-gradient(to right, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.16) 45%, rgba(0,0,0,0.08) 100%)',
-      /* Soft top for navbar */
-      'linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, transparent 20%)',
-    ].join(', '),
+    background: 'linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.92) 22%, rgba(255,255,255,0.6) 42%, rgba(255,255,255,0.0) 62%)',
   },
   imgTopFade: {
     position: 'absolute',
     top: 0, left: 0, right: 0,
     height: 80,
-    background: 'linear-gradient(to bottom, rgba(247,248,250,0.5) 0%, transparent 100%)',
+    background: 'linear-gradient(to bottom, rgba(255,255,255,0.5) 0%, transparent 100%)',
     pointerEvents: 'none',
   },
   content: {
@@ -420,15 +416,14 @@ const s: Record<string, React.CSSProperties> = {
     fontSize: 'clamp(2.4rem, 4vw, 4rem)',
     fontWeight: 900,
     lineHeight: 1.08,
-    color: '#ffffff',
+    color: '#1b2a33',
     letterSpacing: '-0.025em',
     marginBottom: 20,
-    textShadow: '0 2px 16px rgba(0,0,0,0.5)',
   },
-  gold: { color: '#f9cd0d' },
+  gold: { color: '#e6b800' },
   sub: {
     fontSize: '1rem',
-    color: 'rgba(255,255,255,0.85)',
+    color: 'rgba(27,42,51,0.7)',
     lineHeight: 1.75,
     marginBottom: 32,
     maxWidth: 420,
@@ -472,9 +467,9 @@ const s: Record<string, React.CSSProperties> = {
     fontWeight: 800,
     letterSpacing: '0.14em',
     textTransform: 'uppercase' as const,
-    color: 'rgba(255,255,255,0.65)',
+    color: 'rgba(27,42,51,0.55)',
   },
-  trustIco: { width: 15, height: 15, color: '#34d399' },
+  trustIco: { width: 15, height: 15, color: '#16a34a' },
 
   /* RIGHT column — floating cards */
   right: { position: 'relative', minHeight: 480, overflow: 'visible' },
