@@ -255,7 +255,7 @@ export const HomeHero = () => {
         }
         .hero-img {
           object-fit: cover !important;
-          object-position: center center !important;
+          object-position: 68% 55% !important;
         }
         .hero-img-mask {
           background: linear-gradient(to bottom, transparent 40%, rgba(255,255,255,0.85) 80%, #fff 100%) !important;
