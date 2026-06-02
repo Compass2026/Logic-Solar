@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Zap, ShieldCheck, Star, DollarSign } from 'lucide-react';
+import { ArrowRight, Zap, ShieldCheck, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AVATARS = [
@@ -15,16 +15,19 @@ export const HomeHero = () => {
     {/* ═══ HERO ═══════════════════════════════════════════ */}
     <section style={s.hero} className="hero-section">
 
-      {/* House image — right side, bleeds full height */}
+      {/* Full-bleed aerial background */}
       <div style={s.imgWrap} className="hero-img-wrap">
         <div className="hero-img" style={s.heroBg} />
+        {/* Left-to-right gradient: solid white-ish left → transparent right */}
         <div style={s.imgMask} className="hero-img-mask" />
+        {/* Top fade for navbar readability */}
+        <div style={s.imgTopFade} />
       </div>
 
-      {/* ── Content ── */}
+      {/* ── Content grid ── */}
       <div style={s.content} className="hero-content">
 
-        {/* LEFT column */}
+        {/* LEFT column — text overlaid on light sky area */}
         <motion.div
           style={s.left}
           className="hero-left"
@@ -32,10 +35,11 @@ export const HomeHero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          {/* Badge */}
+          {/* Premium Engineering badge */}
           <div style={s.badge} className="hero-badge">
             <span style={s.badgeDot}>+</span>
             <span style={s.badgeLabel}>PREMIUM</span>
+            <span style={s.badgeSep}>|</span>
             <span style={s.badgePower}>⏻</span>
             <span style={s.badgeLabel}>ENGINEERING</span>
           </div>
@@ -68,13 +72,13 @@ export const HomeHero = () => {
           </div>
         </motion.div>
 
-        {/* RIGHT column */}
+        {/* RIGHT column — floating data cards only */}
         <div style={s.right} className="hero-right">
 
-          {/* Trust card — contained within right column, no overflow */}
+          {/* Trusted by 1,000+ — upper right quadrant */}
           <motion.div
             className="trust-bubble"
-            style={{ ...s.card, position: 'absolute', top: '40%', right: 40, transform: 'translateY(-50%)', zIndex: 20 }}
+            style={{ ...s.card, top: '22%', right: 32 }}
             initial={{ opacity: 0, y: -14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.3 }}
@@ -89,10 +93,10 @@ export const HomeHero = () => {
             <p style={s.cardSub}>Modern Homeowners</p>
           </motion.div>
 
-          {/* Savings card */}
+          {/* 40% Savings — lower right quadrant */}
           <motion.div
             className="savings-card"
-            style={{ ...s.card, bottom: 80, left: '5%' }}
+            style={{ ...s.card, bottom: '18%', right: 64 }}
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.45 }}
@@ -106,12 +110,14 @@ export const HomeHero = () => {
 
         </div>
       </div>
-    </section>
 
-    {/* ═══ PREFERRED PARTNERS — Infinite Ticker ═══════════ */}
-    <section style={s.pp}>
-      <p style={s.ppTitle}>PREFERRED PARTNERS</p>
-      <PartnerTicker />
+      {/* ═══ PREFERRED PARTNERS — pinned inside hero, above the fold ════════ */}
+      <div style={s.ppBar}>
+        <p style={s.ppTitleHero}>PREFERRED PARTNERS</p>
+        <div className="hero-ticker-wrap">
+          <PartnerTicker />
+        </div>
+      </div>
     </section>
 
     <style>{`
@@ -119,14 +125,18 @@ export const HomeHero = () => {
       @keyframes floatDown { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)}  }
       @media (max-width: 900px) { .trust-bubble { display: none !important; } }
 
-      /* ── Desktop hero image — full bleed, centered vertically ── */
+      /* ── Desktop hero image — wide aerial, house lower-center ── */
       .hero-img {
         position: absolute;
-        inset: 0;
-        background-image: url('/images/hero-chatgpt-may15.png');
+        top: 72px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url('/hero-final.jpg');
         background-repeat: no-repeat;
-        background-size: cover;
-        background-position: right 38%;
+        background-size: 85%;
+        /* 68% V pulls the viewport down — brings backyard patio into the shot */
+        background-position: center 68%;
       }
 
       /* ── Ticker animation ─────────────────────────────── */
@@ -199,6 +209,32 @@ export const HomeHero = () => {
         .ticker-outer::after { width: 48px; }
       }
 
+      /* ── Hero ticker overrides — dark greyscale logos on white frosted strip ── */
+      .hero-ticker-wrap .ticker-logo {
+        filter: grayscale(100%);
+        opacity: 0.55;
+      }
+      .hero-ticker-wrap .ticker-logo:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+      .hero-ticker-wrap .ticker-text-logo {
+        filter: grayscale(100%);
+        color: #0055aa;
+        opacity: 0.45;
+      }
+      .hero-ticker-wrap .ticker-text-logo:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+      /* Edge fade matches the white strip */
+      .hero-ticker-wrap .ticker-outer::before {
+        background: linear-gradient(to right, rgba(247,248,250,0.92) 0%, transparent 100%);
+      }
+      .hero-ticker-wrap .ticker-outer::after {
+        background: linear-gradient(to left, rgba(247,248,250,0.92) 0%, transparent 100%);
+      }
+
       /* ── Mobile Hero Overrides ─────────────────────────── */
       @media (max-width: 768px) {
         .hero-section {
@@ -214,10 +250,9 @@ export const HomeHero = () => {
           max-height: 460px !important;
           flex-shrink: 0;
         }
-        /* Mobile: switch to full-cover crop, pinned to top to show panels */
         .hero-img {
           background-size: cover !important;
-          background-position: center top !important;
+          background-position: center 30% !important;
         }
         .hero-img-mask {
           background:
@@ -316,7 +351,7 @@ const s: Record<string, React.CSSProperties> = {
   /* HERO */
   hero: {
     position: 'relative',
-    minHeight: '100vh',
+    minHeight: '88vh',
     background: '#f7f8fa',
     display: 'flex',
     flexDirection: 'column',
@@ -327,16 +362,29 @@ const s: Record<string, React.CSSProperties> = {
     position: 'absolute',
     top: 0, right: 0,
     width: '100%',
-    height: '100vh',
+    height: '88vh',
   },
   heroBg: {
     position: 'absolute' as const,
     inset: 0,
   },
+  /* Dark overlay — full-bleed scrim, slightly stronger in the upper-left for text */
   imgMask: {
     position: 'absolute',
     inset: 0,
-    background: 'linear-gradient(to bottom, rgba(247,248,250,0.75) 0%, rgba(247,248,250,0.2) 8%, transparent 16%), linear-gradient(to right, #f7f8fa 0%, rgba(247,248,250,0.95) 12%, rgba(247,248,250,0.3) 28%, transparent 46%)',
+    background: [
+      /* Lighter scrim — photo reads through naturally */
+      'linear-gradient(to right, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.16) 45%, rgba(0,0,0,0.08) 100%)',
+      /* Soft top for navbar */
+      'linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, transparent 20%)',
+    ].join(', '),
+  },
+  imgTopFade: {
+    position: 'absolute',
+    top: 0, left: 0, right: 0,
+    height: 80,
+    background: 'linear-gradient(to bottom, rgba(247,248,250,0.5) 0%, transparent 100%)',
+    pointerEvents: 'none',
   },
   content: {
     position: 'relative',
@@ -346,40 +394,44 @@ const s: Record<string, React.CSSProperties> = {
     gridTemplateColumns: '5fr 4fr',
     alignItems: 'center',
     width: '100%',
-    padding: '130px 48px 90px 28px',
+    padding: '130px 48px 80px 48px',
     gap: 0,
   },
   left: {
     display: 'flex',
     flexDirection: 'column',
+    maxWidth: 520,
   },
   badge: {
     display: 'inline-flex',
     alignItems: 'center',
     gap: 6,
-    background: '#fff',
-    border: '1.5px solid #e5e5e5',
+    background: 'rgba(255,255,255,0.92)',
+    backdropFilter: 'blur(12px)',
+    border: '1.5px solid rgba(229,229,229,0.8)',
     borderRadius: 999,
     padding: '7px 14px',
     marginBottom: 26,
     width: 'fit-content',
-    boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+    boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
   },
-  badgeDot: { color: '#f9cd0d', fontWeight: 900, fontSize: 14 },
+  badgeDot:   { color: '#f9cd0d', fontWeight: 900, fontSize: 14 },
   badgeLabel: { color: '#1b2a33', fontSize: 10, fontWeight: 800, letterSpacing: '0.18em' },
+  badgeSep:   { color: '#ccc', fontSize: 12, margin: '0 2px' },
   badgePower: { color: '#1b2a33', fontSize: 13 },
   h1: {
     fontSize: 'clamp(2.4rem, 4vw, 4rem)',
     fontWeight: 900,
     lineHeight: 1.08,
-    color: '#1b2a33',
+    color: '#ffffff',
     letterSpacing: '-0.025em',
     marginBottom: 20,
+    textShadow: '0 2px 16px rgba(0,0,0,0.5)',
   },
   gold: { color: '#f9cd0d' },
   sub: {
     fontSize: '1rem',
-    color: 'rgba(27,42,51,0.6)',
+    color: 'rgba(255,255,255,0.85)',
     lineHeight: 1.75,
     marginBottom: 32,
     maxWidth: 420,
@@ -396,21 +448,22 @@ const s: Record<string, React.CSSProperties> = {
     fontSize: '0.875rem',
     fontWeight: 800,
     textDecoration: 'none',
-    boxShadow: '0 4px 20px rgba(27,42,51,0.25)',
+    boxShadow: '0 4px 20px rgba(27,42,51,0.28)',
     transition: 'all 0.25s',
   },
   btnLight: {
     display: 'inline-flex',
     alignItems: 'center',
-    background: '#fff',
+    background: 'rgba(255,255,255,0.92)',
+    backdropFilter: 'blur(8px)',
     color: '#1b2a33',
     padding: '14px 24px',
     borderRadius: 999,
     fontSize: '0.875rem',
     fontWeight: 800,
     textDecoration: 'none',
-    border: '1.5px solid #ddd',
-    boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
+    border: '1.5px solid rgba(220,220,220,0.9)',
+    boxShadow: '0 2px 12px rgba(0,0,0,0.07)',
     transition: 'all 0.25s',
   },
   trust: { display: 'flex', flexWrap: 'wrap', gap: 20 },
@@ -422,21 +475,24 @@ const s: Record<string, React.CSSProperties> = {
     fontWeight: 800,
     letterSpacing: '0.14em',
     textTransform: 'uppercase' as const,
-    color: 'rgba(27,42,51,0.55)',
+    color: 'rgba(255,255,255,0.65)',
   },
   trustIco: { width: 15, height: 15, color: '#34d399' },
+
+  /* RIGHT column — floating cards */
   right: { position: 'relative', minHeight: 480, overflow: 'visible' },
   card: {
     position: 'absolute',
-    background: 'rgba(255,255,255,0.92)',
-    backdropFilter: 'blur(16px)',
-    border: '1px solid rgba(255,255,255,0.8)',
+    background: 'rgba(255,255,255,0.90)',
+    backdropFilter: 'blur(20px)',
+    WebkitBackdropFilter: 'blur(20px)',
+    border: '1px solid rgba(255,255,255,0.75)',
     borderRadius: 18,
     padding: '14px 18px',
-    boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
+    boxShadow: '0 12px 40px rgba(0,0,0,0.14), 0 2px 8px rgba(0,0,0,0.06)',
   },
   avatarRow: { display: 'flex', marginBottom: 8 },
-  avatar: { width: 36, height: 36, borderRadius: '50%', border: '2px solid #fff', objectFit: 'cover' },
+  avatar: { width: 36, height: 36, borderRadius: '50%', border: '2px solid #fff', objectFit: 'cover' as const },
   avatarPlus: {
     width: 36, height: 36,
     borderRadius: '50%',
@@ -447,29 +503,35 @@ const s: Record<string, React.CSSProperties> = {
     marginLeft: -8,
   },
   cardTitle: { fontSize: 13, fontWeight: 800, color: '#1b2a33', margin: '0 0 2px' },
-  cardSub: { fontSize: 11, fontWeight: 600, color: 'rgba(27,42,51,0.5)', margin: 0 },
+  cardSub:   { fontSize: 11, fontWeight: 600, color: 'rgba(27,42,51,0.5)', margin: 0 },
   savRow: { display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6 },
   bolt: {
     width: 32, height: 32, borderRadius: 8,
     background: '#f9cd0d',
     display: 'flex', alignItems: 'center', justifyContent: 'center',
   },
-  pct: { fontSize: '2.2rem', fontWeight: 900, color: '#1b2a33', letterSpacing: '-0.03em', lineHeight: 1 },
+  pct:      { fontSize: '2.2rem', fontWeight: 900, color: '#1b2a33', letterSpacing: '-0.03em', lineHeight: 1 },
   savLabel: { fontSize: 9, fontWeight: 800, letterSpacing: '0.16em', textTransform: 'uppercase' as const, color: 'rgba(27,42,51,0.45)', lineHeight: 1.7, margin: 0 },
 
-  /* PARTNERS TICKER */
-  pp: {
-    background: '#f7f8fa',
-    padding: '60px 0 68px',
+  /* PARTNERS TICKER BAR — frosted white strip inside hero */
+  ppBar: {
+    position: 'relative' as const,
+    zIndex: 10,
+    width: '100%',
+    background: 'rgba(247,248,250,0.90)',
+    backdropFilter: 'blur(14px)',
+    WebkitBackdropFilter: 'blur(14px)',
+    borderTop: '1px solid rgba(0,0,0,0.06)',
+    padding: '18px 0 22px',
     overflow: 'hidden',
   },
-  ppTitle: {
+  ppTitleHero: {
     textAlign: 'center' as const,
     fontSize: 11,
     fontWeight: 900,
     letterSpacing: '0.36em',
     color: '#aab4bb',
-    marginBottom: 36,
+    marginBottom: 18,
     textTransform: 'uppercase' as const,
   },
   tickerWrap: {
