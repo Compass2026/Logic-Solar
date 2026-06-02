@@ -343,7 +343,7 @@ const s: Record<string, React.CSSProperties> = {
   /* HERO */
   hero: {
     position: 'relative',
-    minHeight: 760,
+    minHeight: '100vh',
     background: '#000',
     display: 'flex',
     flexDirection: 'column',

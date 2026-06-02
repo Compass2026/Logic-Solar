@@ -53,9 +53,10 @@ export const Navbar = () => {
             </span>
           ) : (
             <img 
-              src={scrolled ? "/logo-dark.png" : "/logo.png"} 
+              src="/logo.png" 
               alt="Logic Solar" 
-              className="h-full w-auto object-contain transition-all duration-300 group-hover:scale-105" 
+              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              style={scrolled ? { background: '#1b2a33', borderRadius: 10, padding: '4px 10px' } : {}}
             />
           )}
         </Link>
