@@ -128,10 +128,7 @@ export const HomeHero = () => {
       /* ── Desktop hero image — wide aerial, house lower-center ── */
       .hero-img {
         position: absolute;
-        top: 72px;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        inset: 0;
         background-image: url('/hero-final.jpg');
         background-repeat: no-repeat;
         background-size: 85%;
@@ -352,7 +349,7 @@ const s: Record<string, React.CSSProperties> = {
   hero: {
     position: 'relative',
     minHeight: '88vh',
-    background: '#f7f8fa',
+    background: '#000',
     display: 'flex',
     flexDirection: 'column',
     overflow: 'hidden',
@@ -360,9 +357,9 @@ const s: Record<string, React.CSSProperties> = {
   },
   imgWrap: {
     position: 'absolute',
-    top: 0, right: 0,
+    top: 0, right: 0, bottom: 0,
     width: '100%',
-    height: '88vh',
+    height: '100%',
   },
   heroBg: {
     position: 'absolute' as const,
