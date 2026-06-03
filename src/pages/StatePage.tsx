@@ -34,6 +34,24 @@ export const StatePage = () => {
         eyebrow={`Solar Energy in ${location.city}`}
       />
 
+      {stateId === 'colorado' && (
+        <div style={{
+          background: 'linear-gradient(90deg, #f9cd0d 0%, #ffd93d 50%, #f9cd0d 100%)',
+          color: '#1b2a33',
+          textAlign: 'center',
+          padding: '14px 24px',
+          fontWeight: 900,
+          fontSize: '15px',
+          letterSpacing: '0.12em',
+          textTransform: 'uppercase',
+          boxShadow: '0 4px 20px rgba(249,205,13,0.4)',
+          position: 'relative',
+          zIndex: 10,
+        }}>
+          🚀 &nbsp;Coming Soon — We're launching in Colorado!&nbsp; 🚀
+        </div>
+      )}
+
       <TrustStrip />
 
       <section className="py-24 bg-white">

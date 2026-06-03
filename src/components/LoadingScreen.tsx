@@ -63,7 +63,7 @@ export const LoadingScreen = ({ onComplete }: { onComplete: () => void }) => {
             >
               <div className="relative h-12 md:h-16 w-64 flex items-center justify-center">
                 <img 
-                  src="/logo.png" 
+                  src="/logo-original.png" 
                   alt="Logic Solar" 
                   className="w-full h-full object-contain" 
                 />

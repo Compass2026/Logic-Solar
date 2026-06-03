@@ -28,37 +28,77 @@ export const Navbar = () => {
   }, [location]);
 
   return (
-    <nav 
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6",
-        scrolled ? "bg-white/95 backdrop-blur-xl border-b border-gray-100 py-4" : "py-6"
-      )}
-      style={!scrolled ? {
-        backgroundColor: 'rgba(27, 42, 51, 0.92)',
-        backdropFilter: 'blur(18px) saturate(1.4)',
-        WebkitBackdropFilter: 'blur(18px) saturate(1.4)',
-        borderBottom: '1px solid rgba(255,255,255,0.12)',
-        boxShadow: '0 4px 32px rgba(33,97,102,0.18), inset 0 1px 0 rgba(255,255,255,0.15)',
-      } : {}}
-    >
-      <div className="w-full flex items-center justify-between">
-        {/* Logo */}
-        <Link to={isRoofing ? "/roofing" : "/"} className="flex items-center group relative h-10 md:h-12 w-auto">
-          {isRoofing ? (
-            <span className={cn(
-              "text-2xl font-black tracking-tighter transition-all duration-300 group-hover:scale-105",
-              (scrolled || isDarkNav) ? "text-brand-dark" : "text-white"
-            )}>
-              LOGIC <span className="text-brand-gold">ROOFING</span>
-            </span>
-          ) : (
-            <img 
-              src={scrolled ? "/logo-dark.png" : "/logo.png"} 
-              alt="Logic Solar" 
-              className="h-full w-auto object-contain transition-all duration-300 group-hover:scale-105" 
-            />
-          )}
-        </Link>
+    <>
+      <style>{`
+        @keyframes flagWave {
+          0%   { background-position: 0% 50%; }
+          50%  { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .nav-flag {
+          background: linear-gradient(
+            105deg,
+            #b22234        0%,
+            #c8102e        18%,
+            #e8223a        28%,
+            #ffffff        42%,
+            #ffffff        58%,
+            #2a52a0        72%,
+            #3c3b6e        82%,
+            #0a3161        92%,
+            #061a3a        100%
+          );
+        }
+        .nav-text-shadow {
+          text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 2px 8px rgba(0,0,0,0.6);
+        }
+      `}</style>
+      <nav 
+        className={cn(
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-28",
+          scrolled ? "py-4" : "py-5"
+        )}
+        style={scrolled ? {
+          backgroundColor: '#ffffff',
+          borderBottom: '1px solid rgba(0,0,0,0.08)',
+          boxShadow: '0 2px 16px rgba(0,0,0,0.06)',
+        } : {
+          backgroundColor: 'rgba(27, 42, 51, 0.92)',
+          backdropFilter: 'blur(18px) saturate(1.4)',
+          WebkitBackdropFilter: 'blur(18px) saturate(1.4)',
+          borderBottom: '1px solid rgba(255,255,255,0.12)',
+          boxShadow: '0 4px 32px rgba(33,97,102,0.18), inset 0 1px 0 rgba(255,255,255,0.15)',
+        }}
+      >
+        <div className="w-full flex items-center justify-between">
+          {/* Logo — sits on its own white backing so it's always legible */}
+          <Link
+            to={isRoofing ? "/roofing" : "/"}
+            className="flex items-center group relative w-auto"
+            style={{
+              height: '120px',
+              background: scrolled ? 'transparent' : 'rgba(255,255,255,0.92)',
+              borderRadius: '12px',
+              padding: scrolled ? '0' : '6px 16px',
+              boxShadow: scrolled ? 'none' : '0 2px 12px rgba(0,0,0,0.12)',
+              transition: 'all 0.5s ease',
+            }}
+          >
+            {isRoofing ? (
+              <span className={cn(
+                "text-2xl font-black tracking-tighter transition-all duration-300 group-hover:scale-105",
+                scrolled ? "text-brand-dark" : "text-brand-dark"
+              )}>
+                LOGIC <span className="text-brand-gold">ROOFING</span>
+              </span>
+            ) : (
+              <img
+                src="/logo-dark.png"
+                alt="Logic Solar"
+                className="h-full w-auto object-contain transition-all duration-300 group-hover:scale-105"
+              />
+            )}
+          </Link>
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-10">
@@ -73,7 +113,7 @@ export const Navbar = () => {
                 <button 
                   className={cn(
                     "flex items-center gap-1.5 text-[13px] font-bold uppercase tracking-widest transition-colors py-2",
-                    scrolled ? "text-brand-dark/60 hover:text-brand-dark" : "text-white/80 hover:text-white"
+                    scrolled ? "text-brand-dark/60 hover:text-brand-dark" : "text-white hover:text-white nav-text-shadow"
                   )}
                 >
                   {item.name}
@@ -84,7 +124,7 @@ export const Navbar = () => {
                   to={item.href}
                   className={cn(
                     "text-[13px] font-bold uppercase tracking-widest transition-colors py-2",
-                    scrolled ? "text-brand-dark/60 hover:text-brand-dark" : "text-white/80 hover:text-white"
+                    scrolled ? "text-brand-dark/60 hover:text-brand-dark" : "text-white hover:text-white nav-text-shadow"
                   )}
                 >
                   {item.name}
@@ -117,7 +157,7 @@ export const Navbar = () => {
         <div className="hidden lg:flex items-center">
           <Link
             to="/contact"
-            style={{ backgroundColor: '#f9cd0d', color: '#1b2a33', padding: '10px 22px', borderRadius: '999px', fontSize: '11px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap', textDecoration: 'none', display: 'inline-block', transition: 'all 0.2s', boxShadow: '0 2px 10px rgba(249,205,13,0.3)' }}
+            style={{ backgroundColor: '#f9cd0d', color: '#1b2a33', padding: '14px 32px', borderRadius: '999px', fontSize: '13px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap', textDecoration: 'none', display: 'inline-block', transition: 'all 0.25s', boxShadow: '0 4px 20px rgba(249,205,13,0.45)', }}
           >
             Get My Free Quote
           </Link>
@@ -195,5 +235,6 @@ export const Navbar = () => {
         </div>
       </div>
     </nav>
+    </>
   );
 };

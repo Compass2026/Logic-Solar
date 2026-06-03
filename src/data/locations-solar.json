@@ -6549,6 +6549,716 @@
           }
         }
       ]
+    },
+    "co": {
+      "name": "Colorado",
+      "heroImage": "/images/colorado-hero.jpg",
+      "sunlightDays": 300,
+      "utilityFocus": "Xcel Energy and Black Hills Energy net metering programs",
+      "stateIncentive": "the Federal Solar Investment Tax Credit (ITC) plus Colorado's Residential Energy Tax Credit and local property tax exemptions on solar equipment",
+      "avgBill": "$87",
+      "cities": [
+        {
+          "city": "Denver",
+          "slug": "denver",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Colorado Springs",
+          "slug": "colorado-springs",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Aurora",
+          "slug": "aurora",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Fort Collins",
+          "slug": "fort-collins",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Lakewood",
+          "slug": "lakewood",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Thornton",
+          "slug": "thornton",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Arvada",
+          "slug": "arvada",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Westminster",
+          "slug": "westminster",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Pueblo",
+          "slug": "pueblo",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Centennial",
+          "slug": "centennial",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Boulder",
+          "slug": "boulder",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Highlands Ranch",
+          "slug": "highlands-ranch",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Greeley",
+          "slug": "greeley",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Longmont",
+          "slug": "longmont",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Loveland",
+          "slug": "loveland",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Broomfield",
+          "slug": "broomfield",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Castle Rock",
+          "slug": "castle-rock",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Commerce City",
+          "slug": "commerce-city",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Parker",
+          "slug": "parker",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Northglenn",
+          "slug": "northglenn",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Brighton",
+          "slug": "brighton",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Littleton",
+          "slug": "littleton",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Englewood",
+          "slug": "englewood",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Columbine",
+          "slug": "columbine",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Ken Caryl",
+          "slug": "ken-caryl",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Erie",
+          "slug": "erie",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Wheat Ridge",
+          "slug": "wheat-ridge",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Windsor",
+          "slug": "windsor",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Fountain",
+          "slug": "fountain",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Security-Widefield",
+          "slug": "security-widefield",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Grand Junction",
+          "slug": "grand-junction",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Pueblo West",
+          "slug": "pueblo-west",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Clifton",
+          "slug": "clifton",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Cimarron Hills",
+          "slug": "cimarron-hills",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Sterling",
+          "slug": "sterling",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Firestone",
+          "slug": "firestone",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Frederick",
+          "slug": "frederick",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Durango",
+          "slug": "durango",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Montrose",
+          "slug": "montrose",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Evans",
+          "slug": "evans",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Lafayette",
+          "slug": "lafayette",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Louisville",
+          "slug": "louisville",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Superior",
+          "slug": "superior",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Johnstown",
+          "slug": "johnstown",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Golden",
+          "slug": "golden",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Federal Heights",
+          "slug": "federal-heights",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Steamboat Springs",
+          "slug": "steamboat-springs",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Fort Morgan",
+          "slug": "fort-morgan",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Glenwood Springs",
+          "slug": "glenwood-springs",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Lone Tree",
+          "slug": "lone-tree",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Castle Pines",
+          "slug": "castle-pines",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Greenwood Village",
+          "slug": "greenwood-village",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Canon City",
+          "slug": "canon-city",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Fruita",
+          "slug": "fruita",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Woodland Park",
+          "slug": "woodland-park",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Berthoud",
+          "slug": "berthoud",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Lochbuie",
+          "slug": "lochbuie",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Milliken",
+          "slug": "milliken",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Mead",
+          "slug": "mead",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Cherry Hills Village",
+          "slug": "cherry-hills-village",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Evergreen",
+          "slug": "evergreen",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Conifer",
+          "slug": "conifer",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Timnath",
+          "slug": "timnath",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Dacono",
+          "slug": "dacono",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Rifle",
+          "slug": "rifle",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Cortez",
+          "slug": "cortez",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Alamosa",
+          "slug": "alamosa",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Craig",
+          "slug": "craig",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Delta",
+          "slug": "delta",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Trinidad",
+          "slug": "trinidad",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Estes Park",
+          "slug": "estes-park",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Vail",
+          "slug": "vail",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Avon",
+          "slug": "avon",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Eagle",
+          "slug": "eagle",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "La Junta",
+          "slug": "la-junta",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Lamar",
+          "slug": "lamar",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Salida",
+          "slug": "salida",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Aspen",
+          "slug": "aspen",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Carbondale",
+          "slug": "carbondale",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Silverthorne",
+          "slug": "silverthorne",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Frisco",
+          "slug": "frisco",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Breckenridge",
+          "slug": "breckenridge",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Pagosa Springs",
+          "slug": "pagosa-springs",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Monte Vista",
+          "slug": "monte-vista",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Walsenburg",
+          "slug": "walsenburg",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Florence",
+          "slug": "florence",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Brush",
+          "slug": "brush",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Gypsum",
+          "slug": "gypsum",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Basalt",
+          "slug": "basalt",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "New Castle",
+          "slug": "new-castle",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Silt",
+          "slug": "silt",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Palisade",
+          "slug": "palisade",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Edgewater",
+          "slug": "edgewater",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Sheridan",
+          "slug": "sheridan",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Leadville",
+          "slug": "leadville",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Buena Vista",
+          "slug": "buena-vista",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Telluride",
+          "slug": "telluride",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Manitou Springs",
+          "slug": "manitou-springs",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Black Hawk",
+          "slug": "black-hawk",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        },
+        {
+          "city": "Central City",
+          "slug": "central-city",
+          "state": "co",
+          "stateName": "Colorado",
+          "keywords": { "primary": "solar installation", "secondary": ["solar panels", "battery backup"] }
+        }
+      ]
     }
   }
 }

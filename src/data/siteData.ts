@@ -29,6 +29,7 @@ export const siteData = {
         { name: "Kansas", href: "/locations/kansas" },
         { name: "Illinois", href: "/locations/illinois" },
         { name: "Missouri", href: "/locations/missouri" },
+        { name: "Colorado", href: "/locations/colorado" },
       ]
     },
     { name: "Financing", href: "/financing" },
@@ -176,6 +177,20 @@ export const siteData = {
         "Off-Grid Readiness",
         "Oncor/CenterPoint Specialists",
         "Lonestar Performance Warranty"
+      ]
+    },
+    {
+      slug: "colorado",
+      city: "Colorado",
+      state: "CO",
+      title: "Colorado's Premier Solar Provider",
+      description: "From Denver to Colorado Springs, Logic Solar delivers high-performance solar systems built for Colorado's 300 days of sunshine and mountain climate.",
+      backgroundImage: "/images/colorado-hero.jpg",
+      highlights: [
+        "300 Days of Sunshine Per Year",
+        "Xcel Energy Net Metering Experts",
+        "CO Residential Energy Tax Credit",
+        "Mountain-Grade System Engineering"
       ]
     }
   ],
