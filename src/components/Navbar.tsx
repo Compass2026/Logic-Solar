@@ -71,29 +71,21 @@ export const Navbar = () => {
         }}
       >
         <div className="w-full flex items-center justify-between">
-          {/* Logo — sits on its own white backing so it's always legible */}
+          {/* Logo */}
           <Link
             to={isRoofing ? "/roofing" : "/"}
-            className="flex items-center group relative w-auto"
-            style={{
-              height: '120px',
-              background: scrolled ? 'transparent' : 'rgba(255,255,255,0.92)',
-              borderRadius: '12px',
-              padding: scrolled ? '0' : '6px 16px',
-              boxShadow: scrolled ? 'none' : '0 2px 12px rgba(0,0,0,0.12)',
-              transition: 'all 0.5s ease',
-            }}
+            className="flex items-center group relative h-10 md:h-12 w-auto"
           >
             {isRoofing ? (
               <span className={cn(
                 "text-2xl font-black tracking-tighter transition-all duration-300 group-hover:scale-105",
-                scrolled ? "text-brand-dark" : "text-brand-dark"
+                scrolled ? "text-brand-dark" : "text-white"
               )}>
                 LOGIC <span className="text-brand-gold">ROOFING</span>
               </span>
             ) : (
               <img
-                src="/logo-dark.png"
+                src="/logo.png"
                 alt="Logic Solar"
                 className="h-full w-auto object-contain transition-all duration-300 group-hover:scale-105"
               />
