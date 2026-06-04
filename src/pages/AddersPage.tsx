@@ -1,6 +1,6 @@
 import React from 'react';
 import { InternalFormPageTemplate } from '../components/InternalFormPageTemplate';
-import { FileText, ExternalLink, Zap, Battery, Home, ClipboardList } from 'lucide-react';
+import { FileText, ExternalLink, Zap, Battery, Home, ClipboardList, Droplets } from 'lucide-react';
 
 /* ─────────────────────────────────────────────
    SCOPED CSS — Logic Solar brand palette only
@@ -178,6 +178,14 @@ const categories = [
       { name: 'Midas Wealth: Full Transfer', price: '$3,000' },
       { name: 'My Incentives', price: '$4,000' },
       { name: 'Credit Repair', price: '$200' },
+    ],
+  },
+  {
+    id: 'home-services',
+    icon: <Droplets size={14} strokeWidth={2.5} />,
+    label: 'Home Services',
+    items: [
+      { name: 'Water Softener', price: '$3,500' },
     ],
   },
 ];
