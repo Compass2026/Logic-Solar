@@ -93,7 +93,7 @@ export const Financing = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mt-16">
             {[
-              { path: "Solar Loan", highlight: "Popular", detail: "Low-interest loans designed specifically for solar and energy efficiency. You own the system and keep all 30% tax credits." },
+              { path: "Solar Loan", highlight: "Popular", detail: "Low-interest loans designed specifically for solar and energy efficiency. You own the system and keep all applicable state and local incentives." },
               { path: "Cash Purchase", highlight: "Highest ROI", detail: "Pay upfront for the shortest payback period and maximum lifetime savings. You own the system from day one." },
               { path: "Lease / PPA", highlight: "Zero-Hassle", detail: "Pay for the power, not the panels. Zero maintenance costs and zero down payment, though tax credits go to the provider." }
             ].map((item, i) => (

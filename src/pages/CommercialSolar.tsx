@@ -77,8 +77,8 @@ export const CommercialSolar = () => {
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 glass p-5 rounded-[20px] shadow-2xl hidden md:block">
-                <div className="text-xl font-black text-brand-dark mb-1">30%</div>
-                <p className="text-[10px] font-bold uppercase tracking-widest text-brand-dark/40">Average Savings</p>
+                <div className="text-xl font-black text-brand-dark mb-1">40%+</div>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-brand-dark/40">Energy Cost Reduction</p>
                 <div className="mt-3 flex gap-1.5">
                   {[1, 2, 3, 4, 5].map((s) => (
                     <div key={s} className="w-1 h-3 bg-brand-gold rounded-full" />

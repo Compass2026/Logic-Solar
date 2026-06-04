@@ -58,7 +58,7 @@ export const siteData = {
       benefits: [
         "Reduce monthly bills by up to 70%",
         "Increase home property value",
-        "Federal Tax Credit eligibility (30%)",
+        "State & local incentive eligibility",
         "Backup power readiness"
       ],
       icon: "Sun",
@@ -217,7 +217,7 @@ export const siteData = {
         },
         {
           question: "Are there still government incentives available?",
-          answer: "Yes! The Federal Investment Tax Credit (ITC) currently allows you to deduct 30% of your solar system cost from your federal taxes."
+          answer: "The federal Investment Tax Credit (ITC) has been eliminated. However, many states and local utilities still offer rebates and performance-based incentives. Contact us to find out what's available in your area."
         }
       ]
     }
@@ -233,7 +233,7 @@ export const siteData = {
     },
     {
       question: "Are there still government incentives available?",
-      answer: "Yes! The Federal Investment Tax Credit (ITC) currently allows you to deduct 30% of your solar system cost from your federal taxes."
+      answer: "The federal Investment Tax Credit (ITC) has been eliminated. However, many states and local utilities still offer rebates and performance-based incentives. Contact us to find out what's available in your area."
     }
   ]
 };

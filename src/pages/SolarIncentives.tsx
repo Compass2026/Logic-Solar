@@ -9,9 +9,9 @@ import { SEO } from '../components/SEO';
 
 export const SolarIncentives = () => {
   const faqItems = [
-    { question: "What is the Federal Solar Tax Credit (ITC)?", answer: "The Investment Tax Credit (ITC) currently allows you to deduct 30% of the cost of installing a solar energy system from your federal taxes. There is no cap on the value of the credit." },
-    { question: "How do I claim solar incentives?", answer: "Most federal incentives are claimed when you file your annual tax return. Logic Solar provides all the necessary documentation and equipment certifications to make this process seamless for your tax professional." },
-    { question: "Do incentives apply to battery storage?", answer: "Yes! Under current legislation, battery storage systems (whether standalone or paired with solar) are eligible for the 30% federal tax credit." },
+    { question: "Is there still a federal solar tax credit?", answer: "The federal Investment Tax Credit (ITC) has been eliminated by the federal government and is no longer available. We recommend consulting a qualified tax professional to understand how this affects your situation." },
+    { question: "How do I claim solar incentives?", answer: "State and local incentives are typically claimed when you file your tax return or via your utility provider. Logic Solar provides all necessary documentation and equipment certifications to make this process seamless for your tax professional." },
+    { question: "Do incentives apply to battery storage?", answer: "State and local incentive eligibility for battery storage varies by program. Contact us to learn what's currently available in your area." },
     { question: "Are there state-specific incentives?", answer: "Many states and local utility companies offer additional rebates or performance-based incentives. These vary significantly by location and program availability." }
   ];
 
@@ -19,7 +19,7 @@ export const SolarIncentives = () => {
     <main className="bg-white">
       <SEO 
         title="Solar Incentives & Tax Credits" 
-        description="Maximize your solar savings with federal and local incentives. Learn how the 30% tax credit and other programs make solar more affordable than ever."
+        description="Maximize your solar savings with state and local incentives. Learn how MACRS depreciation, local rebates, and other programs can make solar more affordable."
       />
       <PageHero 
         title={<>Ownership <br /><span className="text-brand-gold">Accelerated.</span></>}
@@ -33,16 +33,16 @@ export const SolarIncentives = () => {
         <div className="container-custom">
           <SectionHeading 
             eyebrow="Financial Intelligence"
-            title={<>The 30% <br /><span className="text-brand-gold">Advantage.</span></>}
-            description="The federal government and local utilities want you to go solar. These programs are designed to significantly reduce your initial investment and accelerate your return on assets."
+            title={<>The Smart <br /><span className="text-brand-gold">Advantage.</span></>}
+            description="Local utilities and state programs want you to go solar. These programs are designed to significantly reduce your initial investment and accelerate your return on assets."
           />
           
           <div className="grid md:grid-cols-3 gap-8 mt-20">
             {[
               { 
                 icon: DollarSign, 
-                title: "Federal Tax Credit", 
-                desc: "Deduct 30% of your total system cost directly from your federal tax liability. A dollar-for-dollar reduction." 
+                title: "State Tax Incentives", 
+                desc: "Many states offer their own solar tax credits and deductions. Eligibility and amounts vary by state — our team will identify what applies to you." 
               },
               { 
                 icon: Calculator, 
