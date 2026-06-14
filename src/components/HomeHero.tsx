@@ -158,19 +158,19 @@ export const HomeHero = () => {
         animation-play-state: paused;
       }
       .ticker-logo {
-        filter: grayscale(100%);
-        opacity: 0.55;
+        filter: grayscale(100%) brightness(0.25);
+        opacity: 0.85;
         transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
         cursor: default;
         flex-shrink: 0;
       }
       .ticker-logo:hover {
-        filter: grayscale(0%);
+        filter: grayscale(0%) brightness(1);
         opacity: 1;
       }
       .ticker-text-logo {
         filter: grayscale(100%);
-        opacity: 0.45;
+        opacity: 0.75;
         transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
         cursor: default;
         flex-shrink: 0;
@@ -212,30 +212,30 @@ export const HomeHero = () => {
         .ticker-outer::after { width: 48px; }
       }
 
-      /* ── Hero ticker overrides — dark greyscale logos on white frosted strip ── */
+      /* ── Hero ticker overrides — logos float directly on hero image ── */
       .hero-ticker-wrap .ticker-logo {
-        filter: grayscale(100%);
-        opacity: 0.55;
+        filter: brightness(0) invert(1);
+        opacity: 0.82;
       }
       .hero-ticker-wrap .ticker-logo:hover {
-        filter: grayscale(0%);
+        filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
         opacity: 1;
       }
       .hero-ticker-wrap .ticker-text-logo {
-        filter: grayscale(100%);
-        color: #0055aa;
-        opacity: 0.45;
-      }
-      .hero-ticker-wrap .ticker-text-logo:hover {
-        filter: grayscale(0%);
+        filter: none;
+        color: rgba(255,255,255,0.8);
         opacity: 1;
       }
-      /* Edge fade matches the white strip */
+      .hero-ticker-wrap .ticker-text-logo:hover {
+        color: #fff;
+        opacity: 1;
+      }
+      /* Edge fades — transparent to match the see-through bar */
       .hero-ticker-wrap .ticker-outer::before {
-        background: linear-gradient(to right, rgba(247,248,250,0.92) 0%, transparent 100%);
+        background: linear-gradient(to right, rgba(27,42,51,0.6) 0%, transparent 100%);
       }
       .hero-ticker-wrap .ticker-outer::after {
-        background: linear-gradient(to left, rgba(247,248,250,0.92) 0%, transparent 100%);
+        background: linear-gradient(to left, rgba(27,42,51,0.6) 0%, transparent 100%);
       }
 
       /* ── Mobile Hero Overrides ─────────────────────────── */
@@ -285,20 +285,22 @@ export const HomeHero = () => {
 
 /* ── Partner Ticker Data ── */
 const PARTNERS: Array<{ type: 'img'; src: string; name: string; height: number } | { type: 'text'; name: string }> = [
-  { type: 'img',  src: '/images/logos/tesla-word.png',   name: 'Tesla Powerwall',      height: 50 },
-  { type: 'img',  src: '/images/logos/franklinwh.png',   name: 'FranklinWH',           height: 36 },
-  { type: 'img',  src: '/images/logos/enphase.svg',      name: 'Enphase',              height: 52 },
-  { type: 'img',  src: '/images/logos/opensolar.svg',    name: 'OpenSolar',            height: 48 },
-  { type: 'img',  src: '/images/logos/sungage.png',      name: 'Sungage Financial',    height: 52 },
-  { type: 'img',  src: '/images/logos/enfin.jpg',        name: 'EnFin',                height: 48 },
-  { type: 'img',  src: '/images/logos/aurorasolar.svg',  name: 'Aurora',               height: 48 },
-  { type: 'img',  src: '/images/logos/bbb.svg',          name: 'BBB Accredited',       height: 64 },
-  { type: 'img',  src: '/images/logos/silfab.svg',       name: 'Silfab Solar',         height: 50 },
-  { type: 'img',  src: '/images/logos/ironridge.svg',    name: 'IronRidge',            height: 46 },
-  { type: 'img',  src: '/images/logos/sunmodo.jpg',      name: 'SunModo',              height: 52 },
-  { type: 'img',  src: '/images/logos/qcells.svg',       name: 'Qcells',               height: 46 },
-  { type: 'img',  src: '/images/logos/concert-finance.png', name: 'Concert Finance', height: 48 },
-  { type: 'img',  src: '/images/logos/climatefirst.svg', name: 'Climate First',        height: 54 },
+  // Tesla temporarily removed — awaiting clean transparent logo
+  // { type: 'img',  src: '/images/logos/tesla-energy-certified.png', name: 'Tesla Energy Certified Installer', height: 100 },
+  { type: 'img',  src: '/images/logos/franklinwh.png',   name: 'FranklinWH',           height: 58 },
+  { type: 'img',  src: '/images/logos/enphase.svg',      name: 'Enphase',              height: 58 },
+  { type: 'img',  src: '/images/logos/opensolar.svg',    name: 'OpenSolar',            height: 58 },
+  { type: 'img',  src: '/images/logos/sungage.png',      name: 'Sungage Financial',    height: 58 },
+  { type: 'img',  src: '/images/logos/enfin.png',        name: 'EnFin',                height: 58 },
+  { type: 'img',  src: '/images/logos/aurorasolar.svg',  name: 'Aurora',               height: 58 },
+  { type: 'img',  src: '/images/logos/bbb.svg',          name: 'BBB Accredited',       height: 70 },
+  { type: 'img',  src: '/images/logos/silfab.svg',       name: 'Silfab Solar',         height: 58 },
+  { type: 'img',  src: '/images/logos/ironridge.svg',    name: 'IronRidge',            height: 58 },
+  { type: 'img',  src: '/images/logos/sunmodo.png',      name: 'SunModo',              height: 58 },
+  { type: 'img',  src: '/images/logos/qcells.svg',       name: 'Qcells',               height: 58 },
+  // Concert Finance temporarily removed — awaiting clean transparent logo
+  // { type: 'img',  src: '/images/logos/concert-finance.png', name: 'Concert Finance',   height: 58 },
+  { type: 'img',  src: '/images/logos/climatefirst.svg', name: 'Climate First',        height: 58 },
 ];
 
 /* ── Partner Ticker Component ── */
@@ -505,16 +507,14 @@ const s: Record<string, React.CSSProperties> = {
   pct:      { fontSize: '2.2rem', fontWeight: 900, color: '#1b2a33', letterSpacing: '-0.03em', lineHeight: 1 },
   savLabel: { fontSize: 9, fontWeight: 800, letterSpacing: '0.16em', textTransform: 'uppercase' as const, color: 'rgba(27,42,51,0.45)', lineHeight: 1.7, margin: 0 },
 
-  /* PARTNERS TICKER BAR — frosted white strip inside hero */
+  /* PARTNERS TICKER BAR — transparent, floats over the hero image */
   ppBar: {
     position: 'relative' as const,
     zIndex: 10,
     width: '100%',
-    background: 'rgba(247,248,250,0.90)',
-    backdropFilter: 'blur(14px)',
-    WebkitBackdropFilter: 'blur(14px)',
-    borderTop: '1px solid rgba(0,0,0,0.06)',
-    padding: '18px 0 22px',
+    background: 'linear-gradient(to bottom, transparent 0%, rgba(27,42,51,0.45) 100%)',
+    borderTop: '1px solid rgba(255,255,255,0.12)',
+    padding: '20px 0 28px',
     overflow: 'hidden',
   },
   ppTitleHero: {
@@ -522,7 +522,7 @@ const s: Record<string, React.CSSProperties> = {
     fontSize: 11,
     fontWeight: 900,
     letterSpacing: '0.36em',
-    color: '#aab4bb',
+    color: 'rgba(255,255,255,0.55)',
     marginBottom: 18,
     textTransform: 'uppercase' as const,
   },
