@@ -134,10 +134,9 @@ const categories = [
       { name: 'Meter Combination', price: '$3,000' },
       { name: 'Meter Relocation', price: '$1,500' },
       { name: 'Meter Upgrade', price: '$3,000' },
+      { name: 'Meter Riser Upgrade', price: '$1,500' },
       { name: 'Multi-Meter Installation', price: '$0.40/watt' },
       { name: 'EV Charger', price: '$1,500', note: '+ Cost of Charger' },
-      { name: 'LightReach', price: '+$0.10/watt' },
-      { name: 'Domestic Content Package', price: '$0.30/watt' },
     ],
   },
   {
@@ -178,6 +177,8 @@ const categories = [
       { name: 'Midas Wealth: Full Transfer', price: '$3,000' },
       { name: 'My Incentives', price: '$4,000' },
       { name: 'Credit Repair', price: '$200' },
+      { name: 'FEOC Content Package', price: '$0.10/watt' },
+      { name: 'Domestic Content Package', price: '$0.30/watt' },
     ],
   },
   {

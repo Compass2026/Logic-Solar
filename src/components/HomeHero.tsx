@@ -513,7 +513,6 @@ const s: Record<string, React.CSSProperties> = {
     zIndex: 10,
     width: '100%',
     background: 'linear-gradient(to bottom, transparent 0%, rgba(27,42,51,0.45) 100%)',
-    borderTop: '1px solid rgba(255,255,255,0.12)',
     padding: '20px 0 28px',
     overflow: 'hidden',
   },
