@@ -285,8 +285,7 @@ export const HomeHero = () => {
 
 /* ── Partner Ticker Data ── */
 const PARTNERS: Array<{ type: 'img'; src: string; name: string; height: number } | { type: 'text'; name: string }> = [
-  // Tesla temporarily removed — awaiting clean transparent logo
-  // { type: 'img',  src: '/images/logos/tesla-energy-certified.png', name: 'Tesla Energy Certified Installer', height: 100 },
+  { type: 'img',  src: '/images/logos/tesla-energy-certified.png', name: 'Tesla Energy Certified Installer', height: 58 },
   { type: 'img',  src: '/images/logos/franklinwh.png',   name: 'FranklinWH',           height: 58 },
   { type: 'img',  src: '/images/logos/enphase.svg',      name: 'Enphase',              height: 58 },
   { type: 'img',  src: '/images/logos/opensolar.svg',    name: 'OpenSolar',            height: 58 },
