@@ -146,7 +146,37 @@ export const Navbar = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="hidden lg:flex items-center">
+        <div className="hidden lg:flex items-center gap-4">
+          <a
+            href="https://logic-portal.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              backgroundColor: scrolled ? 'rgba(27, 42, 51, 0.05)' : 'rgba(255, 255, 255, 0.12)',
+              color: scrolled ? '#1b2a33' : '#ffffff',
+              border: scrolled ? '1px solid rgba(27, 42, 51, 0.2)' : '1px solid rgba(255, 255, 255, 0.3)',
+              padding: '14px 28px',
+              borderRadius: '999px',
+              fontSize: '13px',
+              fontWeight: 900,
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              whiteSpace: 'nowrap',
+              textDecoration: 'none',
+              display: 'inline-block',
+              transition: 'all 0.25s',
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.backgroundColor = scrolled ? 'rgba(27, 42, 51, 0.1)' : 'rgba(255, 255, 255, 0.22)';
+              e.currentTarget.style.borderColor = scrolled ? 'rgba(27, 42, 51, 0.4)' : 'rgba(255, 255, 255, 0.5)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.backgroundColor = scrolled ? 'rgba(27, 42, 51, 0.05)' : 'rgba(255, 255, 255, 0.12)';
+              e.currentTarget.style.borderColor = scrolled ? 'rgba(27, 42, 51, 0.2)' : 'rgba(255, 255, 255, 0.3)';
+            }}
+          >
+            Logic Portal
+          </a>
           <Link
             to="/contact"
             style={{ backgroundColor: '#f9cd0d', color: '#1b2a33', padding: '14px 32px', borderRadius: '999px', fontSize: '13px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap', textDecoration: 'none', display: 'inline-block', transition: 'all 0.25s', boxShadow: '0 4px 20px rgba(249,205,13,0.45)', }}
@@ -205,6 +235,14 @@ export const Navbar = () => {
             ))}
           </div>
           <div className="pt-10 border-t border-gray-100 space-y-4">
+            <a
+              href="https://logic-portal.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full bg-brand-dark text-white text-center py-5 rounded-2xl font-black uppercase tracking-widest shadow-xl hover:bg-brand-dark/90 transition-colors"
+            >
+              Logic Portal
+            </a>
             <a
               href={`tel:${siteData.contact.phone.replace(/[^+\d]/g, '')}`}
               className="block w-full bg-brand-green text-white text-center py-5 rounded-2xl font-black uppercase tracking-widest shadow-xl"
