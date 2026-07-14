@@ -68,6 +68,30 @@ export const DealSubmissionPage = () => {
               </div>
             </motion.div>
           </a>
+
+          <a 
+            href="https://powerforms.docusign.net/cc6ed60d-63a0-4de8-8cba-3ed158ca1a37?env=na4&acct=a5ca747b-f869-45ab-bdbe-194fd4d9dfeb&accountId=a5ca747b-f869-45ab-bdbe-194fd4d9dfeb"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group cursor-pointer w-full max-w-xl"
+          >
+            <motion.div
+              whileHover={{ y: -5 }}
+              whileTap={{ scale: 0.98 }}
+              className="p-8 rounded-[32px] bg-white border-2 border-brand-dark/5 shadow-lg flex flex-col h-full hover:border-brand-gold/50 hover:shadow-brand-gold/10 transition-all"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-brand-gold/10 flex items-center justify-center mb-6">
+                <FileText className="w-6 h-6 text-brand-gold" />
+              </div>
+              <h3 className="text-2xl font-bold text-brand-dark mb-3 tracking-tight">Illinois Home Improvement Agreement</h3>
+              <p className="text-brand-dark/50 mb-8 flex-grow leading-relaxed">
+                Generate project-specific legal agreements for Illinois customers via DocuSign.
+              </p>
+              <div className="flex items-center gap-2 font-bold text-brand-gold group-hover:gap-3 transition-all mt-auto">
+                Open Agreement <ArrowRight className="w-5 h-5" />
+              </div>
+            </motion.div>
+          </a>
         </div>
 
         {/* GHL Form Area */}
