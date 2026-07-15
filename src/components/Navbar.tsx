@@ -111,6 +111,18 @@ export const Navbar = () => {
                   {item.name}
                   <ChevronDown className={cn("w-4 h-4 transition-transform duration-300", activeDropdown === item.name && "rotate-180")} />
                 </button>
+              ) : item.href.startsWith('http') ? (
+                <a 
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    "text-[13px] font-bold uppercase tracking-widest transition-colors py-2",
+                    scrolled ? "text-brand-dark/60 hover:text-brand-dark" : "text-white hover:text-white nav-text-shadow"
+                  )}
+                >
+                  {item.name}
+                </a>
               ) : (
                 <Link 
                   to={item.href}
@@ -130,13 +142,25 @@ export const Navbar = () => {
                 )}>
                   <div className="bg-white rounded-[24px] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-gray-100 p-3 min-w-[260px] overflow-hidden">
                     {item.children.map((child) => (
-                      <Link
-                        key={child.name}
-                        to={child.href}
-                        className="block px-5 py-4 text-sm font-bold text-brand-dark/60 hover:text-brand-dark hover:bg-gray-50 rounded-xl transition-all"
-                      >
-                        {child.name}
-                      </Link>
+                      child.href.startsWith('http') ? (
+                        <a
+                          key={child.name}
+                          href={child.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-5 py-4 text-sm font-bold text-brand-dark/60 hover:text-brand-dark hover:bg-gray-50 rounded-xl transition-all"
+                        >
+                          {child.name}
+                        </a>
+                      ) : (
+                        <Link
+                          key={child.name}
+                          to={child.href}
+                          className="block px-5 py-4 text-sm font-bold text-brand-dark/60 hover:text-brand-dark hover:bg-gray-50 rounded-xl transition-all"
+                        >
+                          {child.name}
+                        </Link>
+                      )
                     ))}
                   </div>
                 </div>
@@ -213,16 +237,37 @@ export const Navbar = () => {
                     </div>
                     <div className="space-y-6">
                       {item.children.map((child) => (
-                        <Link
-                          key={child.name}
-                          to={child.href}
-                          className="block text-2xl font-extrabold text-brand-dark hover:text-brand-gold transition-colors"
-                        >
-                          {child.name}
-                        </Link>
+                        child.href.startsWith('http') ? (
+                          <a
+                            key={child.name}
+                            href={child.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block text-2xl font-extrabold text-brand-dark hover:text-brand-gold transition-colors"
+                          >
+                            {child.name}
+                          </a>
+                        ) : (
+                          <Link
+                            key={child.name}
+                            to={child.href}
+                            className="block text-2xl font-extrabold text-brand-dark hover:text-brand-gold transition-colors"
+                          >
+                            {child.name}
+                          </Link>
+                        )
                       ))}
                     </div>
                   </>
+                ) : item.href.startsWith('http') ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-3xl font-extrabold text-brand-dark hover:text-brand-gold transition-colors"
+                  >
+                    {item.name}
+                  </a>
                 ) : (
                   <Link
                     to={item.href}

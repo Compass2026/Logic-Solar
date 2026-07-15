@@ -50,9 +50,20 @@ export const Footer = () => {
             <ul className="space-y-4">
               {siteData.nav.filter(n => !n.children).map((item) => (
                 <li key={item.name}>
-                  <Link to={item.href} className="text-white/60 hover:text-brand-gold transition-colors text-sm">
-                    {item.name}
-                  </Link>
+                  {item.href.startsWith('http') ? (
+                    <a 
+                      href={item.href} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/60 hover:text-brand-gold transition-colors text-sm"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link to={item.href} className="text-white/60 hover:text-brand-gold transition-colors text-sm">
+                      {item.name}
+                    </Link>
+                  )}
                 </li>
               ))}
               <li>

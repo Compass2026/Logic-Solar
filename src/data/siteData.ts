@@ -34,6 +34,7 @@ export const siteData = {
     },
     { name: "Financing", href: "/financing" },
     { name: "FAQ", href: "/faq" },
+    { name: "Store", href: "http://logic.myreward.store/" },
     { name: "Contact", href: "/contact" },
   ],
   stats: [
