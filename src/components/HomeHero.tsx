@@ -154,6 +154,20 @@ export const HomeHero = () => {
         animation: ticker-scroll 60s linear infinite;
         will-change: transform;
       }
+      .ticker-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        padding: 0 20px;
+        flex-shrink: 0;
+      }
+      @media (max-width: 768px) {
+        .ticker-item {
+          width: 180px;
+          padding: 0 10px;
+        }
+      }
       .ticker-wrap:hover .ticker-track {
         animation-play-state: paused;
       }
@@ -312,7 +326,7 @@ const PartnerTicker = () => {
         <div className="ticker-track">
           {all.map((p, i) =>
             p.type === 'img' ? (
-              <div key={i} style={s.tickerItem}>
+              <div key={i} className="ticker-item">
                 <img
                   src={p.src}
                   alt={p.name}
@@ -335,7 +349,7 @@ const PartnerTicker = () => {
                 <span style={{ display: 'none', fontSize: 14, fontWeight: 700, color: '#666' }}>{p.name}</span>
               </div>
             ) : (
-              <div key={i} style={s.tickerItem}>
+              <div key={i} className="ticker-item">
                 <span className="ticker-text-logo">{p.name}</span>
               </div>
             )
@@ -534,12 +548,5 @@ const s: Record<string, React.CSSProperties> = {
   tickerWrap: {
     overflow: 'hidden',
     width: '100%',
-  },
-  tickerItem: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '0 56px',
-    flexShrink: 0,
   },
 };
