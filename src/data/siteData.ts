@@ -9,7 +9,15 @@ export const siteData = {
   },
   nav: [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    { 
+      name: "About", 
+      href: "#",
+      children: [
+        { name: "About Us", href: "/about" },
+        { name: "Financing", href: "/financing" },
+        { name: "FAQ", href: "/faq" },
+      ]
+    },
     { 
       name: "Services", 
       href: "#",
@@ -32,8 +40,6 @@ export const siteData = {
         { name: "Colorado", href: "/locations/colorado" },
       ]
     },
-    { name: "Financing", href: "/financing" },
-    { name: "FAQ", href: "/faq" },
     { name: "Store", href: "http://logic.myreward.store/" },
     { name: "Contact", href: "/contact" },
   ],
