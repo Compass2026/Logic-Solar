@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, ShoppingBag, Sparkles } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { siteData } from '../data/siteData';
 
@@ -51,6 +51,18 @@ export const Navbar = () => {
         }
         .nav-text-shadow {
           text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 2px 8px rgba(0,0,0,0.6);
+        }
+        @keyframes storeGlowPulse {
+          0%, 100% {
+            box-shadow: 0 4px 20px rgba(249, 205, 13, 0.4), inset 0 1px 0 rgba(255,255,255,0.4);
+          }
+          50% {
+            box-shadow: 0 4px 30px rgba(249, 205, 13, 0.8), 0 0 20px rgba(52, 211, 153, 0.45), inset 0 1px 0 rgba(255,255,255,0.6);
+          }
+        }
+        @keyframes storeBeam {
+          0% { transform: translateX(-100%) rotate(20deg); }
+          100% { transform: translateX(250%) rotate(20deg); }
         }
       `}</style>
       <nav 
@@ -170,7 +182,40 @@ export const Navbar = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-3">
+          {/* Store CTA Button with Cool Effect */}
+          <a
+            href="http://logic.myreward.store/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative overflow-hidden flex items-center gap-2 transition-all duration-300 transform hover:scale-105 active:scale-95"
+            style={{
+              background: scrolled
+                ? 'linear-gradient(135deg, #1b2a33 0%, #254350 100%)'
+                : 'linear-gradient(135deg, rgba(249,205,13,0.22) 0%, rgba(27,42,51,0.92) 100%)',
+              color: '#ffffff',
+              border: scrolled ? '1px solid rgba(249, 205, 13, 0.7)' : '1px solid rgba(249, 205, 13, 0.85)',
+              padding: '14px 24px',
+              borderRadius: '999px',
+              fontSize: '13px',
+              fontWeight: 900,
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              whiteSpace: 'nowrap',
+              textDecoration: 'none',
+              display: 'inline-flex',
+              alignItems: 'center',
+              animation: 'storeGlowPulse 3s infinite ease-in-out',
+            }}
+          >
+            {/* Animated shimmer beam on hover */}
+            <span className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent transform -skew-x-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:animate-[storeBeam_1.2s_infinite]" />
+
+            <ShoppingBag className="w-4 h-4 text-brand-gold group-hover:rotate-12 transition-transform duration-300 shrink-0" />
+            <span>Store</span>
+            <Sparkles className="w-3.5 h-3.5 text-brand-gold animate-pulse shrink-0" />
+          </a>
+
           <a
             href="https://logic-portal.com/"
             target="_blank"
@@ -179,7 +224,7 @@ export const Navbar = () => {
               backgroundColor: scrolled ? 'rgba(27, 42, 51, 0.05)' : 'rgba(255, 255, 255, 0.12)',
               color: scrolled ? '#1b2a33' : '#ffffff',
               border: scrolled ? '1px solid rgba(27, 42, 51, 0.2)' : '1px solid rgba(255, 255, 255, 0.3)',
-              padding: '14px 28px',
+              padding: '14px 24px',
               borderRadius: '999px',
               fontSize: '13px',
               fontWeight: 900,
@@ -203,7 +248,7 @@ export const Navbar = () => {
           </a>
           <Link
             to="/contact"
-            style={{ backgroundColor: '#f9cd0d', color: '#1b2a33', padding: '14px 32px', borderRadius: '999px', fontSize: '13px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap', textDecoration: 'none', display: 'inline-block', transition: 'all 0.25s', boxShadow: '0 4px 20px rgba(249,205,13,0.45)', }}
+            style={{ backgroundColor: '#f9cd0d', color: '#1b2a33', padding: '14px 28px', borderRadius: '999px', fontSize: '13px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap', textDecoration: 'none', display: 'inline-block', transition: 'all 0.25s', boxShadow: '0 4px 20px rgba(249,205,13,0.45)', }}
           >
             Get My Free Quote
           </Link>

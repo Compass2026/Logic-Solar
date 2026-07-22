@@ -40,7 +40,6 @@ export const siteData = {
         { name: "Colorado", href: "/locations/colorado" },
       ]
     },
-    { name: "Store", href: "http://logic.myreward.store/" },
     { name: "Contact", href: "/contact" },
   ],
   stats: [
