@@ -94,21 +94,27 @@ const adderStyles = `
   .eq-btn {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    padding: 5px 10px;
-    border-radius: 6px;
+    justify-content: center;
+    gap: 6px;
+    height: 32px;
+    padding: 0 16px;
+    border-radius: 9999px;
     background: #1b2a33;
     color: #ffffff;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
     border: none;
     cursor: pointer;
-    transition: all 0.15s;
+    transition: all 0.15s ease-in-out;
+    box-shadow: 0 1px 3px rgba(27, 42, 51, 0.12);
   }
 
   .eq-btn:hover {
     background: #f9cd0d;
     color: #1b2a33;
+    box-shadow: 0 2px 6px rgba(249, 205, 13, 0.3);
   }
 
   /* ── Category card ── */
@@ -464,28 +470,25 @@ export const AddersPage = () => {
     >
       <style dangerouslySetInnerHTML={{ __html: adderStyles }} />
 
-      {/* ── Enphase Datasheet CTA ── */}
+      {/* ── Google Drive Datasheet CTA ── */}
       <div className="ps-datasheet-row">
         <a
           href="https://drive.google.com/drive/u/0/folders/11lN-Gn6-nSdqfK9RDShF9s6zajY4oDSm"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-white border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm hover:shadow-md transition-all group cursor-pointer text-brand-dark"
+          className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-white border border-slate-300 hover:border-[#f9cd0d] shadow-sm hover:shadow-md transition-all group cursor-pointer text-[#1b2a33]"
           style={{ textDecoration: 'none' }}
         >
           <div
-            className="flex items-center justify-center rounded-xl transition-colors duration-300 group-hover:bg-brand-gold"
-            style={{ width: 36, height: 36, background: 'rgba(249,205,13,0.15)' }}
+            className="flex items-center justify-center rounded-full transition-colors duration-300 group-hover:bg-[#f9cd0d]"
+            style={{ width: 28, height: 28, background: 'rgba(249,205,13,0.2)' }}
           >
-            <FileText size={16} />
+            <FileText size={14} />
           </div>
-          <div className="text-left">
-            <span style={{ display: 'block', fontSize: 9, fontWeight: 800, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(27,42,51,0.4)', marginBottom: 1 }}>
-              Google Drive Folder
-            </span>
-            <span style={{ display: 'block', fontSize: 14, fontWeight: 700 }}>All Equipment Datasheets</span>
-          </div>
-          <ExternalLink size={14} style={{ color: 'rgba(27,42,51,0.25)', marginLeft: 4 }} className="group-hover:text-brand-gold transition-colors" />
+          <span style={{ fontSize: 12, fontWeight: 800, whiteSpace: 'nowrap', color: '#1b2a33' }}>
+            All Equipment Datasheets (Google Drive)
+          </span>
+          <ExternalLink size={13} style={{ color: '#8a98a0', marginLeft: 2 }} className="group-hover:text-[#1b2a33] transition-colors" />
         </a>
       </div>
 
