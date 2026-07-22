@@ -467,7 +467,7 @@ export const AddersPage = () => {
       {/* ── Enphase Datasheet CTA ── */}
       <div className="ps-datasheet-row">
         <a
-          href="https://drive.google.com/drive/folders/1MojkRTOp4RYET6emBY12B3rurmHS3kvP"
+          href="https://drive.google.com/drive/u/0/folders/11lN-Gn6-nSdqfK9RDShF9s6zajY4oDSm"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-white border-2 border-brand-gold/40 hover:border-brand-gold shadow-sm hover:shadow-md transition-all group cursor-pointer text-brand-dark"
