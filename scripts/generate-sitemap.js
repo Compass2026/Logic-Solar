@@ -41,6 +41,7 @@ const generateSitemap = () => {
   };
 
   // Dedicated High Priority Location Pages
+  sitemap += `  <url><loc>${BASE_URL}/locations/texas/austin</loc><priority>0.9</priority></url>\n`;
   sitemap += `  <url><loc>${BASE_URL}/locations/missouri/kansas-city</loc><priority>0.9</priority></url>\n`;
   sitemap += `  <url><loc>${BASE_URL}/locations/kansas/wichita</loc><priority>0.9</priority></url>\n`;
 
@@ -52,7 +53,11 @@ const generateSitemap = () => {
     cities.forEach(cityObj => {
       const citySlug = cityObj.slug;
       const locUrl = `${BASE_URL}/locations/${fullStateSlug}/${citySlug}`;
-      if (locUrl !== `${BASE_URL}/locations/missouri/kansas-city` && locUrl !== `${BASE_URL}/locations/kansas/wichita`) {
+      if (
+        locUrl !== `${BASE_URL}/locations/texas/austin` &&
+        locUrl !== `${BASE_URL}/locations/missouri/kansas-city` && 
+        locUrl !== `${BASE_URL}/locations/kansas/wichita`
+      ) {
         sitemap += `  <url><loc>${locUrl}</loc><priority>0.7</priority></url>\n`;
       }
     });

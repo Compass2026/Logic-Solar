@@ -3,11 +3,17 @@ import { useParams, Navigate } from 'react-router-dom';
 import { CityTemplate } from '../components/CityTemplate';
 import { KansasCityMOPage } from './KansasCityMOPage';
 import { WichitaKSPage } from './WichitaKSPage';
+import { AustinTXPage } from './AustinTXPage';
 import { siteData } from '../data/siteData';
 import locationsData from '../data/locations-solar.json';
 
 export const CityPage = () => {
   const { state, city } = useParams<{ state: string; city: string }>();
+
+  // Dedicated Austin, Texas override
+  if (state?.toLowerCase() === 'texas' && city?.toLowerCase() === 'austin') {
+    return <AustinTXPage />;
+  }
 
   // Dedicated Kansas City, Missouri override
   if (state?.toLowerCase() === 'missouri' && city?.toLowerCase() === 'kansas-city') {

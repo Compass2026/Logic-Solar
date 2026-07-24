@@ -4,8 +4,8 @@
       "name": "Texas",
       "heroImage": "/images/texas-hero.jpg",
       "sunlightDays": 234,
-      "utilityFocus": "Oncor and CenterPoint Energy net metering programs",
-      "stateIncentive": "the Federal Solar Investment Tax Credit (ITC) plus local property tax exemptions on solar equipment",
+      "utilityFocus": "Oncor, Austin Energy, PEC, and CenterPoint Energy distributed generation programs",
+      "stateIncentive": "local utility rebates, commercial clean energy tax credits, and Texas property tax exemptions on solar equipment",
       "avgBill": "$156",
       "cities": [
         {
