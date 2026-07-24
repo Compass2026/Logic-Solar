@@ -6,18 +6,28 @@ interface SEOProps {
   description?: string;
   schema?: object;
   noindex?: boolean;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  ogUrl?: string;
 }
 
 export const SEO = ({ 
   title, 
   description = "Logic Solar | Premium Solar Energy Solutions for Home & Business. Custom engineered, high-performance solar installations with luxury service aesthetics.",
   schema,
-  noindex = false
+  noindex = false,
+  canonicalUrl,
+  ogImage = "https://logicsolar.com/images/missouri-hero.jpg",
+  ogType = "website",
+  ogUrl
 }: SEOProps) => {
   const location = useLocation();
 
   useEffect(() => {
-    document.title = `${title} | Logic Solar`;
+    // Prevent duplicating "| Logic Solar" if title already includes it
+    const formattedTitle = title.includes("Logic Solar") ? title : `${title} | Logic Solar`;
+    document.title = formattedTitle;
     
     // Update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
@@ -27,6 +37,33 @@ export const SEO = ({
       document.head.appendChild(metaDescription);
     }
     metaDescription.setAttribute('content', description);
+
+    // Handle Canonical URL
+    const currentCanonicalUrl = canonicalUrl || `${window.location.origin}${location.pathname}`;
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute('href', currentCanonicalUrl);
+
+    // Handle Open Graph Meta Tags
+    const setOgMeta = (property: string, content: string) => {
+      let ogMeta = document.querySelector(`meta[property="${property}"]`);
+      if (!ogMeta) {
+        ogMeta = document.createElement('meta');
+        ogMeta.setAttribute('property', property);
+        document.head.appendChild(ogMeta);
+      }
+      ogMeta.setAttribute('content', content);
+    };
+
+    setOgMeta('og:title', formattedTitle);
+    setOgMeta('og:description', description);
+    setOgMeta('og:image', ogImage);
+    setOgMeta('og:type', ogType);
+    setOgMeta('og:url', ogUrl || currentCanonicalUrl);
 
     // Handle noindex
     let robotsMeta = document.querySelector('meta[name="robots"]');
@@ -54,7 +91,7 @@ export const SEO = ({
       script.text = JSON.stringify(schema);
       document.head.appendChild(script);
     }
-  }, [title, description, schema, location]);
+  }, [title, description, schema, location, canonicalUrl, ogImage, ogType, ogUrl, noindex]);
 
   return null;
 };

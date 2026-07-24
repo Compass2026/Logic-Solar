@@ -123,9 +123,7 @@ export const SolarLanding: React.FC = () => {
   };
 
   /* ── Option pill ── */
-  const OptionBtn = ({ label, selected, onClick, className = '' }: {
-    label: string; selected: boolean; onClick: () => void; className?: string;
-  }) => (
+  const OptionBtn = ({ label, selected, onClick, className = '' }: { label: string; selected: boolean; onClick: () => void; className?: string; key?: string }) => (
     <button
       type="button"
       onClick={onClick}

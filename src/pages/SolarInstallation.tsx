@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Shield, Zap, Award, Sparkles, CheckCircle2, TrendingDown, Sun, Settings, HardHat } from 'lucide-react';
 import { PageHero } from '../components/PageHero';
@@ -160,6 +161,24 @@ export const SolarInstallation = () => {
             />
             <FAQAccordion items={faqItems} />
           </div>
+        </div>
+      </section>
+
+      {/* Featured Service Area Callout */}
+      <section className="py-12 bg-brand-light border-y border-black/5">
+        <div className="container-custom flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div>
+            <h3 className="text-xl font-bold text-brand-dark">Looking for Kansas City solar installation?</h3>
+            <p className="text-brand-dark/70 text-sm mt-1">
+              Read our dedicated guide for homeowners and businesses in Kansas City, Missouri and the KC metro area.
+            </p>
+          </div>
+          <Link 
+            to="/locations/missouri/kansas-city" 
+            className="px-6 py-3 rounded-xl bg-brand-dark text-brand-gold font-extrabold text-sm hover:bg-brand-gold hover:text-brand-dark transition-all shrink-0"
+          >
+            Kansas City Solar Installation
+          </Link>
         </div>
       </section>
 

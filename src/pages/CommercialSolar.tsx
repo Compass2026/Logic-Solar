@@ -145,6 +145,24 @@ export const CommercialSolar = () => {
         </div>
       </section>
 
+      {/* Featured Location Banner */}
+      <section className="py-12 bg-brand-light border-y border-black/5">
+        <div className="container-custom flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div>
+            <h3 className="text-xl font-bold text-brand-dark">Operating a business in Kansas City?</h3>
+            <p className="text-brand-dark/70 text-sm mt-1">
+              Explore custom commercial solar installation and demand charge mitigation for properties in Kansas City, Missouri.
+            </p>
+          </div>
+          <Link 
+            to="/locations/missouri/kansas-city" 
+            className="px-6 py-3 rounded-xl bg-brand-dark text-brand-gold font-extrabold text-sm hover:bg-brand-gold hover:text-brand-dark transition-all shrink-0"
+          >
+            Commercial Solar in Kansas City
+          </Link>
+        </div>
+      </section>
+
       <QuoteForm />
     </main>
   );

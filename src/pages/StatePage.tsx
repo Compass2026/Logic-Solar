@@ -112,6 +112,27 @@ export const StatePage = () => {
 
       <QuoteForm />
 
+      {/* Featured Location Banner for Missouri */}
+      {location.slug === 'missouri' && (
+        <section className="py-12 bg-brand-dark text-white border-y border-brand-gold/30">
+          <div className="container-custom flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <div className="text-xs font-black text-brand-gold uppercase tracking-wider mb-1">Featured Metro Hub</div>
+              <h3 className="text-2xl font-bold text-white">Kansas City Solar Installation</h3>
+              <p className="text-white/70 text-sm max-w-xl mt-1">
+                Explore custom residential solar panel design, battery storage, and commercial installations in Kansas City, Missouri and the KC metro.
+              </p>
+            </div>
+            <Link 
+              to="/locations/missouri/kansas-city" 
+              className="px-6 py-3 rounded-xl bg-brand-gold text-brand-dark font-extrabold text-sm hover:bg-white transition-all shrink-0"
+            >
+              Explore Kansas City Solar
+            </Link>
+          </div>
+        </section>
+      )}
+
       {/* Cities We Serve — SEO Internal Linking Section */}
       <section className="py-24 bg-brand-light">
         <div className="container-custom">

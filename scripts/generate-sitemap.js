@@ -31,16 +31,29 @@ const generateSitemap = () => {
   <url><loc>${BASE_URL}/locations/missouri</loc><priority>0.9</priority></url>
 `;
 
+  const stateSlugMap = {
+    'tx': 'texas',
+    'ok': 'oklahoma',
+    'ks': 'kansas',
+    'il': 'illinois',
+    'mo': 'missouri',
+    'co': 'colorado'
+  };
+
+  // Dedicated High Priority Location Pages
+  sitemap += `  <url><loc>${BASE_URL}/locations/missouri/kansas-city</loc><priority>0.9</priority></url>\n`;
+
   // Dynamic City Pages
   const states = locationsData.states;
   for (const [stateKey, stateData] of Object.entries(states)) {
-    // stateKey is 'tx', 'ok', etc.
-    // Ensure the cities are typed as string array
+    const fullStateSlug = stateSlugMap[stateKey] || stateKey;
     const cities = stateData.cities || [];
     cities.forEach(cityObj => {
-      // Use the pre-computed slug from the city object
       const citySlug = cityObj.slug;
-      sitemap += `  <url><loc>${BASE_URL}/locations/${stateKey}/${citySlug}</loc><priority>0.7</priority></url>\n`;
+      const locUrl = `${BASE_URL}/locations/${fullStateSlug}/${citySlug}`;
+      if (locUrl !== `${BASE_URL}/locations/missouri/kansas-city`) {
+        sitemap += `  <url><loc>${locUrl}</loc><priority>0.7</priority></url>\n`;
+      }
     });
   }
 

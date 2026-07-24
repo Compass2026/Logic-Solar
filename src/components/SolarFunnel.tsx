@@ -103,7 +103,7 @@ export const SolarFunnel: React.FC<{ onBack: () => void }> = ({ onBack }) => {
   }
 
   /* ═══ PILL BUTTON HELPER ═══ */
-  const PillOption = ({ label, selected, onClick }: { label: string; selected: boolean; onClick: () => void }) => (
+  const PillOption = ({ label, selected, onClick }: { label: string; selected: boolean; onClick: () => void; key?: string }) => (
     <button
       onClick={onClick}
       className={`w-full px-6 py-5 rounded-full border-2 text-left font-semibold text-[15px] transition-all duration-250 cursor-pointer ${

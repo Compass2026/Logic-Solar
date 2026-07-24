@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Shield, Zap, TrendingDown, Battery, Home, CloudLightning, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { PageHero } from '../components/PageHero';
@@ -140,6 +141,24 @@ export const BatteryBackup = () => {
             />
             <FAQAccordion items={faqItems} />
           </div>
+        </div>
+      </section>
+
+      {/* Featured Location Banner */}
+      <section className="py-12 bg-brand-light border-y border-black/5">
+        <div className="container-custom flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div>
+            <h3 className="text-xl font-bold text-brand-dark">Need emergency power in Kansas City?</h3>
+            <p className="text-brand-dark/70 text-sm mt-1">
+              Discover custom battery backup and power storage solutions designed for Kansas City storms.
+            </p>
+          </div>
+          <Link 
+            to="/locations/missouri/kansas-city" 
+            className="px-6 py-3 rounded-xl bg-brand-dark text-brand-gold font-extrabold text-sm hover:bg-brand-gold hover:text-brand-dark transition-all shrink-0"
+          >
+            Kansas City Battery Backup
+          </Link>
         </div>
       </section>
 
