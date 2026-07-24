@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { CityTemplate } from '../components/CityTemplate';
 import { KansasCityMOPage } from './KansasCityMOPage';
+import { WichitaKSPage } from './WichitaKSPage';
 import { siteData } from '../data/siteData';
 import locationsData from '../data/locations-solar.json';
 
@@ -11,6 +12,11 @@ export const CityPage = () => {
   // Dedicated Kansas City, Missouri override
   if (state?.toLowerCase() === 'missouri' && city?.toLowerCase() === 'kansas-city') {
     return <KansasCityMOPage />;
+  }
+
+  // Dedicated Wichita, Kansas override
+  if (state?.toLowerCase() === 'kansas' && city?.toLowerCase() === 'wichita') {
+    return <WichitaKSPage />;
   }
 
   // Format city nicely: e.g. "austin" -> "Austin", "san-antonio" -> "San Antonio"
