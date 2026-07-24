@@ -402,11 +402,28 @@ export function AustinTXPage() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-md">
-                <h3 className="text-xl font-bold text-white mb-2">Request an Austin Solar Consultation</h3>
-                <p className="text-sm text-slate-400 mb-6">Receive a custom production estimate engineered for your property's utility rate structure.</p>
-                <QuoteForm locationName="Austin, TX" />
-              </div>
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                className="relative rounded-[32px] overflow-hidden border border-slate-700 shadow-2xl group"
+              >
+                <img 
+                  src="/images/hero-roof.jpg" 
+                  alt="Residential solar panels installed by Logic Solar near Austin, TX" 
+                  className="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-95"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-slate-900/90 border border-slate-700 backdrop-blur-md">
+                  <div className="flex items-center gap-2 text-brand-gold font-bold text-sm mb-1">
+                    <CheckCircle2 className="w-4 h-4 text-brand-gold" />
+                    <span>Custom Engineered for Austin Homes</span>
+                  </div>
+                  <p className="text-slate-300 text-xs leading-relaxed">
+                    Designed for maximum solar production, peak heat tolerance, and battery outage resilience.
+                  </p>
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -1492,34 +1509,21 @@ export function AustinTXPage() {
       </section>
 
       {/* 28. FINAL CONVERSION SECTION */}
-      <section id="austin-quote-form" className="py-16 md:py-24 bg-gradient-to-b from-brand-dark via-slate-950 to-black">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-slate-900/90 border border-slate-800 p-8 sm:p-12 rounded-3xl shadow-2xl space-y-8 backdrop-blur-md">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-                See Whether Solar Makes Sense for Your Austin Property
-              </h2>
-              <p className="text-slate-400 text-base max-w-2xl mx-auto">
-                Our engineering team will analyze your utility provider, 12-month electric usage, roof geometry, and battery objectives to prepare a transparent financial proposal.
-              </p>
-              <div className="w-20 h-1 bg-brand-gold mx-auto rounded-full"></div>
-            </div>
-
-            <QuoteForm locationName="Austin, TX" />
-
-            <div className="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
-              <div className="flex items-center space-x-2">
-                <Lock className="w-4 h-4 text-brand-gold" />
-                <span>Your information is protected. Zero pressure, direct engineering evaluation.</span>
-              </div>
-              <a href="tel:8163005781" className="text-brand-gold font-bold hover:underline flex items-center space-x-1">
-                <Phone className="w-4 h-4" />
-                <span>Call (816) 300-5781</span>
-              </a>
-            </div>
+      <section id="austin-quote-form" className="pt-16 md:pt-24 pb-6 bg-brand-dark text-white relative">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+          <div className="inline-flex items-center space-x-2 bg-brand-gold/10 border border-brand-gold/30 rounded-full px-4 py-1.5 text-xs font-semibold text-brand-gold uppercase tracking-wider">
+            <span>Zero-Pressure Consultation</span>
           </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+            See Whether Solar Makes Sense for Your Austin Property
+          </h2>
+          <p className="text-slate-300 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            Our engineering team will analyze your utility provider, 12-month electric usage, roof geometry, and battery objectives to prepare a transparent financial proposal.
+          </p>
         </div>
       </section>
+
+      <QuoteForm />
     </div>
   );
 }
