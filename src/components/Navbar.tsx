@@ -376,6 +376,23 @@ export const Navbar = () => {
             )}
             style={{ transitionDelay: isOpen ? `${100 + siteData.nav.length * 50}ms` : '0ms' }}
           >
+            {/* Store CTA — mirrors the desktop pill button */}
+            <a
+              href="http://logic.myreward.store/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="relative overflow-hidden flex w-full items-center justify-center gap-2.5 py-5 rounded-2xl font-black uppercase tracking-widest text-white transition-transform active:scale-95"
+              style={{
+                background: 'linear-gradient(135deg, #1b2a33 0%, #254350 100%)',
+                border: '1px solid rgba(249, 205, 13, 0.7)',
+                animation: 'storeGlowPulse 3s infinite ease-in-out',
+              }}
+            >
+              <ShoppingBag className="w-5 h-5 text-brand-gold shrink-0" />
+              <span>Store</span>
+              <Sparkles className="w-4 h-4 text-brand-gold animate-pulse shrink-0" />
+            </a>
             <a
               href="https://logic-portal.com/"
               target="_blank"
