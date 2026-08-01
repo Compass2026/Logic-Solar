@@ -158,14 +158,25 @@ export const HomeHero = () => {
         display: flex;
         align-items: center;
         justify-content: center;
+        box-sizing: border-box;
         width: 250px;
-        padding: 0 20px;
+        padding: 0 24px;
         flex-shrink: 0;
+        /* Scales every logo's height together per breakpoint */
+        --logo-scale: 1;
       }
       @media (max-width: 768px) {
         .ticker-item {
-          width: 180px;
-          padding: 0 10px;
+          width: 190px;
+          padding: 0 18px;
+          --logo-scale: 0.86;
+        }
+      }
+      @media (max-width: 380px) {
+        .ticker-item {
+          width: 164px;
+          padding: 0 15px;
+          --logo-scale: 0.78;
         }
       }
       .ticker-wrap:hover .ticker-track {
@@ -176,7 +187,16 @@ export const HomeHero = () => {
         opacity: 0.85;
         transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
         cursor: default;
-        flex-shrink: 0;
+        /* The slot is the hard boundary: a logo may never exceed it, so the
+           per-logo caps below only ever shrink it, never let it overlap a
+           neighbour. Aspect ratios here span 1.6:1 to 14:1. */
+        width: auto;
+        height: auto;
+        min-width: 0;
+        max-width: min(var(--logo-max-w, 160px), 100%);
+        max-height: calc(var(--logo-h, 58px) * var(--logo-scale, 1));
+        object-fit: contain;
+        display: block;
       }
       .ticker-logo:hover {
         filter: grayscale(0%) brightness(1);
@@ -187,7 +207,10 @@ export const HomeHero = () => {
         opacity: 0.75;
         transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
         cursor: default;
-        flex-shrink: 0;
+        min-width: 0;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
         font-size: 15px;
         font-weight: 800;
         letter-spacing: 0.04em;
@@ -331,14 +354,12 @@ const PartnerTicker = () => {
                   src={p.src}
                   alt={p.name}
                   className="ticker-logo"
+                  loading="lazy"
+                  decoding="async"
                   style={{
-                    height: 'auto',
-                    maxHeight: p.height,
-                    width: 'auto',
-                    maxWidth: p.maxWidth || 160,
-                    objectFit: 'contain',
-                    display: 'block'
-                  }}
+                    '--logo-h': `${p.height}px`,
+                    '--logo-max-w': `${p.maxWidth || 160}px`,
+                  } as React.CSSProperties}
                   onError={(e) => {
                     const target = e.currentTarget as HTMLImageElement;
                     target.style.display = 'none';
