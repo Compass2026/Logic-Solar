@@ -14,6 +14,11 @@ export const Navbar = () => {
   const isRoofing = location.pathname === '/roofing';
   const isDarkNav = isHome || isRoofing;
 
+  // Every link in the mobile menu closes it: external links open in a new tab
+  // and would otherwise leave the site covered, and an internal link to the
+  // route you are already on never fires the location effect below.
+  const closeMenu = () => setIsOpen(false);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -333,6 +338,7 @@ export const Navbar = () => {
                             href={child.href}
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={closeMenu}
                             className="block text-2xl font-extrabold text-brand-dark hover:text-brand-gold transition-colors"
                           >
                             {child.name}
@@ -341,6 +347,7 @@ export const Navbar = () => {
                           <Link
                             key={child.name}
                             to={child.href}
+                            onClick={closeMenu}
                             className="block text-2xl font-extrabold text-brand-dark hover:text-brand-gold transition-colors"
                           >
                             {child.name}
@@ -354,6 +361,7 @@ export const Navbar = () => {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={closeMenu}
                     className="block text-3xl font-extrabold text-brand-dark hover:text-brand-gold transition-colors"
                   >
                     {item.name}
@@ -361,6 +369,7 @@ export const Navbar = () => {
                 ) : (
                   <Link
                     to={item.href}
+                    onClick={closeMenu}
                     className="block text-3xl font-extrabold text-brand-dark hover:text-brand-gold transition-colors"
                   >
                     {item.name}
@@ -381,7 +390,7 @@ export const Navbar = () => {
               href="http://logic.myreward.store/"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => setIsOpen(false)}
+              onClick={closeMenu}
               className="relative overflow-hidden flex w-full items-center justify-center gap-2.5 py-5 rounded-2xl font-black uppercase tracking-widest text-white transition-transform active:scale-95"
               style={{
                 background: 'linear-gradient(135deg, #1b2a33 0%, #254350 100%)',
@@ -397,18 +406,21 @@ export const Navbar = () => {
               href="https://logic-portal.com/"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={closeMenu}
               className="block w-full bg-brand-dark text-white text-center py-5 rounded-2xl font-black uppercase tracking-widest shadow-xl hover:bg-brand-dark/90 transition-colors"
             >
               Logic Portal
             </a>
             <a
               href={`tel:${siteData.contact.phone.replace(/[^+\d]/g, '')}`}
+              onClick={closeMenu}
               className="block w-full bg-brand-green text-white text-center py-5 rounded-2xl font-black uppercase tracking-widest shadow-xl"
             >
               📞 Give Us a Call
             </a>
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
+              onClick={closeMenu}
               className="block w-full bg-brand-gold text-brand-dark text-center py-5 rounded-2xl font-black uppercase tracking-widest shadow-2xl"
             >
               Get My Free Solar Quote
