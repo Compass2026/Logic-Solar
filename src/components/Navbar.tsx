@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, ShoppingBag, Sparkles } from 'lucide-react';
 import { cn } from '../lib/utils';
@@ -26,6 +27,30 @@ export const Navbar = () => {
     setIsOpen(false);
     setActiveDropdown(null);
   }, [location]);
+
+  // Close the mobile menu on Escape.
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsOpen(false);
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [isOpen]);
+
+  // Lock background scrolling while the mobile menu is open.
+  useEffect(() => {
+    if (!isOpen) return;
+    const { documentElement: html, body } = document;
+    const prevHtml = html.style.overflow;
+    const prevBody = body.style.overflow;
+    html.style.overflow = 'hidden';
+    body.style.overflow = 'hidden';
+    return () => {
+      html.style.overflow = prevHtml;
+      body.style.overflow = prevBody;
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -67,7 +92,7 @@ export const Navbar = () => {
       `}</style>
       <nav 
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-28",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-5 sm:px-8 lg:px-28",
           scrolled ? "py-4" : "py-5"
         )}
         style={scrolled ? {
@@ -255,26 +280,46 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button 
+        <button
           className={cn(
             "lg:hidden w-11 h-11 rounded-xl flex items-center justify-center transition-colors",
             scrolled ? "bg-brand-dark/5 text-brand-dark" : "bg-white/20 text-white"
           )}
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
+    </nav>
 
-      {/* Mobile Menu */}
-      <div className={cn(
-        "fixed inset-0 top-0 bg-white z-[60] lg:hidden transition-all duration-500 ease-in-out",
-        isOpen ? "translate-y-0 opacity-100 pointer-events-auto" : "-translate-y-full opacity-0 pointer-events-none"
-      )}>
-        <div className="flex flex-col h-full p-8 pt-24 overflow-y-auto pb-24">
+    {/* Mobile Menu — portalled to <body> so the navbar's backdrop-filter
+        (which makes <nav> the containing block for fixed children) can't
+        clip it to the height of the navbar. */}
+    {createPortal(
+      <div
+        id="mobile-menu"
+        aria-hidden={!isOpen}
+        inert={!isOpen}
+        className={cn(
+          "fixed inset-0 bg-white z-[60] lg:hidden overscroll-contain",
+          "transition-[transform,opacity] duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-[transform,opacity]",
+          isOpen ? "translate-y-0 opacity-100 pointer-events-auto" : "-translate-y-full opacity-0 pointer-events-none"
+        )}
+      >
+        <div className="flex flex-col h-full p-8 pt-24 overflow-y-auto overscroll-contain pb-24">
           <div className="flex-grow space-y-8">
-            {siteData.nav.map((item) => (
-              <div key={item.name} className="space-y-4">
+            {siteData.nav.map((item, i) => (
+              <div
+                key={item.name}
+                className={cn(
+                  "space-y-4 transition-[transform,opacity] duration-300 ease-out",
+                  isOpen ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
+                )}
+                style={{ transitionDelay: isOpen ? `${100 + i * 50}ms` : '0ms' }}
+              >
                 {item.children ? (
                   <>
                     <div className="text-xs font-black text-brand-dark/30 uppercase tracking-[0.3em]">
@@ -324,7 +369,13 @@ export const Navbar = () => {
               </div>
             ))}
           </div>
-          <div className="pt-10 border-t border-gray-100 space-y-4">
+          <div
+            className={cn(
+              "pt-10 border-t border-gray-100 space-y-4 transition-[transform,opacity] duration-300 ease-out",
+              isOpen ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
+            )}
+            style={{ transitionDelay: isOpen ? `${100 + siteData.nav.length * 50}ms` : '0ms' }}
+          >
             <a
               href="https://logic-portal.com/"
               target="_blank"
@@ -346,15 +397,17 @@ export const Navbar = () => {
               Get My Free Solar Quote
             </Link>
           </div>
-          <button 
+          <button
             onClick={() => setIsOpen(false)}
+            aria-label="Close menu"
             className="absolute top-8 right-8 w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center"
           >
             <X className="w-6 h-6" />
           </button>
         </div>
-      </div>
-    </nav>
+      </div>,
+      document.body
+    )}
     </>
   );
 };
