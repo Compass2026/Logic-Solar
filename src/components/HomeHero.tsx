@@ -456,12 +456,18 @@ const s: Record<string, React.CSSProperties> = {
   badgeSep:   { color: '#ccc', fontSize: 12, margin: '0 2px' },
   badgePower: { color: '#1b2a33', fontSize: 13 },
   h1: {
-    fontSize: 'clamp(2.4rem, 4vw, 4rem)',
+    /* `4vw` only clears the 2.4rem floor above ~960px, so every phone width
+       rendered at a flat 38.4px and "Independence." (308px) overflowed the
+       272px content box on a 320px screen. The inner min()/calc() adds a
+       fluid floor that reaches 2.4rem at ~361px and only shrinks below that;
+       max(4vw, …) keeps the original desktop scaling untouched. */
+    fontSize: 'clamp(2rem, max(4vw, min(2.4rem, calc(12vw - 5px))), 4rem)',
     fontWeight: 900,
     lineHeight: 1.08,
     color: '#1b2a33',
     letterSpacing: '-0.025em',
     marginBottom: 20,
+    overflowWrap: 'break-word',
   },
   gold: { color: '#e6b800' },
   sub: {
