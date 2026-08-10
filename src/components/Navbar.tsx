@@ -97,7 +97,9 @@ export const Navbar = () => {
       `}</style>
       <nav 
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-5 sm:px-8 lg:px-28",
+          // Padding widens only as fast as the nav content leaves room for it:
+          // the full-size links + CTAs need ~1400px, so px-28 waits for 1728px.
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-5 sm:px-8 xl:px-10 2xl:px-16 min-[1728px]:px-28",
           scrolled ? "py-4" : "py-5"
         )}
         style={scrolled ? {
@@ -134,8 +136,10 @@ export const Navbar = () => {
             )}
           </Link>
 
-        {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-10">
+        {/* Desktop Nav — the logo, links and CTAs need ~1400px of viewport to
+            sit side by side, so the hamburger holds until xl (1280px) and the
+            spacing only opens up to its full size at 2xl. */}
+        <div className="hidden xl:flex items-center gap-6 2xl:gap-10">
           {siteData.nav.map((item) => (
             <div 
               key={item.name} 
@@ -146,7 +150,7 @@ export const Navbar = () => {
               {item.children ? (
                 <button 
                   className={cn(
-                    "flex items-center gap-1.5 text-[13px] font-bold uppercase tracking-widest transition-colors py-2",
+                    "flex items-center gap-1.5 text-[12px] 2xl:text-[13px] font-bold uppercase tracking-widest whitespace-nowrap transition-colors py-2",
                     scrolled ? "text-brand-dark/60 hover:text-brand-dark" : "text-white hover:text-white nav-text-shadow"
                   )}
                 >
@@ -159,7 +163,7 @@ export const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cn(
-                    "text-[13px] font-bold uppercase tracking-widest transition-colors py-2",
+                    "text-[12px] 2xl:text-[13px] font-bold uppercase tracking-widest whitespace-nowrap transition-colors py-2",
                     scrolled ? "text-brand-dark/60 hover:text-brand-dark" : "text-white hover:text-white nav-text-shadow"
                   )}
                 >
@@ -169,7 +173,7 @@ export const Navbar = () => {
                 <Link 
                   to={item.href}
                   className={cn(
-                    "text-[13px] font-bold uppercase tracking-widest transition-colors py-2",
+                    "text-[12px] 2xl:text-[13px] font-bold uppercase tracking-widest whitespace-nowrap transition-colors py-2",
                     scrolled ? "text-brand-dark/60 hover:text-brand-dark" : "text-white hover:text-white nav-text-shadow"
                   )}
                 >
@@ -212,22 +216,20 @@ export const Navbar = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden xl:flex items-center gap-2 2xl:gap-3">
           {/* Store CTA Button with Cool Effect */}
           <a
             href="http://logic.myreward.store/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative overflow-hidden flex items-center gap-2 transition-all duration-300 transform hover:scale-105 active:scale-95"
+            className="group relative overflow-hidden flex items-center gap-1.5 2xl:gap-2 px-4 py-2.5 text-[11px] 2xl:px-6 2xl:py-3.5 2xl:text-[13px] transition-all duration-300 transform hover:scale-105 active:scale-95"
             style={{
               background: scrolled
                 ? 'linear-gradient(135deg, #1b2a33 0%, #254350 100%)'
                 : 'linear-gradient(135deg, rgba(249,205,13,0.22) 0%, rgba(27,42,51,0.92) 100%)',
               color: '#ffffff',
               border: scrolled ? '1px solid rgba(249, 205, 13, 0.7)' : '1px solid rgba(249, 205, 13, 0.85)',
-              padding: '14px 24px',
               borderRadius: '999px',
-              fontSize: '13px',
               fontWeight: 900,
               textTransform: 'uppercase',
               letterSpacing: '0.08em',
@@ -250,13 +252,12 @@ export const Navbar = () => {
             href="https://logic-portal.com/"
             target="_blank"
             rel="noopener noreferrer"
+            className="px-4 py-2.5 text-[11px] 2xl:px-6 2xl:py-3.5 2xl:text-[13px]"
             style={{
               backgroundColor: scrolled ? 'rgba(27, 42, 51, 0.05)' : 'rgba(255, 255, 255, 0.12)',
               color: scrolled ? '#1b2a33' : '#ffffff',
               border: scrolled ? '1px solid rgba(27, 42, 51, 0.2)' : '1px solid rgba(255, 255, 255, 0.3)',
-              padding: '14px 24px',
               borderRadius: '999px',
-              fontSize: '13px',
               fontWeight: 900,
               textTransform: 'uppercase',
               letterSpacing: '0.08em',
@@ -278,7 +279,8 @@ export const Navbar = () => {
           </a>
           <Link
             to="/contact"
-            style={{ backgroundColor: '#f9cd0d', color: '#1b2a33', padding: '14px 28px', borderRadius: '999px', fontSize: '13px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap', textDecoration: 'none', display: 'inline-block', transition: 'all 0.25s', boxShadow: '0 4px 20px rgba(249,205,13,0.45)', }}
+            className="px-4 py-2.5 text-[11px] 2xl:px-7 2xl:py-3.5 2xl:text-[13px]"
+            style={{ backgroundColor: '#f9cd0d', color: '#1b2a33', borderRadius: '999px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.08em', whiteSpace: 'nowrap', textDecoration: 'none', display: 'inline-block', transition: 'all 0.25s', boxShadow: '0 4px 20px rgba(249,205,13,0.45)', }}
           >
             Get My Free Quote
           </Link>
@@ -287,7 +289,7 @@ export const Navbar = () => {
         {/* Mobile Toggle */}
         <button
           className={cn(
-            "lg:hidden w-11 h-11 rounded-xl flex items-center justify-center transition-colors",
+            "xl:hidden w-11 h-11 rounded-xl flex items-center justify-center transition-colors",
             scrolled ? "bg-brand-dark/5 text-brand-dark" : "bg-white/20 text-white"
           )}
           onClick={() => setIsOpen(!isOpen)}
@@ -309,7 +311,7 @@ export const Navbar = () => {
         aria-hidden={!isOpen}
         inert={!isOpen}
         className={cn(
-          "fixed inset-0 bg-white z-[60] lg:hidden overscroll-contain",
+          "fixed inset-0 bg-white z-[60] xl:hidden overscroll-contain",
           "transition-[transform,opacity] duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-[transform,opacity]",
           isOpen ? "translate-y-0 opacity-100 pointer-events-auto" : "-translate-y-full opacity-0 pointer-events-none"
         )}
