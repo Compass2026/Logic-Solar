@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://logicsolar.com/sitemap.xml
+Sitemap: https://logic-solar.com/sitemap.xml
