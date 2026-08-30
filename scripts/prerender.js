@@ -38,6 +38,10 @@ const cap = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
 const data = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, '../src/data/locations-solar.json'), 'utf8')
 );
+const tiers = JSON.parse(
+  fs.readFileSync(path.resolve(__dirname, '../src/data/city-tiers.json'), 'utf8')
+);
+const tierOf = new Map(tiers.map((t) => [`${t.state}|${t.slug}`, t]));
 const template = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
 
 const routes = [];
@@ -125,6 +129,7 @@ for (const [st, state] of Object.entries(data.states)) {
   const stateSlug = state.name.toLowerCase();
   const stateRoute = `/locations/${stateSlug}`;
   const cityLinks = state.cities
+    .filter((c) => (tierOf.get(`${st}|${c.slug}`)?.tier ?? 3) < 3)
     .map((c) => `<li><a href="/locations/${stateSlug}/${c.slug}">Solar installation in ${esc(c.city)}, ${st.toUpperCase()}</a></li>`)
     .join('\n');
 
@@ -139,14 +144,19 @@ for (const [st, state] of Object.entries(data.states)) {
     });
 
   for (const c of state.cities) {
+    const tier = tierOf.get(`${st}|${c.slug}`);
+    if (!tier || tier.tier >= 3) continue; // Tier 3: 301s to the state hub via vercel.json
     const kw = cap(c.keywords?.primary || 'solar installation');
     const secondary = (c.keywords?.secondary || []).join(', ');
     const cityRoute = `/locations/${stateSlug}/${c.slug}`;
     const dedicated = dedicatedCityMeta[`${stateSlug}/${c.slug}`];
+    const teamNote = tier.anchorMiles > 5
+      ? `about ${tier.anchorMiles} miles from our ${tier.nearestAnchor} team`
+      : `home base of our ${tier.nearestAnchor} team`;
     push(cityRoute,
       dedicated ? dedicated.title : `${kw} in ${c.city}, ${st.toUpperCase()}`,
       dedicated ? dedicated.desc :
-        `${kw} in ${c.city}, ${state.name}: custom-engineered systems, ${secondary || 'battery backup'}, and premium service. Free quotes: ${NAP.phone}.`,
+        `${kw} in ${c.city}, ${state.name} — ${tier.county} County. Custom-engineered by our ${tier.nearestAnchor} team. Free quotes: ${NAP.phone}.`,
       {
         schema: {
           ...orgSchema,
@@ -154,7 +164,7 @@ for (const [st, state] of Object.entries(data.states)) {
           makesOffer: { '@type': 'Offer', itemOffered: { '@type': 'Service', name: `${kw} in ${c.city}, ${state.name}` } },
         },
         body: `<h1>${esc(kw)} in ${esc(c.city)}, ${esc(state.name)}</h1>
-<p>Looking for ${esc(kw.toLowerCase())} in ${esc(c.city)}? With roughly ${state.sunlightDays} sunny days a year and the average ${esc(state.name)} electric bill near ${esc(state.avgBill)} per month, ${esc(c.city)} homeowners are strong candidates for solar. Local utility context: ${esc(state.utilityFocus)}. Available incentives include ${esc(state.stateIncentive)}.</p>
+<p>Logic Solar serves ${esc(c.city)} and the rest of ${esc(tier.county)} County ${esc(teamNote)}. With roughly ${state.sunlightDays} sunny days a year and the average ${esc(state.name)} electric bill near ${esc(state.avgBill)} per month, ${esc(c.city)} homeowners are strong candidates for solar. Local utility context: ${esc(state.utilityFocus)}. Available incentives include ${esc(state.stateIncentive)}.</p>
 <p>Logic Solar custom-engineers every system — panels, ${esc(secondary || 'battery backup')}, and monitoring — and backs it with premium service. Call ${NAP.phone} or <a href="/contact">request a free quote</a>. Explore more of <a href="${stateRoute}">our ${esc(state.name)} service area</a>.</p>`,
       });
   }

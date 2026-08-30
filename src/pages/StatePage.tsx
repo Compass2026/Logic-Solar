@@ -9,6 +9,7 @@ import { QuoteForm } from '../components/QuoteForm';
 import { TrustStrip } from '../components/TrustStrip';
 import { siteData } from '../data/siteData';
 import locationsData from '../data/locations-solar.json';
+import { isServedCity } from '../data/cityTiers';
 
 export const StatePage = () => {
   const { stateId } = useParams<{ stateId: string }>();
@@ -18,7 +19,7 @@ export const StatePage = () => {
 
   const stateKey = location.state.toLowerCase() as keyof typeof locationsData.states;
   const stateData = locationsData.states[stateKey];
-  const cities = stateData?.cities || [];
+  const cities = (stateData?.cities || []).filter((c) => isServedCity(stateKey, c.slug));
 
   return (
     <>
