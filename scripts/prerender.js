@@ -191,6 +191,10 @@ for (const r of routes) {
   <meta name="twitter:image" content="${esc(ogImage)}" />
   </head>`);
 
+  if (r.route === '/') {
+    html = html.replace('</head>',
+      () => `  <link rel="preload" as="image" href="/images/modern_suburban_home_with_solar_panels.jpg" fetchpriority="high" />\n  </head>`);
+  }
   if (r.noindex) {
     html = html.replace('</head>',
       () => `  <meta name="robots" content="noindex, nofollow" />\n  </head>`);
