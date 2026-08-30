@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { SEO } from '../components/SEO';
 import { motion, AnimatePresence } from 'motion/react';
 
 /* ═══════════════════════════════════════════════════════════
@@ -139,6 +140,7 @@ export const SolarLanding: React.FC = () => {
 
   return (
     <div className="min-h-screen text-gray-900 overflow-x-hidden font-sans" style={SOLAR_BG}>
+      <SEO title="Logic Solar" noindex />
 
       <main className="min-h-screen flex items-center justify-center px-5 py-12 md:py-16">
         <section className="w-full max-w-5xl mx-auto">

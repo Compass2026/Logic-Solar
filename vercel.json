@@ -1,5 +1,10 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "redirects": [
+    { "source": "/locations/tx/:city", "destination": "/locations/texas/:city", "permanent": true },
+    { "source": "/locations/ok/:city", "destination": "/locations/oklahoma/:city", "permanent": true },
+    { "source": "/locations/ks/:city", "destination": "/locations/kansas/:city", "permanent": true },
+    { "source": "/locations/il/:city", "destination": "/locations/illinois/:city", "permanent": true },
+    { "source": "/locations/mo/:city", "destination": "/locations/missouri/:city", "permanent": true },
+    { "source": "/locations/co/:city", "destination": "/locations/colorado/:city", "permanent": true }
   ]
 }

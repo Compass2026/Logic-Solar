@@ -8,10 +8,15 @@ import { QuoteForm } from '../components/QuoteForm';
 import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle2, TrendingDown, Zap, Shield, Award, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 
 export const Home = () => {
   return (
     <main className="bg-white">
+      <SEO
+        title="Solar Panel Installation & Battery Backup | Logic Solar"
+        description="Custom-engineered solar installations, battery backup, and commercial solar across Kansas, Missouri, Texas, Oklahoma, Illinois, and Colorado. Free quotes: (816) 300-5781."
+      />
       <HomeHero />
       <TrustStrip />
       
