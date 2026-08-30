@@ -19,10 +19,13 @@ export const HomeHero = () => {
       <div style={s.imgWrap} className="hero-img-wrap">
         {/* Hero image — full quality, no zoom, no distortion */}
         <img
-          src="/images/modern_suburban_home_with_solar_panels.png"
+          src="/images/modern_suburban_home_with_solar_panels.jpg"
           alt="Modern suburban home with rooftop solar panels"
           style={s.heroImg}
           className="hero-img"
+          width={1916}
+          height={821}
+          fetchPriority="high"
         />
         {/* Dark overlay — separate from image, never on the img element */}
         <div style={s.imgMask} className="hero-img-mask" />
