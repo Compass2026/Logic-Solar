@@ -1,8 +1,10 @@
 /**
  * Prerender — runs AFTER `vite build`.
  * Writes a real index.html for every route: unique title, meta description,
- * canonical, Open Graph tags, LocalBusiness schema, and crawlable content
- * that React replaces on hydration. Crawlers see real pages; users see the app.
+ * canonical, Open Graph + Twitter Card tags, LocalBusiness schema, and
+ * crawlable content that React replaces on hydration. Crawlers see real
+ * pages; users see the app. Internal tool routes are prerendered with
+ * noindex so they resolve as files (no SPA catch-all) without being indexed.
  */
 
 import fs from 'fs';
@@ -11,7 +13,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, '../dist');
-const BASE_URL = 'https://logic-solar.com';
+const BASE_URL = 'https://www.logic-solar.com';
 
 const NAP = {
   name: 'Logic Solar',
@@ -40,8 +42,8 @@ const template = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
 
 const routes = [];
 
-const push = (route, t, desc, { schema = null, body = '' } = {}) =>
-  routes.push({ route, title: title(t), desc, schema, body });
+const push = (route, t, desc, { schema = null, body = '', noindex = false, ogImage = null } = {}) =>
+  routes.push({ route, title: title(t), desc, schema, body, noindex, ogImage });
 
 const orgSchema = {
   '@context': 'https://schema.org',
@@ -59,7 +61,7 @@ const orgSchema = {
   },
 };
 
-push('/', 'Logic Solar | Solar Panel Installation, Battery Backup & Commercial Solar',
+push('/', 'Solar Panel Installation & Battery Backup | Logic Solar',
   'Custom-engineered solar installations, battery backup, and commercial solar across Kansas, Missouri, Texas, Oklahoma, Illinois, and Colorado. Free quotes: ' + NAP.phone + '.',
   {
     schema: orgSchema,
@@ -74,6 +76,12 @@ push('/services/battery', 'Battery Backup & Energy Storage',
   'Home battery backup and energy storage systems that keep the lights on and maximize your solar investment. Design and installation by Logic Solar.');
 push('/services/commercial', 'Commercial Solar Installation',
   'Commercial solar systems engineered for businesses: lower operating costs, tax advantages, and dependable performance. Get a commercial quote from Logic Solar.');
+push('/services/incentives', 'Solar Incentives & Tax Credits',
+  'Federal tax credits, state incentives, and utility rebates that lower the cost of going solar. See what applies in KS, MO, TX, OK, IL, and CO.');
+push('/services/how-it-works', 'How Solar Works | From Sunlight to Savings',
+  'How a solar energy system works: panels, inverters, batteries, net metering, and what to expect from design through installation with Logic Solar.');
+push('/roofing', 'Roofing Services',
+  'Roof replacement and repair engineered to pair with solar: one team for your roof and your panels. Free inspections from Logic Solar.');
 push('/financing', 'Solar Financing Options | $0-Down Solar Loans',
   'Flexible solar financing: $0-down loans, cash purchase, and options that make going solar pay from day one. See what fits your budget.');
 push('/faq', 'Solar FAQ | Answers From Logic Solar',
@@ -81,15 +89,47 @@ push('/faq', 'Solar FAQ | Answers From Logic Solar',
 push('/contact', 'Contact Logic Solar | Free Solar Quote',
   `Talk to Logic Solar: free quotes and system designs. Call ${NAP.phone} or send a message — ${NAP.city}, ${NAP.region}.`,
   { schema: orgSchema });
+push('/privacy', 'Privacy Policy',
+  'How Logic Solar collects, uses, and protects your information.');
+push('/terms', 'Terms of Service',
+  'The terms that govern use of the Logic Solar website and services.');
+
+// Internal tool / campaign routes: prerendered so they resolve as real files
+// (no SPA catch-all needed), but noindexed — they are not for search.
+const internalRoutes = [
+  '/adders', '/service', '/credit', '/credit-repair', '/deal', '/logins',
+  '/onboard', '/sitesurvey', '/thankyou', '/commercial', '/solar-landing',
+];
+for (const r of internalRoutes) {
+  push(r, 'Logic Solar', 'Logic Solar internal page.', { noindex: true });
+}
+
+// Flagship city pages keep the same meta their dedicated React pages set,
+// so what crawlers see matches what hydration renders.
+const dedicatedCityMeta = {
+  'texas/austin': {
+    title: 'Austin Solar Company | Panels and Battery Backup | Logic Solar',
+    desc: 'Logic Solar installs residential solar panels, battery backup and commercial solar systems throughout Austin and Central Texas. Request a custom solar estimate.',
+  },
+  'missouri/kansas-city': {
+    title: 'Kansas City Solar Company | Logic Solar',
+    desc: 'Logic Solar installs residential solar panels, battery backup and commercial solar systems throughout Kansas City, Missouri and the KC metro. Request a custom solar estimate.',
+  },
+  'kansas/wichita': {
+    title: 'Wichita Solar Company | Panels and Battery Backup | Logic Solar',
+    desc: 'Logic Solar installs residential solar panels, battery backup and commercial solar systems throughout Wichita and south-central Kansas. Request a custom solar estimate.',
+  },
+};
 
 for (const [st, state] of Object.entries(data.states)) {
-  const stateRoute = `/locations/${state.name.toLowerCase()}`;
+  const stateSlug = state.name.toLowerCase();
+  const stateRoute = `/locations/${stateSlug}`;
   const cityLinks = state.cities
-    .map((c) => `<li><a href="/locations/${c.state}/${c.slug}">Solar installation in ${esc(c.city)}, ${st.toUpperCase()}</a></li>`)
+    .map((c) => `<li><a href="/locations/${stateSlug}/${c.slug}">Solar installation in ${esc(c.city)}, ${st.toUpperCase()}</a></li>`)
     .join('\n');
 
   push(stateRoute, `${state.name} Solar Installation | Panels, Battery & Commercial`,
-    `Solar panel installation across ${state.name}: ~${state.sunlightDays} sunny days a year, ${state.stateIncentive}. Custom-engineered systems by Logic Solar.`,
+    `Solar panel installation across ${state.name}: custom-engineered systems, battery backup, and commercial solar. ~${state.sunlightDays} sunny days a year. Free quotes: ${NAP.phone}.`,
     {
       schema: { ...orgSchema, areaServed: { '@type': 'State', name: state.name } },
       body: `<h1>Solar Installation in ${esc(state.name)}</h1>
@@ -101,9 +141,12 @@ for (const [st, state] of Object.entries(data.states)) {
   for (const c of state.cities) {
     const kw = cap(c.keywords?.primary || 'solar installation');
     const secondary = (c.keywords?.secondary || []).join(', ');
-    push(`/locations/${c.state}/${c.slug}`,
-      `${kw} in ${c.city}, ${st.toUpperCase()}`,
-      `${kw} in ${c.city}, ${state.name}: custom-engineered systems, ${secondary || 'battery backup'}, and premium service. Avg. ${state.name} electric bill ${state.avgBill}/mo — see what solar saves. Free quotes: ${NAP.phone}.`,
+    const cityRoute = `/locations/${stateSlug}/${c.slug}`;
+    const dedicated = dedicatedCityMeta[`${stateSlug}/${c.slug}`];
+    push(cityRoute,
+      dedicated ? dedicated.title : `${kw} in ${c.city}, ${st.toUpperCase()}`,
+      dedicated ? dedicated.desc :
+        `${kw} in ${c.city}, ${state.name}: custom-engineered systems, ${secondary || 'battery backup'}, and premium service. Free quotes: ${NAP.phone}.`,
       {
         schema: {
           ...orgSchema,
@@ -117,18 +160,31 @@ for (const [st, state] of Object.entries(data.states)) {
   }
 }
 
+const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.png`;
+
 let written = 0;
 for (const r of routes) {
   const canonical = `${BASE_URL}${r.route === '/' ? '' : r.route}`;
+  const ogImage = r.ogImage || DEFAULT_OG_IMAGE;
   // Every replacement uses a function so "$" in content is never a regex pattern.
   let html = template
     .replace(/<title>[\s\S]*?<\/title>/, () => `<title>${esc(r.title)}</title>`)
     .replace(/<meta name="description" content="[^"]*"/, () => `<meta name="description" content="${esc(r.desc)}"`)
     .replace(/<meta property="og:title" content="[^"]*"/, () => `<meta property="og:title" content="${esc(r.title)}"`)
     .replace(/<meta property="og:description" content="[^"]*"/, () => `<meta property="og:description" content="${esc(r.desc)}"`)
+    .replace(/<meta property="og:image" content="[^"]*"/, () => `<meta property="og:image" content="${esc(ogImage)}"`)
     .replace(/<meta property="og:url" content="[^"]*"/, () => `<meta property="og:url" content="${canonical}"`)
-    .replace('</head>', () => `  <link rel="canonical" href="${canonical}" />\n  </head>`);
+    .replace('</head>', () => `  <link rel="canonical" href="${canonical}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${esc(r.title)}" />
+  <meta name="twitter:description" content="${esc(r.desc)}" />
+  <meta name="twitter:image" content="${esc(ogImage)}" />
+  </head>`);
 
+  if (r.noindex) {
+    html = html.replace('</head>',
+      () => `  <meta name="robots" content="noindex, nofollow" />\n  </head>`);
+  }
   if (r.schema) {
     html = html.replace('</head>',
       () => `  <script type="application/ld+json">${JSON.stringify(r.schema)}</script>\n  </head>`);

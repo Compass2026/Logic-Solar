@@ -5,7 +5,11 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_URL = 'https://logic-solar.com';
+const BASE_URL = 'https://www.logic-solar.com';
+const LASTMOD = new Date().toISOString().split('T')[0];
+
+const url = (loc, priority) =>
+  `  <url><loc>${loc}</loc><lastmod>${LASTMOD}</lastmod><priority>${priority}</priority></url>\n`;
 
 const generateSitemap = () => {
   const dataPath = path.resolve(__dirname, '../src/data/locations-solar.json');
@@ -14,53 +18,52 @@ const generateSitemap = () => {
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Static Pages -->
-  <url><loc>${BASE_URL}/</loc><priority>1.0</priority></url>
-  <url><loc>${BASE_URL}/about</loc><priority>0.8</priority></url>
-  <url><loc>${BASE_URL}/services/installation</loc><priority>0.8</priority></url>
-  <url><loc>${BASE_URL}/services/battery</loc><priority>0.8</priority></url>
-  <url><loc>${BASE_URL}/services/commercial</loc><priority>0.8</priority></url>
-  <url><loc>${BASE_URL}/financing</loc><priority>0.8</priority></url>
-  <url><loc>${BASE_URL}/faq</loc><priority>0.8</priority></url>
-  <url><loc>${BASE_URL}/contact</loc><priority>0.8</priority></url>
-  
-  <!-- State Hubs -->
-  <url><loc>${BASE_URL}/locations/texas</loc><priority>0.9</priority></url>
-  <url><loc>${BASE_URL}/locations/oklahoma</loc><priority>0.9</priority></url>
-  <url><loc>${BASE_URL}/locations/kansas</loc><priority>0.9</priority></url>
-  <url><loc>${BASE_URL}/locations/illinois</loc><priority>0.9</priority></url>
-  <url><loc>${BASE_URL}/locations/missouri</loc><priority>0.9</priority></url>
 `;
+  sitemap += url(`${BASE_URL}/`, '1.0');
+  for (const p of [
+    '/about',
+    '/services/installation',
+    '/services/battery',
+    '/services/commercial',
+    '/services/incentives',
+    '/services/how-it-works',
+    '/roofing',
+    '/financing',
+    '/faq',
+    '/contact',
+    '/privacy',
+    '/terms',
+  ]) {
+    sitemap += url(`${BASE_URL}${p}`, '0.8');
+  }
 
-  const stateSlugMap = {
-    'tx': 'texas',
-    'ok': 'oklahoma',
-    'ks': 'kansas',
-    'il': 'illinois',
-    'mo': 'missouri',
-    'co': 'colorado'
-  };
+  sitemap += `\n  <!-- State Hubs -->\n`;
+  const states = locationsData.states;
+  for (const stateData of Object.values(states)) {
+    sitemap += url(`${BASE_URL}/locations/${stateData.name.toLowerCase()}`, '0.9');
+  }
 
   // Dedicated High Priority Location Pages
-  sitemap += `  <url><loc>${BASE_URL}/locations/texas/austin</loc><priority>0.9</priority></url>\n`;
-  sitemap += `  <url><loc>${BASE_URL}/locations/missouri/kansas-city</loc><priority>0.9</priority></url>\n`;
-  sitemap += `  <url><loc>${BASE_URL}/locations/kansas/wichita</loc><priority>0.9</priority></url>\n`;
+  const dedicated = [
+    `${BASE_URL}/locations/texas/austin`,
+    `${BASE_URL}/locations/missouri/kansas-city`,
+    `${BASE_URL}/locations/kansas/wichita`,
+  ];
+  sitemap += `\n  <!-- Dedicated City Pages -->\n`;
+  for (const loc of dedicated) {
+    sitemap += url(loc, '0.9');
+  }
 
   // Dynamic City Pages
-  const states = locationsData.states;
-  for (const [stateKey, stateData] of Object.entries(states)) {
-    const fullStateSlug = stateSlugMap[stateKey] || stateKey;
-    const cities = stateData.cities || [];
-    cities.forEach(cityObj => {
-      const citySlug = cityObj.slug;
-      const locUrl = `${BASE_URL}/locations/${fullStateSlug}/${citySlug}`;
-      if (
-        locUrl !== `${BASE_URL}/locations/texas/austin` &&
-        locUrl !== `${BASE_URL}/locations/missouri/kansas-city` && 
-        locUrl !== `${BASE_URL}/locations/kansas/wichita`
-      ) {
-        sitemap += `  <url><loc>${locUrl}</loc><priority>0.7</priority></url>\n`;
+  sitemap += `\n  <!-- City Pages -->\n`;
+  for (const stateData of Object.values(states)) {
+    const stateSlug = stateData.name.toLowerCase();
+    for (const cityObj of stateData.cities || []) {
+      const locUrl = `${BASE_URL}/locations/${stateSlug}/${cityObj.slug}`;
+      if (!dedicated.includes(locUrl)) {
+        sitemap += url(locUrl, '0.7');
       }
-    });
+    }
   }
 
   sitemap += `</urlset>`;

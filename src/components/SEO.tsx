@@ -18,7 +18,7 @@ export const SEO = ({
   schema,
   noindex = false,
   canonicalUrl,
-  ogImage = "https://logicsolar.com/images/missouri-hero.jpg",
+  ogImage = "https://www.logic-solar.com/og-image.png",
   ogType = "website",
   ogUrl
 }: SEOProps) => {

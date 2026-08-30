@@ -185,10 +185,10 @@ export const KansasCityMOPage: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   // Canonical & Page Meta Data
-  const canonicalUrl = "https://logicsolar.com/locations/missouri/kansas-city";
+  const canonicalUrl = "https://www.logic-solar.com/locations/missouri/kansas-city";
   const metaTitle = "Kansas City Solar Company | Logic Solar";
   const metaDescription = "Logic Solar installs residential solar panels, battery backup and commercial solar systems throughout Kansas City, Missouri and the KC metro. Request a custom solar estimate.";
-  const ogImageUrl = "https://logicsolar.com/images/missouri-hero.jpg";
+  const ogImageUrl = "https://www.logic-solar.com/images/missouri-hero.jpg";
 
   // JSON-LD Schemas
   const breadcrumbSchema = {
@@ -199,19 +199,19 @@ export const KansasCityMOPage: React.FC = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://logicsolar.com/"
+        "item": "https://www.logic-solar.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Service Areas",
-        "item": "https://logicsolar.com/locations/missouri"
+        "item": "https://www.logic-solar.com/locations/missouri"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Missouri",
-        "item": "https://logicsolar.com/locations/missouri"
+        "item": "https://www.logic-solar.com/locations/missouri"
       },
       {
         "@type": "ListItem",

@@ -246,10 +246,10 @@ export const WichitaKSPage: React.FC = () => {
   };
 
   // Canonical & Page Meta Data
-  const canonicalUrl = "https://logic-solar.com/locations/kansas/wichita";
+  const canonicalUrl = "https://www.logic-solar.com/locations/kansas/wichita";
   const metaTitle = "Wichita Solar Company | Panels and Battery Backup | Logic Solar";
   const metaDescription = "Logic Solar installs residential solar panels, battery backup and commercial solar systems throughout Wichita and south-central Kansas. Request a custom solar estimate.";
-  const ogImageUrl = "https://logic-solar.com/images/kansas-hero.jpg";
+  const ogImageUrl = "https://www.logic-solar.com/images/kansas-hero.jpg";
 
   // JSON-LD Schemas
   const breadcrumbSchema = {
