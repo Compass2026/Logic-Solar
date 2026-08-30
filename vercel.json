@@ -1,10 +1,64 @@
 {
   "redirects": [
-    { "source": "/locations/tx/:city", "destination": "/locations/texas/:city", "permanent": true },
-    { "source": "/locations/ok/:city", "destination": "/locations/oklahoma/:city", "permanent": true },
-    { "source": "/locations/ks/:city", "destination": "/locations/kansas/:city", "permanent": true },
-    { "source": "/locations/il/:city", "destination": "/locations/illinois/:city", "permanent": true },
-    { "source": "/locations/mo/:city", "destination": "/locations/missouri/:city", "permanent": true },
-    { "source": "/locations/co/:city", "destination": "/locations/colorado/:city", "permanent": true }
+    {
+      "source": "/locations/tx/:city",
+      "destination": "/locations/texas/:city",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ok/:city",
+      "destination": "/locations/oklahoma/:city",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ks/:city",
+      "destination": "/locations/kansas/:city",
+      "permanent": true
+    },
+    {
+      "source": "/locations/il/:city",
+      "destination": "/locations/illinois/:city",
+      "permanent": true
+    },
+    {
+      "source": "/locations/mo/:city",
+      "destination": "/locations/missouri/:city",
+      "permanent": true
+    },
+    {
+      "source": "/locations/co/:city",
+      "destination": "/locations/colorado/:city",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/:city(el-paso|corpus-christi|laredo|lubbock|amarillo|brownsville|mcallen|midland|abilene|odessa|wichita-falls|san-angelo|longview|edinburg|mission|pharr|harlingen|victoria|texarkana|weslaco|lufkin|san-juan|del-rio|nacogdoches|socorro)",
+      "destination": "/locations/texas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/oklahoma/:city(altus|guymon|elk-city|woodward|poteau|idabel|hugo|broken-bow|frederick|mangum|heavener|atoka)",
+      "destination": "/locations/oklahoma",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kansas/:city(manhattan|garden-city|dodge-city|hays|pittsburg|liberal|chanute|ulysses|colby|concordia|goodland|russell|hugoton|scott-city|beloit|marysville|frontenac|riley|lakin|syracuse|oakley|plainville|norton|girard|phillipsburg)",
+      "destination": "/locations/kansas",
+      "permanent": true
+    },
+    {
+      "source": "/locations/illinois/:city(moline|rock-island|danville|freeport)",
+      "destination": "/locations/illinois",
+      "permanent": true
+    },
+    {
+      "source": "/locations/missouri/:city(springfield|columbia|joplin|jefferson-city|nixa|ozark|republic|kirksville|sikeston|poplar-bluff|carthage|fort-leonard-wood|lebanon|moberly|neosho|webb-city|branson|west-plains|bolivar|kennett|monett|carl-junction)",
+      "destination": "/locations/missouri",
+      "permanent": true
+    },
+    {
+      "source": "/locations/colorado/:city(grand-junction|clifton|sterling|durango|montrose|steamboat-springs|glenwood-springs|fruita|rifle|cortez|alamosa|craig|delta|trinidad|lamar|aspen|carbondale|pagosa-springs|monte-vista|gypsum|basalt|new-castle|silt|palisade|telluride)",
+      "destination": "/locations/colorado",
+      "permanent": true
+    }
   ]
 }

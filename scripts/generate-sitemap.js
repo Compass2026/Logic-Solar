@@ -14,6 +14,8 @@ const url = (loc, priority) =>
 const generateSitemap = () => {
   const dataPath = path.resolve(__dirname, '../src/data/locations-solar.json');
   const locationsData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+  const tiers = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../src/data/city-tiers.json'), 'utf8'));
+  const tierOf = new Map(tiers.map((t) => [`${t.state}|${t.slug}`, t]));
 
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -59,6 +61,8 @@ const generateSitemap = () => {
   for (const stateData of Object.values(states)) {
     const stateSlug = stateData.name.toLowerCase();
     for (const cityObj of stateData.cities || []) {
+      const stateKey = Object.keys(states).find((k) => states[k] === stateData);
+      if ((tierOf.get(`${stateKey}|${cityObj.slug}`)?.tier ?? 3) >= 3) continue;
       const locUrl = `${BASE_URL}/locations/${stateSlug}/${cityObj.slug}`;
       if (!dedicated.includes(locUrl)) {
         sitemap += url(locUrl, '0.7');

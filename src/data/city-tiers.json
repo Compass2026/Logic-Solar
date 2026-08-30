@@ -1,0 +1,5402 @@
+[
+ {
+  "state": "tx",
+  "slug": "houston",
+  "city": "Houston",
+  "tier": 1,
+  "county": "Harris",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 0
+ },
+ {
+  "state": "tx",
+  "slug": "san-antonio",
+  "city": "San Antonio",
+  "tier": 2,
+  "county": "Comal",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 55
+ },
+ {
+  "state": "tx",
+  "slug": "dallas",
+  "city": "Dallas",
+  "tier": 1,
+  "county": "Dallas",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 1
+ },
+ {
+  "state": "tx",
+  "slug": "austin",
+  "city": "Austin",
+  "tier": 1,
+  "county": "Williamson",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 16
+ },
+ {
+  "state": "tx",
+  "slug": "fort-worth",
+  "city": "Fort Worth",
+  "tier": 2,
+  "county": "Tarrant",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 31
+ },
+ {
+  "state": "tx",
+  "slug": "el-paso",
+  "city": "El Paso",
+  "tier": 3,
+  "county": "El Paso",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 498
+ },
+ {
+  "state": "tx",
+  "slug": "arlington",
+  "city": "Arlington",
+  "tier": 2,
+  "county": "Tarrant",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 23
+ },
+ {
+  "state": "tx",
+  "slug": "corpus-christi",
+  "city": "Corpus Christi",
+  "tier": 3,
+  "county": "Nueces",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 172
+ },
+ {
+  "state": "tx",
+  "slug": "plano",
+  "city": "Plano",
+  "tier": 2,
+  "county": "Collin",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 20
+ },
+ {
+  "state": "tx",
+  "slug": "laredo",
+  "city": "Laredo",
+  "tier": 3,
+  "county": "Webb",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 218
+ },
+ {
+  "state": "tx",
+  "slug": "lubbock",
+  "city": "Lubbock",
+  "tier": 3,
+  "county": "Lubbock",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 279
+ },
+ {
+  "state": "tx",
+  "slug": "garland",
+  "city": "Garland",
+  "tier": 2,
+  "county": "Dallas",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 14
+ },
+ {
+  "state": "tx",
+  "slug": "irving",
+  "city": "Irving",
+  "tier": 2,
+  "county": "Dallas",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 11
+ },
+ {
+  "state": "tx",
+  "slug": "amarillo",
+  "city": "Amarillo",
+  "tier": 3,
+  "county": "Randall",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 247
+ },
+ {
+  "state": "tx",
+  "slug": "grand-prairie",
+  "city": "Grand Prairie",
+  "tier": 2,
+  "county": "Dallas",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 12
+ },
+ {
+  "state": "tx",
+  "slug": "brownsville",
+  "city": "Brownsville",
+  "tier": 3,
+  "county": "Cameron",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 295
+ },
+ {
+  "state": "tx",
+  "slug": "pasadena",
+  "city": "Pasadena",
+  "tier": 2,
+  "county": "Harris",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 11
+ },
+ {
+  "state": "tx",
+  "slug": "mckinney",
+  "city": "McKinney",
+  "tier": 2,
+  "county": "Collin",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 31
+ },
+ {
+  "state": "tx",
+  "slug": "mesquite",
+  "city": "Mesquite",
+  "tier": 2,
+  "county": "Dallas",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 11
+ },
+ {
+  "state": "tx",
+  "slug": "mcallen",
+  "city": "McAllen",
+  "tier": 3,
+  "county": "Hidalgo",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 282
+ },
+ {
+  "state": "tx",
+  "slug": "killeen",
+  "city": "Killeen",
+  "tier": 2,
+  "county": "Bell",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 59
+ },
+ {
+  "state": "tx",
+  "slug": "frisco",
+  "city": "Frisco",
+  "tier": 2,
+  "county": "Denton",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 26
+ },
+ {
+  "state": "tx",
+  "slug": "waco",
+  "city": "Waco",
+  "tier": 2,
+  "county": "Mclennan",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 87
+ },
+ {
+  "state": "tx",
+  "slug": "carrollton",
+  "city": "Carrollton",
+  "tier": 2,
+  "county": "Denton",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 16
+ },
+ {
+  "state": "tx",
+  "slug": "denton",
+  "city": "Denton",
+  "tier": 2,
+  "county": "Denton",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 37
+ },
+ {
+  "state": "tx",
+  "slug": "midland",
+  "city": "Midland",
+  "tier": 3,
+  "county": "Midland",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 282
+ },
+ {
+  "state": "tx",
+  "slug": "abilene",
+  "city": "Abilene",
+  "tier": 3,
+  "county": "Taylor",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 171
+ },
+ {
+  "state": "tx",
+  "slug": "beaumont",
+  "city": "Beaumont",
+  "tier": 2,
+  "county": "Jefferson",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 79
+ },
+ {
+  "state": "tx",
+  "slug": "round-rock",
+  "city": "Round Rock",
+  "tier": 2,
+  "county": "Williamson",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 18
+ },
+ {
+  "state": "tx",
+  "slug": "odessa",
+  "city": "Odessa",
+  "tier": 3,
+  "county": "Ector",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 295
+ },
+ {
+  "state": "tx",
+  "slug": "wichita-falls",
+  "city": "Wichita Falls",
+  "tier": 3,
+  "county": "Wichita",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 121
+ },
+ {
+  "state": "tx",
+  "slug": "richardson",
+  "city": "Richardson",
+  "tier": 2,
+  "county": "Dallas",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 13
+ },
+ {
+  "state": "tx",
+  "slug": "lewisville",
+  "city": "Lewisville",
+  "tier": 2,
+  "county": "Denton",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 22
+ },
+ {
+  "state": "tx",
+  "slug": "tyler",
+  "city": "Tyler",
+  "tier": 2,
+  "county": "Smith",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 93
+ },
+ {
+  "state": "tx",
+  "slug": "college-station",
+  "city": "College Station",
+  "tier": 2,
+  "county": "Brazos",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 81
+ },
+ {
+  "state": "tx",
+  "slug": "pearland",
+  "city": "Pearland",
+  "tier": 2,
+  "county": "Brazoria",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 15
+ },
+ {
+  "state": "tx",
+  "slug": "san-angelo",
+  "city": "San Angelo",
+  "tier": 3,
+  "county": "Tom Green",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 183
+ },
+ {
+  "state": "tx",
+  "slug": "allen",
+  "city": "Allen",
+  "tier": 2,
+  "county": "Collin",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 24
+ },
+ {
+  "state": "tx",
+  "slug": "league-city",
+  "city": "League City",
+  "tier": 2,
+  "county": "Galveston",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 23
+ },
+ {
+  "state": "tx",
+  "slug": "sugar-land",
+  "city": "Sugar Land",
+  "tier": 2,
+  "county": "Fort Bend",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 17
+ },
+ {
+  "state": "tx",
+  "slug": "longview",
+  "city": "Longview",
+  "tier": 3,
+  "county": "Gregg",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 122
+ },
+ {
+  "state": "tx",
+  "slug": "edinburg",
+  "city": "Edinburg",
+  "tier": 3,
+  "county": "Hidalgo",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 275
+ },
+ {
+  "state": "tx",
+  "slug": "mission",
+  "city": "Mission",
+  "tier": 3,
+  "county": "Hidalgo",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 281
+ },
+ {
+  "state": "tx",
+  "slug": "bryan",
+  "city": "Bryan",
+  "tier": 2,
+  "county": "Brazos",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 85
+ },
+ {
+  "state": "tx",
+  "slug": "baytown",
+  "city": "Baytown",
+  "tier": 2,
+  "county": "Harris",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 24
+ },
+ {
+  "state": "tx",
+  "slug": "pharr",
+  "city": "Pharr",
+  "tier": 3,
+  "county": "Hidalgo",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 284
+ },
+ {
+  "state": "tx",
+  "slug": "temple",
+  "city": "Temple",
+  "tier": 2,
+  "county": "Bell",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 62
+ },
+ {
+  "state": "tx",
+  "slug": "missouri-city",
+  "city": "Missouri City",
+  "tier": 2,
+  "county": "Fort Bend",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 17
+ },
+ {
+  "state": "tx",
+  "slug": "flower-mound",
+  "city": "Flower Mound",
+  "tier": 2,
+  "county": "Denton",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 25
+ },
+ {
+  "state": "tx",
+  "slug": "harlingen",
+  "city": "Harlingen",
+  "tier": 3,
+  "county": "Cameron",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 281
+ },
+ {
+  "state": "tx",
+  "slug": "north-richland-hills",
+  "city": "North Richland Hills",
+  "tier": 2,
+  "county": "Tarrant",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 25
+ },
+ {
+  "state": "tx",
+  "slug": "victoria",
+  "city": "Victoria",
+  "tier": 3,
+  "county": "Victoria",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 110
+ },
+ {
+  "state": "tx",
+  "slug": "conroe",
+  "city": "Conroe",
+  "tier": 2,
+  "county": "Montgomery",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 38
+ },
+ {
+  "state": "tx",
+  "slug": "new-braunfels",
+  "city": "New Braunfels",
+  "tier": 2,
+  "county": "Comal",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 45
+ },
+ {
+  "state": "tx",
+  "slug": "mansfield",
+  "city": "Mansfield",
+  "tier": 2,
+  "county": "Tarrant",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 24
+ },
+ {
+  "state": "tx",
+  "slug": "cedar-park",
+  "city": "Cedar Park",
+  "tier": 2,
+  "county": "Williamson",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 15
+ },
+ {
+  "state": "tx",
+  "slug": "rowlett",
+  "city": "Rowlett",
+  "tier": 2,
+  "county": "Dallas",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 16
+ },
+ {
+  "state": "tx",
+  "slug": "port-arthur",
+  "city": "Port Arthur",
+  "tier": 2,
+  "county": "Jefferson",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 85
+ },
+ {
+  "state": "tx",
+  "slug": "euless",
+  "city": "Euless",
+  "tier": 2,
+  "county": "Tarrant",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 18
+ },
+ {
+  "state": "tx",
+  "slug": "georgetown",
+  "city": "Georgetown",
+  "tier": 2,
+  "county": "Williamson",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 26
+ },
+ {
+  "state": "tx",
+  "slug": "pflugerville",
+  "city": "Pflugerville",
+  "tier": 2,
+  "county": "Travis",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 14
+ },
+ {
+  "state": "tx",
+  "slug": "desoto",
+  "city": "DeSoto",
+  "tier": 2,
+  "county": "Dallas",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 13
+ },
+ {
+  "state": "tx",
+  "slug": "san-marcos",
+  "city": "San Marcos",
+  "tier": 2,
+  "county": "Hays",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 30
+ },
+ {
+  "state": "tx",
+  "slug": "grapevine",
+  "city": "Grapevine",
+  "tier": 2,
+  "county": "Tarrant",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 20
+ },
+ {
+  "state": "tx",
+  "slug": "bedford",
+  "city": "Bedford",
+  "tier": 2,
+  "county": "Tarrant",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 20
+ },
+ {
+  "state": "tx",
+  "slug": "galveston",
+  "city": "Galveston",
+  "tier": 2,
+  "county": "Galveston",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 47
+ },
+ {
+  "state": "tx",
+  "slug": "cedar-hill",
+  "city": "Cedar Hill",
+  "tier": 2,
+  "county": "Dallas",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 16
+ },
+ {
+  "state": "tx",
+  "slug": "texas-city",
+  "city": "Texas City",
+  "tier": 2,
+  "county": "Galveston",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 37
+ },
+ {
+  "state": "tx",
+  "slug": "wylie",
+  "city": "Wylie",
+  "tier": 2,
+  "county": "Collin",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 22
+ },
+ {
+  "state": "tx",
+  "slug": "haltom-city",
+  "city": "Haltom City",
+  "tier": 2,
+  "county": "Tarrant",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 28
+ },
+ {
+  "state": "tx",
+  "slug": "keller",
+  "city": "Keller",
+  "tier": 2,
+  "county": "Tarrant",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 29
+ },
+ {
+  "state": "tx",
+  "slug": "coppell",
+  "city": "Coppell",
+  "tier": 2,
+  "county": "Dallas",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 17
+ },
+ {
+  "state": "tx",
+  "slug": "rockwall",
+  "city": "Rockwall",
+  "tier": 2,
+  "county": "Rockwall",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 22
+ },
+ {
+  "state": "tx",
+  "slug": "huntsville",
+  "city": "Huntsville",
+  "tier": 2,
+  "county": "Walker",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 72
+ },
+ {
+  "state": "tx",
+  "slug": "duncanville",
+  "city": "Duncanville",
+  "tier": 2,
+  "county": "Dallas",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 11
+ },
+ {
+  "state": "tx",
+  "slug": "sherman",
+  "city": "Sherman",
+  "tier": 2,
+  "county": "Grayson",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 61
+ },
+ {
+  "state": "tx",
+  "slug": "the-colony",
+  "city": "The Colony",
+  "tier": 2,
+  "county": "Denton",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 22
+ },
+ {
+  "state": "tx",
+  "slug": "burleson",
+  "city": "Burleson",
+  "tier": 2,
+  "county": "Johnson",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 34
+ },
+ {
+  "state": "tx",
+  "slug": "hurst",
+  "city": "Hurst",
+  "tier": 2,
+  "county": "Tarrant",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 22
+ },
+ {
+  "state": "tx",
+  "slug": "lancaster",
+  "city": "Lancaster",
+  "tier": 2,
+  "county": "Dallas",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 11
+ },
+ {
+  "state": "tx",
+  "slug": "texarkana",
+  "city": "Texarkana",
+  "tier": 3,
+  "county": "Bowie",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 161
+ },
+ {
+  "state": "tx",
+  "slug": "friendswood",
+  "city": "Friendswood",
+  "tier": 2,
+  "county": "Galveston",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 20
+ },
+ {
+  "state": "tx",
+  "slug": "weslaco",
+  "city": "Weslaco",
+  "tier": 3,
+  "county": "Hidalgo",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 284
+ },
+ {
+  "state": "tx",
+  "slug": "lufkin",
+  "city": "Lufkin",
+  "tier": 3,
+  "county": "Angelina",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 115
+ },
+ {
+  "state": "tx",
+  "slug": "schertz",
+  "city": "Schertz",
+  "tier": 2,
+  "county": "Guadalupe",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 58
+ },
+ {
+  "state": "tx",
+  "slug": "san-juan",
+  "city": "San Juan",
+  "tier": 3,
+  "county": "Hidalgo",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 282
+ },
+ {
+  "state": "tx",
+  "slug": "del-rio",
+  "city": "Del Rio",
+  "tier": 3,
+  "county": "Val Verde",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 199
+ },
+ {
+  "state": "tx",
+  "slug": "la-porte",
+  "city": "La Porte",
+  "tier": 2,
+  "county": "Harris",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 20
+ },
+ {
+  "state": "tx",
+  "slug": "nacogdoches",
+  "city": "Nacogdoches",
+  "tier": 3,
+  "county": "Nacogdoches",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 135
+ },
+ {
+  "state": "tx",
+  "slug": "deer-park",
+  "city": "Deer Park",
+  "tier": 2,
+  "county": "Harris",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 16
+ },
+ {
+  "state": "tx",
+  "slug": "rosenberg",
+  "city": "Rosenberg",
+  "tier": 2,
+  "county": "Fort Bend",
+  "nearestAnchor": "Houston",
+  "anchorMiles": 30
+ },
+ {
+  "state": "tx",
+  "slug": "copperas-cove",
+  "city": "Copperas Cove",
+  "tier": 2,
+  "county": "Coryell",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 60
+ },
+ {
+  "state": "tx",
+  "slug": "little-elm",
+  "city": "Little Elm",
+  "tier": 2,
+  "county": "Denton",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 29
+ },
+ {
+  "state": "tx",
+  "slug": "socorro",
+  "city": "Socorro",
+  "tier": 3,
+  "county": "El Paso",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 503
+ },
+ {
+  "state": "tx",
+  "slug": "kyle",
+  "city": "Kyle",
+  "tier": 2,
+  "county": "Hays",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 19
+ },
+ {
+  "state": "tx",
+  "slug": "leander",
+  "city": "Leander",
+  "tier": 2,
+  "county": "Williamson",
+  "nearestAnchor": "Austin",
+  "anchorMiles": 21
+ },
+ {
+  "state": "tx",
+  "slug": "waxahachie",
+  "city": "Waxahachie",
+  "tier": 2,
+  "county": "Ellis",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 27
+ },
+ {
+  "state": "tx",
+  "slug": "cleburne",
+  "city": "Cleburne",
+  "tier": 2,
+  "county": "Johnson",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 46
+ },
+ {
+  "state": "tx",
+  "slug": "southlake",
+  "city": "Southlake",
+  "tier": 2,
+  "county": "Tarrant",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 24
+ },
+ {
+  "state": "ok",
+  "slug": "oklahoma-city",
+  "city": "Oklahoma City",
+  "tier": 1,
+  "county": "Oklahoma",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 0
+ },
+ {
+  "state": "ok",
+  "slug": "tulsa",
+  "city": "Tulsa",
+  "tier": 1,
+  "county": "Tulsa",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 0
+ },
+ {
+  "state": "ok",
+  "slug": "norman",
+  "city": "Norman",
+  "tier": 2,
+  "county": "Cleveland",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 17
+ },
+ {
+  "state": "ok",
+  "slug": "broken-arrow",
+  "city": "Broken Arrow",
+  "tier": 2,
+  "county": "Wagoner",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 17
+ },
+ {
+  "state": "ok",
+  "slug": "edmond",
+  "city": "Edmond",
+  "tier": 2,
+  "county": "Oklahoma",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 15
+ },
+ {
+  "state": "ok",
+  "slug": "lawton",
+  "city": "Lawton",
+  "tier": 2,
+  "county": "Comanche",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 77
+ },
+ {
+  "state": "ok",
+  "slug": "enid",
+  "city": "Enid",
+  "tier": 2,
+  "county": "Garfield",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 67
+ },
+ {
+  "state": "ok",
+  "slug": "stillwater",
+  "city": "Stillwater",
+  "tier": 2,
+  "county": "Payne",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 51
+ },
+ {
+  "state": "ok",
+  "slug": "owasso",
+  "city": "Owasso",
+  "tier": 2,
+  "county": "Tulsa",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 13
+ },
+ {
+  "state": "ok",
+  "slug": "bartlesville",
+  "city": "Bartlesville",
+  "tier": 2,
+  "county": "Washington",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 41
+ },
+ {
+  "state": "ok",
+  "slug": "muskogee",
+  "city": "Muskogee",
+  "tier": 2,
+  "county": "Muskogee",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 45
+ },
+ {
+  "state": "ok",
+  "slug": "shawnee",
+  "city": "Shawnee",
+  "tier": 2,
+  "county": "Pottawatomie",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 34
+ },
+ {
+  "state": "ok",
+  "slug": "bixby",
+  "city": "Bixby",
+  "tier": 2,
+  "county": "Tulsa",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 18
+ },
+ {
+  "state": "ok",
+  "slug": "jenks",
+  "city": "Jenks",
+  "tier": 2,
+  "county": "Tulsa",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 10
+ },
+ {
+  "state": "ok",
+  "slug": "ardmore",
+  "city": "Ardmore",
+  "tier": 2,
+  "county": "Carter",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 92
+ },
+ {
+  "state": "ok",
+  "slug": "ponca-city",
+  "city": "Ponca City",
+  "tier": 2,
+  "county": "Kay",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 69
+ },
+ {
+  "state": "ok",
+  "slug": "yukon",
+  "city": "Yukon",
+  "tier": 2,
+  "county": "Canadian",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 14
+ },
+ {
+  "state": "ok",
+  "slug": "duncan",
+  "city": "Duncan",
+  "tier": 2,
+  "county": "Stephens",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 71
+ },
+ {
+  "state": "ok",
+  "slug": "sapulpa",
+  "city": "Sapulpa",
+  "tier": 2,
+  "county": "Creek",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 12
+ },
+ {
+  "state": "ok",
+  "slug": "bethany",
+  "city": "Bethany",
+  "tier": 2,
+  "county": "Oklahoma",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 7
+ },
+ {
+  "state": "ok",
+  "slug": "mustang",
+  "city": "Mustang",
+  "tier": 2,
+  "county": "Canadian",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 13
+ },
+ {
+  "state": "ok",
+  "slug": "sand-springs",
+  "city": "Sand Springs",
+  "tier": 2,
+  "county": "Tulsa",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 8
+ },
+ {
+  "state": "ok",
+  "slug": "claremore",
+  "city": "Claremore",
+  "tier": 2,
+  "county": "Rogers",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 25
+ },
+ {
+  "state": "ok",
+  "slug": "altus",
+  "city": "Altus",
+  "tier": 3,
+  "county": "Jackson",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 117
+ },
+ {
+  "state": "ok",
+  "slug": "durant",
+  "city": "Durant",
+  "tier": 2,
+  "county": "Bryan",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 88
+ },
+ {
+  "state": "ok",
+  "slug": "mcalester",
+  "city": "McAlester",
+  "tier": 2,
+  "county": "Pittsburg",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 86
+ },
+ {
+  "state": "ok",
+  "slug": "el-reno",
+  "city": "El Reno",
+  "tier": 2,
+  "county": "Canadian",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 25
+ },
+ {
+  "state": "ok",
+  "slug": "ada",
+  "city": "Ada",
+  "tier": 2,
+  "county": "Pontotoc",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 67
+ },
+ {
+  "state": "ok",
+  "slug": "tahlequah",
+  "city": "Tahlequah",
+  "tier": 2,
+  "county": "Cherokee",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 59
+ },
+ {
+  "state": "ok",
+  "slug": "chickasha",
+  "city": "Chickasha",
+  "tier": 2,
+  "county": "Grady",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 39
+ },
+ {
+  "state": "ok",
+  "slug": "glenpool",
+  "city": "Glenpool",
+  "tier": 2,
+  "county": "Tulsa",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 13
+ },
+ {
+  "state": "ok",
+  "slug": "miami",
+  "city": "Miami",
+  "tier": 2,
+  "county": "Ottawa",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 80
+ },
+ {
+  "state": "ok",
+  "slug": "guymon",
+  "city": "Guymon",
+  "tier": 3,
+  "county": "Texas",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 235
+ },
+ {
+  "state": "ok",
+  "slug": "choctaw",
+  "city": "Choctaw",
+  "tier": 2,
+  "county": "Oklahoma",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 14
+ },
+ {
+  "state": "ok",
+  "slug": "weatherford",
+  "city": "Weatherford",
+  "tier": 2,
+  "county": "Custer",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 67
+ },
+ {
+  "state": "ok",
+  "slug": "okmulgee",
+  "city": "Okmulgee",
+  "tier": 2,
+  "county": "Okmulgee",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 36
+ },
+ {
+  "state": "ok",
+  "slug": "elk-city",
+  "city": "Elk City",
+  "tier": 3,
+  "county": "Beckham",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 107
+ },
+ {
+  "state": "ok",
+  "slug": "woodward",
+  "city": "Woodward",
+  "tier": 3,
+  "county": "Woodward",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 125
+ },
+ {
+  "state": "ok",
+  "slug": "guthrie",
+  "city": "Guthrie",
+  "tier": 2,
+  "county": "Logan",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 26
+ },
+ {
+  "state": "ok",
+  "slug": "newcastle",
+  "city": "Newcastle",
+  "tier": 2,
+  "county": "Mcclain",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 16
+ },
+ {
+  "state": "ok",
+  "slug": "piedmont",
+  "city": "Piedmont",
+  "tier": 2,
+  "county": "Canadian",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 19
+ },
+ {
+  "state": "ok",
+  "slug": "clinton",
+  "city": "Clinton",
+  "tier": 2,
+  "county": "Custer",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 82
+ },
+ {
+  "state": "ok",
+  "slug": "coweta",
+  "city": "Coweta",
+  "tier": 2,
+  "county": "Wagoner",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 23
+ },
+ {
+  "state": "ok",
+  "slug": "cushing",
+  "city": "Cushing",
+  "tier": 2,
+  "county": "Payne",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 44
+ },
+ {
+  "state": "ok",
+  "slug": "sallisaw",
+  "city": "Sallisaw",
+  "tier": 2,
+  "county": "Sequoyah",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 82
+ },
+ {
+  "state": "ok",
+  "slug": "poteau",
+  "city": "Poteau",
+  "tier": 3,
+  "county": "Le Flore",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 108
+ },
+ {
+  "state": "ok",
+  "slug": "skiatook",
+  "city": "Skiatook",
+  "tier": 2,
+  "county": "Tulsa",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 15
+ },
+ {
+  "state": "ok",
+  "slug": "blanchard",
+  "city": "Blanchard",
+  "tier": 2,
+  "county": "Mcclain",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 25
+ },
+ {
+  "state": "ok",
+  "slug": "perry",
+  "city": "Perry",
+  "tier": 2,
+  "county": "Noble",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 58
+ },
+ {
+  "state": "ok",
+  "slug": "grove",
+  "city": "Grove",
+  "tier": 2,
+  "county": "Delaware",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 75
+ },
+ {
+  "state": "ok",
+  "slug": "noble",
+  "city": "Noble",
+  "tier": 2,
+  "county": "Cleveland",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 25
+ },
+ {
+  "state": "ok",
+  "slug": "idabel",
+  "city": "Idabel",
+  "tier": 3,
+  "county": "Mccurtain",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 138
+ },
+ {
+  "state": "ok",
+  "slug": "pryor-creek",
+  "city": "Pryor Creek",
+  "tier": 2,
+  "county": "Mayes",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 39
+ },
+ {
+  "state": "ok",
+  "slug": "collinsville",
+  "city": "Collinsville",
+  "tier": 2,
+  "county": "Tulsa",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 17
+ },
+ {
+  "state": "ok",
+  "slug": "purcell",
+  "city": "Purcell",
+  "tier": 2,
+  "county": "Mcclain",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 32
+ },
+ {
+  "state": "ok",
+  "slug": "tecumseh",
+  "city": "Tecumseh",
+  "tier": 2,
+  "county": "Pottawatomie",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 34
+ },
+ {
+  "state": "ok",
+  "slug": "pauls-valley",
+  "city": "Pauls Valley",
+  "tier": 2,
+  "county": "Garvin",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 53
+ },
+ {
+  "state": "ok",
+  "slug": "henryetta",
+  "city": "Henryetta",
+  "tier": 2,
+  "county": "Okmulgee",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 48
+ },
+ {
+  "state": "ok",
+  "slug": "hugo",
+  "city": "Hugo",
+  "tier": 3,
+  "county": "Choctaw",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 113
+ },
+ {
+  "state": "ok",
+  "slug": "lone-grove",
+  "city": "Lone Grove",
+  "tier": 2,
+  "county": "Carter",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 90
+ },
+ {
+  "state": "ok",
+  "slug": "seminole",
+  "city": "Seminole",
+  "tier": 2,
+  "county": "Seminole",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 51
+ },
+ {
+  "state": "ok",
+  "slug": "alva",
+  "city": "Alva",
+  "tier": 2,
+  "county": "Woods",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 96
+ },
+ {
+  "state": "ok",
+  "slug": "anadarko",
+  "city": "Anadarko",
+  "tier": 2,
+  "county": "Caddo",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 49
+ },
+ {
+  "state": "ok",
+  "slug": "holdenville",
+  "city": "Holdenville",
+  "tier": 2,
+  "county": "Hughes",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 70
+ },
+ {
+  "state": "ok",
+  "slug": "kingfisher",
+  "city": "Kingfisher",
+  "tier": 2,
+  "county": "Kingfisher",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 37
+ },
+ {
+  "state": "ok",
+  "slug": "chandler",
+  "city": "Chandler",
+  "tier": 2,
+  "county": "Lincoln",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 40
+ },
+ {
+  "state": "ok",
+  "slug": "catoosa",
+  "city": "Catoosa",
+  "tier": 2,
+  "county": "Rogers",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 15
+ },
+ {
+  "state": "ok",
+  "slug": "hobart",
+  "city": "Hobart",
+  "tier": 2,
+  "county": "Kiowa",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 94
+ },
+ {
+  "state": "ok",
+  "slug": "checotah",
+  "city": "Checotah",
+  "tier": 2,
+  "county": "Mcintosh",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 56
+ },
+ {
+  "state": "ok",
+  "slug": "slaughterville",
+  "city": "Slaughterville",
+  "tier": 2,
+  "county": "Cleveland",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 28
+ },
+ {
+  "state": "ok",
+  "slug": "bristow",
+  "city": "Bristow",
+  "tier": 2,
+  "county": "Creek",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 31
+ },
+ {
+  "state": "ok",
+  "slug": "vinita",
+  "city": "Vinita",
+  "tier": 2,
+  "county": "Craig",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 58
+ },
+ {
+  "state": "ok",
+  "slug": "mcloud",
+  "city": "McLoud",
+  "tier": 2,
+  "county": "Pottawatomie",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 23
+ },
+ {
+  "state": "ok",
+  "slug": "spencer",
+  "city": "Spencer",
+  "tier": 2,
+  "county": "Oklahoma",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 10
+ },
+ {
+  "state": "ok",
+  "slug": "wewoka",
+  "city": "Wewoka",
+  "tier": 2,
+  "county": "Seminole",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 60
+ },
+ {
+  "state": "ok",
+  "slug": "stigler",
+  "city": "Stigler",
+  "tier": 2,
+  "county": "Haskell",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 79
+ },
+ {
+  "state": "ok",
+  "slug": "hominy",
+  "city": "Hominy",
+  "tier": 2,
+  "county": "Osage",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 28
+ },
+ {
+  "state": "ok",
+  "slug": "watonga",
+  "city": "Watonga",
+  "tier": 2,
+  "county": "Blaine",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 57
+ },
+ {
+  "state": "ok",
+  "slug": "tonkawa",
+  "city": "Tonkawa",
+  "tier": 2,
+  "county": "Kay",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 70
+ },
+ {
+  "state": "ok",
+  "slug": "marlow",
+  "city": "Marlow",
+  "tier": 2,
+  "county": "Stephens",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 62
+ },
+ {
+  "state": "ok",
+  "slug": "harrah",
+  "city": "Harrah",
+  "tier": 2,
+  "county": "Oklahoma",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 19
+ },
+ {
+  "state": "ok",
+  "slug": "madill",
+  "city": "Madill",
+  "tier": 2,
+  "county": "Marshall",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 89
+ },
+ {
+  "state": "ok",
+  "slug": "broken-bow",
+  "city": "Broken Bow",
+  "tier": 3,
+  "county": "Mccurtain",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 146
+ },
+ {
+  "state": "ok",
+  "slug": "healdton",
+  "city": "Healdton",
+  "tier": 2,
+  "county": "Carter",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 86
+ },
+ {
+  "state": "ok",
+  "slug": "frederick",
+  "city": "Frederick",
+  "tier": 3,
+  "county": "Tillman",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 112
+ },
+ {
+  "state": "ok",
+  "slug": "hinton",
+  "city": "Hinton",
+  "tier": 2,
+  "county": "Caddo",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 46
+ },
+ {
+  "state": "ok",
+  "slug": "nowata",
+  "city": "Nowata",
+  "tier": 2,
+  "county": "Nowata",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 42
+ },
+ {
+  "state": "ok",
+  "slug": "okemah",
+  "city": "Okemah",
+  "tier": 2,
+  "county": "Okfuskee",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 52
+ },
+ {
+  "state": "ok",
+  "slug": "eufaula",
+  "city": "Eufaula",
+  "tier": 2,
+  "county": "Mcintosh",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 63
+ },
+ {
+  "state": "ok",
+  "slug": "perkins",
+  "city": "Perkins",
+  "tier": 2,
+  "county": "Payne",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 44
+ },
+ {
+  "state": "ok",
+  "slug": "lindsay",
+  "city": "Lindsay",
+  "tier": 2,
+  "county": "Garvin",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 45
+ },
+ {
+  "state": "ok",
+  "slug": "marietta",
+  "city": "Marietta",
+  "tier": 2,
+  "county": "Love",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 83
+ },
+ {
+  "state": "ok",
+  "slug": "mangum",
+  "city": "Mangum",
+  "tier": 3,
+  "county": "Greer",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 120
+ },
+ {
+  "state": "ok",
+  "slug": "heavener",
+  "city": "Heavener",
+  "tier": 3,
+  "county": "Le Flore",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 119
+ },
+ {
+  "state": "ok",
+  "slug": "fairview",
+  "city": "Fairview",
+  "tier": 2,
+  "county": "Major",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 78
+ },
+ {
+  "state": "ok",
+  "slug": "atoka",
+  "city": "Atoka",
+  "tier": 3,
+  "county": "Atoka",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 110
+ },
+ {
+  "state": "ks",
+  "slug": "wichita",
+  "city": "Wichita",
+  "tier": 1,
+  "county": "Sedgwick",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 1
+ },
+ {
+  "state": "ks",
+  "slug": "overland-park",
+  "city": "Overland Park",
+  "tier": 2,
+  "county": "Johnson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 9
+ },
+ {
+  "state": "ks",
+  "slug": "kansas-city",
+  "city": "Kansas City",
+  "tier": 2,
+  "county": "Wyandotte",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 3
+ },
+ {
+  "state": "ks",
+  "slug": "olathe",
+  "city": "Olathe",
+  "tier": 2,
+  "county": "Johnson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 20
+ },
+ {
+  "state": "ks",
+  "slug": "topeka",
+  "city": "Topeka",
+  "tier": 2,
+  "county": "Shawnee",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 59
+ },
+ {
+  "state": "ks",
+  "slug": "lawrence",
+  "city": "Lawrence",
+  "tier": 2,
+  "county": "Douglas",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 37
+ },
+ {
+  "state": "ks",
+  "slug": "shawnee",
+  "city": "Shawnee",
+  "tier": 2,
+  "county": "Johnson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 9
+ },
+ {
+  "state": "ks",
+  "slug": "lenexa",
+  "city": "Lenexa",
+  "tier": 2,
+  "county": "Johnson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 13
+ },
+ {
+  "state": "ks",
+  "slug": "manhattan",
+  "city": "Manhattan",
+  "tier": 3,
+  "county": "Riley",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 108
+ },
+ {
+  "state": "ks",
+  "slug": "salina",
+  "city": "Salina",
+  "tier": 2,
+  "county": "Saline",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 80
+ },
+ {
+  "state": "ks",
+  "slug": "hutchinson",
+  "city": "Hutchinson",
+  "tier": 2,
+  "county": "Reno",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 41
+ },
+ {
+  "state": "ks",
+  "slug": "leavenworth",
+  "city": "Leavenworth",
+  "tier": 2,
+  "county": "Leavenworth",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 24
+ },
+ {
+  "state": "ks",
+  "slug": "leawood",
+  "city": "Leawood",
+  "tier": 2,
+  "county": "Johnson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 10
+ },
+ {
+  "state": "ks",
+  "slug": "garden-city",
+  "city": "Garden City",
+  "tier": 3,
+  "county": "Finney",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 194
+ },
+ {
+  "state": "ks",
+  "slug": "dodge-city",
+  "city": "Dodge City",
+  "tier": 3,
+  "county": "Ford",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 147
+ },
+ {
+  "state": "ks",
+  "slug": "derby",
+  "city": "Derby",
+  "tier": 2,
+  "county": "Sedgwick",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 10
+ },
+ {
+  "state": "ks",
+  "slug": "gardner",
+  "city": "Gardner",
+  "tier": 2,
+  "county": "Johnson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 27
+ },
+ {
+  "state": "ks",
+  "slug": "emporia",
+  "city": "Emporia",
+  "tier": 2,
+  "county": "Lyon",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 80
+ },
+ {
+  "state": "ks",
+  "slug": "prairie-village",
+  "city": "Prairie Village",
+  "tier": 2,
+  "county": "Johnson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 8
+ },
+ {
+  "state": "ks",
+  "slug": "junction-city",
+  "city": "Junction City",
+  "tier": 2,
+  "county": "Geary",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 97
+ },
+ {
+  "state": "ks",
+  "slug": "hays",
+  "city": "Hays",
+  "tier": 3,
+  "county": "Ellis",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 136
+ },
+ {
+  "state": "ks",
+  "slug": "pittsburg",
+  "city": "Pittsburg",
+  "tier": 3,
+  "county": "Crawford",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 113
+ },
+ {
+  "state": "ks",
+  "slug": "liberal",
+  "city": "Liberal",
+  "tier": 3,
+  "county": "Seward",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 203
+ },
+ {
+  "state": "ks",
+  "slug": "newton",
+  "city": "Newton",
+  "tier": 2,
+  "county": "Harvey",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 25
+ },
+ {
+  "state": "ks",
+  "slug": "andover",
+  "city": "Andover",
+  "tier": 2,
+  "county": "Butler",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 12
+ },
+ {
+  "state": "ks",
+  "slug": "great-bend",
+  "city": "Great Bend",
+  "tier": 2,
+  "county": "Barton",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 92
+ },
+ {
+  "state": "ks",
+  "slug": "mcpherson",
+  "city": "McPherson",
+  "tier": 2,
+  "county": "Mcpherson",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 51
+ },
+ {
+  "state": "ks",
+  "slug": "ottawa",
+  "city": "Ottawa",
+  "tier": 2,
+  "county": "Franklin",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 50
+ },
+ {
+  "state": "ks",
+  "slug": "el-dorado",
+  "city": "El Dorado",
+  "tier": 2,
+  "county": "Butler",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 28
+ },
+ {
+  "state": "ks",
+  "slug": "arkansas-city",
+  "city": "Arkansas City",
+  "tier": 2,
+  "county": "Cowley",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 46
+ },
+ {
+  "state": "ks",
+  "slug": "winfield",
+  "city": "Winfield",
+  "tier": 2,
+  "county": "Cowley",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 36
+ },
+ {
+  "state": "ks",
+  "slug": "haysville",
+  "city": "Haysville",
+  "tier": 2,
+  "county": "Sedgwick",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 9
+ },
+ {
+  "state": "ks",
+  "slug": "lansing",
+  "city": "Lansing",
+  "tier": 2,
+  "county": "Leavenworth",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 20
+ },
+ {
+  "state": "ks",
+  "slug": "atchison",
+  "city": "Atchison",
+  "tier": 2,
+  "county": "Atchison",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 43
+ },
+ {
+  "state": "ks",
+  "slug": "spring-hill",
+  "city": "Spring Hill",
+  "tier": 2,
+  "county": "Johnson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 27
+ },
+ {
+  "state": "ks",
+  "slug": "mission",
+  "city": "Mission",
+  "tier": 2,
+  "county": "Johnson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 7
+ },
+ {
+  "state": "ks",
+  "slug": "parsons",
+  "city": "Parsons",
+  "tier": 2,
+  "county": "Labette",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 91
+ },
+ {
+  "state": "ks",
+  "slug": "augusta",
+  "city": "Augusta",
+  "tier": 2,
+  "county": "Butler",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 20
+ },
+ {
+  "state": "ks",
+  "slug": "coffeyville",
+  "city": "Coffeyville",
+  "tier": 2,
+  "county": "Montgomery",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 65
+ },
+ {
+  "state": "ks",
+  "slug": "chanute",
+  "city": "Chanute",
+  "tier": 3,
+  "county": "Neosho",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 102
+ },
+ {
+  "state": "ks",
+  "slug": "independence",
+  "city": "Independence",
+  "tier": 2,
+  "county": "Montgomery",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 76
+ },
+ {
+  "state": "ks",
+  "slug": "bonner-springs",
+  "city": "Bonner Springs",
+  "tier": 2,
+  "county": "Wyandotte",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 17
+ },
+ {
+  "state": "ks",
+  "slug": "wellington",
+  "city": "Wellington",
+  "tier": 2,
+  "county": "Sumner",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 28
+ },
+ {
+  "state": "ks",
+  "slug": "fort-scott",
+  "city": "Fort Scott",
+  "tier": 2,
+  "county": "Bourbon",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 88
+ },
+ {
+  "state": "ks",
+  "slug": "valley-center",
+  "city": "Valley Center",
+  "tier": 2,
+  "county": "Sedgwick",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 13
+ },
+ {
+  "state": "ks",
+  "slug": "basehor",
+  "city": "Basehor",
+  "tier": 2,
+  "county": "Leavenworth",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 20
+ },
+ {
+  "state": "ks",
+  "slug": "pratt",
+  "city": "Pratt",
+  "tier": 2,
+  "county": "Pratt",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 77
+ },
+ {
+  "state": "ks",
+  "slug": "abilene",
+  "city": "Abilene",
+  "tier": 2,
+  "county": "Dickinson",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 87
+ },
+ {
+  "state": "ks",
+  "slug": "eudora",
+  "city": "Eudora",
+  "tier": 2,
+  "county": "Douglas",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 30
+ },
+ {
+  "state": "ks",
+  "slug": "mulvane",
+  "city": "Mulvane",
+  "tier": 2,
+  "county": "Sedgwick",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 16
+ },
+ {
+  "state": "ks",
+  "slug": "de-soto",
+  "city": "De Soto",
+  "tier": 2,
+  "county": "Johnson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 23
+ },
+ {
+  "state": "ks",
+  "slug": "paola",
+  "city": "Paola",
+  "tier": 2,
+  "county": "Miami",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 40
+ },
+ {
+  "state": "ks",
+  "slug": "ulysses",
+  "city": "Ulysses",
+  "tier": 3,
+  "county": "Grant",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 207
+ },
+ {
+  "state": "ks",
+  "slug": "maize",
+  "city": "Maize",
+  "tier": 2,
+  "county": "Sedgwick",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 10
+ },
+ {
+  "state": "ks",
+  "slug": "tonganoxie",
+  "city": "Tonganoxie",
+  "tier": 2,
+  "county": "Leavenworth",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 28
+ },
+ {
+  "state": "ks",
+  "slug": "colby",
+  "city": "Colby",
+  "tier": 3,
+  "county": "Thomas",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 206
+ },
+ {
+  "state": "ks",
+  "slug": "iola",
+  "city": "Iola",
+  "tier": 2,
+  "county": "Allen",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 92
+ },
+ {
+  "state": "ks",
+  "slug": "concordia",
+  "city": "Concordia",
+  "tier": 3,
+  "county": "Cloud",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 131
+ },
+ {
+  "state": "ks",
+  "slug": "goddard",
+  "city": "Goddard",
+  "tier": 2,
+  "county": "Sedgwick",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 11
+ },
+ {
+  "state": "ks",
+  "slug": "louisburg",
+  "city": "Louisburg",
+  "tier": 2,
+  "county": "Miami",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 34
+ },
+ {
+  "state": "ks",
+  "slug": "wamego",
+  "city": "Wamego",
+  "tier": 2,
+  "county": "Pottawatomie",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 93
+ },
+ {
+  "state": "ks",
+  "slug": "baldwin-city",
+  "city": "Baldwin City",
+  "tier": 2,
+  "county": "Douglas",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 41
+ },
+ {
+  "state": "ks",
+  "slug": "edwardsville",
+  "city": "Edwardsville",
+  "tier": 2,
+  "county": "Wyandotte",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 14
+ },
+ {
+  "state": "ks",
+  "slug": "goodland",
+  "city": "Goodland",
+  "tier": 3,
+  "county": "Sherman",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 170
+ },
+ {
+  "state": "ks",
+  "slug": "russell",
+  "city": "Russell",
+  "tier": 3,
+  "county": "Russell",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 117
+ },
+ {
+  "state": "ks",
+  "slug": "rose-hill",
+  "city": "Rose Hill",
+  "tier": 2,
+  "county": "Butler",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 14
+ },
+ {
+  "state": "ks",
+  "slug": "lindsborg",
+  "city": "Lindsborg",
+  "tier": 2,
+  "county": "Mcpherson",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 64
+ },
+ {
+  "state": "ks",
+  "slug": "hesston",
+  "city": "Hesston",
+  "tier": 2,
+  "county": "Harvey",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 32
+ },
+ {
+  "state": "ks",
+  "slug": "hugoton",
+  "city": "Hugoton",
+  "tier": 3,
+  "county": "Stevens",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 222
+ },
+ {
+  "state": "ks",
+  "slug": "osawatomie",
+  "city": "Osawatomie",
+  "tier": 2,
+  "county": "Miami",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 47
+ },
+ {
+  "state": "ks",
+  "slug": "scott-city",
+  "city": "Scott City",
+  "tier": 3,
+  "county": "Scott",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 202
+ },
+ {
+  "state": "ks",
+  "slug": "beloit",
+  "city": "Beloit",
+  "tier": 3,
+  "county": "Mitchell",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 129
+ },
+ {
+  "state": "ks",
+  "slug": "clearwater",
+  "city": "Clearwater",
+  "tier": 2,
+  "county": "Sedgwick",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 16
+ },
+ {
+  "state": "ks",
+  "slug": "hiawatha",
+  "city": "Hiawatha",
+  "tier": 2,
+  "county": "Brown",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 74
+ },
+ {
+  "state": "ks",
+  "slug": "garnett",
+  "city": "Garnett",
+  "tier": 2,
+  "county": "Anderson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 67
+ },
+ {
+  "state": "ks",
+  "slug": "marysville",
+  "city": "Marysville",
+  "tier": 3,
+  "county": "Marshall",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 121
+ },
+ {
+  "state": "ks",
+  "slug": "frontenac",
+  "city": "Frontenac",
+  "tier": 3,
+  "county": "Crawford",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 114
+ },
+ {
+  "state": "ks",
+  "slug": "riley",
+  "city": "Riley",
+  "tier": 3,
+  "county": "Riley",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 103
+ },
+ {
+  "state": "ks",
+  "slug": "lakin",
+  "city": "Lakin",
+  "tier": 3,
+  "county": "Kearny",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 202
+ },
+ {
+  "state": "ks",
+  "slug": "syracuse",
+  "city": "Syracuse",
+  "tier": 3,
+  "county": "Hamilton",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 175
+ },
+ {
+  "state": "ks",
+  "slug": "osage-city",
+  "city": "Osage City",
+  "tier": 2,
+  "county": "Osage",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 75
+ },
+ {
+  "state": "ks",
+  "slug": "neodesha",
+  "city": "Neodesha",
+  "tier": 2,
+  "county": "Wilson",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 90
+ },
+ {
+  "state": "ks",
+  "slug": "hoisington",
+  "city": "Hoisington",
+  "tier": 2,
+  "county": "Barton",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 98
+ },
+ {
+  "state": "ks",
+  "slug": "ellsworth",
+  "city": "Ellsworth",
+  "tier": 2,
+  "county": "Ellsworth",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 86
+ },
+ {
+  "state": "ks",
+  "slug": "cherryvale",
+  "city": "Cherryvale",
+  "tier": 2,
+  "county": "Montgomery",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 81
+ },
+ {
+  "state": "ks",
+  "slug": "oakley",
+  "city": "Oakley",
+  "tier": 3,
+  "county": "Logan",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 214
+ },
+ {
+  "state": "ks",
+  "slug": "plainville",
+  "city": "Plainville",
+  "tier": 3,
+  "county": "Rooks",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 151
+ },
+ {
+  "state": "ks",
+  "slug": "wellsville",
+  "city": "Wellsville",
+  "tier": 2,
+  "county": "Franklin",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 38
+ },
+ {
+  "state": "ks",
+  "slug": "halstead",
+  "city": "Halstead",
+  "tier": 2,
+  "county": "Harvey",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 24
+ },
+ {
+  "state": "ks",
+  "slug": "norton",
+  "city": "Norton",
+  "tier": 3,
+  "county": "Norton",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 203
+ },
+ {
+  "state": "ks",
+  "slug": "girard",
+  "city": "Girard",
+  "tier": 3,
+  "county": "Crawford",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 111
+ },
+ {
+  "state": "ks",
+  "slug": "moundridge",
+  "city": "Moundridge",
+  "tier": 2,
+  "county": "Mcpherson",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 37
+ },
+ {
+  "state": "ks",
+  "slug": "cheney",
+  "city": "Cheney",
+  "tier": 2,
+  "county": "Sedgwick",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 24
+ },
+ {
+  "state": "ks",
+  "slug": "phillipsburg",
+  "city": "Phillipsburg",
+  "tier": 3,
+  "county": "Phillips",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 179
+ },
+ {
+  "state": "ks",
+  "slug": "inman",
+  "city": "Inman",
+  "tier": 2,
+  "county": "Mcpherson",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 45
+ },
+ {
+  "state": "ks",
+  "slug": "seneca",
+  "city": "Seneca",
+  "tier": 2,
+  "county": "Nemaha",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 94
+ },
+ {
+  "state": "il",
+  "slug": "chicago",
+  "city": "Chicago",
+  "tier": 1,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 1
+ },
+ {
+  "state": "il",
+  "slug": "aurora",
+  "city": "Aurora",
+  "tier": 2,
+  "county": "Kane",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 35
+ },
+ {
+  "state": "il",
+  "slug": "joliet",
+  "city": "Joliet",
+  "tier": 2,
+  "county": "Will",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 34
+ },
+ {
+  "state": "il",
+  "slug": "naperville",
+  "city": "Naperville",
+  "tier": 2,
+  "county": "Will",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 32
+ },
+ {
+  "state": "il",
+  "slug": "rockford",
+  "city": "Rockford",
+  "tier": 2,
+  "county": "Winnebago",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 81
+ },
+ {
+  "state": "il",
+  "slug": "elgin",
+  "city": "Elgin",
+  "tier": 2,
+  "county": "Kane",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 34
+ },
+ {
+  "state": "il",
+  "slug": "springfield",
+  "city": "Springfield",
+  "tier": 1,
+  "county": "Sangamon",
+  "nearestAnchor": "Springfield",
+  "anchorMiles": 0
+ },
+ {
+  "state": "il",
+  "slug": "peoria",
+  "city": "Peoria",
+  "tier": 2,
+  "county": "Peoria",
+  "nearestAnchor": "Springfield",
+  "anchorMiles": 61
+ },
+ {
+  "state": "il",
+  "slug": "champaign",
+  "city": "Champaign",
+  "tier": 2,
+  "county": "Champaign",
+  "nearestAnchor": "Springfield",
+  "anchorMiles": 77
+ },
+ {
+  "state": "il",
+  "slug": "waukegan",
+  "city": "Waukegan",
+  "tier": 2,
+  "county": "Lake",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 35
+ },
+ {
+  "state": "il",
+  "slug": "cicero",
+  "city": "Cicero",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 7
+ },
+ {
+  "state": "il",
+  "slug": "bloomington",
+  "city": "Bloomington",
+  "tier": 2,
+  "county": "Mclean",
+  "nearestAnchor": "Springfield",
+  "anchorMiles": 58
+ },
+ {
+  "state": "il",
+  "slug": "arlington-heights",
+  "city": "Arlington Heights",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 24
+ },
+ {
+  "state": "il",
+  "slug": "evanston",
+  "city": "Evanston",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 13
+ },
+ {
+  "state": "il",
+  "slug": "schaumburg",
+  "city": "Schaumburg",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 26
+ },
+ {
+  "state": "il",
+  "slug": "bolingbrook",
+  "city": "Bolingbrook",
+  "tier": 2,
+  "county": "Will",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 27
+ },
+ {
+  "state": "il",
+  "slug": "decatur",
+  "city": "Decatur",
+  "tier": 2,
+  "county": "Macon",
+  "nearestAnchor": "Springfield",
+  "anchorMiles": 38
+ },
+ {
+  "state": "il",
+  "slug": "palatine",
+  "city": "Palatine",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 29
+ },
+ {
+  "state": "il",
+  "slug": "skokie",
+  "city": "Skokie",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 12
+ },
+ {
+  "state": "il",
+  "slug": "orland-park",
+  "city": "Orland Park",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 21
+ },
+ {
+  "state": "il",
+  "slug": "des-plaines",
+  "city": "Des Plaines",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 18
+ },
+ {
+  "state": "il",
+  "slug": "oak-lawn",
+  "city": "Oak Lawn",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 13
+ },
+ {
+  "state": "il",
+  "slug": "berwyn",
+  "city": "Berwyn",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 9
+ },
+ {
+  "state": "il",
+  "slug": "mount-prospect",
+  "city": "Mount Prospect",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 20
+ },
+ {
+  "state": "il",
+  "slug": "wheaton",
+  "city": "Wheaton",
+  "tier": 2,
+  "county": "Dupage",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 25
+ },
+ {
+  "state": "il",
+  "slug": "normal",
+  "city": "Normal",
+  "tier": 2,
+  "county": "Mclean",
+  "nearestAnchor": "Springfield",
+  "anchorMiles": 60
+ },
+ {
+  "state": "il",
+  "slug": "hoffman-estates",
+  "city": "Hoffman Estates",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 27
+ },
+ {
+  "state": "il",
+  "slug": "oak-park",
+  "city": "Oak Park",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 9
+ },
+ {
+  "state": "il",
+  "slug": "downers-grove",
+  "city": "Downers Grove",
+  "tier": 2,
+  "county": "Dupage",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 20
+ },
+ {
+  "state": "il",
+  "slug": "glenview",
+  "city": "Glenview",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 17
+ },
+ {
+  "state": "il",
+  "slug": "belleville",
+  "city": "Belleville",
+  "tier": 2,
+  "county": "Saint Clair",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 14
+ },
+ {
+  "state": "il",
+  "slug": "elmhurst",
+  "city": "Elmhurst",
+  "tier": 2,
+  "county": "Dupage",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 16
+ },
+ {
+  "state": "il",
+  "slug": "dekalb",
+  "city": "DeKalb",
+  "tier": 2,
+  "county": "Dekalb",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 58
+ },
+ {
+  "state": "il",
+  "slug": "moline",
+  "city": "Moline",
+  "tier": 3,
+  "county": "Rock Island",
+  "nearestAnchor": "Springfield",
+  "anchorMiles": 125
+ },
+ {
+  "state": "il",
+  "slug": "lombard",
+  "city": "Lombard",
+  "tier": 2,
+  "county": "Dupage",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 20
+ },
+ {
+  "state": "il",
+  "slug": "buffalo-grove",
+  "city": "Buffalo Grove",
+  "tier": 2,
+  "county": "Lake",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 26
+ },
+ {
+  "state": "il",
+  "slug": "urbana",
+  "city": "Urbana",
+  "tier": 2,
+  "county": "Champaign",
+  "nearestAnchor": "Springfield",
+  "anchorMiles": 79
+ },
+ {
+  "state": "il",
+  "slug": "bartlett",
+  "city": "Bartlett",
+  "tier": 2,
+  "county": "Dupage",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 28
+ },
+ {
+  "state": "il",
+  "slug": "crystal-lake",
+  "city": "Crystal Lake",
+  "tier": 2,
+  "county": "Mchenry",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 44
+ },
+ {
+  "state": "il",
+  "slug": "quincy",
+  "city": "Quincy",
+  "tier": 2,
+  "county": "Adams",
+  "nearestAnchor": "Springfield",
+  "anchorMiles": 92
+ },
+ {
+  "state": "il",
+  "slug": "streamwood",
+  "city": "Streamwood",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 29
+ },
+ {
+  "state": "il",
+  "slug": "carol-stream",
+  "city": "Carol Stream",
+  "tier": 2,
+  "county": "Dupage",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 25
+ },
+ {
+  "state": "il",
+  "slug": "romeoville",
+  "city": "Romeoville",
+  "tier": 2,
+  "county": "Will",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 29
+ },
+ {
+  "state": "il",
+  "slug": "plainfield",
+  "city": "Plainfield",
+  "tier": 2,
+  "county": "Will",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 35
+ },
+ {
+  "state": "il",
+  "slug": "rock-island",
+  "city": "Rock Island",
+  "tier": 3,
+  "county": "Rock Island",
+  "nearestAnchor": "Springfield",
+  "anchorMiles": 127
+ },
+ {
+  "state": "il",
+  "slug": "hanover-park",
+  "city": "Hanover Park",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 11
+ },
+ {
+  "state": "il",
+  "slug": "carpentersville",
+  "city": "Carpentersville",
+  "tier": 2,
+  "county": "Kane",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 37
+ },
+ {
+  "state": "il",
+  "slug": "wheeling",
+  "city": "Wheeling",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 24
+ },
+ {
+  "state": "il",
+  "slug": "park-ridge",
+  "city": "Park Ridge",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 14
+ },
+ {
+  "state": "il",
+  "slug": "calumet-city",
+  "city": "Calumet City",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 19
+ },
+ {
+  "state": "il",
+  "slug": "addison",
+  "city": "Addison",
+  "tier": 2,
+  "county": "Dupage",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 20
+ },
+ {
+  "state": "il",
+  "slug": "glendale-heights",
+  "city": "Glendale Heights",
+  "tier": 2,
+  "county": "Dupage",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 23
+ },
+ {
+  "state": "il",
+  "slug": "pekin",
+  "city": "Pekin",
+  "tier": 2,
+  "county": "Tazewell",
+  "nearestAnchor": "Springfield",
+  "anchorMiles": 53
+ },
+ {
+  "state": "il",
+  "slug": "northbrook",
+  "city": "Northbrook",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 20
+ },
+ {
+  "state": "il",
+  "slug": "elk-grove-village",
+  "city": "Elk Grove Village",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 22
+ },
+ {
+  "state": "il",
+  "slug": "danville",
+  "city": "Danville",
+  "tier": 3,
+  "county": "Vermilion",
+  "nearestAnchor": "Springfield",
+  "anchorMiles": 110
+ },
+ {
+  "state": "il",
+  "slug": "st-charles",
+  "city": "St. Charles",
+  "tier": 2,
+  "county": "Kane",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 35
+ },
+ {
+  "state": "il",
+  "slug": "woodridge",
+  "city": "Woodridge",
+  "tier": 2,
+  "county": "Dupage",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 23
+ },
+ {
+  "state": "il",
+  "slug": "north-chicago",
+  "city": "North Chicago",
+  "tier": 2,
+  "county": "Lake",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 32
+ },
+ {
+  "state": "il",
+  "slug": "galesburg",
+  "city": "Galesburg",
+  "tier": 2,
+  "county": "Knox",
+  "nearestAnchor": "Springfield",
+  "anchorMiles": 88
+ },
+ {
+  "state": "il",
+  "slug": "gurnee",
+  "city": "Gurnee",
+  "tier": 2,
+  "county": "Lake",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 37
+ },
+ {
+  "state": "il",
+  "slug": "mundelein",
+  "city": "Mundelein",
+  "tier": 2,
+  "county": "Lake",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 33
+ },
+ {
+  "state": "il",
+  "slug": "oswego",
+  "city": "Oswego",
+  "tier": 2,
+  "county": "Kendall",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 39
+ },
+ {
+  "state": "il",
+  "slug": "chicago-heights",
+  "city": "Chicago Heights",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 26
+ },
+ {
+  "state": "il",
+  "slug": "algonquin",
+  "city": "Algonquin",
+  "tier": 2,
+  "county": "Mchenry",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 40
+ },
+ {
+  "state": "il",
+  "slug": "freeport",
+  "city": "Freeport",
+  "tier": 3,
+  "county": "Stephenson",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 107
+ },
+ {
+  "state": "il",
+  "slug": "niles",
+  "city": "Niles",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 13
+ },
+ {
+  "state": "il",
+  "slug": "marion",
+  "city": "Marion",
+  "tier": 2,
+  "county": "Williamson",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 93
+ },
+ {
+  "state": "il",
+  "slug": "o-fallon",
+  "city": "O'Fallon",
+  "tier": 2,
+  "county": "Saint Clair",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 16
+ },
+ {
+  "state": "il",
+  "slug": "oak-forest",
+  "city": "Oak Forest",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 20
+ },
+ {
+  "state": "il",
+  "slug": "highland-park",
+  "city": "Highland Park",
+  "tier": 2,
+  "county": "Lake",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 23
+ },
+ {
+  "state": "il",
+  "slug": "lake-in-the-hills",
+  "city": "Lake in the Hills",
+  "tier": 2,
+  "county": "Mchenry",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 42
+ },
+ {
+  "state": "il",
+  "slug": "burbank",
+  "city": "Burbank",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 12
+ },
+ {
+  "state": "il",
+  "slug": "lansing",
+  "city": "Lansing",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 22
+ },
+ {
+  "state": "il",
+  "slug": "mchenry",
+  "city": "McHenry",
+  "tier": 2,
+  "county": "Mchenry",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 45
+ },
+ {
+  "state": "il",
+  "slug": "alton",
+  "city": "Alton",
+  "tier": 2,
+  "county": "Madison",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 20
+ },
+ {
+  "state": "il",
+  "slug": "south-elgin",
+  "city": "South Elgin",
+  "tier": 2,
+  "county": "Kane",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 35
+ },
+ {
+  "state": "il",
+  "slug": "vernon-hills",
+  "city": "Vernon Hills",
+  "tier": 2,
+  "county": "Lake",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 30
+ },
+ {
+  "state": "il",
+  "slug": "batavia",
+  "city": "Batavia",
+  "tier": 2,
+  "county": "Kane",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 35
+ },
+ {
+  "state": "il",
+  "slug": "belvidere",
+  "city": "Belvidere",
+  "tier": 2,
+  "county": "Boone",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 68
+ },
+ {
+  "state": "il",
+  "slug": "zion",
+  "city": "Zion",
+  "tier": 2,
+  "county": "Lake",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 41
+ },
+ {
+  "state": "il",
+  "slug": "carbondale",
+  "city": "Carbondale",
+  "tier": 2,
+  "county": "Jackson",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 82
+ },
+ {
+  "state": "il",
+  "slug": "melrose-park",
+  "city": "Melrose Park",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 12
+ },
+ {
+  "state": "il",
+  "slug": "grayslake",
+  "city": "Grayslake",
+  "tier": 2,
+  "county": "Lake",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 39
+ },
+ {
+  "state": "il",
+  "slug": "lockport",
+  "city": "Lockport",
+  "tier": 2,
+  "county": "Will",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 27
+ },
+ {
+  "state": "il",
+  "slug": "woodstock",
+  "city": "Woodstock",
+  "tier": 2,
+  "county": "Mchenry",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 52
+ },
+ {
+  "state": "il",
+  "slug": "west-chicago",
+  "city": "West Chicago",
+  "tier": 2,
+  "county": "Dupage",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 29
+ },
+ {
+  "state": "il",
+  "slug": "collinsville",
+  "city": "Collinsville",
+  "tier": 2,
+  "county": "Madison",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 12
+ },
+ {
+  "state": "il",
+  "slug": "edwardsville",
+  "city": "Edwardsville",
+  "tier": 2,
+  "county": "Madison",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 18
+ },
+ {
+  "state": "il",
+  "slug": "sycamore",
+  "city": "Sycamore",
+  "tier": 2,
+  "county": "Dekalb",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 55
+ },
+ {
+  "state": "il",
+  "slug": "rolling-meadows",
+  "city": "Rolling Meadows",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 24
+ },
+ {
+  "state": "il",
+  "slug": "east-st-louis",
+  "city": "East St. Louis",
+  "tier": 2,
+  "county": "Saint Clair",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 3
+ },
+ {
+  "state": "il",
+  "slug": "morton-grove",
+  "city": "Morton Grove",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 14
+ },
+ {
+  "state": "il",
+  "slug": "new-lenox",
+  "city": "New Lenox",
+  "tier": 2,
+  "county": "Will",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 31
+ },
+ {
+  "state": "il",
+  "slug": "macomb",
+  "city": "Macomb",
+  "tier": 2,
+  "county": "Mcdonough",
+  "nearestAnchor": "Springfield",
+  "anchorMiles": 71
+ },
+ {
+  "state": "il",
+  "slug": "elmwood-park",
+  "city": "Elmwood Park",
+  "tier": 2,
+  "county": "Cook",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 10
+ },
+ {
+  "state": "il",
+  "slug": "homer-glen",
+  "city": "Homer Glen",
+  "tier": 2,
+  "county": "Will",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 25
+ },
+ {
+  "state": "il",
+  "slug": "godfrey",
+  "city": "Godfrey",
+  "tier": 2,
+  "county": "Madison",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 22
+ },
+ {
+  "state": "il",
+  "slug": "canton",
+  "city": "Canton",
+  "tier": 2,
+  "county": "Fulton",
+  "nearestAnchor": "Springfield",
+  "anchorMiles": 56
+ },
+ {
+  "state": "il",
+  "slug": "bourbonnais",
+  "city": "Bourbonnais",
+  "tier": 2,
+  "county": "Kankakee",
+  "nearestAnchor": "Chicago",
+  "anchorMiles": 51
+ },
+ {
+  "state": "mo",
+  "slug": "kansas-city",
+  "city": "Kansas City",
+  "tier": 1,
+  "county": "Platte",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 8
+ },
+ {
+  "state": "mo",
+  "slug": "st-louis",
+  "city": "St. Louis",
+  "tier": 1,
+  "county": "Saint Louis City",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 1
+ },
+ {
+  "state": "mo",
+  "slug": "springfield",
+  "city": "Springfield",
+  "tier": 3,
+  "county": "Greene",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 148
+ },
+ {
+  "state": "mo",
+  "slug": "columbia",
+  "city": "Columbia",
+  "tier": 3,
+  "county": "Boone",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 115
+ },
+ {
+  "state": "mo",
+  "slug": "independence",
+  "city": "Independence",
+  "tier": 2,
+  "county": "Jackson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 9
+ },
+ {
+  "state": "mo",
+  "slug": "o-fallon",
+  "city": "O'Fallon",
+  "tier": 2,
+  "county": "Saint Charles",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 31
+ },
+ {
+  "state": "mo",
+  "slug": "st-charles",
+  "city": "St. Charles",
+  "tier": 2,
+  "county": "Saint Charles",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 20
+ },
+ {
+  "state": "mo",
+  "slug": "st-joseph",
+  "city": "St. Joseph",
+  "tier": 2,
+  "county": "Buchanan",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 48
+ },
+ {
+  "state": "mo",
+  "slug": "st-peters",
+  "city": "St. Peters",
+  "tier": 2,
+  "county": "Saint Charles",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 25
+ },
+ {
+  "state": "mo",
+  "slug": "blue-springs",
+  "city": "Blue Springs",
+  "tier": 2,
+  "county": "Jackson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 17
+ },
+ {
+  "state": "mo",
+  "slug": "joplin",
+  "city": "Joplin",
+  "tier": 3,
+  "county": "Jasper",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 105
+ },
+ {
+  "state": "mo",
+  "slug": "florissant",
+  "city": "Florissant",
+  "tier": 2,
+  "county": "Saint Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 15
+ },
+ {
+  "state": "mo",
+  "slug": "wentzville",
+  "city": "Wentzville",
+  "tier": 2,
+  "county": "Saint Charles",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 37
+ },
+ {
+  "state": "mo",
+  "slug": "chesterfield",
+  "city": "Chesterfield",
+  "tier": 2,
+  "county": "Saint Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 22
+ },
+ {
+  "state": "mo",
+  "slug": "jefferson-city",
+  "city": "Jefferson City",
+  "tier": 3,
+  "county": "Cole",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 106
+ },
+ {
+  "state": "mo",
+  "slug": "cape-girardeau",
+  "city": "Cape Girardeau",
+  "tier": 2,
+  "county": "Cape Girardeau",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 97
+ },
+ {
+  "state": "mo",
+  "slug": "liberty",
+  "city": "Liberty",
+  "tier": 2,
+  "county": "Clay",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 13
+ },
+ {
+  "state": "mo",
+  "slug": "ballwin",
+  "city": "Ballwin",
+  "tier": 2,
+  "county": "Saint Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 19
+ },
+ {
+  "state": "mo",
+  "slug": "nixa",
+  "city": "Nixa",
+  "tier": 3,
+  "county": "Christian",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 158
+ },
+ {
+  "state": "mo",
+  "slug": "raymore",
+  "city": "Raymore",
+  "tier": 2,
+  "county": "Cass",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 22
+ },
+ {
+  "state": "mo",
+  "slug": "maryland-heights",
+  "city": "Maryland Heights",
+  "tier": 2,
+  "county": "Saint Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 15
+ },
+ {
+  "state": "mo",
+  "slug": "belton",
+  "city": "Belton",
+  "tier": 2,
+  "county": "Cass",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 20
+ },
+ {
+  "state": "mo",
+  "slug": "grandview",
+  "city": "Grandview",
+  "tier": 2,
+  "county": "Jackson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 15
+ },
+ {
+  "state": "mo",
+  "slug": "hazelwood",
+  "city": "Hazelwood",
+  "tier": 2,
+  "county": "Saint Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 14
+ },
+ {
+  "state": "mo",
+  "slug": "ozark",
+  "city": "Ozark",
+  "tier": 3,
+  "county": "Christian",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 162
+ },
+ {
+  "state": "mo",
+  "slug": "republic",
+  "city": "Republic",
+  "tier": 3,
+  "county": "Greene",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 149
+ },
+ {
+  "state": "mo",
+  "slug": "sedalia",
+  "city": "Sedalia",
+  "tier": 2,
+  "county": "Pettis",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 78
+ },
+ {
+  "state": "mo",
+  "slug": "arnold",
+  "city": "Arnold",
+  "tier": 2,
+  "county": "Jefferson",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 17
+ },
+ {
+  "state": "mo",
+  "slug": "rolla",
+  "city": "Rolla",
+  "tier": 2,
+  "county": "Phelps",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 97
+ },
+ {
+  "state": "mo",
+  "slug": "warrensburg",
+  "city": "Warrensburg",
+  "tier": 2,
+  "county": "Johnson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 51
+ },
+ {
+  "state": "mo",
+  "slug": "farmington",
+  "city": "Farmington",
+  "tier": 2,
+  "county": "Saint Francois",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 60
+ },
+ {
+  "state": "mo",
+  "slug": "lake-st-louis",
+  "city": "Lake St. Louis",
+  "tier": 2,
+  "county": "Saint Charles",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 34
+ },
+ {
+  "state": "mo",
+  "slug": "kirksville",
+  "city": "Kirksville",
+  "tier": 3,
+  "county": "Adair",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 130
+ },
+ {
+  "state": "mo",
+  "slug": "hannibal",
+  "city": "Hannibal",
+  "tier": 2,
+  "county": "Marion",
+  "nearestAnchor": "Springfield",
+  "anchorMiles": 93
+ },
+ {
+  "state": "mo",
+  "slug": "sikeston",
+  "city": "Sikeston",
+  "tier": 3,
+  "county": "Scott",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 125
+ },
+ {
+  "state": "mo",
+  "slug": "grain-valley",
+  "city": "Grain Valley",
+  "tier": 2,
+  "county": "Jackson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 20
+ },
+ {
+  "state": "mo",
+  "slug": "poplar-bluff",
+  "city": "Poplar Bluff",
+  "tier": 3,
+  "county": "Butler",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 129
+ },
+ {
+  "state": "mo",
+  "slug": "jackson",
+  "city": "Jackson",
+  "tier": 2,
+  "county": "Cape Girardeau",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 91
+ },
+ {
+  "state": "mo",
+  "slug": "carthage",
+  "city": "Carthage",
+  "tier": 3,
+  "county": "Jasper",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 116
+ },
+ {
+  "state": "mo",
+  "slug": "fort-leonard-wood",
+  "city": "Fort Leonard Wood",
+  "tier": 3,
+  "county": "Pulaski",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 121
+ },
+ {
+  "state": "mo",
+  "slug": "lebanon",
+  "city": "Lebanon",
+  "tier": 3,
+  "county": "Laclede",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 143
+ },
+ {
+  "state": "mo",
+  "slug": "washington",
+  "city": "Washington",
+  "tier": 2,
+  "county": "Franklin",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 45
+ },
+ {
+  "state": "mo",
+  "slug": "troy",
+  "city": "Troy",
+  "tier": 2,
+  "county": "Lincoln",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 49
+ },
+ {
+  "state": "mo",
+  "slug": "marshall",
+  "city": "Marshall",
+  "tier": 2,
+  "county": "Saline",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 74
+ },
+ {
+  "state": "mo",
+  "slug": "moberly",
+  "city": "Moberly",
+  "tier": 3,
+  "county": "Randolph",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 117
+ },
+ {
+  "state": "mo",
+  "slug": "neosho",
+  "city": "Neosho",
+  "tier": 3,
+  "county": "Newton",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 102
+ },
+ {
+  "state": "mo",
+  "slug": "webb-city",
+  "city": "Webb City",
+  "tier": 3,
+  "county": "Jasper",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 109
+ },
+ {
+  "state": "mo",
+  "slug": "festus",
+  "city": "Festus",
+  "tier": 2,
+  "county": "Jefferson",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 33
+ },
+ {
+  "state": "mo",
+  "slug": "eureka",
+  "city": "Eureka",
+  "tier": 2,
+  "county": "Saint Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 25
+ },
+ {
+  "state": "mo",
+  "slug": "branson",
+  "city": "Branson",
+  "tier": 3,
+  "county": "Taney",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 158
+ },
+ {
+  "state": "mo",
+  "slug": "st-ann",
+  "city": "St. Ann",
+  "tier": 2,
+  "county": "Saint Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 12
+ },
+ {
+  "state": "mo",
+  "slug": "union",
+  "city": "Union",
+  "tier": 2,
+  "county": "Franklin",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 46
+ },
+ {
+  "state": "mo",
+  "slug": "fulton",
+  "city": "Fulton",
+  "tier": 2,
+  "county": "Callaway",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 96
+ },
+ {
+  "state": "mo",
+  "slug": "west-plains",
+  "city": "West Plains",
+  "tier": 3,
+  "county": "Howell",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 160
+ },
+ {
+  "state": "mo",
+  "slug": "mexico",
+  "city": "Mexico",
+  "tier": 2,
+  "county": "Audrain",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 98
+ },
+ {
+  "state": "mo",
+  "slug": "bridgeton",
+  "city": "Bridgeton",
+  "tier": 2,
+  "county": "Saint Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 14
+ },
+ {
+  "state": "mo",
+  "slug": "bolivar",
+  "city": "Bolivar",
+  "tier": 3,
+  "county": "Polk",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 121
+ },
+ {
+  "state": "mo",
+  "slug": "kearney",
+  "city": "Kearney",
+  "tier": 2,
+  "county": "Clay",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 22
+ },
+ {
+  "state": "mo",
+  "slug": "smithville",
+  "city": "Smithville",
+  "tier": 2,
+  "county": "Clay",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 20
+ },
+ {
+  "state": "mo",
+  "slug": "excelsior-springs",
+  "city": "Excelsior Springs",
+  "tier": 2,
+  "county": "Clay",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 25
+ },
+ {
+  "state": "mo",
+  "slug": "maryville",
+  "city": "Maryville",
+  "tier": 2,
+  "county": "Nodaway",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 87
+ },
+ {
+  "state": "mo",
+  "slug": "kennett",
+  "city": "Kennett",
+  "tier": 3,
+  "county": "Dunklin",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 165
+ },
+ {
+  "state": "mo",
+  "slug": "harrisonville",
+  "city": "Harrisonville",
+  "tier": 2,
+  "county": "Cass",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 34
+ },
+ {
+  "state": "mo",
+  "slug": "monett",
+  "city": "Monett",
+  "tier": 3,
+  "county": "Barry",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 126
+ },
+ {
+  "state": "mo",
+  "slug": "warrenton",
+  "city": "Warrenton",
+  "tier": 2,
+  "county": "Warren",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 54
+ },
+ {
+  "state": "mo",
+  "slug": "clinton",
+  "city": "Clinton",
+  "tier": 2,
+  "county": "Henry",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 67
+ },
+ {
+  "state": "mo",
+  "slug": "chillicothe",
+  "city": "Chillicothe",
+  "tier": 2,
+  "county": "Livingston",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 73
+ },
+ {
+  "state": "mo",
+  "slug": "pleasant-hill",
+  "city": "Pleasant Hill",
+  "tier": 2,
+  "county": "Cass",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 28
+ },
+ {
+  "state": "mo",
+  "slug": "park-hills",
+  "city": "Park Hills",
+  "tier": 2,
+  "county": "Saint Francois",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 56
+ },
+ {
+  "state": "mo",
+  "slug": "perryville",
+  "city": "Perryville",
+  "tier": 2,
+  "county": "Perry",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 65
+ },
+ {
+  "state": "mo",
+  "slug": "carl-junction",
+  "city": "Carl Junction",
+  "tier": 3,
+  "county": "Jasper",
+  "nearestAnchor": "Tulsa",
+  "anchorMiles": 107
+ },
+ {
+  "state": "co",
+  "slug": "denver",
+  "city": "Denver",
+  "tier": 1,
+  "county": "Jefferson",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 4
+ },
+ {
+  "state": "co",
+  "slug": "colorado-springs",
+  "city": "Colorado Springs",
+  "tier": 1,
+  "county": "El Paso",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 0
+ },
+ {
+  "state": "co",
+  "slug": "aurora",
+  "city": "Aurora",
+  "tier": 2,
+  "county": "Arapahoe",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 7
+ },
+ {
+  "state": "co",
+  "slug": "fort-collins",
+  "city": "Fort Collins",
+  "tier": 2,
+  "county": "Larimer",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 58
+ },
+ {
+  "state": "co",
+  "slug": "arvada",
+  "city": "Arvada",
+  "tier": 2,
+  "county": "Jefferson",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 7
+ },
+ {
+  "state": "co",
+  "slug": "westminster",
+  "city": "Westminster",
+  "tier": 2,
+  "county": "Adams",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 8
+ },
+ {
+  "state": "co",
+  "slug": "pueblo",
+  "city": "Pueblo",
+  "tier": 2,
+  "county": "Pueblo",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 40
+ },
+ {
+  "state": "co",
+  "slug": "boulder",
+  "city": "Boulder",
+  "tier": 2,
+  "county": "Boulder",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 25
+ },
+ {
+  "state": "co",
+  "slug": "greeley",
+  "city": "Greeley",
+  "tier": 2,
+  "county": "Weld",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 49
+ },
+ {
+  "state": "co",
+  "slug": "longmont",
+  "city": "Longmont",
+  "tier": 2,
+  "county": "Weld",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 27
+ },
+ {
+  "state": "co",
+  "slug": "loveland",
+  "city": "Loveland",
+  "tier": 2,
+  "county": "Larimer",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 45
+ },
+ {
+  "state": "co",
+  "slug": "broomfield",
+  "city": "Broomfield",
+  "tier": 2,
+  "county": "Jefferson",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 11
+ },
+ {
+  "state": "co",
+  "slug": "castle-rock",
+  "city": "Castle Rock",
+  "tier": 2,
+  "county": "Douglas",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 25
+ },
+ {
+  "state": "co",
+  "slug": "commerce-city",
+  "city": "Commerce City",
+  "tier": 2,
+  "county": "Adams",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 7
+ },
+ {
+  "state": "co",
+  "slug": "parker",
+  "city": "Parker",
+  "tier": 2,
+  "county": "Douglas",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 21
+ },
+ {
+  "state": "co",
+  "slug": "brighton",
+  "city": "Brighton",
+  "tier": 2,
+  "county": "Weld",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 24
+ },
+ {
+  "state": "co",
+  "slug": "littleton",
+  "city": "Littleton",
+  "tier": 2,
+  "county": "Jefferson",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 11
+ },
+ {
+  "state": "co",
+  "slug": "englewood",
+  "city": "Englewood",
+  "tier": 2,
+  "county": "Arapahoe",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 6
+ },
+ {
+  "state": "co",
+  "slug": "erie",
+  "city": "Erie",
+  "tier": 2,
+  "county": "Boulder",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 23
+ },
+ {
+  "state": "co",
+  "slug": "wheat-ridge",
+  "city": "Wheat Ridge",
+  "tier": 2,
+  "county": "Jefferson",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 6
+ },
+ {
+  "state": "co",
+  "slug": "windsor",
+  "city": "Windsor",
+  "tier": 2,
+  "county": "Weld",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 52
+ },
+ {
+  "state": "co",
+  "slug": "fountain",
+  "city": "Fountain",
+  "tier": 2,
+  "county": "El Paso",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 11
+ },
+ {
+  "state": "co",
+  "slug": "grand-junction",
+  "city": "Grand Junction",
+  "tier": 3,
+  "county": "Mesa",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 195
+ },
+ {
+  "state": "co",
+  "slug": "clifton",
+  "city": "Clifton",
+  "tier": 3,
+  "county": "Mesa",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 190
+ },
+ {
+  "state": "co",
+  "slug": "sterling",
+  "city": "Sterling",
+  "tier": 3,
+  "county": "Logan",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 112
+ },
+ {
+  "state": "co",
+  "slug": "firestone",
+  "city": "Firestone",
+  "tier": 2,
+  "county": "Weld",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 26
+ },
+ {
+  "state": "co",
+  "slug": "frederick",
+  "city": "Frederick",
+  "tier": 2,
+  "county": "Weld",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 25
+ },
+ {
+  "state": "co",
+  "slug": "durango",
+  "city": "Durango",
+  "tier": 3,
+  "county": "La Plata",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 197
+ },
+ {
+  "state": "co",
+  "slug": "montrose",
+  "city": "Montrose",
+  "tier": 3,
+  "county": "Montrose",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 167
+ },
+ {
+  "state": "co",
+  "slug": "evans",
+  "city": "Evans",
+  "tier": 2,
+  "county": "Weld",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 47
+ },
+ {
+  "state": "co",
+  "slug": "lafayette",
+  "city": "Lafayette",
+  "tier": 2,
+  "county": "Boulder",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 19
+ },
+ {
+  "state": "co",
+  "slug": "louisville",
+  "city": "Louisville",
+  "tier": 2,
+  "county": "Boulder",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 18
+ },
+ {
+  "state": "co",
+  "slug": "johnstown",
+  "city": "Johnstown",
+  "tier": 2,
+  "county": "Weld",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 41
+ },
+ {
+  "state": "co",
+  "slug": "golden",
+  "city": "Golden",
+  "tier": 2,
+  "county": "Jefferson",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 11
+ },
+ {
+  "state": "co",
+  "slug": "steamboat-springs",
+  "city": "Steamboat Springs",
+  "tier": 3,
+  "county": "Routt",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 110
+ },
+ {
+  "state": "co",
+  "slug": "fort-morgan",
+  "city": "Fort Morgan",
+  "tier": 2,
+  "county": "Morgan",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 72
+ },
+ {
+  "state": "co",
+  "slug": "glenwood-springs",
+  "city": "Glenwood Springs",
+  "tier": 3,
+  "county": "Garfield",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 125
+ },
+ {
+  "state": "co",
+  "slug": "canon-city",
+  "city": "Canon City",
+  "tier": 2,
+  "county": "Fremont",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 34
+ },
+ {
+  "state": "co",
+  "slug": "fruita",
+  "city": "Fruita",
+  "tier": 3,
+  "county": "Mesa",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 203
+ },
+ {
+  "state": "co",
+  "slug": "woodland-park",
+  "city": "Woodland Park",
+  "tier": 2,
+  "county": "Teller",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 17
+ },
+ {
+  "state": "co",
+  "slug": "berthoud",
+  "city": "Berthoud",
+  "tier": 2,
+  "county": "Larimer",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 39
+ },
+ {
+  "state": "co",
+  "slug": "milliken",
+  "city": "Milliken",
+  "tier": 2,
+  "county": "Weld",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 40
+ },
+ {
+  "state": "co",
+  "slug": "mead",
+  "city": "Mead",
+  "tier": 2,
+  "county": "Weld",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 34
+ },
+ {
+  "state": "co",
+  "slug": "evergreen",
+  "city": "Evergreen",
+  "tier": 2,
+  "county": "Jefferson",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 19
+ },
+ {
+  "state": "co",
+  "slug": "conifer",
+  "city": "Conifer",
+  "tier": 2,
+  "county": "Jefferson",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 23
+ },
+ {
+  "state": "co",
+  "slug": "timnath",
+  "city": "Timnath",
+  "tier": 2,
+  "county": "Larimer",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 55
+ },
+ {
+  "state": "co",
+  "slug": "dacono",
+  "city": "Dacono",
+  "tier": 2,
+  "county": "Weld",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 24
+ },
+ {
+  "state": "co",
+  "slug": "rifle",
+  "city": "Rifle",
+  "tier": 3,
+  "county": "Garfield",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 150
+ },
+ {
+  "state": "co",
+  "slug": "cortez",
+  "city": "Cortez",
+  "tier": 3,
+  "county": "Montezuma",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 229
+ },
+ {
+  "state": "co",
+  "slug": "alamosa",
+  "city": "Alamosa",
+  "tier": 3,
+  "county": "Alamosa",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 110
+ },
+ {
+  "state": "co",
+  "slug": "craig",
+  "city": "Craig",
+  "tier": 3,
+  "county": "Moffat",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 146
+ },
+ {
+  "state": "co",
+  "slug": "delta",
+  "city": "Delta",
+  "tier": 3,
+  "county": "Delta",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 175
+ },
+ {
+  "state": "co",
+  "slug": "trinidad",
+  "city": "Trinidad",
+  "tier": 3,
+  "county": "Las Animas",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 116
+ },
+ {
+  "state": "co",
+  "slug": "estes-park",
+  "city": "Estes Park",
+  "tier": 2,
+  "county": "Larimer",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 52
+ },
+ {
+  "state": "co",
+  "slug": "vail",
+  "city": "Vail",
+  "tier": 2,
+  "county": "Eagle",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 79
+ },
+ {
+  "state": "co",
+  "slug": "avon",
+  "city": "Avon",
+  "tier": 2,
+  "county": "Eagle",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 82
+ },
+ {
+  "state": "co",
+  "slug": "eagle",
+  "city": "Eagle",
+  "tier": 2,
+  "county": "Eagle",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 94
+ },
+ {
+  "state": "co",
+  "slug": "la-junta",
+  "city": "La Junta",
+  "tier": 2,
+  "county": "Otero",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 90
+ },
+ {
+  "state": "co",
+  "slug": "lamar",
+  "city": "Lamar",
+  "tier": 3,
+  "county": "Prowers",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 130
+ },
+ {
+  "state": "co",
+  "slug": "salida",
+  "city": "Salida",
+  "tier": 2,
+  "county": "Chaffee",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 67
+ },
+ {
+  "state": "co",
+  "slug": "aspen",
+  "city": "Aspen",
+  "tier": 3,
+  "county": "Pitkin",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 105
+ },
+ {
+  "state": "co",
+  "slug": "carbondale",
+  "city": "Carbondale",
+  "tier": 3,
+  "county": "Garfield",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 119
+ },
+ {
+  "state": "co",
+  "slug": "silverthorne",
+  "city": "Silverthorne",
+  "tier": 2,
+  "county": "Summit",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 57
+ },
+ {
+  "state": "co",
+  "slug": "frisco",
+  "city": "Frisco",
+  "tier": 2,
+  "county": "Summit",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 65
+ },
+ {
+  "state": "co",
+  "slug": "breckenridge",
+  "city": "Breckenridge",
+  "tier": 2,
+  "county": "Summit",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 59
+ },
+ {
+  "state": "co",
+  "slug": "pagosa-springs",
+  "city": "Pagosa Springs",
+  "tier": 3,
+  "county": "Archuleta",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 163
+ },
+ {
+  "state": "co",
+  "slug": "monte-vista",
+  "city": "Monte Vista",
+  "tier": 3,
+  "county": "Rio Grande",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 113
+ },
+ {
+  "state": "co",
+  "slug": "walsenburg",
+  "city": "Walsenburg",
+  "tier": 2,
+  "county": "Huerfano",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 83
+ },
+ {
+  "state": "co",
+  "slug": "florence",
+  "city": "Florence",
+  "tier": 2,
+  "county": "Fremont",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 35
+ },
+ {
+  "state": "co",
+  "slug": "brush",
+  "city": "Brush",
+  "tier": 2,
+  "county": "Morgan",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 81
+ },
+ {
+  "state": "co",
+  "slug": "gypsum",
+  "city": "Gypsum",
+  "tier": 3,
+  "county": "Eagle",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 105
+ },
+ {
+  "state": "co",
+  "slug": "basalt",
+  "city": "Basalt",
+  "tier": 3,
+  "county": "Eagle",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 110
+ },
+ {
+  "state": "co",
+  "slug": "new-castle",
+  "city": "New Castle",
+  "tier": 3,
+  "county": "Garfield",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 136
+ },
+ {
+  "state": "co",
+  "slug": "silt",
+  "city": "Silt",
+  "tier": 3,
+  "county": "Garfield",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 143
+ },
+ {
+  "state": "co",
+  "slug": "palisade",
+  "city": "Palisade",
+  "tier": 3,
+  "county": "Mesa",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 186
+ },
+ {
+  "state": "co",
+  "slug": "leadville",
+  "city": "Leadville",
+  "tier": 2,
+  "county": "Lake",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 78
+ },
+ {
+  "state": "co",
+  "slug": "buena-vista",
+  "city": "Buena Vista",
+  "tier": 2,
+  "county": "Chaffee",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 71
+ },
+ {
+  "state": "co",
+  "slug": "telluride",
+  "city": "Telluride",
+  "tier": 3,
+  "county": "San Miguel",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 174
+ },
+ {
+  "state": "co",
+  "slug": "manitou-springs",
+  "city": "Manitou Springs",
+  "tier": 2,
+  "county": "El Paso",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 5
+ },
+ {
+  "state": "co",
+  "slug": "black-hawk",
+  "city": "Black Hawk",
+  "tier": 2,
+  "county": "Gilpin",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 28
+ },
+ {
+  "state": "co",
+  "slug": "central-city",
+  "city": "Central City",
+  "tier": 2,
+  "county": "Gilpin",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 28
+ },
+ {
+  "state": "tx",
+  "slug": "farmers-branch",
+  "city": "Farmers Branch",
+  "tier": 2,
+  "county": "Dallas",
+  "nearestAnchor": "Dallas",
+  "anchorMiles": 12
+ },
+ {
+  "state": "ok",
+  "slug": "moore",
+  "city": "Moore",
+  "tier": 2,
+  "county": "Cleveland",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 11
+ },
+ {
+  "state": "ok",
+  "slug": "midwest-city",
+  "city": "Midwest City",
+  "tier": 2,
+  "county": "Oklahoma",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 9
+ },
+ {
+  "state": "ok",
+  "slug": "del-city",
+  "city": "Del City",
+  "tier": 2,
+  "county": "Oklahoma",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 7
+ },
+ {
+  "state": "ok",
+  "slug": "warr-acres",
+  "city": "Warr Acres",
+  "tier": 2,
+  "county": "Oklahoma",
+  "nearestAnchor": "Oklahoma City",
+  "anchorMiles": 8
+ },
+ {
+  "state": "ks",
+  "slug": "merriam",
+  "city": "Merriam",
+  "tier": 2,
+  "county": "Johnson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 10
+ },
+ {
+  "state": "ks",
+  "slug": "bel-aire",
+  "city": "Bel Aire",
+  "tier": 2,
+  "county": "Sedgwick",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 9
+ },
+ {
+  "state": "ks",
+  "slug": "park-city",
+  "city": "Park City",
+  "tier": 2,
+  "county": "Sedgwick",
+  "nearestAnchor": "Wichita",
+  "anchorMiles": 8
+ },
+ {
+  "state": "ks",
+  "slug": "roeland-park",
+  "city": "Roeland Park",
+  "tier": 2,
+  "county": "Johnson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 7
+ },
+ {
+  "state": "mo",
+  "slug": "lees-summit",
+  "city": "Lee's Summit",
+  "tier": 2,
+  "county": "Jackson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 18
+ },
+ {
+  "state": "mo",
+  "slug": "oakville",
+  "city": "Oakville",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 15
+ },
+ {
+  "state": "mo",
+  "slug": "wildwood",
+  "city": "Wildwood",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 25
+ },
+ {
+  "state": "mo",
+  "slug": "university-city",
+  "city": "University City",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 8
+ },
+ {
+  "state": "mo",
+  "slug": "kirkwood",
+  "city": "Kirkwood",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 13
+ },
+ {
+  "state": "mo",
+  "slug": "mehlville",
+  "city": "Mehlville",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 12
+ },
+ {
+  "state": "mo",
+  "slug": "raytown",
+  "city": "Raytown",
+  "tier": 2,
+  "county": "Jackson",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 10
+ },
+ {
+  "state": "mo",
+  "slug": "gladstone",
+  "city": "Gladstone",
+  "tier": 2,
+  "county": "Clay",
+  "nearestAnchor": "Kansas City",
+  "anchorMiles": 8
+ },
+ {
+  "state": "mo",
+  "slug": "webster-groves",
+  "city": "Webster Groves",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 10
+ },
+ {
+  "state": "mo",
+  "slug": "old-jamestown",
+  "city": "Old Jamestown",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 15
+ },
+ {
+  "state": "mo",
+  "slug": "affton",
+  "city": "Affton",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 10
+ },
+ {
+  "state": "mo",
+  "slug": "creve-coeur",
+  "city": "Creve Coeur",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 13
+ },
+ {
+  "state": "mo",
+  "slug": "concord",
+  "city": "Concord",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 12
+ },
+ {
+  "state": "mo",
+  "slug": "ferguson",
+  "city": "Ferguson",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 11
+ },
+ {
+  "state": "mo",
+  "slug": "manchester",
+  "city": "Manchester",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 18
+ },
+ {
+  "state": "mo",
+  "slug": "spanish-lake",
+  "city": "Spanish Lake",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 12
+ },
+ {
+  "state": "mo",
+  "slug": "clayton",
+  "city": "Clayton",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 9
+ },
+ {
+  "state": "mo",
+  "slug": "lemay",
+  "city": "Lemay",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 9
+ },
+ {
+  "state": "mo",
+  "slug": "overland",
+  "city": "Overland",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 10
+ },
+ {
+  "state": "mo",
+  "slug": "dardenne-prairie",
+  "city": "Dardenne Prairie",
+  "tier": 2,
+  "county": "St. Charles",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 30
+ },
+ {
+  "state": "mo",
+  "slug": "jennings",
+  "city": "Jennings",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 9
+ },
+ {
+  "state": "mo",
+  "slug": "crestwood",
+  "city": "Crestwood",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 12
+ },
+ {
+  "state": "mo",
+  "slug": "town-and-country",
+  "city": "Town and Country",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 15
+ },
+ {
+  "state": "mo",
+  "slug": "bellefontaine-neighbors",
+  "city": "Bellefontaine Neighbors",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 10
+ },
+ {
+  "state": "mo",
+  "slug": "ellisville",
+  "city": "Ellisville",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 20
+ },
+ {
+  "state": "mo",
+  "slug": "des-peres",
+  "city": "Des Peres",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 13
+ },
+ {
+  "state": "mo",
+  "slug": "richmond-heights",
+  "city": "Richmond Heights",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 8
+ },
+ {
+  "state": "mo",
+  "slug": "sunset-hills",
+  "city": "Sunset Hills",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 14
+ },
+ {
+  "state": "mo",
+  "slug": "ladue",
+  "city": "Ladue",
+  "tier": 2,
+  "county": "St. Louis",
+  "nearestAnchor": "St. Louis",
+  "anchorMiles": 10
+ },
+ {
+  "state": "co",
+  "slug": "lakewood",
+  "city": "Lakewood",
+  "tier": 2,
+  "county": "Jefferson",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 7
+ },
+ {
+  "state": "co",
+  "slug": "thornton",
+  "city": "Thornton",
+  "tier": 2,
+  "county": "Adams",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 10
+ },
+ {
+  "state": "co",
+  "slug": "centennial",
+  "city": "Centennial",
+  "tier": 2,
+  "county": "Arapahoe",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 15
+ },
+ {
+  "state": "co",
+  "slug": "highlands-ranch",
+  "city": "Highlands Ranch",
+  "tier": 2,
+  "county": "Douglas",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 15
+ },
+ {
+  "state": "co",
+  "slug": "northglenn",
+  "city": "Northglenn",
+  "tier": 2,
+  "county": "Adams",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 10
+ },
+ {
+  "state": "co",
+  "slug": "columbine",
+  "city": "Columbine",
+  "tier": 2,
+  "county": "Jefferson",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 14
+ },
+ {
+  "state": "co",
+  "slug": "ken-caryl",
+  "city": "Ken Caryl",
+  "tier": 2,
+  "county": "Jefferson",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 15
+ },
+ {
+  "state": "co",
+  "slug": "security-widefield",
+  "city": "Security-Widefield",
+  "tier": 2,
+  "county": "El Paso",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 10
+ },
+ {
+  "state": "co",
+  "slug": "pueblo-west",
+  "city": "Pueblo West",
+  "tier": 2,
+  "county": "Pueblo",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 45
+ },
+ {
+  "state": "co",
+  "slug": "cimarron-hills",
+  "city": "Cimarron Hills",
+  "tier": 2,
+  "county": "El Paso",
+  "nearestAnchor": "Colorado Springs",
+  "anchorMiles": 8
+ },
+ {
+  "state": "co",
+  "slug": "superior",
+  "city": "Superior",
+  "tier": 2,
+  "county": "Boulder",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 20
+ },
+ {
+  "state": "co",
+  "slug": "federal-heights",
+  "city": "Federal Heights",
+  "tier": 2,
+  "county": "Adams",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 10
+ },
+ {
+  "state": "co",
+  "slug": "lone-tree",
+  "city": "Lone Tree",
+  "tier": 2,
+  "county": "Douglas",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 17
+ },
+ {
+  "state": "co",
+  "slug": "castle-pines",
+  "city": "Castle Pines",
+  "tier": 2,
+  "county": "Douglas",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 20
+ },
+ {
+  "state": "co",
+  "slug": "greenwood-village",
+  "city": "Greenwood Village",
+  "tier": 2,
+  "county": "Arapahoe",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 12
+ },
+ {
+  "state": "co",
+  "slug": "lochbuie",
+  "city": "Lochbuie",
+  "tier": 2,
+  "county": "Weld",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 30
+ },
+ {
+  "state": "co",
+  "slug": "cherry-hills-village",
+  "city": "Cherry Hills Village",
+  "tier": 2,
+  "county": "Arapahoe",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 10
+ },
+ {
+  "state": "co",
+  "slug": "edgewater",
+  "city": "Edgewater",
+  "tier": 2,
+  "county": "Jefferson",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 5
+ },
+ {
+  "state": "co",
+  "slug": "sheridan",
+  "city": "Sheridan",
+  "tier": 2,
+  "county": "Arapahoe",
+  "nearestAnchor": "Denver",
+  "anchorMiles": 7
+ }
+]

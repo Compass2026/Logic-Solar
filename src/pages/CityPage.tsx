@@ -6,6 +6,7 @@ import { WichitaKSPage } from './WichitaKSPage';
 import { AustinTXPage } from './AustinTXPage';
 import { siteData } from '../data/siteData';
 import locationsData from '../data/locations-solar.json';
+import { isServedCity } from '../data/cityTiers';
 
 export const CityPage = () => {
   const { state, city } = useParams<{ state: string; city: string }>();
@@ -42,6 +43,12 @@ export const CityPage = () => {
 
   if (!stateData) {
     return <Navigate to="/" replace />;
+  }
+
+  // Tier 3 cities (outside the ~2-hour service radius) redirect to the state hub,
+  // mirroring the 301s in vercel.json.
+  if (city && !isServedCity(stateKey, city)) {
+    return <Navigate to={`/locations/${state}`} replace />;
   }
 
   // Create a dynamic location object for CityTemplate
