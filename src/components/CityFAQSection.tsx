@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Plus, Minus, HelpCircle } from 'lucide-react';
+// Q&A copy comes from ../data/faqs.js — the same module the prerender script
+// uses — so the FAQPage schema in the prerendered HTML matches this text.
+import { buildCityFaqs } from '../data/faqs';
 
 // ─── Types ──────────────────────────────────────────────────────────────────
 
@@ -18,33 +21,6 @@ interface CityFAQSectionProps {
   stateData: StateData;
 }
 
-// ─── FAQ Generation ──────────────────────────────────────────────────────────
-
-function buildFAQs(city: string, stateData: StateData) {
-  const state = stateData.name;
-  const sunlightDays = stateData.sunlightDays ?? 200;
-  const utilityFocus = stateData.utilityFocus ?? 'local utility net metering programs';
-  const stateIncentive = stateData.stateIncentive ?? 'the Federal Solar Investment Tax Credit (ITC)';
-
-  return [
-    {
-      question: `Are solar panels worth it in ${city}, ${state}?`,
-      answer: `Absolutely! With ${state}'s average of ${sunlightDays} sunny days per year and local utility programs like ${utilityFocus}, ${city} homeowners consistently see excellent returns on their solar investment. Most Logic Solar customers in ${city} break even within 6–8 years and enjoy decades of free energy production after that.`,
-    },
-    {
-      question: `What is the best solar incentive in ${state}?`,
-      answer: `Homeowners in ${city} can take advantage of ${stateIncentive} to significantly lower the upfront cost of a solar installation. When combined with net metering credits and Logic Solar's flexible financing options, the out-of-pocket cost becomes very manageable for most families.`,
-    },
-    {
-      question: `How long does solar installation take in ${city}?`,
-      answer: `Our ${city} installation crews typically complete a standard residential solar system in 1–2 days. From your initial quote through final utility interconnection, the full process usually takes 4–8 weeks depending on local permitting timelines in ${state}.`,
-    },
-    {
-      question: `Does Logic Solar offer battery backup in ${city}?`,
-      answer: `Yes! Battery backup systems like the Tesla Powerwall and Enphase IQ Battery are available to every ${city} homeowner. Given ${state}'s utility rate structures and occasional grid outages, pairing solar with storage is one of the smartest investments you can make for energy independence.`,
-    },
-  ];
-}
 
 // ─── JSON-LD Schema ──────────────────────────────────────────────────────────
 
@@ -67,7 +43,7 @@ function buildSchema(faqs: { question: string; answer: string }[]) {
 
 export const CityFAQSection = ({ city, stateData }: CityFAQSectionProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const faqs = buildFAQs(city, stateData);
+  const faqs = buildCityFaqs(city, stateData);
   const schema = buildSchema(faqs);
 
   return (
