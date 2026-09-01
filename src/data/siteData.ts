@@ -1,3 +1,5 @@
+import { homeFaqs, faqClusters } from './faqs';
+
 export const siteData = {
   name: "Logic Solar",
   tagline: "The Logical Choice for Energy Independence",
@@ -200,46 +202,8 @@ export const siteData = {
       ]
     }
   ],
-  faqClusters: [
-    {
-      category: "Process",
-      questions: [
-        {
-          question: "How long does the installation process take?",
-          answer: "The typical installation takes 1-3 days, but the entire process from design to activation usually spans 4-8 weeks due to permitting and utility interconnection."
-        },
-        {
-          question: "What is involved in the design phase?",
-          answer: "We use advanced drone mapping and thermal scans to create a 3D model of your home, ensuring the most efficient and aesthetically pleasing layout."
-        }
-      ]
-    },
-    {
-      category: "Savings",
-      questions: [
-        {
-          question: "How much can I actually save with solar?",
-          answer: "Most Logic Solar customers see a 40-70% reduction in their monthly utility bills. With current incentives, many systems pay for themselves in 5-7 years."
-        },
-        {
-          question: "Are there still government incentives available?",
-          answer: "The federal Investment Tax Credit (ITC) has been eliminated. However, many states and local utilities still offer rebates and performance-based incentives. Contact us to find out what's available in your area."
-        }
-      ]
-    }
-  ],
-  faqs: [
-    {
-      question: "How much can I actually save with solar?",
-      answer: "Most Logic Solar customers see a 40-70% reduction in their monthly utility bills. With current incentives, many systems pay for themselves in 5-7 years."
-    },
-    {
-      question: "What happens during a power outage?",
-      answer: "Standard solar systems shut off for safety. However, with our Battery Backup solutions, your home switches to stored energy instantly, keeping your lights and essentials running."
-    },
-    {
-      question: "Are there still government incentives available?",
-      answer: "The federal Investment Tax Credit (ITC) has been eliminated. However, many states and local utilities still offer rebates and performance-based incentives. Contact us to find out what's available in your area."
-    }
-  ]
+  // FAQ copy lives in ./faqs.js so scripts/prerender.js can emit the same
+  // Q&A text into the prerendered HTML and FAQPage schema.
+  faqClusters,
+  faqs: homeFaqs
 };

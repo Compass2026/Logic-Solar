@@ -20,6 +20,15 @@ interface CityTemplateProps {
     highlights: string[];
     backgroundImage?: string;
   };
+  /**
+   * Meta title/description for the SEO component. Comes from
+   * src/data/pageMeta.js so hydration sets the exact strings the
+   * prerendered HTML already carries. Falls back to location copy.
+   */
+  seo?: {
+    title: string;
+    description: string;
+  };
   stateData?: {
     name: string;
     heroImage?: string;
@@ -31,12 +40,12 @@ interface CityTemplateProps {
   };
 }
 
-export const CityTemplate = ({ location, stateData }: CityTemplateProps) => {
+export const CityTemplate = ({ location, seo, stateData }: CityTemplateProps) => {
   return (
     <>
-      <SEO 
-        title={location.title} 
-        description={location.description} 
+      <SEO
+        title={seo?.title ?? location.title}
+        description={seo?.description ?? location.description}
       />
       
       <PageHero 

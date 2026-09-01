@@ -10,6 +10,7 @@ import { TrustStrip } from '../components/TrustStrip';
 import { siteData } from '../data/siteData';
 import locationsData from '../data/locations-solar.json';
 import { isServedCity } from '../data/cityTiers';
+import { buildStateMeta } from '../data/pageMeta';
 
 export const StatePage = () => {
   const { stateId } = useParams<{ stateId: string }>();
@@ -21,11 +22,15 @@ export const StatePage = () => {
   const stateData = locationsData.states[stateKey];
   const cities = (stateData?.cities || []).filter((c) => isServedCity(stateKey, c.slug));
 
+  // Same meta the prerender script writes for this route — hydration must
+  // set identical strings, or crawlers see two competing titles.
+  const meta = buildStateMeta(stateId ?? '');
+
   return (
     <>
-      <SEO 
-        title={location.title} 
-        description={location.description} 
+      <SEO
+        title={meta?.title ?? location.title}
+        description={meta?.description ?? location.description}
       />
       
       <PageHero 

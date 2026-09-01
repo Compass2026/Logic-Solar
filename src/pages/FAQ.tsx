@@ -9,10 +9,12 @@ import { siteData } from '../data/siteData';
 import { cn } from '../lib/utils';
 
 export const FAQ = () => {
+  // Schema must quote the Q&A the page actually renders (faqClusters),
+  // matching the FAQPage schema in the prerendered HTML.
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": siteData.faqs.map(item => ({
+    "mainEntity": siteData.faqClusters.flatMap(cluster => cluster.questions).map(item => ({
       "@type": "Question",
       "name": item.question,
       "acceptedAnswer": {
