@@ -15,15 +15,54 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, '../dist');
 const BASE_URL = 'https://www.logic-solar.com';
 
-const NAP = {
-  name: 'Logic Solar',
-  phone: '(816) 300-5781',
-  phoneIntl: '+18163005781',
-  street: '7300 W 110th St, Plaza 1, 7th Floor',
-  city: 'Overland Park',
-  region: 'KS',
-  zip: '66210',
+// Per-location NAP. Each Google Business Profile is a separate listing, so
+// every page's LocalBusiness schema must match the listing for the location
+// that actually serves it — never a hardcoded HQ NAP.
+const LOCATIONS = {
+  overlandPark: {
+    name: 'Logic Solar',
+    phone: '(816) 300-5781',
+    phoneIntl: '+18163005781',
+    street: '7300 W 110th St, Plaza 1, 7th Floor',
+    city: 'Overland Park',
+    region: 'KS',
+    zip: '66210',
+    geo: { lat: 38.9310762, lng: -94.6707302 },
+    isServiceArea: false,
+    // Add the public Google Maps URL for the Overland Park GBP listing here
+    // once verified — do not guess it.
+    sameAs: ['https://www.instagram.com/logic_solar/'],
+  },
+  wichita: {
+    name: 'Logic Solar',
+    phone: '(316) 669-7219',
+    phoneIntl: '+13166697219',
+    street: '307 S Prescott Cir',
+    city: 'Wichita',
+    region: 'KS',
+    zip: '67209',
+    // US Census geocode for 307 S Prescott Cir, 67209 — confirm against the
+    // live GBP pin before treating as authoritative.
+    geo: { lat: 37.6785125, lng: -97.4701138 },
+    isServiceArea: true,
+    // Add the public Google Maps URL for the Wichita GBP listing here once
+    // verified — do not guess it.
+    sameAs: [
+      'https://www.facebook.com/profile.php?id=61580455196022',
+      'https://www.instagram.com/logic_solar',
+      'https://www.linkedin.com/company/logic-solar/',
+    ],
+  },
 };
+
+// Route -> location. Every route not listed here uses the Overland Park HQ;
+// adding a location page later is one line.
+const ROUTE_LOCATION = {
+  '/locations/kansas/wichita': 'wichita',
+};
+const locationFor = (route) => LOCATIONS[ROUTE_LOCATION[route] ?? 'overlandPark'];
+
+const HQ = LOCATIONS.overlandPark;
 
 const esc = (s) =>
   String(s)
@@ -49,28 +88,31 @@ const routes = [];
 const push = (route, t, desc, { schema = null, body = '', noindex = false, ogImage = null } = {}) =>
   routes.push({ route, title: title(t), desc, schema, body, noindex, ogImage });
 
-const orgSchema = {
+const localBusinessSchema = (loc) => ({
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: NAP.name,
-  telephone: NAP.phoneIntl,
+  name: loc.name,
+  telephone: loc.phoneIntl,
   url: BASE_URL,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: NAP.street,
-    addressLocality: NAP.city,
-    addressRegion: NAP.region,
-    postalCode: NAP.zip,
+    streetAddress: loc.street,
+    addressLocality: loc.city,
+    addressRegion: loc.region,
+    postalCode: loc.zip,
     addressCountry: 'US',
   },
-};
+  geo: { '@type': 'GeoCoordinates', latitude: loc.geo.lat, longitude: loc.geo.lng },
+  openingHours: 'Mo-Fr 09:00-17:00',
+  sameAs: loc.sameAs,
+});
 
 push('/', 'Solar Panel Installation & Battery Backup | Logic Solar',
-  'Custom-engineered solar installations, battery backup, and commercial solar across Kansas, Missouri, Texas, Oklahoma, Illinois, and Colorado. Free quotes: ' + NAP.phone + '.',
+  'Custom-engineered solar installations, battery backup, and commercial solar across Kansas, Missouri, Texas, Oklahoma, Illinois, and Colorado. Free quotes: ' + HQ.phone + '.',
   {
-    schema: orgSchema,
+    schema: localBusinessSchema(HQ),
     body: `<h1>Logic Solar — Custom-Engineered Solar Energy Systems</h1>
-<p>Logic Solar designs and installs high-performance residential and commercial solar systems, with battery backup and premium service. Based in ${NAP.city}, ${NAP.region}, serving Kansas, Missouri, Texas, Oklahoma, Illinois, and Colorado. Call ${NAP.phone} for a free quote.</p>`,
+<p>Logic Solar designs and installs high-performance residential and commercial solar systems, with battery backup and premium service. Based in ${HQ.city}, ${HQ.region}, serving Kansas, Missouri, Texas, Oklahoma, Illinois, and Colorado. Call ${HQ.phone} for a free quote.</p>`,
   });
 push('/about', 'About Logic Solar | Custom-Engineered Solar Since Day One',
   'Meet Logic Solar: engineering-first solar installation with a premium service standard. Learn how we design, build, and stand behind every system.');
@@ -91,8 +133,8 @@ push('/financing', 'Solar Financing Options | $0-Down Solar Loans',
 push('/faq', 'Solar FAQ | Answers From Logic Solar',
   'Straight answers to the most common solar questions: costs, savings, batteries, roof requirements, incentives, and how installation works.');
 push('/contact', 'Contact Logic Solar | Free Solar Quote',
-  `Talk to Logic Solar: free quotes and system designs. Call ${NAP.phone} or send a message — ${NAP.city}, ${NAP.region}.`,
-  { schema: orgSchema });
+  `Talk to Logic Solar: free quotes and system designs. Call ${HQ.phone} or send a message — ${HQ.city}, ${HQ.region}.`,
+  { schema: localBusinessSchema(HQ) });
 push('/privacy', 'Privacy Policy',
   'How Logic Solar collects, uses, and protects your information.');
 push('/terms', 'Terms of Service',
@@ -134,11 +176,11 @@ for (const [st, state] of Object.entries(data.states)) {
     .join('\n');
 
   push(stateRoute, `${state.name} Solar Installation | Panels, Battery & Commercial`,
-    `Solar panel installation across ${state.name}: custom-engineered systems, battery backup, and commercial solar. ~${state.sunlightDays} sunny days a year. Free quotes: ${NAP.phone}.`,
+    `Solar panel installation across ${state.name}: custom-engineered systems, battery backup, and commercial solar. ~${state.sunlightDays} sunny days a year. Free quotes: ${HQ.phone}.`,
     {
-      schema: { ...orgSchema, areaServed: { '@type': 'State', name: state.name } },
+      schema: { ...localBusinessSchema(HQ), areaServed: { '@type': 'State', name: state.name } },
       body: `<h1>Solar Installation in ${esc(state.name)}</h1>
-<p>${esc(state.name)} averages around ${state.sunlightDays} days of sunshine a year, and homeowners here benefit from ${esc(state.stateIncentive)}. Logic Solar custom-engineers residential and commercial systems across the state — call ${NAP.phone} for a free quote.</p>
+<p>${esc(state.name)} averages around ${state.sunlightDays} days of sunshine a year, and homeowners here benefit from ${esc(state.stateIncentive)}. Logic Solar custom-engineers residential and commercial systems across the state — call ${HQ.phone} for a free quote.</p>
 <h2>${esc(state.name)} cities we serve</h2>
 <ul>${cityLinks}</ul>`,
     });
@@ -150,22 +192,25 @@ for (const [st, state] of Object.entries(data.states)) {
     const secondary = (c.keywords?.secondary || []).join(', ');
     const cityRoute = `/locations/${stateSlug}/${c.slug}`;
     const dedicated = dedicatedCityMeta[`${stateSlug}/${c.slug}`];
+    // The location whose GBP covers this city page. Its NAP drives both the
+    // schema and the visible phone number in the prerendered body.
+    const loc = locationFor(cityRoute);
     const teamNote = tier.anchorMiles > 5
       ? `about ${tier.anchorMiles} miles from our ${tier.nearestAnchor} team`
       : `home base of our ${tier.nearestAnchor} team`;
     push(cityRoute,
       dedicated ? dedicated.title : `${kw} in ${c.city}, ${st.toUpperCase()}`,
       dedicated ? dedicated.desc :
-        `${kw} in ${c.city}, ${state.name} — ${tier.county} County. Custom-engineered by our ${tier.nearestAnchor} team. Free quotes: ${NAP.phone}.`,
+        `${kw} in ${c.city}, ${state.name} — ${tier.county} County. Custom-engineered by our ${tier.nearestAnchor} team. Free quotes: ${loc.phone}.`,
       {
         schema: {
-          ...orgSchema,
+          ...localBusinessSchema(loc),
           areaServed: { '@type': 'City', name: c.city, containedInPlace: { '@type': 'State', name: state.name } },
           makesOffer: { '@type': 'Offer', itemOffered: { '@type': 'Service', name: `${kw} in ${c.city}, ${state.name}` } },
         },
         body: `<h1>${esc(kw)} in ${esc(c.city)}, ${esc(state.name)}</h1>
 <p>Logic Solar serves ${esc(c.city)} and the rest of ${esc(tier.county)} County ${esc(teamNote)}. With roughly ${state.sunlightDays} sunny days a year and the average ${esc(state.name)} electric bill near ${esc(state.avgBill)} per month, ${esc(c.city)} homeowners are strong candidates for solar. Local utility context: ${esc(state.utilityFocus)}. Available incentives include ${esc(state.stateIncentive)}.</p>
-<p>Logic Solar custom-engineers every system — panels, ${esc(secondary || 'battery backup')}, and monitoring — and backs it with premium service. Call ${NAP.phone} or <a href="/contact">request a free quote</a>. Explore more of <a href="${stateRoute}">our ${esc(state.name)} service area</a>.</p>`,
+<p>Logic Solar custom-engineers every system — panels, ${esc(secondary || 'battery backup')}, and monitoring — and backs it with premium service. Call ${loc.phone} or <a href="/contact">request a free quote</a>. Explore more of <a href="${stateRoute}">our ${esc(state.name)} service area</a>.</p>`,
       });
   }
 }
