@@ -10,7 +10,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { buildCityMeta, buildStateMeta, dedicatedCityMeta } from '../src/data/pageMeta.js';
+import { buildCityMeta, buildStateMeta, dedicatedCityMeta, homeMeta } from '../src/data/pageMeta.js';
 import { homeFaqs, faqClusters, buildCityFaqs } from '../src/data/faqs.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -165,12 +165,15 @@ const faqPageNode = (route, faqs) => ({
 const faqBody = (faqs) =>
   faqs.map((f) => `<h3>${esc(f.question)}</h3>\n<p>${esc(f.answer)}</p>`).join('\n');
 
-push('/', 'Solar Panel Installation & Battery Backup | Logic Solar',
-  'Custom-engineered solar installations, battery backup, and commercial solar across Kansas, Missouri, Texas, Oklahoma, Illinois, and Colorado. Free quotes: ' + HQ.phone + '.',
+push('/', homeMeta.title, homeMeta.description,
   {
     schema: [localBusinessSchema(HQ), faqPageNode('/', homeFaqs)],
     body: `<h1>Logic Solar — Custom-Engineered Solar Energy Systems</h1>
-<p>Logic Solar designs and installs high-performance residential and commercial solar systems, with battery backup and premium service. Based in ${HQ.city}, ${HQ.region}, serving Kansas, Missouri, Texas, Oklahoma, Illinois, and Colorado. Call ${HQ.phone} for a free quote.</p>
+<p>Logic Solar is a solar energy company that designs and installs residential and commercial solar systems with battery backup and premium service. We are based in ${HQ.city}, ${HQ.region}, and our teams serve homeowners and businesses across <a href="/locations/kansas">Kansas</a>, <a href="/locations/missouri">Missouri</a>, <a href="/locations/texas">Texas</a>, <a href="/locations/oklahoma">Oklahoma</a>, <a href="/locations/illinois">Illinois</a>, and <a href="/locations/colorado">Colorado</a>. Call ${HQ.phone} for a free quote.</p>
+<h2>What we do</h2>
+<p>Every project starts with your last 12 months of utility bills, not a one-size-fits-all package. We engineer <a href="/services/installation">residential solar panel installations</a> around your roof, your usage, and your utility. We add <a href="/services/battery">battery backup and energy storage</a> so your essential circuits stay powered through grid outages. We build <a href="/services/commercial">commercial solar systems</a> that lower operating costs for businesses, and we pair panels with <a href="/roofing">roofing services</a> when a roof needs work before solar goes up. Our team handles design, permits, utility interconnection, and inspections from start to finish.</p>
+<h2>Why homeowners choose Logic Solar</h2>
+<p>We are a solar energy company built on engineering, not sales volume. Systems use Tier 1 panels and microinverters, installations are backed by a 25-year workmanship warranty, and every system we build is monitored. Explore <a href="/financing">solar financing options</a>, learn <a href="/services/how-it-works">how solar works</a>, review <a href="/services/incentives">current solar incentives</a>, or <a href="/contact">request a free quote</a>.</p>
 <h2>Frequently asked questions</h2>
 ${faqBody(homeFaqs)}`,
   });
