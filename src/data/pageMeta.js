@@ -16,6 +16,14 @@ const PHONE = '(816) 300-5781';
 
 const cap = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
 
+// Homepage meta — shared by scripts/prerender.js and src/pages/Home.tsx.
+// Description stays under 160 characters so Google doesn't truncate the
+// phone number off the end.
+export const homeMeta = {
+  title: 'Solar Panel Installation & Battery Backup | Logic Solar',
+  description: `Logic Solar is a solar energy company installing custom solar panels, battery backup, and commercial solar across six states. Free quotes: ${PHONE}.`,
+};
+
 // state slug ("texas") -> [stateKey ("tx"), state object]
 const statesBySlug = new Map(
   Object.entries(locationsData.states).map(([key, state]) => [state.name.toLowerCase(), [key, state]])
