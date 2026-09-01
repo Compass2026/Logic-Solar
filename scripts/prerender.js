@@ -10,6 +10,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { buildCityMeta, buildStateMeta } from '../src/data/pageMeta.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, '../dist');
@@ -72,7 +73,6 @@ const esc = (s) =>
     .replace(/"/g, '&quot;');
 
 const title = (t) => (t.includes('Logic Solar') ? t : `${t} | Logic Solar`);
-const cap = (s) => s.replace(/\b\w/g, (c) => c.toUpperCase());
 
 const data = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, '../src/data/locations-solar.json'), 'utf8')
@@ -150,22 +150,9 @@ for (const r of internalRoutes) {
   push(r, 'Logic Solar', 'Logic Solar internal page.', { noindex: true });
 }
 
-// Flagship city pages keep the same meta their dedicated React pages set,
-// so what crawlers see matches what hydration renders.
-const dedicatedCityMeta = {
-  'texas/austin': {
-    title: 'Austin Solar Company | Panels and Battery Backup | Logic Solar',
-    desc: 'Logic Solar installs residential solar panels, battery backup and commercial solar systems throughout Austin and Central Texas. Request a custom solar estimate.',
-  },
-  'missouri/kansas-city': {
-    title: 'Kansas City Solar Company | Logic Solar',
-    desc: 'Logic Solar installs residential solar panels, battery backup and commercial solar systems throughout Kansas City, Missouri and the KC metro. Request a custom solar estimate.',
-  },
-  'kansas/wichita': {
-    title: 'Wichita Solar Company | Panels and Battery Backup | Logic Solar',
-    desc: 'Logic Solar installs residential solar panels, battery backup and commercial solar systems throughout Wichita and south-central Kansas. Request a custom solar estimate.',
-  },
-};
+// City/state titles and descriptions come from src/data/pageMeta.js — the
+// same module the React pages use — so prerendered meta and hydrated meta
+// can never drift apart.
 
 for (const [st, state] of Object.entries(data.states)) {
   const stateSlug = state.name.toLowerCase();
@@ -175,11 +162,11 @@ for (const [st, state] of Object.entries(data.states)) {
     .map((c) => `<li><a href="/locations/${stateSlug}/${c.slug}">Solar installation in ${esc(c.city)}, ${st.toUpperCase()}</a></li>`)
     .join('\n');
 
-  push(stateRoute, `${state.name} Solar Installation | Panels, Battery & Commercial`,
-    `Solar panel installation across ${state.name}: custom-engineered systems, battery backup, and commercial solar. ~${state.sunlightDays} sunny days a year. Free quotes: ${HQ.phone}.`,
+  const stateMeta = buildStateMeta(stateSlug);
+  push(stateRoute, stateMeta.title, stateMeta.description,
     {
       schema: { ...localBusinessSchema(HQ), areaServed: { '@type': 'State', name: state.name } },
-      body: `<h1>Solar Installation in ${esc(state.name)}</h1>
+      body: `<h1>${esc(stateMeta.h1)}</h1>
 <p>${esc(state.name)} averages around ${state.sunlightDays} days of sunshine a year, and homeowners here benefit from ${esc(state.stateIncentive)}. Logic Solar custom-engineers residential and commercial systems across the state — call ${HQ.phone} for a free quote.</p>
 <h2>${esc(state.name)} cities we serve</h2>
 <ul>${cityLinks}</ul>`,
@@ -188,27 +175,24 @@ for (const [st, state] of Object.entries(data.states)) {
   for (const c of state.cities) {
     const tier = tierOf.get(`${st}|${c.slug}`);
     if (!tier || tier.tier >= 3) continue; // Tier 3: 301s to the state hub via vercel.json
-    const kw = cap(c.keywords?.primary || 'solar installation');
+    const cityMeta = buildCityMeta(stateSlug, c.slug);
+    const kw = cityMeta.kw;
     const secondary = (c.keywords?.secondary || []).join(', ');
     const cityRoute = `/locations/${stateSlug}/${c.slug}`;
-    const dedicated = dedicatedCityMeta[`${stateSlug}/${c.slug}`];
     // The location whose GBP covers this city page. Its NAP drives both the
     // schema and the visible phone number in the prerendered body.
     const loc = locationFor(cityRoute);
     const teamNote = tier.anchorMiles > 5
       ? `about ${tier.anchorMiles} miles from our ${tier.nearestAnchor} team`
       : `home base of our ${tier.nearestAnchor} team`;
-    push(cityRoute,
-      dedicated ? dedicated.title : `${kw} in ${c.city}, ${st.toUpperCase()}`,
-      dedicated ? dedicated.desc :
-        `${kw} in ${c.city}, ${state.name} — ${tier.county} County. Custom-engineered by our ${tier.nearestAnchor} team. Free quotes: ${loc.phone}.`,
+    push(cityRoute, cityMeta.title, cityMeta.description,
       {
         schema: {
           ...localBusinessSchema(loc),
           areaServed: { '@type': 'City', name: c.city, containedInPlace: { '@type': 'State', name: state.name } },
           makesOffer: { '@type': 'Offer', itemOffered: { '@type': 'Service', name: `${kw} in ${c.city}, ${state.name}` } },
         },
-        body: `<h1>${esc(kw)} in ${esc(c.city)}, ${esc(state.name)}</h1>
+        body: `<h1>${esc(cityMeta.h1)}</h1>
 <p>Logic Solar serves ${esc(c.city)} and the rest of ${esc(tier.county)} County ${esc(teamNote)}. With roughly ${state.sunlightDays} sunny days a year and the average ${esc(state.name)} electric bill near ${esc(state.avgBill)} per month, ${esc(c.city)} homeowners are strong candidates for solar. Local utility context: ${esc(state.utilityFocus)}. Available incentives include ${esc(state.stateIncentive)}.</p>
 <p>Logic Solar custom-engineers every system — panels, ${esc(secondary || 'battery backup')}, and monitoring — and backs it with premium service. Call ${loc.phone} or <a href="/contact">request a free quote</a>. Explore more of <a href="${stateRoute}">our ${esc(state.name)} service area</a>.</p>`,
       });
