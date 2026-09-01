@@ -260,19 +260,19 @@ export const WichitaKSPage: React.FC = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://logic-solar.com/"
+        "item": "https://www.logic-solar.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Service Areas",
-        "item": "https://logic-solar.com/locations/kansas"
+        "item": "https://www.logic-solar.com/locations/kansas"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Kansas",
-        "item": "https://logic-solar.com/locations/kansas"
+        "item": "https://www.logic-solar.com/locations/kansas"
       },
       {
         "@type": "ListItem",

@@ -8,8 +8,9 @@ const __dirname = path.dirname(__filename);
 const BASE_URL = 'https://www.logic-solar.com';
 const LASTMOD = new Date().toISOString().split('T')[0];
 
-const url = (loc, priority) =>
-  `  <url><loc>${loc}</loc><lastmod>${LASTMOD}</lastmod><priority>${priority}</priority></url>\n`;
+// No <priority>: Google ignores it.
+const url = (loc) =>
+  `  <url><loc>${loc}</loc><lastmod>${LASTMOD}</lastmod></url>\n`;
 
 const generateSitemap = () => {
   const dataPath = path.resolve(__dirname, '../src/data/locations-solar.json');
@@ -21,7 +22,7 @@ const generateSitemap = () => {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Static Pages -->
 `;
-  sitemap += url(`${BASE_URL}/`, '1.0');
+  sitemap += url(`${BASE_URL}/`);
   for (const p of [
     '/about',
     '/services/installation',
@@ -36,13 +37,13 @@ const generateSitemap = () => {
     '/privacy',
     '/terms',
   ]) {
-    sitemap += url(`${BASE_URL}${p}`, '0.8');
+    sitemap += url(`${BASE_URL}${p}`);
   }
 
   sitemap += `\n  <!-- State Hubs -->\n`;
   const states = locationsData.states;
   for (const stateData of Object.values(states)) {
-    sitemap += url(`${BASE_URL}/locations/${stateData.name.toLowerCase()}`, '0.9');
+    sitemap += url(`${BASE_URL}/locations/${stateData.name.toLowerCase()}`);
   }
 
   // Dedicated High Priority Location Pages
@@ -53,7 +54,7 @@ const generateSitemap = () => {
   ];
   sitemap += `\n  <!-- Dedicated City Pages -->\n`;
   for (const loc of dedicated) {
-    sitemap += url(loc, '0.9');
+    sitemap += url(loc);
   }
 
   // Dynamic City Pages
@@ -65,7 +66,7 @@ const generateSitemap = () => {
       if ((tierOf.get(`${stateKey}|${cityObj.slug}`)?.tier ?? 3) >= 3) continue;
       const locUrl = `${BASE_URL}/locations/${stateSlug}/${cityObj.slug}`;
       if (!dedicated.includes(locUrl)) {
-        sitemap += url(locUrl, '0.7');
+        sitemap += url(locUrl);
       }
     }
   }
