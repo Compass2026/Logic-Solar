@@ -168,7 +168,8 @@ const faqBody = (faqs) =>
 push('/', homeMeta.title, homeMeta.description,
   {
     schema: [localBusinessSchema(HQ), faqPageNode('/', homeFaqs)],
-    body: `<h1>Logic Solar — Custom-Engineered Solar Energy Systems</h1>
+    body: `<h1>Logic Solar — the Solar Energy Company for Custom-Engineered Systems</h1>
+<img src="/images/modern_suburban_home_with_solar_panels.jpg" alt="Custom-engineered rooftop solar panel installation on a suburban home by Logic Solar" width="1916" height="821" style="max-width:100%;height:auto" />
 <p>Logic Solar is a solar energy company that designs and installs residential and commercial solar systems with battery backup and premium service. We are based in ${HQ.city}, ${HQ.region}, and our teams serve homeowners and businesses across <a href="/locations/kansas">Kansas</a>, <a href="/locations/missouri">Missouri</a>, <a href="/locations/texas">Texas</a>, <a href="/locations/oklahoma">Oklahoma</a>, <a href="/locations/illinois">Illinois</a>, and <a href="/locations/colorado">Colorado</a>. Call ${HQ.phone} for a free quote.</p>
 <h2>What we do</h2>
 <p>Every project starts with your last 12 months of utility bills, not a one-size-fits-all package. We engineer <a href="/services/installation">residential solar panel installations</a> around your roof, your usage, and your utility. We add <a href="/services/battery">battery backup and energy storage</a> so your essential circuits stay powered through grid outages. We build <a href="/services/commercial">commercial solar systems</a> that lower operating costs for businesses, and we pair panels with <a href="/roofing">roofing services</a> when a roof needs work before solar goes up. Our team handles design, permits, utility interconnection, and inspections from start to finish.</p>
