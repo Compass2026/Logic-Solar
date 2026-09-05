@@ -28,6 +28,12 @@
   <url><loc>https://www.logic-solar.com/locations/missouri/kansas-city</loc><lastmod>2026-09-05</lastmod></url>
   <url><loc>https://www.logic-solar.com/locations/kansas/wichita</loc><lastmod>2026-09-05</lastmod></url>
 
+  <!-- Wichita Hub Pages -->
+  <url><loc>https://www.logic-solar.com/locations/kansas/wichita/residential</loc><lastmod>2026-09-05</lastmod></url>
+  <url><loc>https://www.logic-solar.com/locations/kansas/wichita/battery</loc><lastmod>2026-09-05</lastmod></url>
+  <url><loc>https://www.logic-solar.com/locations/kansas/wichita/commercial</loc><lastmod>2026-09-05</lastmod></url>
+  <url><loc>https://www.logic-solar.com/locations/kansas/wichita/projects</loc><lastmod>2026-09-05</lastmod></url>
+
   <!-- City Pages -->
   <url><loc>https://www.logic-solar.com/locations/texas/houston</loc><lastmod>2026-09-05</lastmod></url>
   <url><loc>https://www.logic-solar.com/locations/texas/san-antonio</loc><lastmod>2026-09-05</lastmod></url>
