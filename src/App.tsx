@@ -12,6 +12,7 @@ import { Contact } from './pages/Contact';
 import { ServiceTemplate } from './components/ServiceTemplate';
 import { StatePage } from './pages/StatePage';
 import { CityPage } from './pages/CityPage';
+import { WichitaHubPage } from './pages/WichitaHubPage';
 import { StickyMobileCTA } from './components/StickyMobileCTA';
 import { siteData } from './data/siteData';
 import { AddersPage } from './pages/AddersPage';
@@ -71,6 +72,7 @@ const MainSiteLayout = () => {
             
             {/* Dynamic Location Routes */}
             <Route path="/locations/:stateId" element={<StatePage />} />
+            <Route path="/locations/kansas/wichita/:sub" element={<WichitaHubPage />} />
             <Route path="/locations/:state/:city" element={<CityPage />} />
             
             <Route path="/financing" element={<Financing />} />

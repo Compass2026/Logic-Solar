@@ -12,6 +12,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { buildCityMeta, buildStateMeta, dedicatedCityMeta, homeMeta } from '../src/data/pageMeta.js';
 import { homeFaqs, faqClusters, buildCityFaqs } from '../src/data/faqs.js';
+import { WICHITA_HUB } from '../src/data/wichitaHub.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, '../dist');
@@ -304,6 +305,43 @@ for (const [st, state] of Object.entries(data.states)) {
             : ''),
       });
   }
+}
+
+// ── Wichita hub sub-pages ──
+// Service-specific Wichita pages sharing copy with src/pages/WichitaHubPage.tsx
+// via src/data/wichitaHub.js. Each targets one intent under the Wichita GBP's
+// service area, with the Wichita NAP location.
+const WICHITA_HUB_BASE = '/locations/kansas/wichita';
+for (const [slug, page] of Object.entries(WICHITA_HUB)) {
+  const route = `${WICHITA_HUB_BASE}/${slug}`;
+  const schema = [];
+  if (slug !== 'projects') {
+    schema.push({
+      '@type': 'Service',
+      '@id': `${BASE_URL}${route}#service`,
+      name: page.h1,
+      description: page.description,
+      provider: { '@id': ORG_ID },
+      areaServed: { '@type': 'City', name: 'Wichita', containedInPlace: { '@type': 'State', name: 'Kansas' } },
+      url: `${BASE_URL}${route}`,
+    });
+  }
+  if (page.faqs.length > 0) schema.push(faqPageNode(route, page.faqs.map((f) => ({ question: f.q, answer: f.a }))));
+
+  const body = [
+    `<h1>${esc(page.h1)}</h1>`,
+    ...page.intro.map((p) => `<p>${esc(p)}</p>`),
+    ...page.features.map((f) => `<h2>${esc(f.title)}</h2>\n<p>${esc(f.text)}</p>`),
+    ...(page.projects || []).map((p) =>
+      `<h2>${esc(p.type)} — ${esc(p.city)}</h2>\n<p>${esc(p.summary)} System size: ${esc(p.systemSize)}. ${esc(p.panels)}, ${esc(p.inverter)}, ${esc(p.battery)}. Utility: ${esc(p.utility)}. Installed ${esc(p.installationYear)}.</p>`),
+    ...(page.faqs.length ? [faqBody(page.faqs.map((f) => ({ question: f.q, answer: f.a })))] : []),
+    `<p>Explore more: <a href="${WICHITA_HUB_BASE}">our Wichita solar company overview</a>${Object.keys(WICHITA_HUB)
+      .filter((s) => s !== slug)
+      .map((s) => `, <a href="${WICHITA_HUB_BASE}/${s}">${esc(WICHITA_HUB[s].crumb)}</a>`)
+      .join('')}. Call ${esc('(316) 669-7219')} or <a href="/contact">request a free quote</a>.</p>`,
+  ].join('\n');
+
+  push(route, page.title, page.description, { crumb: page.crumb, schema, body });
 }
 
 const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.png`;
