@@ -30,6 +30,9 @@ import {
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { TrustStrip } from '../components/TrustStrip';
+// Projects and FAQ copy live in ../data/wichitaHub.js, shared with the
+// Wichita hub sub-pages and scripts/prerender.js.
+import { WICHITA_FAQS, WICHITA_PROJECTS } from '../data/wichitaHub';
 
 // Wichita Metro & South-Central Kansas Communities
 const WICHITA_METRO_COMMUNITIES = [
@@ -59,55 +62,6 @@ const SOUTH_CENTRAL_KS_COMMUNITIES = [
   { name: 'Wellington', slug: 'wellington' },
   { name: 'Winfield', slug: 'winfield' },
   { name: 'Arkansas City', slug: 'arkansas-city' }
-];
-
-// Reusable Data-Driven Structure for Verified Projects
-const WICHITA_PROJECTS = [
-  {
-    id: 'wichita-res-1',
-    city: 'Wichita, KS (East Wichita)',
-    type: 'Residential Solar & Battery Backup',
-    systemSize: '11.8 kW DC',
-    panels: '29 High-Efficiency Monocrystalline Panels',
-    inverter: 'Enphase IQ8M Microinverters',
-    battery: 'Tesla Powerwall 2 (13.5 kWh)',
-    mount: 'Rooftop Pitch Mount (Architectural Shingle)',
-    utility: 'Evergy Kansas Central',
-    installationYear: '2025',
-    summary: 'Custom-engineered rooftop array with sleek zero-conduit aesthetics, configured for automatic battery transfer during seasonal thunder and wind storms.',
-    image: '/images/hero-roof.jpg',
-    verified: true
-  },
-  {
-    id: 'wichita-res-2',
-    city: 'Andover, KS',
-    type: 'Residential Solar Array',
-    systemSize: '14.2 kW DC',
-    panels: '35 All-Black Premium Modules',
-    inverter: 'Enphase IQ8+ Microinverters',
-    battery: 'Grid-Tied Storage Ready',
-    mount: 'South & West Facing Roof Pitch',
-    utility: 'Evergy Kansas Central',
-    installationYear: '2025',
-    summary: 'Designed to offset 108% of annual electricity consumption for a growing suburban household with high summer cooling demand.',
-    image: '/images/hero-house-solar.jpg',
-    verified: true
-  },
-  {
-    id: 'wichita-ag-1',
-    city: 'Sedgwick County, KS (Rural Goddard)',
-    type: 'Agricultural Ground-Mounted Solar & Storage',
-    systemSize: '24.0 kW DC',
-    panels: '60 Commercial-Grade Monocrystalline Panels',
-    inverter: 'Ground-Mount Dual Inverter Assembly',
-    battery: 'Commercial Energy Storage Array',
-    mount: 'Fixed Ground Mount with Heavy Structural Anchoring',
-    utility: 'Sedgwick County Electric Cooperative',
-    installationYear: '2025',
-    summary: 'Heavy-duty ground-mounted solar installation powering workshop equipment and farm buildings, engineered for high wind resistance.',
-    image: '/images/groundmount-solar.jpg',
-    verified: true
-  }
 ];
 
 // Verified Local Customer Reviews Data Structure
@@ -141,78 +95,6 @@ const WICHITA_REVIEWS = [
     date: 'Fall 2025',
     rating: 5,
     text: 'The battery backup system Logic Solar installed has given our family complete peace of mind during severe weather. When storm outages hit Derby, our essential circuits stay powered seamlessly.'
-  }
-];
-
-// All 17 Visible FAQs
-const WICHITA_FAQS = [
-  {
-    q: "Is solar worth it in Wichita, Kansas?",
-    a: "Yes. Wichita receives over 220 sunny days per year on average, offering exceptional solar irradiance for rooftop and ground-mounted solar arrays. When paired with custom system engineering, Evergy Kansas Central interconnection, and protection against rising regional electric utility rates, solar panel systems provide reliable long-term energy savings and property value enhancement across south-central Kansas."
-  },
-  {
-    q: "How much do solar panels cost in Wichita?",
-    a: "Solar system costs in Wichita depend on your 12-month electrical usage, roof orientation, roof condition, shading, panel quantity, inverter selection, potential main electrical panel upgrades, and whether battery backup is included. Logic Solar avoids arbitrary averages or generic quotes, providing a custom engineering evaluation based on your property's actual utility bills and structural layout."
-  },
-  {
-    q: "Does Logic Solar install solar panels in Wichita?",
-    a: "Yes. Logic Solar designs, permits, and installs custom residential solar panels, battery backup storage, and commercial solar energy systems throughout Wichita and surrounding Sedgwick, Butler, Harvey, and Sumner County communities."
-  },
-  {
-    q: "Does Logic Solar have a Wichita office?",
-    a: "Logic Solar serves Wichita and south-central Kansas from our Kansas regional office located at 7300 W 110th St, Plaza 1, 7th Floor, Overland Park, KS 66210. Our specialized installation crews travel directly to Wichita to conduct property evaluations, engineering reviews, equipment delivery, physical installations, and ongoing workmanship service."
-  },
-  {
-    q: "Which utility serves Wichita solar customers?",
-    a: "Most properties within the city of Wichita and nearby suburbs are served by Evergy Kansas Central. Outlying rural properties and nearby communities in south-central Kansas may be served by rural electric cooperatives such as Sedgwick County Electric Cooperative or Butler Electric Cooperative, or municipal utilities."
-  },
-  {
-    q: "How does Evergy Kansas Central solar interconnection work?",
-    a: "Evergy Kansas Central requires a formal interconnection application, including detailed site plans, equipment spec sheets, single-line electrical diagrams, and municipal inspection sign-offs prior to issuing Permission to Operate (PTO) and completing meter exchanges. Logic Solar handles the complete utility filing, engineering documentation, and inspection coordination on your behalf."
-  },
-  {
-    q: "Do Wichita homeowners still receive a federal residential solar tax credit?",
-    a: "Federal and local clean energy incentive rules have changed for residential projects placed in service in 2026. While state and local utility policies vary, homeowners should consult a qualified tax professional to evaluate current tax eligibility, deductions, or utility program incentives applicable to their specific financial situation."
-  },
-  {
-    q: "Are commercial solar incentives still available?",
-    a: "Yes. Qualifying commercial, industrial, and agricultural enterprises may take advantage of federal commercial clean energy tax credits, accelerated depreciation (MACRS), and USDA REAP grants under separate commercial tax regulations. Eligibility depends on entity type, construction timing, domestic content, and project sizing. We recommend reviewing your project with a CPA or corporate tax advisor."
-  },
-  {
-    q: "Will solar panels work during a power outage?",
-    a: "Standard grid-tied solar systems shut down automatically during grid outages to protect utility line technicians. However, when your system is paired with a battery backup storage system (such as Tesla Powerwall or Enphase IQ Battery), your system automatically isolates from the grid during blackouts, powering your critical household circuits."
-  },
-  {
-    q: "Do I need a battery with my solar system?",
-    a: "A battery storage system is optional but strongly recommended for Wichita property owners seeking resilience against severe weather blackouts. Systems can be installed as solar-only or custom-engineered as battery-ready for future storage additions."
-  },
-  {
-    q: "Can solar panels handle Wichita hail and severe weather?",
-    a: "Quality solar modules installed by Logic Solar are tested and certified to recognized industry impact standards, including tempered glass rated for heavy wind loads and hail impact. While no rooftop product is immune to extreme tornado-force storms, Logic Solar uses structural racking and high-grade attachment hardware designed specifically for Kansas wind and weather exposure."
-  },
-  {
-    q: "Can Logic Solar install ground-mounted solar?",
-    a: "Yes. Ground-mounted solar arrays are ideal for Wichita-area rural properties, farms, acreage, or homes with heavy roof shading or architectural limitations. Ground mounts allow optimal tilt angles and panel orientation for maximum solar collection."
-  },
-  {
-    q: "Can Logic Solar install solar for Wichita businesses?",
-    a: "Yes. We engineer commercial solar systems for manufacturing facilities, aviation suppliers, warehouses, distribution centers, retail properties, office buildings, churches, and agricultural operations across south-central Kansas."
-  },
-  {
-    q: "Can solar be installed on a farm or rural property?",
-    a: "Yes. Rural residential, farm, and agricultural properties in Sedgwick and surrounding counties benefit significantly from custom ground-mounts, three-phase electrical integrations, and energy storage designed for heavy equipment loads."
-  },
-  {
-    q: "What happens if my roof needs replacement?",
-    a: "Logic Solar offers professional solar panel removal and reinstallation (detach and reset) services. If your roof experiences storm damage or reaches the end of its lifespan, our technicians safely unmount the panels, store them during re-roofing, and reinstall the array once roofing work is completed."
-  },
-  {
-    q: "How long does the complete solar process take?",
-    a: "While physical rooftop installation typically takes only 1 to 3 days, the complete process—including site analysis, custom structural & electrical engineering, municipal permitting, HOA reviews, Evergy interconnection approval, and final meter activation—generally spans 4 to 8 weeks."
-  },
-  {
-    q: "How do I request a Wichita solar estimate?",
-    a: "Getting started is straightforward. Request a custom estimate through our online form or call our Kansas team at (816) 300-5781. We will review your property address, analyze your average electric bill, and prepare a custom engineering proposal with zero sales pressure."
   }
 ];
 
@@ -601,7 +483,7 @@ export const WichitaKSPage: React.FC = () => {
                 </p>
               </div>
               <Link 
-                to="/services/installation" 
+                to="/locations/kansas/wichita/residential"
                 className="inline-flex items-center gap-2 text-brand-gold font-bold text-sm hover:underline"
               >
                 <span>Learn about residential solar</span>
@@ -621,7 +503,7 @@ export const WichitaKSPage: React.FC = () => {
                 </p>
               </div>
               <Link 
-                to="/services/commercial" 
+                to="/locations/kansas/wichita/commercial"
                 className="inline-flex items-center gap-2 text-brand-gold font-bold text-sm hover:underline"
               >
                 <span>Learn about commercial solar</span>
@@ -641,7 +523,7 @@ export const WichitaKSPage: React.FC = () => {
                 </p>
               </div>
               <Link 
-                to="/services/battery" 
+                to="/locations/kansas/wichita/battery"
                 className="inline-flex items-center gap-2 text-brand-gold font-bold text-sm hover:underline"
               >
                 <span>Explore battery backup options</span>
@@ -1024,7 +906,8 @@ export const WichitaKSPage: React.FC = () => {
               Recent Wichita-Area Solar Projects
             </h2>
             <p className="text-slate-600 text-lg">
-              Explore custom residential, commercial, and agricultural solar arrays engineered across south-central Kansas.
+              Explore custom residential, commercial, and agricultural solar arrays engineered across south-central Kansas.{' '}
+              <Link to="/locations/kansas/wichita/projects" className="text-brand-gold font-bold hover:underline">View all Wichita projects</Link>.
             </p>
           </div>
 

@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { WICHITA_HUB } from '../src/data/wichitaHub.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -55,6 +56,12 @@ const generateSitemap = () => {
   sitemap += `\n  <!-- Dedicated City Pages -->\n`;
   for (const loc of dedicated) {
     sitemap += url(loc);
+  }
+
+  // Wichita hub sub-pages (service-specific local pages)
+  sitemap += `\n  <!-- Wichita Hub Pages -->\n`;
+  for (const slug of Object.keys(WICHITA_HUB)) {
+    sitemap += url(`${BASE_URL}/locations/kansas/wichita/${slug}`);
   }
 
   // Dynamic City Pages
