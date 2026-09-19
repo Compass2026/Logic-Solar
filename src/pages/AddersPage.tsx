@@ -420,8 +420,6 @@ const categories = [
       { name: 'Company Generated Lead', price: '$0.40/watt' },
       { name: 'SREC Project Filing', price: '$1,000' },
       { name: 'REAP Grant Application', price: '$750', note: 'Upfront — subtracted once approved' },
-      { name: 'Midas Wealth: Full Transfer', price: '$3,000' },
-      { name: 'My Incentives', price: '$4,000' },
       { name: 'Credit Repair', price: '$200' },
       { name: 'FEOC Content Package', price: '$0.10/watt' },
       { name: 'Domestic Content Package', price: '$0.30/watt' },
