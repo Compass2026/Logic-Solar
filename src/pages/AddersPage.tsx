@@ -299,6 +299,24 @@ const EQUIPMENT_STACKS: EquipmentStackCategory[] = [
     description: 'Foreign Entity of Concern compliant supply chain stack',
     items: [
       {
+        id: 'mse435_feoc',
+        type: 'Modules',
+        model: 'MSE PERC 72 435',
+        fullTitle: 'Mission Solar MSE PERC 72 (MSE435SX9Z) 435W',
+        manufacturer: 'Mission Solar Energy',
+        specSheetName: 'MSE PERC 72 425-435W Datasheet',
+        specSheetUrl: '/specs/mission-solar-mse-perc-72-435w.pdf',
+        badge: 'Made in USA',
+        specsSummary: {
+          powerOutput: '425 - 435 Watt (STC), -0/+3% Tolerance',
+          efficiency: '19.8% Module Efficiency (435W)',
+          warranty: '30-Yr Linear (0.58% annual Yr 2-30), 84.08% @ Yr 25',
+          technology: '72-Cell PERC Monocrystalline, 9 Busbar — San Antonio, TX',
+          dimensions: '2086 × 1054 × 40 mm (23.4 kg)',
+          certifications: 'UL 61730, IEC 61215/61730/61701, BAA Compliant',
+        },
+      },
+      {
         id: 'iq8mc_feoc',
         type: 'Inverters',
         model: 'IQ8MC',
