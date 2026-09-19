@@ -27,7 +27,7 @@ const adderStyles = `
 
   .eq-stack-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     margin-top: 16px;
   }
@@ -77,6 +77,11 @@ const adderStyles = `
   .eq-badge.domestic {
     background: #fef3c7;
     color: #92400e;
+  }
+
+  .eq-badge.suncheck {
+    background: #dcfce7;
+    color: #166534;
   }
 
   .eq-item {
@@ -218,7 +223,7 @@ const adderStyles = `
 
 interface EquipmentSpec {
   id: string;
-  type: 'Modules' | 'Inverters';
+  type: 'Modules' | 'Inverters' | 'Storage';
   model: string;
   fullTitle: string;
   manufacturer: string;
@@ -299,6 +304,24 @@ const EQUIPMENT_STACKS: EquipmentStackCategory[] = [
     description: 'Foreign Entity of Concern compliant supply chain stack',
     items: [
       {
+        id: 'mse435_feoc',
+        type: 'Modules',
+        model: 'MSE PERC 72 435',
+        fullTitle: 'Mission Solar MSE PERC 72 (MSE435SX9Z) 435W',
+        manufacturer: 'Mission Solar Energy',
+        specSheetName: 'MSE PERC 72 425-435W Datasheet',
+        specSheetUrl: '/specs/mission-solar-mse-perc-72-435w.pdf',
+        badge: 'Made in USA',
+        specsSummary: {
+          powerOutput: '425 - 435 Watt (STC), -0/+3% Tolerance',
+          efficiency: '19.8% Module Efficiency (435W)',
+          warranty: '30-Yr Linear (0.58% annual Yr 2-30), 84.08% @ Yr 25',
+          technology: '72-Cell PERC Monocrystalline, 9 Busbar — San Antonio, TX',
+          dimensions: '2086 × 1054 × 40 mm (23.4 kg)',
+          certifications: 'UL 61730, IEC 61215/61730/61701, BAA Compliant',
+        },
+      },
+      {
         id: 'iq8mc_feoc',
         type: 'Inverters',
         model: 'IQ8MC',
@@ -363,6 +386,51 @@ const EQUIPMENT_STACKS: EquipmentStackCategory[] = [
       },
     ],
   },
+  {
+    id: 'suncheck',
+    name: 'Suncheck Equipment',
+    badge: 'SUNCHECK',
+    badgeClass: 'eq-badge suncheck',
+    description: 'Suncheck program equipment stack',
+    items: [
+      {
+        id: 'astro455_suncheck',
+        type: 'Modules',
+        model: 'ASTRO N7s 455',
+        fullTitle: 'Astronergy ASTRO N7s CHSM48RN(DG)(BLH)/F-BH 455W Bifacial',
+        manufacturer: 'Astronergy',
+        specSheetName: 'ASTRO N7s Bifacial Series 440-455W Datasheet',
+        specSheetUrl: '/specs/astronergy-astro-n7s-455w.pdf',
+        badge: 'n-TOPCon All-Black',
+        specsSummary: {
+          powerOutput: '440 - 455 Watt (STC), 0/+3% Power Sorting',
+          efficiency: '22.8% Max Module Efficiency',
+          warranty: '25-Yr Product / 30-Yr Linear (≤1.0% Yr 1, ≤0.4% Yr 2-30)',
+          technology: 'n-type TOPCon 4.0 Zero-Busbar Bifacial Dual Glass, All-Black',
+          dimensions: '1762 × 1134 × 30 mm (24.5 kg)',
+          certifications: 'BloombergNEF Tier 1, 6000 Pa Front / 4000 Pa Back Load',
+        },
+      },
+      {
+        id: 'powerq_suncheck',
+        type: 'Storage',
+        model: 'PowerQ AIO',
+        fullTitle: 'Fox ESS PowerQ All-In-One Residential Energy Storage System',
+        manufacturer: 'Fox ESS',
+        specSheetName: 'US PowerQ AIO Datasheet V1.5',
+        specSheetUrl: '/specs/fox-ess-powerq-aio.pdf',
+        badge: 'Up to 80kWh',
+        specsSummary: {
+          powerOutput: '3.8 - 11.4 kW Rated Output, up to 80 kWh Backup Capacity',
+          efficiency: '97.0% CEC / 97.6% Max Efficiency',
+          warranty: '12.5-Year Warranty',
+          technology: 'Modular All-In-One Hybrid ESS, LFP (LiFePO4), NEMA Type 4X Outdoor',
+          voltage: '120 / 240 VAC Split-Phase Backup',
+          certifications: 'UL 9540, UL 1741 SA/SB, IEEE 1547-2018, Rule 21',
+        },
+      },
+    ],
+  },
 ];
 
 /* ─────────────────────────────────────────────
@@ -394,6 +462,12 @@ const categories = [
       { name: 'Enphase Encharge IQ 10', price: '$13,500', note: '+$1,500 if battery only' },
       { name: 'Enphase Encharge IQ 5', price: '$9,000', note: '+$1,500 if battery only' },
       { name: 'Franklin aPower 2 Battery', price: '$14,500', note: '+$1,500 if battery only' },
+      { name: 'Fox ESS 8KW', price: '$9,000' },
+      { name: 'Fox ESS 12KW', price: '$11,000' },
+      { name: 'Fox ESS 16KW', price: '$13,000' },
+      { name: 'Fox ESS 20KW', price: '$15,000' },
+      { name: 'Fox ESS 24KW', price: '$17,000' },
+      { name: 'Fox ESS 28KW', price: '$19,000' },
       { name: 'Generac 24KW Generator', price: '$14,500', note: 'Excludes gas line & hookup' },
     ],
   },
@@ -420,8 +494,6 @@ const categories = [
       { name: 'Company Generated Lead', price: '$0.40/watt' },
       { name: 'SREC Project Filing', price: '$1,000' },
       { name: 'REAP Grant Application', price: '$750', note: 'Upfront — subtracted once approved' },
-      { name: 'Midas Wealth: Full Transfer', price: '$3,000' },
-      { name: 'My Incentives', price: '$4,000' },
       { name: 'Credit Repair', price: '$200' },
       { name: 'FEOC Content Package', price: '$0.10/watt' },
       { name: 'Domestic Content Package', price: '$0.30/watt' },
@@ -490,7 +562,7 @@ export const AddersPage = () => {
           </div>
         </div>
 
-        {/* 3 Subcategory Cards Grid */}
+        {/* Equipment stack cards */}
         <div className="eq-stack-grid">
           {EQUIPMENT_STACKS.map((stack) => (
             <div key={stack.id} className="eq-card">
@@ -508,6 +580,8 @@ export const AddersPage = () => {
                       <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginBottom: 2 }}>
                         {spec.type === 'Modules' ? (
                           <Sun size={12} style={{ color: '#d97706' }} />
+                        ) : spec.type === 'Storage' ? (
+                          <Battery size={12} style={{ color: '#16a34a' }} />
                         ) : (
                           <Cpu size={12} style={{ color: '#2563eb' }} />
                         )}
