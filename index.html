@@ -20,6 +20,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Production website analytics. Preview hosts are excluded. -->
+    <script>
+(function () {
+  if (!["logic-solar.com","www.logic-solar.com"].includes(window.location.hostname)) return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-00M21YF8KM');
+  var script = document.createElement('script');
+  script.async = true;
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-00M21YF8KM';
+  document.head.appendChild(script);
+})();
+    </script>
   </head>
   <body>
     <div id="root"></div>
