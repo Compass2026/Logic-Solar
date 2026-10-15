@@ -1,0 +1,530 @@
+[
+ {
+  "term": "solar panel installation near me",
+  "coord": "38.9310762,-94.6707302,13z",
+  "pos": 3,
+  "n": 17,
+  "top": [
+   {
+    "rank": 1,
+    "title": "KC Solar",
+    "category": "Solar energy company",
+    "reviews": 14,
+    "rating": 4.7,
+    "cid": "16327291125640201317"
+   },
+   {
+    "rank": 2,
+    "title": "Blue Raven Solar",
+    "category": "Solar energy company",
+    "reviews": 222,
+    "rating": 3.8,
+    "cid": "10573669920595306926"
+   },
+   {
+    "rank": 3,
+    "title": "Logic Solar",
+    "category": "Solar energy company",
+    "reviews": 95,
+    "rating": 4.9,
+    "cid": "2667316398874659401"
+   },
+   {
+    "rank": 4,
+    "title": "Overland Park Solar Installer And Solar Power Company, Kansas Roofer",
+    "category": "Solar energy company",
+    "reviews": null,
+    "rating": null,
+    "cid": "487603584193921886"
+   },
+   {
+    "rank": 5,
+    "title": "Next Level Energy",
+    "category": "Solar energy company",
+    "reviews": 6,
+    "rating": 5,
+    "cid": "12346823444129752073"
+   }
+  ]
+ },
+ {
+  "term": "solar installer near me",
+  "coord": "38.9310762,-94.6707302,13z",
+  "pos": 3,
+  "n": 30,
+  "top": [
+   {
+    "rank": 1,
+    "title": "KC Solar",
+    "category": "Solar energy company",
+    "reviews": 14,
+    "rating": 4.7,
+    "cid": "16327291125640201317"
+   },
+   {
+    "rank": 2,
+    "title": "Blue Raven Solar",
+    "category": "Solar energy company",
+    "reviews": 222,
+    "rating": 3.8,
+    "cid": "10573669920595306926"
+   },
+   {
+    "rank": 3,
+    "title": "Logic Solar",
+    "category": "Solar energy company",
+    "reviews": 95,
+    "rating": 4.9,
+    "cid": "2667316398874659401"
+   },
+   {
+    "rank": 4,
+    "title": "Overland Park Solar Installer And Solar Power Company, Kansas Roofer",
+    "category": "Solar energy company",
+    "reviews": null,
+    "rating": null,
+    "cid": "487603584193921886"
+   },
+   {
+    "rank": 5,
+    "title": "Next Level Energy",
+    "category": "Solar energy company",
+    "reviews": 6,
+    "rating": 5,
+    "cid": "12346823444129752073"
+   }
+  ]
+ },
+ {
+  "term": "solar company near me",
+  "coord": "38.9310762,-94.6707302,13z",
+  "pos": 3,
+  "n": 59,
+  "top": [
+   {
+    "rank": 1,
+    "title": "KC Solar",
+    "category": "Solar energy company",
+    "reviews": 14,
+    "rating": 4.7,
+    "cid": "16327291125640201317"
+   },
+   {
+    "rank": 2,
+    "title": "Blue Raven Solar",
+    "category": "Solar energy company",
+    "reviews": 222,
+    "rating": 3.8,
+    "cid": "10573669920595306926"
+   },
+   {
+    "rank": 3,
+    "title": "Logic Solar",
+    "category": "Solar energy company",
+    "reviews": 95,
+    "rating": 4.9,
+    "cid": "2667316398874659401"
+   },
+   {
+    "rank": 4,
+    "title": "Overland Park Solar Installer And Solar Power Company, Kansas Roofer",
+    "category": "Solar energy company",
+    "reviews": null,
+    "rating": null,
+    "cid": "487603584193921886"
+   },
+   {
+    "rank": 5,
+    "title": "Next Level Energy",
+    "category": "Solar energy company",
+    "reviews": 6,
+    "rating": 5,
+    "cid": "12346823444129752073"
+   }
+  ]
+ },
+ {
+  "term": "solar panels near me",
+  "coord": "38.9310762,-94.6707302,13z",
+  "pos": 3,
+  "n": 20,
+  "top": [
+   {
+    "rank": 1,
+    "title": "KC Solar",
+    "category": "Solar energy company",
+    "reviews": 14,
+    "rating": 4.7,
+    "cid": "16327291125640201317"
+   },
+   {
+    "rank": 2,
+    "title": "Blue Raven Solar",
+    "category": "Solar energy company",
+    "reviews": 222,
+    "rating": 3.8,
+    "cid": "10573669920595306926"
+   },
+   {
+    "rank": 3,
+    "title": "Logic Solar",
+    "category": "Solar energy company",
+    "reviews": 95,
+    "rating": 4.9,
+    "cid": "2667316398874659401"
+   },
+   {
+    "rank": 4,
+    "title": "Next Level Energy",
+    "category": "Solar energy company",
+    "reviews": 6,
+    "rating": 5,
+    "cid": "12346823444129752073"
+   },
+   {
+    "rank": 5,
+    "title": "Overland Park Solar Installer And Solar Power Company, Kansas Roofer",
+    "category": "Solar energy company",
+    "reviews": null,
+    "rating": null,
+    "cid": "487603584193921886"
+   }
+  ]
+ },
+ {
+  "term": "home battery backup near me",
+  "coord": "38.9310762,-94.6707302,13z",
+  "pos": null,
+  "n": 68,
+  "top": [
+   {
+    "rank": 1,
+    "title": "Batteries Plus",
+    "category": "Car battery store",
+    "reviews": 264,
+    "rating": 4.5,
+    "cid": "4524551017350385294"
+   },
+   {
+    "rank": 2,
+    "title": "Battery Outfitters",
+    "category": "Car battery store",
+    "reviews": 47,
+    "rating": 4.9,
+    "cid": "892026718775072846"
+   },
+   {
+    "rank": 3,
+    "title": "Best Buy",
+    "category": "Computer store",
+    "reviews": 3462,
+    "rating": 4,
+    "cid": "1347457031624297087"
+   },
+   {
+    "rank": 4,
+    "title": "Micro Center",
+    "category": "Data recovery service",
+    "reviews": 8356,
+    "rating": 4.5,
+    "cid": "13769178705997840200"
+   },
+   {
+    "rank": 5,
+    "title": "The Home Depot",
+    "category": "Home improvement store",
+    "reviews": 1660,
+    "rating": 4.3,
+    "cid": "6310115632561602281"
+   }
+  ]
+ },
+ {
+  "term": "tesla powerwall installer near me",
+  "coord": "38.9310762,-94.6707302,13z",
+  "pos": null,
+  "n": 12,
+  "top": [
+   {
+    "rank": 1,
+    "title": "LBA Air Conditioning, Heating & Plumbing",
+    "category": null,
+    "reviews": 3301,
+    "rating": 4.7,
+    "cid": null
+   },
+   {
+    "rank": 1,
+    "title": "EV BLU Charging Solutions | Certified EV Charger Installer",
+    "category": "Electrician",
+    "reviews": 4,
+    "rating": 5,
+    "cid": "7535106805841490940"
+   },
+   {
+    "rank": 2,
+    "title": "Tesla Supercharger",
+    "category": "Electric vehicle charging station",
+    "reviews": 72,
+    "rating": 4.6,
+    "cid": "279284779196966216"
+   },
+   {
+    "rank": 3,
+    "title": "Tesla Kansas City",
+    "category": "Tesla showroom",
+    "reviews": 473,
+    "rating": 3.7,
+    "cid": "16772175176868446803"
+   },
+   {
+    "rank": 4,
+    "title": "Tesla Service Kansas City",
+    "category": "Auto repair shop",
+    "reviews": 99,
+    "rating": 4.1,
+    "cid": "5727625408188295739"
+   }
+  ]
+ },
+ {
+  "term": "commercial solar near me",
+  "coord": "38.9310762,-94.6707302,13z",
+  "pos": 1,
+  "n": 20,
+  "top": [
+   {
+    "rank": 1,
+    "title": "Logic Solar",
+    "category": "Solar energy company",
+    "reviews": 95,
+    "rating": 4.9,
+    "cid": "2667316398874659401"
+   },
+   {
+    "rank": 2,
+    "title": "KC Solar",
+    "category": "Solar energy company",
+    "reviews": 14,
+    "rating": 4.7,
+    "cid": "16327291125640201317"
+   },
+   {
+    "rank": 3,
+    "title": "Blue Raven Solar",
+    "category": "Solar energy company",
+    "reviews": 222,
+    "rating": 3.8,
+    "cid": "10573669920595306926"
+   },
+   {
+    "rank": 4,
+    "title": "Next Level Energy",
+    "category": "Solar energy company",
+    "reviews": 6,
+    "rating": 5,
+    "cid": "12346823444129752073"
+   },
+   {
+    "rank": 5,
+    "title": "Overland Park Solar Installer And Solar Power Company, Kansas Roofer",
+    "category": "Solar energy company",
+    "reviews": null,
+    "rating": null,
+    "cid": "487603584193921886"
+   }
+  ]
+ },
+ {
+  "term": "solar energy company near me",
+  "coord": "38.9310762,-94.6707302,13z",
+  "pos": 1,
+  "n": 36,
+  "top": [
+   {
+    "rank": 1,
+    "title": "Logic Solar",
+    "category": "Solar energy company",
+    "reviews": 95,
+    "rating": 4.9,
+    "cid": "2667316398874659401"
+   },
+   {
+    "rank": 2,
+    "title": "Blue Raven Solar",
+    "category": "Solar energy company",
+    "reviews": 222,
+    "rating": 3.8,
+    "cid": "10573669920595306926"
+   },
+   {
+    "rank": 3,
+    "title": "KC Solar",
+    "category": "Solar energy company",
+    "reviews": 14,
+    "rating": 4.7,
+    "cid": "16327291125640201317"
+   },
+   {
+    "rank": 4,
+    "title": "Next Level Energy",
+    "category": "Solar energy company",
+    "reviews": 6,
+    "rating": 5,
+    "cid": "12346823444129752073"
+   },
+   {
+    "rank": 5,
+    "title": "Overland Park Solar Installer And Solar Power Company, Kansas Roofer",
+    "category": "Solar energy company",
+    "reviews": null,
+    "rating": null,
+    "cid": "487603584193921886"
+   }
+  ]
+ },
+ {
+  "term": "solar battery installer near me",
+  "coord": "38.9310762,-94.6707302,13z",
+  "pos": 3,
+  "n": 15,
+  "top": [
+   {
+    "rank": 1,
+    "title": "Blue Raven Solar",
+    "category": "Solar energy equipment supplier",
+    "reviews": 222,
+    "rating": 3.8,
+    "cid": "10573669920595306926"
+   },
+   {
+    "rank": 2,
+    "title": "KC Solar",
+    "category": "Solar energy company",
+    "reviews": 14,
+    "rating": 4.7,
+    "cid": "16327291125640201317"
+   },
+   {
+    "rank": 3,
+    "title": "Logic Solar",
+    "category": "Solar energy company",
+    "reviews": 95,
+    "rating": 4.9,
+    "cid": "2667316398874659401"
+   },
+   {
+    "rank": 4,
+    "title": "Overland Park Solar Installer And Solar Power Company, Kansas Roofer",
+    "category": "Solar energy equipment supplier",
+    "reviews": null,
+    "rating": null,
+    "cid": "487603584193921886"
+   },
+   {
+    "rank": 5,
+    "title": "Next Level Energy",
+    "category": "Solar energy company",
+    "reviews": 6,
+    "rating": 5,
+    "cid": "12346823444129752073"
+   }
+  ]
+ },
+ {
+  "term": "solar battery backup near me",
+  "coord": "38.9310762,-94.6707302,13z",
+  "pos": 1,
+  "n": 14,
+  "top": [
+   {
+    "rank": 1,
+    "title": "Logic Solar",
+    "category": "Solar energy company",
+    "reviews": 95,
+    "rating": 4.9,
+    "cid": "2667316398874659401"
+   },
+   {
+    "rank": 2,
+    "title": "KC Solar",
+    "category": "Solar energy company",
+    "reviews": 14,
+    "rating": 4.7,
+    "cid": "16327291125640201317"
+   },
+   {
+    "rank": 3,
+    "title": "Blue Raven Solar",
+    "category": "Solar energy equipment supplier",
+    "reviews": 222,
+    "rating": 3.8,
+    "cid": "10573669920595306926"
+   },
+   {
+    "rank": 4,
+    "title": "Next Level Energy",
+    "category": "Solar energy company",
+    "reviews": 6,
+    "rating": 5,
+    "cid": "12346823444129752073"
+   },
+   {
+    "rank": 5,
+    "title": "Overland Park Solar Installer And Solar Power Company, Kansas Roofer",
+    "category": "Solar energy equipment supplier",
+    "reviews": null,
+    "rating": null,
+    "cid": "487603584193921886"
+   }
+  ]
+ },
+ {
+  "term": "residential solar near me",
+  "coord": "38.9310762,-94.6707302,13z",
+  "pos": 3,
+  "n": 18,
+  "top": [
+   {
+    "rank": 1,
+    "title": "KC Solar",
+    "category": "Solar energy company",
+    "reviews": 14,
+    "rating": 4.7,
+    "cid": "16327291125640201317"
+   },
+   {
+    "rank": 2,
+    "title": "Blue Raven Solar",
+    "category": "Solar energy company",
+    "reviews": 222,
+    "rating": 3.8,
+    "cid": "10573669920595306926"
+   },
+   {
+    "rank": 3,
+    "title": "Logic Solar",
+    "category": "Solar energy company",
+    "reviews": 95,
+    "rating": 4.9,
+    "cid": "2667316398874659401"
+   },
+   {
+    "rank": 4,
+    "title": "Next Level Energy",
+    "category": "Solar energy company",
+    "reviews": 6,
+    "rating": 5,
+    "cid": "12346823444129752073"
+   },
+   {
+    "rank": 5,
+    "title": "Overland Park Solar Installer And Solar Power Company, Kansas Roofer",
+    "category": "Solar energy company",
+    "reviews": null,
+    "rating": null,
+    "cid": "487603584193921886"
+   }
+  ]
+ }
+]

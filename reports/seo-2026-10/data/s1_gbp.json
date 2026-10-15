@@ -1,0 +1,202 @@
+{
+ "version": "0.1.20260917",
+ "status_code": 20000,
+ "status_message": "Ok.",
+ "time": "12.0784 sec.",
+ "cost": 0.0054,
+ "tasks_count": 1,
+ "tasks_error": 0,
+ "tasks": [
+  {
+   "id": "10151841-2445-0572-0000-7e3853a77ae1",
+   "status_code": 20000,
+   "status_message": "Ok.",
+   "time": "12.0435 sec.",
+   "cost": 0.0054,
+   "result_count": 1,
+   "path": [
+    "v3",
+    "business_data",
+    "google",
+    "my_business_info",
+    "live"
+   ],
+   "data": {
+    "api": "business_data",
+    "function": "my_business_info",
+    "se": "google",
+    "keyword": "Logic Solar",
+    "location_coordinate": "38.9310762,-94.6707302,13z",
+    "language_code": "en",
+    "se_type": "my_business_info",
+    "device": "desktop",
+    "os": "windows"
+   },
+   "result": [
+    {
+     "keyword": "Logic Solar",
+     "se_domain": "google.com",
+     "location_code": 2840,
+     "language_code": "en",
+     "check_url": "https://www.google.com/maps?cid=2667316398874659401&hl=en&gl=US",
+     "datetime": "2026-10-15 18:41:22 +00:00",
+     "item_types": [
+      "google_business_info"
+     ],
+     "items_count": 1,
+     "items": [
+      {
+       "type": "google_business_info",
+       "rank_group": 1,
+       "rank_absolute": 1,
+       "position": "left",
+       "title": "Logic Solar",
+       "original_title": null,
+       "description": "Looking for reliable solar energy solutions? Logic Solar provides expert solar panel installation for residential and commercial properties. We help homeowners and businesses save money on electricity, reduce dependence on the utility grid, and take advantage of state and federal solar incentives. Whether you're interested in rooftop solar, ground-mounted systems, battery storage, or full-service solar consulting, our team delivers custom solutions built to last. Proudly serving Kansas, Missouri and Illinois with affordable, high-efficiency solar systems designed for long-term savings and sustainability. Get your free solar quote today!",
+       "category": "Solar energy company",
+       "category_ids": null,
+       "additional_categories": null,
+       "cid": "2667316398874659401",
+       "feature_id": "0x716bc5b5aee662d:0x25043621fa7f8a49",
+       "address": "7300 W 110th St Plaza 1, 7th Floor, Overland Park, KS 66210",
+       "address_info": {
+        "borough": "Executive Hills",
+        "address": "7300 W 110th St Plaza 1, 7th Floor",
+        "city": "Overland Park",
+        "zip": "66210",
+        "region": "Kansas",
+        "country_code": "US"
+       },
+       "place_id": "ChIJLWbuWlu8FgcRSYp_-iE2BCU",
+       "phone": "+1816-300-5781",
+       "url": "https://www.logic-solar.com/locations/missouri/kansas-city",
+       "contact_url": "https://link.logic-solar.com/widget/booking/T9pvh8WNMZWszG1aTk96",
+       "contributor_url": "https://maps.google.com/maps/contrib/108075256478048317728",
+       "book_online_url": null,
+       "domain": "www.logic-solar.com",
+       "logo": "https://lh3.googleusercontent.com/-7BFDNH8yq2k/AAAAAAAAAAI/AAAAAAAAAAA/oPMwwMKPTlo/s44-p-k-no-ns-nd/photo.jpg",
+       "main_image": "https://lh3.googleusercontent.com/grass-cs/AABkmLdf8vLtqEWnvY0QGvpf60qEvvS-elBTbJJAnWTiFHXmmAXm2i6JU5OgpAOs2YFmruxlEF4awUwSNJGybDHN67XjTlxhW5sxM82d9j8JDb5WpilmleYTykS0Y59tetGtCTbwqnunzh3o0cO4=w408-h536-k-no",
+       "total_photos": 50,
+       "snippet": "7300 W 110th St Plaza 1, 7th Floor, Overland Park, KS 66210",
+       "latitude": 38.9310762,
+       "longitude": -94.6707302,
+       "is_claimed": true,
+       "questions_and_answers_count": null,
+       "attributes": {
+        "available_attributes": {
+         "accessibility": [
+          "has_wheelchair_accessible_entrance",
+          "has_wheelchair_accessible_parking"
+         ]
+        },
+        "unavailable_attributes": null
+       },
+       "place_topics": {
+        "knowledgeable team": 12,
+        "smooth solar process": 2,
+        "responsive team": 4,
+        "quick installation": 3,
+        "clear explanations": 8,
+        "explaining system": 2,
+        "helpful information": 4,
+        "installers": 3,
+        "responsiveness": 5,
+        "caring staff": 2
+       },
+       "rating": {
+        "rating_type": "Max5",
+        "value": 4.9,
+        "votes_count": 95,
+        "rating_max": null
+       },
+       "hotel_rating": null,
+       "price_level": null,
+       "rating_distribution": {
+        "1": 1,
+        "2": 0,
+        "3": 0,
+        "4": 1,
+        "5": 93
+       },
+       "people_also_search": null,
+       "work_time": {
+        "work_hours": {
+         "timetable": {
+          "sunday": null,
+          "monday": [
+           {
+            "open": {
+             "hour": 9,
+             "minute": 0
+            },
+            "close": {
+             "hour": 17,
+             "minute": 0
+            }
+           }
+          ],
+          "tuesday": [
+           {
+            "open": {
+             "hour": 9,
+             "minute": 0
+            },
+            "close": {
+             "hour": 17,
+             "minute": 0
+            }
+           }
+          ],
+          "wednesday": [
+           {
+            "open": {
+             "hour": 9,
+             "minute": 0
+            },
+            "close": {
+             "hour": 17,
+             "minute": 0
+            }
+           }
+          ],
+          "thursday": [
+           {
+            "open": {
+             "hour": 9,
+             "minute": 0
+            },
+            "close": {
+             "hour": 17,
+             "minute": 0
+            }
+           }
+          ],
+          "friday": [
+           {
+            "open": {
+             "hour": 9,
+             "minute": 0
+            },
+            "close": {
+             "hour": 17,
+             "minute": 0
+            }
+           }
+          ],
+          "saturday": null
+         },
+         "current_status": "open"
+        }
+       },
+       "popular_times": null,
+       "local_business_links": null,
+       "is_directory_item": false,
+       "directory": null,
+       "services": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

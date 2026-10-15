@@ -1,0 +1,211 @@
+[
+ {
+  "place": "Business pin",
+  "km": 0.0,
+  "pos": {
+   "solar company near me": 3,
+   "solar panel installation near me": 3,
+   "solar battery backup near me": 1
+  },
+  "top1": {
+   "solar company near me": "KC Solar",
+   "solar panel installation near me": "KC Solar",
+   "solar battery backup near me": "Logic Solar"
+  },
+  "n": {
+   "solar company near me": 59,
+   "solar panel installation near me": 17,
+   "solar battery backup near me": 14
+  }
+ },
+ {
+  "place": "5 km south of pin",
+  "km": 5.0,
+  "pos": {
+   "solar company near me": 4,
+   "solar panel installation near me": 3,
+   "solar battery backup near me": 2
+  },
+  "top1": {
+   "solar company near me": "KC Solar",
+   "solar panel installation near me": "KC Solar",
+   "solar battery backup near me": "KC Solar"
+  },
+  "n": {
+   "solar company near me": 51,
+   "solar panel installation near me": 13,
+   "solar battery backup near me": 13
+  }
+ },
+ {
+  "place": "Overland Park centre",
+  "km": 5.7,
+  "pos": {
+   "solar company near me": 3,
+   "solar panel installation near me": 3,
+   "solar battery backup near me": 3
+  },
+  "top1": {
+   "solar company near me": "Blue Raven Solar",
+   "solar panel installation near me": "KC Solar",
+   "solar battery backup near me": "KC Solar"
+  },
+  "n": {
+   "solar company near me": 56,
+   "solar panel installation near me": 28,
+   "solar battery backup near me": 14
+  }
+ },
+ {
+  "place": "Leawood",
+  "km": 6.1,
+  "pos": {
+   "solar company near me": 4,
+   "solar panel installation near me": 4,
+   "solar battery backup near me": 4
+  },
+  "top1": {
+   "solar company near me": "Blue Raven Solar",
+   "solar panel installation near me": "KC Solar",
+   "solar battery backup near me": "816SolarPro"
+  },
+  "n": {
+   "solar company near me": 42,
+   "solar panel installation near me": 20,
+   "solar battery backup near me": 16
+  }
+ },
+ {
+  "place": "Lenexa",
+  "km": 6.0,
+  "pos": {
+   "solar company near me": 4,
+   "solar panel installation near me": 4,
+   "solar battery backup near me": 4
+  },
+  "top1": {
+   "solar company near me": "KC Solar",
+   "solar panel installation near me": "KC Solar",
+   "solar battery backup near me": "KC Solar"
+  },
+  "n": {
+   "solar company near me": 72,
+   "solar panel installation near me": 22,
+   "solar battery backup near me": 19
+  }
+ },
+ {
+  "place": "Olathe",
+  "km": 14.0,
+  "pos": {
+   "solar company near me": 3,
+   "solar panel installation near me": 3,
+   "solar battery backup near me": 6
+  },
+  "top1": {
+   "solar company near me": "KC Solar",
+   "solar panel installation near me": "KC Solar",
+   "solar battery backup near me": "Batteries Plus"
+  },
+  "n": {
+   "solar company near me": 53,
+   "solar panel installation near me": 22,
+   "solar battery backup near me": 20
+  }
+ },
+ {
+  "place": "Shawnee",
+  "km": 10.9,
+  "pos": {
+   "solar company near me": null,
+   "solar panel installation near me": null,
+   "solar battery backup near me": null
+  },
+  "top1": {
+   "solar company near me": "Fidelis Renewables",
+   "solar panel installation near me": "Fidelis Renewables",
+   "solar battery backup near me": "Astrawatt Solar"
+  },
+  "n": {
+   "solar company near me": 35,
+   "solar panel installation near me": 21,
+   "solar battery backup near me": 15
+  }
+ },
+ {
+  "place": "Kansas City, MO",
+  "km": 20.4,
+  "pos": {
+   "solar company near me": null,
+   "solar panel installation near me": null,
+   "solar battery backup near me": null
+  },
+  "top1": {
+   "solar company near me": "Lifetime Solar",
+   "solar panel installation near me": "Gladiator Solar Power",
+   "solar battery backup near me": "Gladiator Solar Power"
+  },
+  "n": {
+   "solar company near me": 58,
+   "solar panel installation near me": 24,
+   "solar battery backup near me": 17
+  }
+ },
+ {
+  "place": "Lees Summit",
+  "km": 25.1,
+  "pos": {
+   "solar company near me": null,
+   "solar panel installation near me": null,
+   "solar battery backup near me": null
+  },
+  "top1": {
+   "solar company near me": "NuSun Power KC",
+   "solar panel installation near me": "NuSun Power KC",
+   "solar battery backup near me": "NuSun Power KC"
+  },
+  "n": {
+   "solar company near me": 13,
+   "solar panel installation near me": 4,
+   "solar battery backup near me": 13
+  }
+ },
+ {
+  "place": "Independence",
+  "km": 28.3,
+  "pos": {
+   "solar company near me": null,
+   "solar panel installation near me": null,
+   "solar battery backup near me": null
+  },
+  "top1": {
+   "solar company near me": "Free Energy Corporation",
+   "solar panel installation near me": "Free Energy Corporation",
+   "solar battery backup near me": "Solar Power and Light Service"
+  },
+  "n": {
+   "solar company near me": 12,
+   "solar panel installation near me": 5,
+   "solar battery backup near me": 8
+  }
+ },
+ {
+  "place": "Lawrence",
+  "km": 49.0,
+  "pos": {
+   "solar company near me": null,
+   "solar panel installation near me": null,
+   "solar battery backup near me": null
+  },
+  "top1": {
+   "solar company near me": "Kansas Solar Systems Incorporated",
+   "solar panel installation near me": "Kansas Solar Systems Incorporated",
+   "solar battery backup near me": "Kansas Solar Systems Incorporated"
+  },
+  "n": {
+   "solar company near me": 13,
+   "solar panel installation near me": 7,
+   "solar battery backup near me": 13
+  }
+ }
+]
