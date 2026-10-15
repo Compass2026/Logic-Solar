@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { WICHITA_HUB } from '../src/data/wichitaHub.js';
+import { loadBlogForBuild } from './blog-build.js';
+import { blogPath, BLOG_INDEX_PATH } from '../src/content/compass-blog-core.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -75,6 +77,17 @@ const generateSitemap = () => {
       if (!dedicated.includes(locUrl)) {
         sitemap += url(locUrl);
       }
+    }
+  }
+
+  // Compass blog (approved articles; canonical URLs end in a slash). On a
+  // preview build this includes preview fixtures; production refuses them.
+  const posts = loadBlogForBuild();
+  if (posts.length) {
+    sitemap += `\n  <!-- Blog -->\n`;
+    sitemap += url(`${BASE_URL}${BLOG_INDEX_PATH}`);
+    for (const p of posts) {
+      sitemap += `  <url><loc>${BASE_URL}${blogPath(p.slug)}</loc><lastmod>${p.dateModified}</lastmod></url>\n`;
     }
   }
 

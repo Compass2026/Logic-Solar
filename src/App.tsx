@@ -29,6 +29,8 @@ import { SolarLanding } from './pages/SolarLanding';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
 import { RoofingHome } from './pages/roofing/RoofingHome';
+import { BlogIndex } from './pages/BlogIndex';
+import { BlogPost } from './pages/BlogPost';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -79,6 +81,10 @@ const MainSiteLayout = () => {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
+
+            {/* Compass blog: approved articles from data/blog-posts.json */}
+            <Route path="/blog" element={<BlogIndex />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/terms" element={<Terms />} />
 
             {/* Internal Utility Pages */}

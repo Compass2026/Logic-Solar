@@ -13,6 +13,8 @@ import { fileURLToPath } from 'url';
 import { buildCityMeta, buildStateMeta, dedicatedCityMeta, homeMeta } from '../src/data/pageMeta.js';
 import { homeFaqs, faqClusters, buildCityFaqs } from '../src/data/faqs.js';
 import { WICHITA_HUB } from '../src/data/wichitaHub.js';
+import { loadBlogForBuild } from './blog-build.js';
+import { blogPath, BLOG_INDEX_PATH, formatDate, heroHtml, renderBlocksHtml, escapeHtml as escHtml } from '../src/content/compass-blog-core.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, '../dist');
@@ -90,8 +92,8 @@ const routes = [];
 // `crumb` is the page's own name in its BreadcrumbList; defaults to the
 // capitalized last URL segment. `schema` accepts one node or an array —
 // everything is emitted as a single @graph per page.
-const push = (route, t, desc, { schema = null, body = '', noindex = false, ogImage = null, crumb = null } = {}) =>
-  routes.push({ route, title: title(t), desc, schema, body, noindex, ogImage, crumb });
+const push = (route, t, desc, { schema = null, body = '', noindex = false, ogImage = null, crumb = null, ogType = null, preload = null } = {}) =>
+  routes.push({ route, title: title(t), desc, schema, body, noindex, ogImage, crumb, ogType, preload });
 
 // ── Schema building blocks — all @ids live on the canonical www host ──
 
@@ -344,6 +346,58 @@ for (const [slug, page] of Object.entries(WICHITA_HUB)) {
   push(route, page.title, page.description, { crumb: page.crumb, schema, body });
 }
 
+// ── Compass blog ──
+// Approved articles from data/blog-posts.json (written only by the Compass
+// CRM's blog-publisher). The full article is in the raw HTML: the CRM's live
+// verification reads the release marker, H1, every line of the body, its
+// links, the hero image (src + alt) and the canonical from it. A production
+// build refuses preview fixtures (scripts/blog-build.js).
+const BLOG_POSTS = loadBlogForBuild();
+if (BLOG_POSTS.length > 0) {
+  const anyPreview = BLOG_POSTS.some((p) => p.preview);
+  push(BLOG_INDEX_PATH, 'Solar Insights | Logic Solar',
+    'Practical guidance from Logic Solar on planning a solar installation, battery backup and getting the most from a design consultation.',
+    {
+      crumb: 'Solar Insights',
+      noindex: anyPreview,
+      body: `<h1>Solar insights</h1>
+<ul>${BLOG_POSTS.map((p) => `<li><a href="${blogPath(p.slug)}">${escHtml(p.title)}</a> <time datetime="${p.datePublished}">${formatDate(p.datePublished)}</time><p>${escHtml(p.description)}</p></li>`).join('\n')}</ul>`,
+    });
+  for (const a of BLOG_POSTS) {
+    const route = blogPath(a.slug);
+    const heroUrl = a.heroImage ? `${BASE_URL}${a.heroImage.src}` : null;
+    const cta = a.cta.url ? `<p><a href="${escHtml(a.cta.url)}">${escHtml(a.cta.text)}</a></p>` : `<p>${escHtml(a.cta.text)}</p>`;
+    push(route, a.metaTitle, a.description, {
+      crumb: a.title,
+      noindex: a.preview,
+      ogType: 'article',
+      ogImage: heroUrl,
+      preload: a.heroImage ? a.heroImage.src : null,
+      schema: {
+        '@type': 'BlogPosting',
+        '@id': `${BASE_URL}${route}#article`,
+        headline: a.h1,
+        description: a.description,
+        datePublished: a.datePublished,
+        dateModified: a.dateModified,
+        mainEntityOfPage: `${BASE_URL}${route}`,
+        url: `${BASE_URL}${route}`,
+        ...(heroUrl ? { image: { '@type': 'ImageObject', url: heroUrl, width: a.heroImage.width, height: a.heroImage.height } } : {}),
+        author: { '@id': ORG_ID },
+        publisher: { '@id': ORG_ID },
+      },
+      body: `<article data-compass-release="${a.compass.release_hash}">
+<p><a href="${BLOG_INDEX_PATH}">Solar insights</a></p>
+<h1>${escHtml(a.h1)}</h1>
+<p><time datetime="${a.datePublished}">${formatDate(a.datePublished)}</time> · ${a.readMinutes} min read</p>
+${a.heroImage ? heroHtml(a.heroImage) : ''}
+${renderBlocksHtml(a.blocks)}
+${cta}
+</article>`,
+    });
+  }
+}
+
 const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.png`;
 
 // ── BreadcrumbList, derived from the real URL path ──
@@ -368,13 +422,15 @@ const breadcrumbNode = (route) => {
   segs.forEach((seg, i) => {
     acc += `/${seg}`;
     const isLast = i === segs.length - 1;
-    if (!isLast && !crumbFor.has(acc)) return;
+    // Blog routes are registered with their trailing slash (/blog/, /blog/x/).
+    const key = crumbFor.has(acc) ? acc : crumbFor.has(`${acc}/`) ? `${acc}/` : null;
+    if (!isLast && !key) return;
     items.push({
       '@type': 'ListItem',
       position: items.length + 1,
-      name: crumbFor.get(acc),
+      name: crumbFor.get(key ?? acc),
       // Google allows omitting `item` on the final crumb (the current page).
-      ...(isLast ? {} : { item: `${BASE_URL}${acc}` }),
+      ...(isLast ? {} : { item: `${BASE_URL}${key ?? acc}` }),
     });
   });
   return { '@type': 'BreadcrumbList', '@id': `${BASE_URL}${route}#breadcrumb`, itemListElement: items };
@@ -392,6 +448,7 @@ for (const r of routes) {
     .replace(/<meta property="og:description" content="[^"]*"/, () => `<meta property="og:description" content="${esc(r.desc)}"`)
     .replace(/<meta property="og:image" content="[^"]*"/, () => `<meta property="og:image" content="${esc(ogImage)}"`)
     .replace(/<meta property="og:url" content="[^"]*"/, () => `<meta property="og:url" content="${canonical}"`)
+    .replace(/<meta property="og:type" content="[^"]*"/, () => `<meta property="og:type" content="${r.ogType || 'website'}"`)
     .replace('</head>', () => `  <link rel="canonical" href="${canonical}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${esc(r.title)}" />
@@ -402,6 +459,10 @@ for (const r of routes) {
   if (r.route === '/') {
     html = html.replace('</head>',
       () => `  <link rel="preload" as="image" href="/images/modern_suburban_home_with_solar_panels.jpg" fetchpriority="high" />\n  </head>`);
+  }
+  if (r.preload) {
+    html = html.replace('</head>',
+      () => `  <link rel="preload" as="image" href="${esc(r.preload)}" fetchpriority="high" />\n  </head>`);
   }
   if (r.noindex) {
     html = html.replace('</head>',
