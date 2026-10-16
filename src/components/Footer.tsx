@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Sun, ArrowRight } from 'lucide-react';
 import { siteData } from '../data/siteData';
 import { InternalLinks } from './InternalLinks';
+import { BLOG_POSTS } from '../content/compass-blog';
+import { BLOG_INDEX_PATH } from '../routing';
 
 export const Footer = () => {
   return (
@@ -71,6 +73,13 @@ export const Footer = () => {
                   Services
                 </Link>
               </li>
+              {BLOG_POSTS.length > 0 && (
+                <li>
+                  <Link to={BLOG_INDEX_PATH} className="text-white/60 hover:text-brand-gold transition-colors text-sm">
+                    Solar Insights
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
 
