@@ -4,11 +4,11 @@ import { ArrowLeft, ArrowRight, Calendar, Clock } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { ArticleBody, ArticleHero } from '../components/blog/ArticleBody';
 import { findArticle } from '../content/compass-blog';
-import { formatDate } from '../content/compass-blog-core.js';
+import { formatDate, TLDR_LABEL } from '../content/compass-blog-core.js';
 import { BLOG_INDEX_PATH, blogPath, canonicalFor, SITE_URL } from '../routing';
 
 // One approved Compass article. The prerendered HTML (scripts/prerender.js)
-// carries the same H1, body, hero and release marker for crawlers and for
+// carries the same H1, TL;DR, body, hero and release marker for crawlers and for
 // the CRM's live verification; this is what a visitor's browser renders.
 export const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -35,6 +35,12 @@ export const BlogPost = () => {
             <span className="inline-flex items-center gap-2"><Calendar className="h-4 w-4" /><time dateTime={article.datePublished}>{formatDate(article.datePublished)}</time></span>
             <span className="inline-flex items-center gap-2"><Clock className="h-4 w-4" />{article.readMinutes} min read</span>
           </p>
+          {article.tldr && (
+            <aside aria-label={TLDR_LABEL} data-compass-tldr className="mt-8 rounded-xl border-l-4 border-brand-gold bg-white/10 px-5 py-4 md:px-6 md:py-5">
+              <p className="text-xs font-bold uppercase tracking-widest text-brand-gold">{TLDR_LABEL}</p>
+              <p className="mt-2 text-base leading-relaxed text-white md:text-lg">{article.tldr}</p>
+            </aside>
+          )}
         </div>
       </header>
       <div className="mx-auto max-w-4xl px-6">

@@ -10,7 +10,7 @@ export type HeroImage = { src: string; alt: string; width: number; height: numbe
 export type BlogArticle = {
   slug: string; title: string; description: string; metaTitle: string; h1: string;
   datePublished: string; dateModified: string; bodyMarkdown: string; blocks: Block[];
-  cta: { text: string; url: string | null }; heroImage: HeroImage | null;
+  cta: { text: string; url: string | null }; heroImage: HeroImage | null; tldr: string | null;
   compass: { draft_id: string; release_hash: string; keyword_id: string; version: number };
   preview: boolean; readMinutes: number;
 };
