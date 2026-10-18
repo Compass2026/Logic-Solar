@@ -14,7 +14,7 @@ import { buildCityMeta, buildStateMeta, dedicatedCityMeta, homeMeta } from '../s
 import { homeFaqs, faqClusters, buildCityFaqs } from '../src/data/faqs.js';
 import { WICHITA_HUB } from '../src/data/wichitaHub.js';
 import { loadBlogForBuild } from './blog-build.js';
-import { blogPath, BLOG_INDEX_PATH, formatDate, heroHtml, renderBlocksHtml, escapeHtml as escHtml } from '../src/content/compass-blog-core.js';
+import { blogPath, BLOG_INDEX_PATH, formatDate, heroHtml, renderBlocksHtml, tldrHtml, escapeHtml as escHtml } from '../src/content/compass-blog-core.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, '../dist');
@@ -383,6 +383,7 @@ if (BLOG_POSTS.length > 0) {
         mainEntityOfPage: `${BASE_URL}${route}`,
         url: `${BASE_URL}${route}`,
         ...(heroUrl ? { image: { '@type': 'ImageObject', url: heroUrl, width: a.heroImage.width, height: a.heroImage.height } } : {}),
+        ...(a.tldr ? { abstract: a.tldr } : {}),
         author: { '@id': ORG_ID },
         publisher: { '@id': ORG_ID },
       },
@@ -390,6 +391,7 @@ if (BLOG_POSTS.length > 0) {
 <p><a href="${BLOG_INDEX_PATH}">Solar insights</a></p>
 <h1>${escHtml(a.h1)}</h1>
 <p><time datetime="${a.datePublished}">${formatDate(a.datePublished)}</time> · ${a.readMinutes} min read</p>
+${a.tldr ? tldrHtml(a.tldr) : ''}
 ${a.heroImage ? heroHtml(a.heroImage) : ''}
 ${renderBlocksHtml(a.blocks)}
 ${cta}

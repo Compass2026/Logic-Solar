@@ -13,6 +13,10 @@ export const SITE_URL = 'https://www.logic-solar.com';
 export const BLOG_INDEX_PATH = '/blog/';
 export const blogPath = (slug) => `/blog/${slug}/`;
 export const HERO_IMAGE_PREFIX = '/blog/images/';
+// The TL;DR (compass-blog.json `tldr: true`): the CRM sends the approved
+// summary as its own field; the page shows it once, labelled, under the H1
+// and before the hero image. Plain text only.
+export const TLDR_LABEL = 'TL;DR';
 /** Responsive WebP widths generated at build time (scripts/blog-images.js). */
 export const HERO_WIDTHS = [640, 1280];
 /**
@@ -64,13 +68,19 @@ export function loadReleasedArticles(input, { allowPreviewFixtures = false, rese
       if (typeof h.illustrative !== 'boolean') fail('hero image illustrative flag');
       heroImage = { src: h.src, alt: h.alt, width: h.width, height: h.height, illustrative: h.illustrative };
     }
+    let tldr = null;
+    if (a.tldr != null) {
+      tldr = text(a.tldr, 'TL;DR', 600).trim();
+      if (/[\n<>]/.test(tldr)) fail('the TL;DR is one plain-text paragraph');
+    }
+    if (tldr && /(^|\n)\s*(?:[*_>#-]+\s*)*tl\s*;?\s*dr\b/i.test(a.bodyMarkdown)) fail('the TL;DR appears twice (field and body)');
     // Rendering must never change the approved words: parse now so a body
     // with unsupported syntax fails the build.
     const blocks = parseMarkdown(a.bodyMarkdown);
     return {
       slug: a.slug, title: a.title, description: a.description, metaTitle: a.metaTitle, h1: a.h1,
       datePublished: a.datePublished, dateModified: a.dateModified, bodyMarkdown: a.bodyMarkdown, blocks,
-      cta: { text: a.cta.text, url: a.cta.url }, heroImage, compass: { ...c }, preview,
+      cta: { text: a.cta.text, url: a.cta.url }, heroImage, tldr, compass: { ...c }, preview,
       readMinutes: Math.max(1, Math.ceil(a.bodyMarkdown.split(/\s+/).filter(Boolean).length / 220)),
     };
   });
@@ -155,6 +165,10 @@ export function renderBlocksHtml(blocks) {
 export function heroVariants(hero) {
   const base = hero.src.replace(/\.(png|jpe?g|webp)$/, '');
   return HERO_WIDTHS.filter((w) => w < hero.width).map((w) => ({ width: w, src: `${base}-${w}.webp` }));
+}
+/** The TL;DR block for the prerendered HTML (the React page renders the same words). */
+export function tldrHtml(tldr) {
+  return `<aside class="compass-tldr" aria-label="${TLDR_LABEL}"><p><strong>${TLDR_LABEL}</strong></p><p>${escapeHtml(tldr)}</p></aside>`;
 }
 export const HERO_SIZES = '(min-width: 1024px) 896px, 100vw';
 export const ILLUSTRATIVE_CAPTION = 'Illustration';

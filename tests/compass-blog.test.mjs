@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {
-  loadReleasedArticles, parseMarkdown, renderBlocksHtml, heroHtml, heroVariants, blogPath, PREVIEW_RELEASE_HASH,
+  loadReleasedArticles, parseMarkdown, renderBlocksHtml, heroHtml, heroVariants, blogPath, PREVIEW_RELEASE_HASH, tldrHtml, TLDR_LABEL,
 } from '../src/content/compass-blog-core.js';
 
 const article = (over = {}) => ({
@@ -21,7 +21,7 @@ const plain = (s) => s.replace(/<[^>]*>/g, '').replace(/&quot;/g, '"').replace(/
 test('the site advertises the contract the CRM requires, hero images included', () => {
   const c = JSON.parse(fs.readFileSync('compass-blog.json', 'utf8'));
   assert.deepEqual(c, { version: 1, adapter: 'json_blog', keyword_provenance: true, markdown: true, seo_fields: true,
-    hero_image: true, hero_image_dir: 'public/blog/images', hero_image_url_prefix: '/blog/images/' });
+    hero_image: true, hero_image_dir: 'public/blog/images', hero_image_url_prefix: '/blog/images/', tldr: true });
   assert.ok(Array.isArray(JSON.parse(fs.readFileSync('data/blog-posts.json', 'utf8'))));
   for (const f of ['src/content/compass-blog.ts', 'src/routing.ts', 'scripts/prerender.js']) assert.ok(fs.existsSync(f), f);
   assert.equal(blogPath('x'), '/blog/x/');
@@ -71,4 +71,21 @@ test('the hero renders with its alt text, dimensions and responsive WebP variant
   assert.match(html, /<figcaption>Illustration<\/figcaption>/);
   assert.deepEqual(heroVariants({ ...a.heroImage, width: 800 }).map((v) => v.width), [640]);
   assert.ok(!heroHtml({ ...a.heroImage, illustrative: false }).includes('figcaption'));
+});
+
+test('the TL;DR slot: one plain-text field, labelled once, before the hero', () => {
+  const tldr = 'Bring a year of utility bills and notes on your roof. The design starts from that information.';
+  const [a] = loadReleasedArticles([article({ tldr })]);
+  assert.equal(a.tldr, tldr);
+  assert.equal(loadReleasedArticles([article()])[0].tldr, null, 'an article without one renders as before');
+  for (const bad of [{ tldr: ' ' }, { tldr: 'Line one.\nLine two.' }, { tldr: 'A <b>bold</b> claim. Two.' }, { tldr: 7 }]) {
+    assert.throws(() => loadReleasedArticles([article(bad)]), JSON.stringify(bad));
+  }
+  assert.throws(() => loadReleasedArticles([article({ tldr, bodyMarkdown: `**TL;DR:** ${tldr}\n\n## Bills\n\nText.` })]), /twice/);
+  const html = tldrHtml('Bills & roof <notes>. Then talk.');
+  assert.match(html, /^<aside class="compass-tldr" aria-label="TL;DR"><p><strong>TL;DR<\/strong><\/p><p>Bills &amp; roof &lt;notes&gt;\. Then talk\.<\/p><\/aside>$/);
+  assert.equal(TLDR_LABEL, 'TL;DR');
+  const page = fs.readFileSync('scripts/prerender.js', 'utf8');
+  assert.ok(page.indexOf('tldrHtml(a.tldr)') < page.indexOf('heroHtml(a.heroImage)') && page.indexOf('<h1>${escHtml(a.h1)}</h1>') < page.indexOf('tldrHtml(a.tldr)'),
+    'prerendered order: H1, TL;DR, hero, body');
 });
