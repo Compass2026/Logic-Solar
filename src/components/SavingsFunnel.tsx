@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, ArrowRight, MapPin, ShieldCheck, Sun, Zap, Home as HomeIcon } from 'lucide-react';
 
@@ -53,6 +53,8 @@ export const SavingsFunnel = () => {
   const [zipError, setZipError] = useState(false);
   const [homeowner, setHomeowner] = useState('');
   const [shade, setShade] = useState('');
+  const cardRef = useRef<HTMLDivElement>(null);
+  const firstRender = useRef(true);
 
   const { yearly, total, systemKw } = useMemo(() => projectUtilityCost(bill), [bill]);
   const billLabel = bill >= BILL_MAX ? `${usd(BILL_MAX)}+` : usd(bill);
@@ -80,6 +82,26 @@ export const SavingsFunnel = () => {
       document.body.removeChild(script);
     };
   }, [step]);
+
+  // Bring the new question into view; on a phone the previous step's button
+  // sits below it, so without this the change happens off screen.
+  useEffect(() => {
+    if (firstRender.current) { firstRender.current = false; return; }
+    const card = cardRef.current;
+    if (!card) return;
+    const top = card.getBoundingClientRect().top + window.scrollY - 100;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }, [step]);
+
+  // iOS Safari only moves a range input when the thumb itself is dragged, so
+  // set the value from wherever the finger lands and follow it while held.
+  const setBillFromPointer = (e: React.PointerEvent<HTMLInputElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const thumb = 36; // matches the thumb width in the styles below
+    const ratio = Math.min(Math.max((e.clientX - rect.left - thumb / 2) / (rect.width - thumb), 0), 1);
+    const raw = BILL_MIN + ratio * (BILL_MAX - BILL_MIN);
+    setBill(Math.round(raw / BILL_STEP) * BILL_STEP);
+  };
 
   const next = () => setStep(s => Math.min(s + 1, 4));
   const back = () => setStep(s => Math.max(s - 1, 0));
@@ -130,7 +152,7 @@ export const SavingsFunnel = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto bg-white rounded-[40px] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden">
+        <div ref={cardRef} className="max-w-5xl mx-auto bg-white rounded-[40px] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden">
           {/* Progress */}
           <div className="px-8 md:px-14 pt-10">
             <div className="h-2 rounded-full bg-gray-100 overflow-hidden">
@@ -188,6 +210,14 @@ export const SavingsFunnel = () => {
                       step={BILL_STEP}
                       value={bill}
                       onChange={e => setBill(Number(e.target.value))}
+                      onPointerDown={e => {
+                        if (e.pointerType !== 'touch') return;
+                        e.currentTarget.setPointerCapture(e.pointerId);
+                        setBillFromPointer(e);
+                      }}
+                      onPointerMove={e => {
+                        if (e.pointerType === 'touch' && e.currentTarget.hasPointerCapture(e.pointerId)) setBillFromPointer(e);
+                      }}
                       aria-label="Average monthly electric bill"
                       aria-valuetext={`${billLabel} per month`}
                       className="bill-slider w-full"
@@ -196,6 +226,20 @@ export const SavingsFunnel = () => {
                     <div className="flex justify-between mt-3 text-xs font-bold text-brand-dark/40">
                       <span>{usd(BILL_MIN)}</span>
                       <span>{usd(BILL_MAX)}+</span>
+                    </div>
+
+                    <div className="lg:hidden mt-8 rounded-3xl bg-brand-dark text-white p-6 grid grid-cols-2 gap-4">
+                      <div>
+                        <p className="text-[10px] font-extrabold uppercase tracking-[0.15em] text-white/40 mb-1">Per year</p>
+                        <p className="text-2xl font-black tabular-nums">{usd(yearly)}</p>
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-extrabold uppercase tracking-[0.15em] text-white/40 mb-1">Over 25 years</p>
+                        <p className="text-2xl font-black text-brand-gold tabular-nums">{usd(total)}</p>
+                      </div>
+                      <p className="col-span-2 text-xs text-white/50">
+                        Paid to the utility · est. system ≈ {systemKw.toFixed(1)} kW
+                      </p>
                     </div>
 
                     <button
@@ -207,7 +251,7 @@ export const SavingsFunnel = () => {
                     </button>
                   </div>
 
-                  <div className="lg:col-span-2 bg-brand-dark text-white p-8 md:p-14 flex flex-col justify-center relative overflow-hidden">
+                  <div className="hidden lg:flex lg:col-span-2 bg-brand-dark text-white p-8 md:p-14 flex-col justify-center relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-brand-gold/10 rounded-full blur-[80px] pointer-events-none" />
                     <div className="relative space-y-8">
                       <div>
@@ -293,7 +337,7 @@ export const SavingsFunnel = () => {
               {/* ── STEP 5: Contact (GoHighLevel form) ── */}
               {step === 4 && (
                 <div className="grid lg:grid-cols-5">
-                  <div className="lg:col-span-2 bg-brand-gold p-8 md:p-12 flex flex-col justify-between gap-10">
+                  <div className="order-2 lg:order-1 lg:col-span-2 bg-brand-gold p-8 md:p-12 flex flex-col justify-between gap-10">
                     <div>
                       <h3 className="text-3xl font-extrabold text-brand-dark mb-4 leading-tight tracking-tight">
                         Last step: where should we send your quote?
@@ -316,7 +360,7 @@ export const SavingsFunnel = () => {
                       ))}
                     </dl>
                   </div>
-                  <div className="lg:col-span-3 p-4 lg:p-8 min-h-[911px]">
+                  <div className="order-1 lg:order-2 lg:col-span-3 p-4 lg:p-8 min-h-[911px]">
                     <iframe
                       src={formSrc}
                       style={{ width: '100%', height: '911px', border: 'none', borderRadius: '3px' }}
@@ -368,11 +412,16 @@ export const SavingsFunnel = () => {
         .bill-slider {
           -webkit-appearance: none;
           appearance: none;
+          box-sizing: content-box;
           height: 12px;
+          padding: 14px 0; /* a 40px touch target around the 12px track */
+          background-clip: content-box;
           border-radius: 9999px;
-          background: linear-gradient(to right, #f9cd0d 0%, #f9cd0d var(--fill), #eef0f2 var(--fill), #eef0f2 100%);
+          background: linear-gradient(to right, #f9cd0d 0%, #f9cd0d var(--fill), #eef0f2 var(--fill), #eef0f2 100%) content-box;
           cursor: pointer;
           outline: none;
+          touch-action: none;
+          -webkit-tap-highlight-color: transparent;
         }
         .bill-slider::-webkit-slider-thumb {
           -webkit-appearance: none;
