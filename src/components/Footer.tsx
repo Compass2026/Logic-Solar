@@ -76,7 +76,7 @@ export const Footer = () => {
               {BLOG_POSTS.length > 0 && (
                 <li>
                   <Link to={BLOG_INDEX_PATH} className="text-white/60 hover:text-brand-gold transition-colors text-sm">
-                    Solar Insights
+                    Blog
                   </Link>
                 </li>
               )}
