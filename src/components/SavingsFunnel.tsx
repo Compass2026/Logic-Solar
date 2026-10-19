@@ -1,19 +1,17 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowLeft, ArrowRight, MapPin, ShieldCheck, Sun, Zap, Home as HomeIcon } from 'lucide-react';
+import { ArrowLeft, ArrowRight, CheckCircle2, CreditCard, Loader2, MapPin, Phone, ShieldCheck, Sun, Zap, Home as HomeIcon } from 'lucide-react';
+import {
+  CONSENT_TEXT, CONTACT_OPTIONS, CREDIT_OPTIONS, HOMEOWNER_OPTIONS, SHADE_OPTIONS, US_STATES, formatPhone, validateLead,
+} from '../lib/lead-core.js';
+import { siteData } from '../data/siteData';
 
 /*
  * Homepage lead funnel: an electric-bill slider with a live utility-cost
- * projection, three short qualifying steps, then Logic's existing
- * GoHighLevel quote form ("Google ads 1 Form") prefilled from the answers,
- * so every lead still lands in GoHighLevel exactly as it does today.
- *
- * GoHighLevel prefills a form field from the iframe URL's query string,
- * keyed by the field's query key (the form's `data-q` attributes).
+ * projection, then ZIP, homeowner, roof shade, credit, address and contact
+ * steps. The lead is posted to /api/lead, which forwards it to GoHighLevel's
+ * inbound webhook (api/lead.js; field list in docs/ghl-lead-webhook.md).
  */
-
-const GHL_FORM_ID = 'jXEWmVgfutwbzVW9JGIu';
-const GHL_FORM_URL = `https://link.logic-solar.com/widget/form/${GHL_FORM_ID}`;
 
 const BILL_MIN = 50;
 const BILL_MAX = 600;
@@ -26,9 +24,26 @@ const PRICE_PER_KWH = 0.14; // $ per kWh
 const KWH_PER_KW_YEAR = 1400; // yearly production per installed kW
 const YEARS = 25;
 
-const SHADE_OPTIONS = ['No shade', 'A little shade', 'A lot of shade', 'Not sure'];
+const STEP_LABELS = ['Your Bill', 'ZIP', 'Home', 'Roof', 'Credit', 'Address', 'Contact'];
+const LAST_STEP = STEP_LABELS.length - 1;
 
-const STEP_LABELS = ['Your Bill', 'Location', 'Homeowner', 'Roof', 'Your Quote'];
+type Lead = {
+  zip: string; homeowner: string; shade: string; credit: string; street: string; city: string; state: string;
+  firstName: string; lastName: string; phone: string; email: string; contactPreference: string; consent: boolean;
+};
+
+const EMPTY_LEAD: Lead = {
+  zip: '', homeowner: '', shade: '', credit: '', street: '', city: '', state: '',
+  firstName: '', lastName: '', phone: '', email: '', contactPreference: '', consent: false,
+};
+
+const inputClass = (error?: string) =>
+  `w-full px-5 py-4 rounded-2xl border-2 bg-white font-medium text-brand-dark placeholder:text-brand-dark/30 focus:border-brand-gold focus:outline-none transition-colors ${
+    error ? 'border-red-300 bg-red-50/50' : 'border-gray-100'
+  }`;
+
+const primaryButton =
+  'w-full inline-flex items-center justify-center gap-2.5 px-10 py-5 rounded-full font-bold text-[15px] bg-brand-dark text-white hover:-translate-y-1 hover:shadow-xl shadow-lg shadow-brand-dark/20 transition-all duration-300 cursor-pointer disabled:opacity-60 disabled:hover:translate-y-0';
 
 const usd = (n: number) =>
   n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
@@ -49,10 +64,10 @@ const track = (event: string, params: Record<string, unknown> = {}) => {
 export const SavingsFunnel = () => {
   const [step, setStep] = useState(0);
   const [bill, setBill] = useState(BILL_DEFAULT);
-  const [zip, setZip] = useState('');
-  const [zipError, setZipError] = useState(false);
-  const [homeowner, setHomeowner] = useState('');
-  const [shade, setShade] = useState('');
+  const [lead, setLead] = useState<Lead>(EMPTY_LEAD);
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [company, setCompany] = useState(''); // honeypot, never shown
+  const [status, setStatus] = useState<'idle' | 'sending' | 'done' | 'error'>('idle');
   const cardRef = useRef<HTMLDivElement>(null);
   const firstRender = useRef(true);
 
@@ -60,27 +75,8 @@ export const SavingsFunnel = () => {
   const billLabel = bill >= BILL_MAX ? `${usd(BILL_MAX)}+` : usd(bill);
   const fill = ((bill - BILL_MIN) / (BILL_MAX - BILL_MIN)) * 100;
 
-  const formSrc = useMemo(() => {
-    const params = new URLSearchParams({
-      average_monthly_utility_bill: String(bill),
-      postal_code: zip,
-      'please_add_any_other_information_that_you_think_we_should_know?':
-        `Homepage savings calculator. Monthly bill: ${billLabel}. Homeowner: ${homeowner}. Roof shade: ${shade}.`,
-    });
-    return `${GHL_FORM_URL}?${params.toString()}`;
-  }, [bill, billLabel, zip, homeowner, shade]);
-
-  // GoHighLevel's embed script sizes the iframe; load it once the form shows.
   useEffect(() => {
-    if (step !== 4) return;
-    const script = document.createElement('script');
-    script.src = 'https://link.logic-solar.com/js/form_embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-    track('savings_calculator_contact_step', { monthly_bill: bill });
-    return () => {
-      document.body.removeChild(script);
-    };
+    if (step === LAST_STEP) track('savings_calculator_contact_step', { monthly_bill: bill });
   }, [step]);
 
   // Bring the new question into view; on a phone the previous step's button
@@ -91,7 +87,7 @@ export const SavingsFunnel = () => {
     if (!card) return;
     const top = card.getBoundingClientRect().top + window.scrollY - 100;
     window.scrollTo({ top, behavior: 'smooth' });
-  }, [step]);
+  }, [step, status]);
 
   // iOS Safari only moves a range input when the thumb itself is dragged, so
   // set the value from wherever the finger lands and follow it while held.
@@ -103,21 +99,67 @@ export const SavingsFunnel = () => {
     setBill(Math.round(raw / BILL_STEP) * BILL_STEP);
   };
 
-  const next = () => setStep(s => Math.min(s + 1, 4));
-  const back = () => setStep(s => Math.max(s - 1, 0));
+  const next = () => setStep(s => Math.min(s + 1, LAST_STEP));
+  const back = () => { setErrors({}); setStatus('idle'); setStep(s => Math.max(s - 1, 0)); };
 
-  const choose = (setter: (v: string) => void, value: string) => {
-    setter(value);
+  const set = <K extends keyof Lead>(key: K, value: Lead[K]) => {
+    setLead(prev => ({ ...prev, [key]: value }));
+    setErrors(prev => {
+      if (!prev[key]) return prev;
+      const { [key]: _, ...rest } = prev;
+      return rest;
+    });
+  };
+
+  const choose = (key: 'homeowner' | 'shade' | 'credit', value: string) => {
+    set(key, value);
     setTimeout(next, 300);
   };
 
-  const submitZip = () => {
-    if (!/^\d{5}$/.test(zip)) {
-      setZipError(true);
-      return;
-    }
-    next();
+  // Validate this step's fields; advance when they pass.
+  const advance = (fields: (keyof Lead)[]) => {
+    const found = validateLead(lead, fields);
+    setErrors(found);
+    if (Object.keys(found).length === 0) next();
   };
+
+  const submit = async () => {
+    const found = validateLead({ ...lead, monthlyBill: bill });
+    setErrors(found);
+    if (Object.keys(found).length) return;
+    setStatus('sending');
+    try {
+      const res = await fetch('/api/lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...lead, monthlyBill: bill, company, pageUrl: window.location.href }),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      track('generate_lead', { monthly_bill: bill, contact_preference: lead.contactPreference });
+      setStatus('done');
+    } catch {
+      setStatus('error');
+    }
+  };
+
+  // A plain function (not a component) so inputs keep focus while typing.
+  const textField = (
+    key: 'street' | 'city' | 'zip' | 'firstName' | 'lastName' | 'phone' | 'email',
+    label: string,
+    props: React.InputHTMLAttributes<HTMLInputElement> = {},
+  ) => (
+    <label className="block text-left">
+      <span className="block text-sm font-bold text-brand-dark/70 mb-1.5 ml-1">{label}</span>
+      <input
+        value={lead[key]}
+        onChange={e => set(key, key === 'phone' ? formatPhone(e.target.value) : key === 'zip' ? e.target.value.replace(/\D/g, '').slice(0, 5) : e.target.value)}
+        aria-invalid={Boolean(errors[key])}
+        className={inputClass(errors[key])}
+        {...props}
+      />
+      {errors[key] && <span className="block text-sm text-red-500 mt-1.5 ml-1 font-medium">{errors[key]}</span>}
+    </label>
+  );
 
   const Pill = ({ label, selected, onClick }: { label: string; selected: boolean; onClick: () => void; key?: string }) => (
     <button
@@ -148,7 +190,7 @@ export const SavingsFunnel = () => {
             What Is Your Power Bill <span className="text-brand-gold">Really Costing You?</span>
           </h2>
           <p className="text-xl text-brand-dark/60 leading-relaxed font-medium">
-            Slide to your average monthly electric bill, answer three quick questions, and we'll build your custom solar quote.
+            Slide to your average monthly electric bill, answer a few quick questions, and we'll build your custom solar quote.
           </p>
         </div>
 
@@ -158,7 +200,7 @@ export const SavingsFunnel = () => {
             <div className="h-2 rounded-full bg-gray-100 overflow-hidden">
               <motion.div
                 className="h-full rounded-full bg-brand-gold"
-                animate={{ width: `${((step + 1) / STEP_LABELS.length) * 100}%` }}
+                animate={{ width: status === 'done' ? '100%' : `${((step + 1) / STEP_LABELS.length) * 100}%` }}
                 transition={{ duration: 0.4, ease: 'easeOut' }}
               />
             </div>
@@ -175,20 +217,33 @@ export const SavingsFunnel = () => {
               ))}
             </div>
             <p className="sm:hidden mt-3 text-xs font-bold text-brand-dark/50">
-              Step {step + 1} of {STEP_LABELS.length} · {STEP_LABELS[step]}
+              {status === 'done' ? 'Request sent' : `Step ${step + 1} of ${STEP_LABELS.length} · ${STEP_LABELS[step]}`}
             </p>
           </div>
 
           <AnimatePresence mode="wait">
             <motion.div
-              key={step}
+              key={status === 'done' ? 'done' : step}
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -30 }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
               {/* ── STEP 1: Bill slider ── */}
-              {step === 0 && (
+              {status === 'done' && (
+                <div className="p-8 md:p-14 max-w-xl mx-auto text-center">
+                  <div className="w-20 h-20 rounded-full bg-brand-gold/20 flex items-center justify-center mx-auto mb-8">
+                    <CheckCircle2 className="w-10 h-10 text-brand-dark" />
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-extrabold text-brand-dark mb-4 tracking-tight">You're all set, {lead.firstName.trim()}!</h3>
+                  <p className="text-lg text-brand-dark/60 leading-relaxed font-medium">
+                    A Logic Solar specialist will {lead.contactPreference === 'Text' ? 'text' : 'call'} you at {lead.phone} to go over
+                    your custom solar quote.
+                  </p>
+                </div>
+              )}
+
+              {status !== 'done' && step === 0 && (
                 <div className="grid lg:grid-cols-5">
                   <div className="lg:col-span-3 p-8 md:p-14">
                     <h3 className="text-2xl md:text-3xl font-bold text-brand-dark mb-2 tracking-tight">
@@ -273,31 +328,29 @@ export const SavingsFunnel = () => {
               )}
 
               {/* ── STEP 2: ZIP ── */}
-              {step === 1 && (
+              {status !== 'done' && step === 1 && (
                 <div className="p-8 md:p-14 max-w-xl mx-auto text-center">
                   <div className="w-14 h-14 rounded-2xl bg-brand-gold/15 flex items-center justify-center mx-auto mb-6">
                     <MapPin className="w-7 h-7 text-brand-dark" />
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-brand-dark mb-2 tracking-tight">What is your ZIP code?</h3>
                   <p className="text-brand-dark/50 font-medium mb-8">Incentives and utility rules depend on where you live.</p>
-                  <form onSubmit={e => { e.preventDefault(); submitZip(); }}>
+                  <form noValidate onSubmit={e => { e.preventDefault(); advance(['zip']); }}>
                     <input
                       type="text"
                       inputMode="numeric"
                       autoComplete="postal-code"
                       maxLength={5}
                       placeholder="ZIP code"
-                      value={zip}
-                      onChange={e => { setZip(e.target.value.replace(/\D/g, '')); setZipError(false); }}
+                      aria-label="ZIP code"
+                      value={lead.zip}
+                      onChange={e => set('zip', e.target.value.replace(/\D/g, '').slice(0, 5))}
                       className={`w-full px-6 py-5 rounded-full border-2 bg-white text-center text-xl font-bold tracking-[0.3em] text-brand-dark placeholder:tracking-normal placeholder:font-medium placeholder:text-brand-dark/25 focus:border-brand-gold focus:outline-none transition-colors ${
-                        zipError ? 'border-red-300 bg-red-50/50' : 'border-gray-100'
+                        errors.zip ? 'border-red-300 bg-red-50/50' : 'border-gray-100'
                       }`}
                     />
-                    {zipError && <p className="text-sm text-red-400 mt-2 font-medium">Enter a 5-digit ZIP code.</p>}
-                    <button
-                      type="submit"
-                      className="mt-6 w-full inline-flex items-center justify-center gap-2.5 px-10 py-5 rounded-full font-bold text-[15px] bg-brand-dark text-white hover:-translate-y-1 hover:shadow-xl shadow-lg shadow-brand-dark/20 transition-all duration-300 cursor-pointer"
-                    >
+                    {errors.zip && <p className="text-sm text-red-500 mt-2 font-medium">{errors.zip}</p>}
+                    <button type="submit" className={`mt-6 ${primaryButton}`}>
                       Continue <ArrowRight className="w-4 h-4" />
                     </button>
                   </form>
@@ -305,22 +358,22 @@ export const SavingsFunnel = () => {
               )}
 
               {/* ── STEP 3: Homeowner ── */}
-              {step === 2 && (
+              {status !== 'done' && step === 2 && (
                 <div className="p-8 md:p-14 max-w-xl mx-auto">
                   <div className="w-14 h-14 rounded-2xl bg-brand-gold/15 flex items-center justify-center mx-auto mb-6">
                     <HomeIcon className="w-7 h-7 text-brand-dark" />
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-brand-dark mb-8 tracking-tight text-center">Do you own your home?</h3>
                   <div className="space-y-3">
-                    {['Yes, I own my home', 'No, I rent'].map(opt => (
-                      <Pill key={opt} label={opt} selected={homeowner === opt} onClick={() => choose(setHomeowner, opt)} />
+                    {HOMEOWNER_OPTIONS.map(opt => (
+                      <Pill key={opt} label={opt} selected={lead.homeowner === opt} onClick={() => choose('homeowner', opt)} />
                     ))}
                   </div>
                 </div>
               )}
 
               {/* ── STEP 4: Shade ── */}
-              {step === 3 && (
+              {status !== 'done' && step === 3 && (
                 <div className="p-8 md:p-14 max-w-xl mx-auto">
                   <div className="w-14 h-14 rounded-2xl bg-brand-gold/15 flex items-center justify-center mx-auto mb-6">
                     <Sun className="w-7 h-7 text-brand-dark" />
@@ -328,57 +381,139 @@ export const SavingsFunnel = () => {
                   <h3 className="text-2xl md:text-3xl font-bold text-brand-dark mb-8 tracking-tight text-center">How much shade does your roof get?</h3>
                   <div className="space-y-3">
                     {SHADE_OPTIONS.map(opt => (
-                      <Pill key={opt} label={opt} selected={shade === opt} onClick={() => choose(setShade, opt)} />
+                      <Pill key={opt} label={opt} selected={lead.shade === opt} onClick={() => choose('shade', opt)} />
                     ))}
                   </div>
                 </div>
               )}
 
-              {/* ── STEP 5: Contact (GoHighLevel form) ── */}
-              {step === 4 && (
-                <div className="grid lg:grid-cols-5">
-                  <div className="order-2 lg:order-1 lg:col-span-2 bg-brand-gold p-8 md:p-12 flex flex-col justify-between gap-10">
-                    <div>
-                      <h3 className="text-3xl font-extrabold text-brand-dark mb-4 leading-tight tracking-tight">
-                        Last step: where should we send your quote?
-                      </h3>
-                      <p className="text-brand-dark/70 font-medium leading-relaxed">
-                        A Logic Solar specialist will design a system around your actual usage and walk you through your real numbers.
-                      </p>
+              {/* ── STEP 5: Credit ── */}
+              {status !== 'done' && step === 4 && (
+                <div className="p-8 md:p-14 max-w-xl mx-auto">
+                  <div className="w-14 h-14 rounded-2xl bg-brand-gold/15 flex items-center justify-center mx-auto mb-6">
+                    <CreditCard className="w-7 h-7 text-brand-dark" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-brand-dark mb-2 tracking-tight text-center">Is your credit score above 640?</h3>
+                  <p className="text-brand-dark/50 font-medium mb-8 text-center">It helps us show you the right financing options. This doesn't affect your score.</p>
+                  <div className="space-y-3">
+                    {CREDIT_OPTIONS.map(opt => (
+                      <Pill key={opt} label={opt} selected={lead.credit === opt} onClick={() => choose('credit', opt)} />
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* ── STEP 6: Address ── */}
+              {status !== 'done' && step === 5 && (
+                <div className="p-8 md:p-14 max-w-xl mx-auto">
+                  <div className="w-14 h-14 rounded-2xl bg-brand-gold/15 flex items-center justify-center mx-auto mb-6">
+                    <MapPin className="w-7 h-7 text-brand-dark" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-brand-dark mb-2 tracking-tight text-center">What is your address?</h3>
+                  <p className="text-brand-dark/50 font-medium mb-8 text-center">We use it to look at your roof and design your system.</p>
+                  <form noValidate className="space-y-4" onSubmit={e => { e.preventDefault(); advance(['street', 'city', 'state', 'zip']); }}>
+                    {textField('street', 'Street address', { autoComplete: 'address-line1', placeholder: '123 Main St' })}
+                    {textField('city', 'City', { autoComplete: 'address-level2' })}
+                    <div className="grid grid-cols-2 gap-4">
+                      <label className="block text-left">
+                        <span className="block text-sm font-bold text-brand-dark/70 mb-1.5 ml-1">State</span>
+                        <select
+                          value={lead.state}
+                          onChange={e => set('state', e.target.value)}
+                          autoComplete="address-level1"
+                          aria-invalid={Boolean(errors.state)}
+                          className={inputClass(errors.state)}
+                        >
+                          <option value="">Select</option>
+                          {US_STATES.map(st => <option key={st} value={st}>{st}</option>)}
+                        </select>
+                        {errors.state && <span className="block text-sm text-red-500 mt-1.5 ml-1 font-medium">{errors.state}</span>}
+                      </label>
+                      {textField('zip', 'ZIP code', { autoComplete: 'postal-code', inputMode: 'numeric', maxLength: 5 })}
                     </div>
-                    <dl className="space-y-4 text-brand-dark">
-                      {[
-                        ['Monthly bill', billLabel],
-                        ['ZIP code', zip],
-                        ['Homeowner', homeowner],
-                        ['Roof shade', shade],
-                      ].map(([k, v]) => (
-                        <div key={k} className="flex justify-between gap-4 border-b border-brand-dark/10 pb-3">
-                          <dt className="font-semibold text-brand-dark/60">{k}</dt>
-                          <dd className="font-bold text-right">{v}</dd>
-                        </div>
-                      ))}
-                    </dl>
+                    <button type="submit" className={`mt-2 ${primaryButton}`}>
+                      Continue <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </form>
+                </div>
+              )}
+
+              {/* ── STEP 7: Contact ── */}
+              {status !== 'done' && step === 6 && (
+                <div className="p-8 md:p-14 max-w-xl mx-auto">
+                  <div className="w-14 h-14 rounded-2xl bg-brand-gold/15 flex items-center justify-center mx-auto mb-6">
+                    <Phone className="w-7 h-7 text-brand-dark" />
                   </div>
-                  <div className="order-1 lg:order-2 lg:col-span-3 p-4 lg:p-8 min-h-[911px]">
-                    <iframe
-                      src={formSrc}
-                      style={{ width: '100%', height: '911px', border: 'none', borderRadius: '3px' }}
-                      id={`inline-${GHL_FORM_ID}`}
-                      data-layout="{'id':'INLINE'}"
-                      data-trigger-type="alwaysShow"
-                      data-trigger-value=""
-                      data-activation-type="alwaysActivated"
-                      data-activation-value=""
-                      data-deactivation-type="neverDeactivate"
-                      data-deactivation-value=""
-                      data-form-name="Google ads 1 Form"
-                      data-height="911"
-                      data-layout-iframe-id={`inline-${GHL_FORM_ID}`}
-                      data-form-id={GHL_FORM_ID}
-                      title="Get your free solar quote"
+                  <h3 className="text-2xl md:text-3xl font-bold text-brand-dark mb-2 tracking-tight text-center">Where should we send your quote?</h3>
+                  <p className="text-brand-dark/50 font-medium mb-8 text-center">Last step. A Logic Solar specialist will reach out with your real numbers.</p>
+                  <form noValidate className="space-y-4" onSubmit={e => { e.preventDefault(); submit(); }}>
+                    <div className="grid grid-cols-2 gap-4">
+                      {textField('firstName', 'First name', { autoComplete: 'given-name' })}
+                      {textField('lastName', 'Last name', { autoComplete: 'family-name' })}
+                    </div>
+                    {textField('phone', 'Phone number', { type: 'tel', autoComplete: 'tel-national', inputMode: 'tel', placeholder: '(555) 555-5555' })}
+                    {textField('email', 'Email', { type: 'email', autoComplete: 'email', inputMode: 'email' })}
+
+                    <fieldset className="pt-2">
+                      <legend className="block text-sm font-bold text-brand-dark/70 mb-2 ml-1">Do you prefer a text or a phone call?</legend>
+                      <div className="grid grid-cols-2 gap-3">
+                        {CONTACT_OPTIONS.map(opt => (
+                          <button
+                            key={opt}
+                            type="button"
+                            aria-pressed={lead.contactPreference === opt}
+                            onClick={() => set('contactPreference', opt)}
+                            className={`px-4 py-4 rounded-full border-2 font-semibold text-[15px] transition-all cursor-pointer ${
+                              lead.contactPreference === opt
+                                ? 'border-brand-gold bg-brand-gold/15 text-brand-dark'
+                                : errors.contactPreference
+                                  ? 'border-red-300 bg-red-50/50 text-brand-dark/70'
+                                  : 'border-gray-100 bg-white hover:border-brand-gold/40 text-brand-dark/70'
+                            }`}
+                          >
+                            {opt}
+                          </button>
+                        ))}
+                      </div>
+                      {errors.contactPreference && <span className="block text-sm text-red-500 mt-1.5 ml-1 font-medium">{errors.contactPreference}</span>}
+                    </fieldset>
+
+                    {/* Honeypot: hidden from people, filled in by bots. */}
+                    <input
+                      type="text"
+                      name="company"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      aria-hidden="true"
+                      value={company}
+                      onChange={e => setCompany(e.target.value)}
+                      className="absolute -left-[9999px] w-px h-px opacity-0"
                     />
-                  </div>
+
+                    <label className="flex gap-3 items-start text-left pt-2 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        checked={lead.consent}
+                        onChange={e => set('consent', e.target.checked)}
+                        className="mt-1 w-5 h-5 shrink-0 accent-[#1b2a33]"
+                      />
+                      <span className="text-[11px] leading-relaxed text-brand-dark/55">{CONSENT_TEXT}</span>
+                    </label>
+                    {errors.consent && <p className="text-sm text-red-500 font-medium">{errors.consent}</p>}
+
+                    {status === 'error' && (
+                      <p role="alert" className="rounded-2xl bg-red-50 border border-red-200 p-4 text-sm text-red-700 font-medium">
+                        We couldn't send your request. Please try again, or call us at{' '}
+                        <a className="underline font-bold" href={`tel:${siteData.contact.phone.replace(/\D/g, '')}`}>{siteData.contact.phone}</a>.
+                      </p>
+                    )}
+
+                    <button type="submit" disabled={status === 'sending'} className={`mt-2 ${primaryButton}`}>
+                      {status === 'sending'
+                        ? <><Loader2 className="w-4 h-4 animate-spin" /> Sending…</>
+                        : <>Get My Free Quote <ArrowRight className="w-4 h-4" /></>}
+                    </button>
+                  </form>
                 </div>
               )}
             </motion.div>
@@ -386,7 +521,7 @@ export const SavingsFunnel = () => {
 
           {/* Back + trust line */}
           <div className="px-8 md:px-14 pb-10 pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-gray-50">
-            {step > 0 ? (
+            {step > 0 && status !== 'done' ? (
               <button
                 type="button"
                 onClick={back}
