@@ -65,9 +65,9 @@ export const HomeHero = () => {
 
           {/* CTAs */}
           <div style={s.ctas}>
-            <Link to="/contact" style={s.btnDark}>
+            <a href="#quote-form" style={s.btnDark}>
               Get My Free Solar Quote <ArrowRight style={{ width: 16, height: 16, marginLeft: 6 }} />
-            </Link>
+            </a>
             <Link to="/services/how-it-works" style={s.btnLight}>
               See How It Works
             </Link>
