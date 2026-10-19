@@ -41,11 +41,18 @@
       "text": "Get your free quote",
       "url": "https://www.logic-solar.com/services/battery"
     },
+    "heroImage": {
+      "src": "/blog/images/solar-battery-backup-overland-park-essential-loads-b6902c64e3c0.png",
+      "alt": "Illustrative scene of a homeowner making an essential-load checklist in a kitchen at dusk.",
+      "width": 1732,
+      "height": 908,
+      "illustrative": true
+    },
     "compass": {
       "draft_id": "63344ed3-7e71-4a4a-943a-d8192dc1bf9d",
       "release_hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
       "keyword_id": "50e58bbd-fd4d-43eb-a66f-9c766fb3245c",
-      "version": 3
+      "version": 4
     }
   },
   {
@@ -62,11 +69,18 @@
       "text": "Get your free quote",
       "url": "https://www.logic-solar.com/services/installation"
     },
+    "heroImage": {
+      "src": "/blog/images/solar-panel-installation-quote-wichita-factors-3a4610ca4b30.png",
+      "alt": "Illustrative tabletop with planning papers, a roof sketch, a navy folder and a yellow pencil.",
+      "width": 1734,
+      "height": 907,
+      "illustrative": true
+    },
     "compass": {
       "draft_id": "019c1eb1-9378-41d7-b21b-3700104fbe3e",
       "release_hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
       "keyword_id": "40e327de-1ec0-42c2-9971-c2e119e0a8e4",
-      "version": 2
+      "version": 3
     }
   }
 ]
