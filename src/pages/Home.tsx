@@ -4,7 +4,7 @@ import { TrustStrip } from '../components/TrustStrip';
 import { ServicesOverview } from '../components/ServicesOverview';
 import { ServiceMap } from '../components/ServiceMap';
 import { FAQSection } from '../components/FAQSection';
-import { QuoteForm } from '../components/QuoteForm';
+import { SavingsFunnel } from '../components/SavingsFunnel';
 import { homeMeta } from '../data/pageMeta';
 import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle2, TrendingDown, Zap, Shield, Award, Sparkles } from 'lucide-react';
@@ -20,6 +20,7 @@ export const Home = () => {
       />
       <HomeHero />
       <TrustStrip />
+      <SavingsFunnel />
       
       {/* Why Logic Solar Section - Refined for Spacing & Hierarchy */}
       <section className="section-padding overflow-hidden">
@@ -237,7 +238,6 @@ export const Home = () => {
       </section>
 
       <FAQSection />
-      <QuoteForm />
     </main>
   );
 };
