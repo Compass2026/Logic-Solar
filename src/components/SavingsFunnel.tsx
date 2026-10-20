@@ -5,12 +5,13 @@ import {
   CONSENT_TEXT, CONTACT_OPTIONS, CREDIT_OPTIONS, HOMEOWNER_OPTIONS, SHADE_OPTIONS, US_STATES, formatPhone, validateLead,
 } from '../lib/lead-core.js';
 import { siteData } from '../data/siteData';
+import { readAttribution } from '../lib/attribution';
 
 /*
  * Homepage lead funnel: an electric-bill slider with a live utility-cost
  * projection, then ZIP, homeowner, roof shade, credit, address and contact
- * steps. The lead is posted to /api/lead, which forwards it to GoHighLevel's
- * inbound webhook (api/lead.js; field list in docs/ghl-lead-webhook.md).
+ * steps. The lead is posted to /api/lead, which sends it server-side to
+ * Logic's intake endpoint (api/lead.js; docs/lead-intake.md).
  */
 
 const BILL_MIN = 50;
@@ -27,14 +28,31 @@ const YEARS = 25;
 const STEP_LABELS = ['Your Bill', 'ZIP', 'Home', 'Roof', 'Credit', 'Address', 'Contact'];
 const LAST_STEP = STEP_LABELS.length - 1;
 
+// Which step asks each question, so an error from the intake lands where the
+// visitor can fix it.
+const FIELD_STEP: Record<string, number> = {
+  monthlyBill: 0, homeowner: 2, shade: 3, credit: 4, street: 5, city: 5, state: 5, zip: 5,
+  firstName: 6, lastName: 6, phone: 6, email: 6, contactPreference: 6, consent: 6,
+};
+
+const newSubmissionId = () => {
+  if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') return crypto.randomUUID();
+  const b = crypto.getRandomValues(new Uint8Array(16));
+  b[6] = (b[6] & 0x0f) | 0x40;
+  b[8] = (b[8] & 0x3f) | 0x80;
+  const h = Array.from(b, x => x.toString(16).padStart(2, '0')).join('');
+  return `${h.slice(0, 8)}-${h.slice(8, 12)}-${h.slice(12, 16)}-${h.slice(16, 20)}-${h.slice(20)}`;
+};
+
 type Lead = {
   zip: string; homeowner: string; shade: string; credit: string; street: string; city: string; state: string;
   firstName: string; lastName: string; phone: string; email: string; contactPreference: string; consent: boolean;
+  consentAt: string;
 };
 
 const EMPTY_LEAD: Lead = {
   zip: '', homeowner: '', shade: '', credit: '', street: '', city: '', state: '',
-  firstName: '', lastName: '', phone: '', email: '', contactPreference: '', consent: false,
+  firstName: '', lastName: '', phone: '', email: '', contactPreference: '', consent: false, consentAt: '',
 };
 
 const inputClass = (error?: string) =>
@@ -68,6 +86,9 @@ export const SavingsFunnel = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [company, setCompany] = useState(''); // honeypot, never shown
   const [status, setStatus] = useState<'idle' | 'sending' | 'done' | 'error'>('idle');
+  const [testSubmission, setTestSubmission] = useState(false);
+  // One id per submission, reused on every retry so the intake never saves it twice.
+  const submissionId = useRef('');
   const cardRef = useRef<HTMLDivElement>(null);
   const firstRender = useRef(true);
 
@@ -124,19 +145,42 @@ export const SavingsFunnel = () => {
   };
 
   const submit = async () => {
+    if (status === 'sending') return;
     const found = validateLead({ ...lead, monthlyBill: bill });
     setErrors(found);
     if (Object.keys(found).length) return;
+    if (!submissionId.current) submissionId.current = newSubmissionId();
     setStatus('sending');
     try {
       const res = await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...lead, monthlyBill: bill, company, pageUrl: window.location.href }),
+        body: JSON.stringify({
+          ...lead,
+          monthlyBill: bill,
+          monthlyBillLabel: billLabel,
+          submissionId: submissionId.current,
+          attribution: readAttribution(),
+          pageUrl: window.location.href,
+          company,
+        }),
       });
-      if (!res.ok) throw new Error(String(res.status));
-      track('generate_lead', { monthly_bill: bill, contact_preference: lead.contactPreference });
-      setStatus('done');
+      const json = await res.json().catch(() => null);
+      if (res.ok && json?.ok) {
+        track('generate_lead', { monthly_bill: bill, contact_preference: lead.contactPreference });
+        setTestSubmission(Boolean(json.test));
+        setStatus('done');
+        return;
+      }
+      if (res.status === 400 && json?.errors && Object.keys(json.errors).length) {
+        const fieldErrors: Record<string, string> = json.errors;
+        const steps = Object.keys(fieldErrors).map(f => FIELD_STEP[f] ?? LAST_STEP);
+        setErrors(fieldErrors);
+        setStatus('idle');
+        setStep(Math.min(...steps));
+        return;
+      }
+      setStatus('error');
     } catch {
       setStatus('error');
     }
@@ -240,6 +284,11 @@ export const SavingsFunnel = () => {
                     A Logic Solar specialist will {lead.contactPreference === 'Text' ? 'text' : 'call'} you at {lead.phone} to go over
                     your custom solar quote.
                   </p>
+                  {testSubmission && (
+                    <p className="mt-6 inline-block rounded-full bg-gray-100 px-4 py-2 text-xs font-bold uppercase tracking-wider text-brand-dark/50">
+                      Test submission · not saved
+                    </p>
+                  )}
                 </div>
               )}
 
@@ -282,6 +331,7 @@ export const SavingsFunnel = () => {
                       <span>{usd(BILL_MIN)}</span>
                       <span>{usd(BILL_MAX)}+</span>
                     </div>
+                    {errors.monthlyBill && <p role="alert" className="text-sm text-red-500 mt-3 font-medium">{errors.monthlyBill}</p>}
 
                     <div className="lg:hidden mt-8 rounded-3xl bg-brand-dark text-white p-6 grid grid-cols-2 gap-4">
                       <div>
@@ -369,6 +419,7 @@ export const SavingsFunnel = () => {
                       <Pill key={opt} label={opt} selected={lead.homeowner === opt} onClick={() => choose('homeowner', opt)} />
                     ))}
                   </div>
+                  {errors.homeowner && <p role="alert" className="text-sm text-red-500 mt-3 text-center font-medium">{errors.homeowner}</p>}
                 </div>
               )}
 
@@ -384,6 +435,7 @@ export const SavingsFunnel = () => {
                       <Pill key={opt} label={opt} selected={lead.shade === opt} onClick={() => choose('shade', opt)} />
                     ))}
                   </div>
+                  {errors.shade && <p role="alert" className="text-sm text-red-500 mt-3 text-center font-medium">{errors.shade}</p>}
                 </div>
               )}
 
@@ -400,6 +452,7 @@ export const SavingsFunnel = () => {
                       <Pill key={opt} label={opt} selected={lead.credit === opt} onClick={() => choose('credit', opt)} />
                     ))}
                   </div>
+                  {errors.credit && <p role="alert" className="text-sm text-red-500 mt-3 text-center font-medium">{errors.credit}</p>}
                 </div>
               )}
 
@@ -494,7 +547,10 @@ export const SavingsFunnel = () => {
                       <input
                         type="checkbox"
                         checked={lead.consent}
-                        onChange={e => set('consent', e.target.checked)}
+                        onChange={e => {
+                          set('consent', e.target.checked);
+                          set('consentAt', e.target.checked ? new Date().toISOString() : '');
+                        }}
                         className="mt-1 w-5 h-5 shrink-0 accent-[#1b2a33]"
                       />
                       <span className="text-[11px] leading-relaxed text-brand-dark/55">{CONSENT_TEXT}</span>

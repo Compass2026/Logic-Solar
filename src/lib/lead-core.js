@@ -1,6 +1,7 @@
 // The homepage funnel's lead: the one set of rules the browser, the /api/lead
 // route and the tests share. The route re-validates everything the browser
-// sends and builds the payload GoHighLevel's inbound webhook receives.
+// sends and builds the body Logic's intake endpoint receives
+// (docs/lead-intake.md).
 
 export const CONSENT_TEXT =
   'By submitting your information, you agree to be contacted by Logic Solar via phone calls and text messages at the number provided. ' +
@@ -12,6 +13,10 @@ export const HOMEOWNER_OPTIONS = ['Yes, I own my home', 'No, I rent'];
 export const SHADE_OPTIONS = ['No shade', 'A little shade', 'A lot of shade', 'Not sure'];
 export const CREDIT_OPTIONS = ['Yes', 'No', "I'm not sure"];
 export const CONTACT_OPTIONS = ['Text', 'Phone call'];
+
+export const ATTRIBUTION_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'];
+
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
 export const US_STATES = [
   'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
@@ -56,47 +61,46 @@ export function validateLead(lead, fields = null) {
   if (want('email') && !isEmail(lead.email)) errors.email = 'Enter a valid email address.';
   if (want('contactPreference') && !CONTACT_OPTIONS.includes(lead.contactPreference)) errors.contactPreference = 'Choose text or phone call.';
   if (want('consent') && lead.consent !== true) errors.consent = 'Please check the box so we can contact you.';
+  if (want('consentAt') && lead.consent === true && Number.isNaN(Date.parse(str(lead.consentAt)))) errors.consent = 'Please check the box so we can contact you.';
+  if (want('submissionId') && !UUID_RE.test(str(lead.submissionId))) errors.submissionId = 'Please refresh the page and try again.';
   for (const key of ['street', 'city', 'firstName', 'lastName', 'email']) {
     if (want(key) && str(lead[key]).length > 120) errors[key] = 'That answer is too long.';
   }
   return errors;
 }
 
-// What GoHighLevel's inbound webhook receives: flat keys a workflow maps
-// onto the contact (standard fields) and Logic's custom fields.
-export function buildLeadPayload(lead, { submittedAt, pageUrl, ip, userAgent } = {}) {
-  const phone = phoneDigits(lead.phone);
-  const bill = Math.round(Number(lead.monthlyBill));
-  const first = str(lead.firstName);
-  const last = str(lead.lastName);
-  const summary =
-    `Homepage savings funnel. Monthly bill: $${bill}. Homeowner: ${lead.homeowner}. Roof shade: ${lead.shade}. ` +
-    `Credit score above 640: ${lead.credit}. Prefers: ${lead.contactPreference}.`;
-  return {
-    first_name: first,
-    last_name: last,
-    full_name: `${first} ${last}`,
+// Logic's intake body. Labels go exactly as the visitor saw them; optional
+// fields we don't have are left out.
+export function buildIntakeBody(lead, { test = true } = {}) {
+  const body = {
+    submission_id: str(lead.submissionId),
+    first_name: str(lead.firstName),
+    last_name: str(lead.lastName),
     email: str(lead.email).toLowerCase(),
-    phone: `+1${phone}`,
+    phone: str(lead.phone),
     address1: str(lead.street),
     city: str(lead.city),
     state: str(lead.state).toUpperCase(),
     postal_code: str(lead.zip),
-    country: 'US',
-    average_monthly_utility_bill: bill,
-    homeowner: lead.homeowner === HOMEOWNER_OPTIONS[0] ? 'Yes' : 'No',
-    roof_shade: lead.shade,
-    credit_score_above_640: lead.credit,
-    contact_preference: lead.contactPreference,
-    consent: true,
-    consent_text: CONSENT_TEXT,
-    consent_at: submittedAt,
-    consent_ip: ip || '',
-    consent_user_agent: userAgent || '',
-    notes: summary,
-    source: 'Website - Homepage Savings Funnel',
-    page_url: pageUrl || '',
-    submitted_at: submittedAt,
-    tags: ['website lead', 'savings funnel'],
+    monthly_bill: str(lead.monthlyBillLabel),
+    homeowner: str(lead.homeowner),
+    shade: str(lead.shade),
+    credit_score: str(lead.credit),
+    contact_preference: lead.contactPreference === 'Text' ? 'text' : lead.contactPreference === 'Phone call' ? 'call' : '',
+    consent: { agreed: true, text: CONSENT_TEXT, at: new Date(lead.consentAt).toISOString() },
+    page_url: str(lead.pageUrl).slice(0, 500),
   };
+  const attribution = lead.attribution && typeof lead.attribution === 'object' ? lead.attribution : {};
+  for (const key of ATTRIBUTION_KEYS) body[key] = str(attribution[key]).slice(0, 300);
+  for (const [key, value] of Object.entries(body)) if (value === '') delete body[key];
+  if (test) body.test = true;
+  return body;
 }
+
+// Logic's 400 names its fields; the funnel names them its own way.
+export const INTAKE_FIELD_TO_LEAD = {
+  first_name: 'firstName', last_name: 'lastName', email: 'email', phone: 'phone',
+  address1: 'street', city: 'city', state: 'state', postal_code: 'zip',
+  monthly_bill: 'monthlyBill', homeowner: 'homeowner', shade: 'shade', credit_score: 'credit',
+  contact_preference: 'contactPreference', consent: 'consent',
+};
