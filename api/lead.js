@@ -1,6 +1,7 @@
 // POST /api/lead: the homepage funnel's submit. Re-validates the lead and
 // sends it, server-side only, to Logic's intake endpoint with the key from
 // LOGIC_INTAKE_KEY (docs/lead-intake.md). The key never reaches the browser.
+import { createHash } from 'node:crypto';
 import { validateLead, buildIntakeBody, INTAKE_FIELD_TO_LEAD } from '../src/lib/lead-core.js';
 
 export const INTAKE_URL = 'https://logic-portal.com/api/lead-intake/site';
@@ -32,6 +33,21 @@ async function post(fetchImpl, key, body) {
     return { status: 0, json: null, error: err && err.name };
   }
 }
+
+// The env value as pasted into Vercel: spaces, line breaks and one pair of
+// quote marks around it are copy-paste debris, never part of the key.
+export function cleanKey(raw) {
+  let key = String(raw || '').trim();
+  const m = key.match(/^(["'\u201c\u2018`])(.*)(["'\u201d\u2019`])$/s);
+  if (m) key = m[2].trim();
+  return key;
+}
+
+// Safe to log and to compare with Logic: length and a short hash, never the key.
+export const keyFingerprint = (key) => ({
+  length: key.length,
+  sha256_prefix: createHash('sha256').update(key).digest('hex').slice(0, 12),
+});
 
 const retryable = (status) => status === 0 || status === 429 || status >= 500;
 
@@ -73,7 +89,10 @@ export async function handleLead(body, { key, fetchImpl = fetch, wait = sleep, l
   }
 
   if (answer.status === 404) {
-    log.error('[lead] intake answered 404: wrong or missing key, or the endpoint is off', { submission_id: intakeBody.submission_id });
+    log.error('[lead] intake answered 404: wrong or missing key, or the endpoint is off', {
+      submission_id: intakeBody.submission_id,
+      key: keyFingerprint(key),
+    });
   } else {
     log.error('[lead] intake failed', answer.status || answer.error, { submission_id: intakeBody.submission_id });
   }
@@ -90,7 +109,6 @@ export default async function handler(req, res) {
   if (typeof body === 'string') {
     try { body = JSON.parse(body); } catch { body = null; }
   }
-  // Trimmed: a key pasted into Vercel easily picks up a space or line break.
-  const { status, json } = await handleLead(body, { key: (process.env.LOGIC_INTAKE_KEY || '').trim() });
+  const { status, json } = await handleLead(body, { key: cleanKey(process.env.LOGIC_INTAKE_KEY) });
   return res.status(status).json(json);
 }

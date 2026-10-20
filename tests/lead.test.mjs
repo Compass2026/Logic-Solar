@@ -3,7 +3,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { validateLead, buildIntakeBody, formatPhone, CONSENT_TEXT } from '../src/lib/lead-core.js';
-import { handleLead, INTAKE_URL, INTAKE_TEST_MODE } from '../api/lead.js';
+import { handleLead, INTAKE_URL, INTAKE_TEST_MODE, cleanKey, keyFingerprint } from '../api/lead.js';
 
 const ID = '3f2b8c1e-9d4a-4c6b-8e2f-1a2b3c4d5e6f';
 
@@ -175,4 +175,23 @@ test('without LOGIC_INTAKE_KEY nothing is sent and it is logged', async () => {
 
 test('a missing body is a bad request', async () => {
   assert.equal((await handleLead(null, { key: 'k' })).status, 400);
+});
+
+test('the key loses copy-paste debris (spaces, line breaks, wrapping quotes) and nothing else', () => {
+  assert.equal(cleanKey('  abc-123_@.x \n'), 'abc-123_@.x');
+  assert.equal(cleanKey('"abc-123"'), 'abc-123');
+  assert.equal(cleanKey("'abc-123'\n"), 'abc-123');
+  assert.equal(cleanKey('\u201cabc-123\u201d'), 'abc-123');
+  assert.equal(cleanKey('ab"c'), 'ab"c');
+  assert.equal(cleanKey(undefined), '');
+});
+
+test('a 404 logs a key fingerprint (length + short hash), never the key', async () => {
+  const fake = intake([404, null]);
+  const log = recorder();
+  await run(lead(), fake, { key: 'secret-key-value', log });
+  const logged = JSON.stringify(log.lines);
+  assert.ok(!logged.includes('secret-key-value'));
+  assert.ok(logged.includes(keyFingerprint('secret-key-value').sha256_prefix));
+  assert.equal(keyFingerprint('secret-key-value').length, 16);
 });
