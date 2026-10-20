@@ -90,6 +90,7 @@ export default async function handler(req, res) {
   if (typeof body === 'string') {
     try { body = JSON.parse(body); } catch { body = null; }
   }
-  const { status, json } = await handleLead(body, { key: process.env.LOGIC_INTAKE_KEY });
+  // Trimmed: a key pasted into Vercel easily picks up a space or line break.
+  const { status, json } = await handleLead(body, { key: (process.env.LOGIC_INTAKE_KEY || '').trim() });
   return res.status(status).json(json);
 }
