@@ -492,7 +492,7 @@ const categories = [
       { name: 'Small System Adder (4KW–6KW)', price: '$1,500', note: 'Must be within 100 mi of metro areas' },
       { name: 'Small System Adder (4KW or less)', price: '$2,500', note: 'Must be within 100 mi of metro areas' },
       { name: 'Company Generated Lead', price: '$0.40/watt' },
-      { name: 'SREC Project Filing', price: '$1,000' },
+      { name: 'SREC Project Filing', price: '$1,500' },
       { name: 'REAP Grant Application', price: '$750', note: 'Upfront — subtracted once approved' },
       { name: 'Credit Repair', price: '$200' },
       { name: 'FEOC Content Package', price: '$0.10/watt' },
