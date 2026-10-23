@@ -6,10 +6,9 @@ import { validateLead, buildIntakeBody, INTAKE_FIELD_TO_LEAD } from '../src/lib/
 
 export const INTAKE_URL = 'https://logic-portal.com/api/lead-intake/site';
 
-// Logic asked for "test": true until they say the endpoint takes real leads.
-// Test submissions are answered with a summary and nothing is saved.
-// Going live = set this to false in a reviewed commit.
-export const INTAKE_TEST_MODE = true;
+// Live: real leads, no "test": true. Set back to true only to test against
+// Logic's intake without saving (answers carry a "would" summary instead).
+export const INTAKE_TEST_MODE = false;
 
 export const config = { maxDuration: 30 };
 

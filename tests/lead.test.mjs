@@ -91,13 +91,17 @@ test('the consent text names Logic Solar, not a placeholder', () => {
   assert.doesNotMatch(CONSENT_TEXT, /\[Company Name\]/);
 });
 
-test('the route stays in test mode until Logic says the endpoint takes real leads', () => {
-  assert.equal(INTAKE_TEST_MODE, true);
+test('the route is live: real leads carry no test flag', async () => {
+  assert.equal(INTAKE_TEST_MODE, false);
+  const fake = intake([200, { ok: true }]);
+  const r = await handleLead(lead(), { key: 'k-test', fetchImpl: fake.fetchImpl, wait: async () => {}, log: quiet });
+  assert.deepEqual(r.json, { ok: true, test: false });
+  assert.ok(!('test' in fake.calls[0].body));
 });
 
 test('200: posts once to the intake with the key header and answers ok', async () => {
   const fake = intake([200, { ok: true, would: { action: 'create' } }]);
-  const r = await run(lead(), fake);
+  const r = await run(lead(), fake, { test: true });
   assert.deepEqual(r, { status: 200, json: { ok: true, test: true } });
   assert.equal(fake.calls.length, 1);
   assert.equal(fake.calls[0].url, INTAKE_URL);

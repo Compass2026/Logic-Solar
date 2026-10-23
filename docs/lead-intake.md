@@ -30,10 +30,10 @@ Built by `buildIntakeBody` in `src/lib/lead-core.js`:
 - `page_url`, and `utm_source` / `utm_medium` / `utm_campaign` / `utm_term` /
   `utm_content` / `gclid` / `fbclid` from the visitor's landing URL
   (`src/lib/attribution.ts`, kept for the visit). Missing ones are omitted.
-- `test: true` while `INTAKE_TEST_MODE` in `api/lead.js` is `true`. Logic
-  answers test submissions with a `would` summary (logged) and saves nothing;
-  the thank-you step then shows "Test submission · not saved". Set it to
-  `false` only when Logic says the endpoint takes real leads.
+- `test: true` only while `INTAKE_TEST_MODE` in `api/lead.js` is `true` (it
+  is `false`: live since October 23, 2026, after Josh approved the flow).
+  Logic answers test submissions with a `would` summary (logged) and saves
+  nothing; the thank-you step then shows "Test submission · not saved".
 
 ## Answers
 
@@ -47,10 +47,9 @@ Built by `buildIntakeBody` in `src/lib/lead-core.js`:
 
 Logs are in Vercel → logic-solar → Logs, prefixed `[lead]`.
 
-## Going live
+## Status
 
-The existing form stays on the live site until Josh approves the new flow.
-Then: set `INTAKE_TEST_MODE = false` (once Logic confirms real leads), merge,
-and send one real lead to check it arrives.
+Live on the homepage since October 23, 2026 (Josh approved the flow). The
+/contact page still uses the GoHighLevel form.
 
 Tests: `tests/lead.test.mjs` (`npm test`).
