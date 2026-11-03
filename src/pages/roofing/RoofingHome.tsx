@@ -72,8 +72,8 @@ export const RoofingHome = () => {
               >
                 <div className="relative rounded-[40px] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.15)] aspect-square md:aspect-[4/3] lg:aspect-[3/2] group">
                   <img 
-                    src="/images/roofing-replacement-home.jpg" 
-                    alt="Roofing crew replacing the roof on a two-story home" 
+                    src="/images/roofing-finished-home.jpg" 
+                    alt="Two-story home with a finished architectural shingle roof" 
                     className="w-full h-full object-cover transition-transform duration-1000"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent opacity-60" />
