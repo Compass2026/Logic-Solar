@@ -72,8 +72,8 @@ export const RoofingHome = () => {
               >
                 <div className="relative rounded-[40px] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.15)] aspect-square md:aspect-[4/3] lg:aspect-[3/2] group">
                   <img 
-                    src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1600" 
-                    alt="Premium Architectural Roofing" 
+                    src="/images/roofing-replacement-home.jpg" 
+                    alt="Roofing crew replacing the roof on a two-story home" 
                     className="w-full h-full object-cover transition-transform duration-1000"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 via-transparent to-transparent opacity-60" />
@@ -130,8 +130,8 @@ export const RoofingHome = () => {
                 className="relative rounded-[48px] overflow-hidden shadow-[0_40px_80px_-20px_rgba(0,0,0,0.12)]"
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1000" 
-                  alt="Modern Roof Replacement" 
+                  src="/images/roofing-shingle-install.jpg" 
+                  alt="Roofer nailing architectural shingles" 
                   className="w-full h-full object-cover aspect-[4/5]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-brand-dark/20 to-transparent" />
