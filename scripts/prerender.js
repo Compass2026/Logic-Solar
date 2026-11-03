@@ -242,7 +242,7 @@ push('/terms', 'Terms of Service',
 // Internal tool / campaign routes: prerendered so they resolve as real files
 // (no SPA catch-all needed), but noindexed — they are not for search.
 const internalRoutes = [
-  '/adders', '/service', '/credit', '/credit-repair', '/deal', '/logins',
+  '/adders', '/service', '/credit', '/credit-repair', '/deal', '/roofdeal', '/logins',
   '/onboard', '/sitesurvey', '/thankyou', '/commercial', '/solar-landing',
 ];
 for (const r of internalRoutes) {

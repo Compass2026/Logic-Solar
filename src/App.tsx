@@ -20,6 +20,7 @@ import { ServiceRequestPage } from './pages/ServiceRequestPage';
 import { CreditApplicationPage } from './pages/CreditApplicationPage';
 import { CreditRepairPage } from './pages/CreditRepairPage';
 import { DealSubmissionPage } from './pages/DealSubmissionPage';
+import { RoofDealSubmissionPage } from './pages/RoofDealSubmissionPage';
 import { LoginsPage } from './pages/LoginsPage';
 import { OnboardingPage } from './pages/OnboardingPage';
 import { SiteSurveyPage } from './pages/SiteSurveyPage';
@@ -93,6 +94,7 @@ const MainSiteLayout = () => {
             <Route path="/credit" element={<CreditApplicationPage />} />
             <Route path="/credit-repair" element={<CreditRepairPage />} />
             <Route path="/deal" element={<DealSubmissionPage />} />
+            <Route path="/roofdeal" element={<RoofDealSubmissionPage />} />
             <Route path="/logins" element={<LoginsPage />} />
             <Route path="/onboard" element={<OnboardingPage />} />
             <Route path="/sitesurvey" element={<SiteSurveyPage />} />
