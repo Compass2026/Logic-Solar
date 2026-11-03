@@ -9,6 +9,10 @@ interface InternalFormPageTemplateProps {
   eyebrow?: string;
   children: React.ReactNode;
   maxWidth?: string;
+  /** Optional photo behind the header, darkened so the text stays readable. */
+  backgroundImage?: string;
+  /** Optional link-preview image (absolute URL). */
+  ogImage?: string;
 }
 
 /**
@@ -21,20 +25,34 @@ export const InternalFormPageTemplate = ({
   subtitle,
   eyebrow,
   children,
-  maxWidth = "max-w-5xl" // Default roughly 1000px
+  maxWidth = "max-w-5xl", // Default roughly 1000px
+  backgroundImage,
+  ogImage,
 }: InternalFormPageTemplateProps) => {
   return (
     <main className="bg-gray-50 min-h-screen">
       <SEO 
         title={title} 
         description={subtitle}
-        noindex={true} 
+        noindex={true}
+        ogImage={ogImage}
       />
 
       {/* Branded Hero Header */}
       <section className="relative pt-32 pb-48 md:pt-40 md:pb-64 overflow-hidden bg-brand-dark">
         {/* Decorative branded glow background */}
         <div className="absolute inset-0 z-0">
+          {backgroundImage && (
+            <>
+              <img
+                src={backgroundImage}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/85 via-brand-dark/75 to-brand-dark/95" />
+            </>
+          )}
           <div className="absolute top-0 right-0 w-[60%] h-full bg-brand-teal/20 blur-[120px]" />
           <div className="absolute bottom-0 left-0 w-[40%] h-[80%] bg-brand-gold/5 blur-[100px]" />
         </div>
