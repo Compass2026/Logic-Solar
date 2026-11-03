@@ -242,12 +242,18 @@ push('/terms', 'Terms of Service',
 // Internal tool / campaign routes: prerendered so they resolve as real files
 // (no SPA catch-all needed), but noindexed — they are not for search.
 const internalRoutes = [
-  '/adders', '/service', '/credit', '/credit-repair', '/deal', '/roofdeal', '/logins',
+  '/adders', '/service', '/credit', '/credit-repair', '/deal', '/logins',
   '/onboard', '/sitesurvey', '/thankyou', '/commercial', '/solar-landing',
 ];
 for (const r of internalRoutes) {
   push(r, 'Logic Solar', 'Logic Solar internal page.', { noindex: true });
 }
+// Roof deals get their own link preview (roofing photo), since the sales team
+// texts this link around.
+push('/roofdeal', 'Roof Deal Submission', 'Submit roofing project details for review and scheduling.', {
+  noindex: true,
+  ogImage: `${BASE_URL}/images/roofing-crew-og.jpg`,
+});
 
 // City/state titles and descriptions come from src/data/pageMeta.js — the
 // same module the React pages use — so prerendered meta and hydrated meta

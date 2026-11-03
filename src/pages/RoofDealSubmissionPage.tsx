@@ -29,6 +29,8 @@ export const RoofDealSubmissionPage = () => {
       title="Roof Deal Submission"
       subtitle="Submit roofing project details for review and scheduling."
       eyebrow="Roofing Sales Portal"
+      backgroundImage="/images/roofing-crew-hero.jpg"
+      ogImage="https://www.logic-solar.com/images/roofing-crew-og.jpg"
     >
       {ROOF_DEAL_FORM_ID ? (
         <div className="w-full overflow-hidden rounded-[40px] bg-white shadow-sm border border-gray-100">
