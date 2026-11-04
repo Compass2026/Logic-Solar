@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 import React from 'react';
 import type { Block, HeroImage, Inline } from '../../content/compass-blog';
-import { heroVariants, HERO_SIZES, ILLUSTRATIVE_CAPTION, linkAttrs } from '../../content/compass-blog-core.js';
+import { heroVariants, HERO_SIZES, linkAttrs } from '../../content/compass-blog-core.js';
 
 // Renders the approved Markdown blocks as React elements: text is always
 // text (no raw HTML), and only https links become anchors.
@@ -54,7 +54,6 @@ export const ArticleHero = ({ hero, eager = true, className = '' }: { hero: Hero
           className="h-auto w-full rounded-2xl bg-brand-dark/5 object-cover shadow-xl"
           {...(eager ? { fetchPriority: 'high' as const } : { loading: 'lazy' as const })} decoding="async" />
       </picture>
-      {hero.illustrative && <figcaption className="mt-2 text-xs uppercase tracking-widest text-brand-dark/50">{ILLUSTRATIVE_CAPTION}</figcaption>}
     </figure>
   );
 };

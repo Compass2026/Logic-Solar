@@ -171,14 +171,15 @@ export function tldrHtml(tldr) {
   return `<aside class="compass-tldr" aria-label="${TLDR_LABEL}"><p><strong>${TLDR_LABEL}</strong></p><p>${escapeHtml(tldr)}</p></aside>`;
 }
 export const HERO_SIZES = '(min-width: 1024px) 896px, 100vw';
-export const ILLUSTRATIVE_CAPTION = 'Illustration';
+// The hero carries no public caption (Tom, Nov 4 2026). `illustrative` stays on the
+// article as an internal classification; the alt text describes the image.
 export function heroHtml(hero, { eager = true } = {}) {
   const variants = heroVariants(hero);
   const source = variants.length
     ? `<source type="image/webp" srcset="${variants.map((v) => `${v.src} ${v.width}w`).join(', ')}" sizes="${HERO_SIZES}">`
     : '';
   const img = `<img src="${escapeHtml(hero.src)}" alt="${escapeHtml(hero.alt)}" width="${hero.width}" height="${hero.height}" style="width:100%;height:auto"${eager ? ' fetchpriority="high"' : ' loading="lazy"'} decoding="async">`;
-  return `<figure class="compass-hero"><picture>${source}${img}</picture>${hero.illustrative ? `<figcaption>${ILLUSTRATIVE_CAPTION}</figcaption>` : ''}</figure>`;
+  return `<figure class="compass-hero"><picture>${source}${img}</picture></figure>`;
 }
 
 export function formatDate(iso) {

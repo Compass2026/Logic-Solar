@@ -68,7 +68,8 @@ test('the hero renders with its alt text, dimensions and responsive WebP variant
   const html = heroHtml(a.heroImage);
   assert.match(html, /<img src="\/blog\/images\/solar-consultation-571a4c1c9494\.png" alt="Homeowner reviewing utility bills" width="1730" height="909"/);
   assert.match(html, /srcset="\/blog\/images\/solar-consultation-571a4c1c9494-640\.webp 640w, \/blog\/images\/solar-consultation-571a4c1c9494-1280\.webp 1280w"/);
-  assert.match(html, /<figcaption>Illustration<\/figcaption>/);
+  assert.ok(!/figcaption|Illustration/.test(html), 'an illustrative hero has no public caption');
+  assert.equal(a.heroImage.illustrative, true, 'the internal classification is kept');
   assert.deepEqual(heroVariants({ ...a.heroImage, width: 800 }).map((v) => v.width), [640]);
   assert.ok(!heroHtml({ ...a.heroImage, illustrative: false }).includes('figcaption'));
 });
