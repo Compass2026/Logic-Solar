@@ -476,7 +476,7 @@ const categories = [
     icon: <Home size={14} strokeWidth={2.5} />,
     label: 'Structural & Site Adders',
     items: [
-      { name: 'Ground Mount Installation', price: '$0.35/watt', note: '+ Trenching' },
+      { name: 'Ground Mount Installation', price: '$0.40/watt', note: '+ Trenching' },
       { name: 'Trenching', price: '$20/ft' },
       { name: 'Detach & Reset of Panels', price: '$400/panel' },
       { name: 'Tile / Flat Roof / Ballast System', price: '$0.25/watt' },
